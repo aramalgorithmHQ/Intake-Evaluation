@@ -1,0 +1,132 @@
+{
+  "document_id": "DOC-012",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "TERMINATION_LETTER",
+  "title": "Ordentliche betriebsbedingte Kuendigung - Wiederholung",
+  "document_date": "2015-07-15",
+  "intro": "Endgueltige synthetische Kuendigungserklaerung im Evaluationsfall. Das Arbeitsverhaeltnis wird wegen vollstaendiger Betriebsstilllegung ordentlich beendet.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "termination_issued_at",
+      "field": "termination_issued_at",
+      "canonical_value": "2015-07-15",
+      "rendered_value": "15.07.2015",
+      "anchor_id": "ANCHOR-DOC-012-001"
+    },
+    {
+      "slot_id": "termination_effective",
+      "field": "termination_effective",
+      "canonical_value": "2016-01-31",
+      "rendered_value": "31.01.2016",
+      "anchor_id": "ANCHOR-DOC-012-002"
+    },
+    {
+      "slot_id": "termination_type",
+      "field": "termination_type",
+      "canonical_value": "ORDINARY",
+      "rendered_value": "Ordentliche Kuendigung",
+      "anchor_id": "ANCHOR-DOC-012-003"
+    },
+    {
+      "slot_id": "route",
+      "field": "route",
+      "canonical_value": "ROUTE_C",
+      "rendered_value": "betriebsbedingt - vollstaendige Betriebsstilllegung",
+      "anchor_id": "ANCHOR-DOC-012-004"
+    },
+    {
+      "slot_id": "letter_exists",
+      "field": "letter_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-012-005"
+    },
+    {
+      "slot_id": "written_form_used",
+      "field": "written_form_used",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-012-006"
+    },
+    {
+      "slot_id": "original_signature",
+      "field": "original_signature",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-012-007"
+    },
+    {
+      "slot_id": "proxy_signed",
+      "field": "proxy_signed",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-012-008"
+    },
+    {
+      "slot_id": "vollmacht_attached",
+      "field": "vollmacht_attached",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-012-009"
+    },
+    {
+      "slot_id": "delivery_proof",
+      "field": "delivery_proof",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-012-010"
+    },
+    {
+      "slot_id": "delivery_method",
+      "field": "delivery_method",
+      "canonical_value": "PERSONAL_HANDOVER",
+      "rendered_value": "Persoenliche Uebergabe",
+      "anchor_id": "ANCHOR-DOC-012-011"
+    },
+    {
+      "slot_id": "delivery_date",
+      "field": "delivery_date",
+      "canonical_value": "2015-07-15",
+      "rendered_value": "15.07.2015",
+      "anchor_id": "ANCHOR-DOC-012-012"
+    },
+    {
+      "slot_id": "statutory_minimum_days",
+      "field": "statutory_minimum_days",
+      "canonical_value": 120,
+      "rendered_value": "120",
+      "anchor_id": "ANCHOR-DOC-012-013"
+    },
+    {
+      "slot_id": "contractual_minimum_days",
+      "field": "contractual_minimum_days",
+      "canonical_value": 180,
+      "rendered_value": "180",
+      "anchor_id": "ANCHOR-DOC-012-014"
+    },
+    {
+      "slot_id": "actual_notice_days",
+      "field": "actual_notice_days",
+      "canonical_value": 200,
+      "rendered_value": "200",
+      "anchor_id": "ANCHOR-DOC-012-015"
+    },
+    {
+      "slot_id": "terminates_on_valid_date",
+      "field": "terminates_on_valid_date",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-012-016"
+    }
+  ],
+  "artifact_hash": "sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

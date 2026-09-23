@@ -1,0 +1,157 @@
+{
+  "document_id": "DOC-010",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Ordentliche Kündigung",
+  "document_date": "10.09.2026",
+  "reference": "NH-KDG-7421",
+  "intro": "Hiermit kündigen wir das Arbeitsverhältnis ordentlich aus verhaltensbedingten Gründen zum nachstehend angegebenen Beendigungsdatum.",
+  "template_rows": [
+    {
+      "label": "Kündigungsschreiben vorhanden",
+      "value_placeholder": "{{ASSERT-061}}"
+    },
+    {
+      "label": "Schriftform verwendet",
+      "value_placeholder": "{{ASSERT-062}}"
+    },
+    {
+      "label": "Originalunterschrift vorhanden",
+      "value_placeholder": "{{ASSERT-063}}"
+    },
+    {
+      "label": "Unterzeichnung durch Vertreter",
+      "value_placeholder": "{{ASSERT-064}}"
+    },
+    {
+      "label": "Angegebene Kündigungsfrist (Tage)",
+      "value_placeholder": "{{ASSERT-065}}"
+    },
+    {
+      "label": "Kündigungsgrund",
+      "value_placeholder": "{{ASSERT-066}}"
+    },
+    {
+      "label": "Kündigungsart",
+      "value_placeholder": "{{ASSERT-067}}"
+    },
+    {
+      "label": "Ausstellungsdatum",
+      "value_placeholder": "{{ASSERT-068}}"
+    },
+    {
+      "label": "Beendigungsdatum",
+      "value_placeholder": "{{ASSERT-069}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Kündigungsschreiben vorhanden",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Schriftform verwendet",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Originalunterschrift vorhanden",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Unterzeichnung durch Vertreter",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Angegebene Kündigungsfrist (Tage)",
+      "display_value": "51"
+    },
+    {
+      "label": "Kündigungsgrund",
+      "display_value": "verhaltensbedingt"
+    },
+    {
+      "label": "Kündigungsart",
+      "display_value": "ordentlich"
+    },
+    {
+      "label": "Ausstellungsdatum",
+      "display_value": "10.09.2026"
+    },
+    {
+      "label": "Beendigungsdatum",
+      "display_value": "31.10.2026"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-061",
+      "document_id": "DOC-010",
+      "slot_id": "letter_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-062",
+      "document_id": "DOC-010",
+      "slot_id": "written_form_used",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-063",
+      "document_id": "DOC-010",
+      "slot_id": "original_signature",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-064",
+      "document_id": "DOC-010",
+      "slot_id": "proxy_signed",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-065",
+      "document_id": "DOC-010",
+      "slot_id": "notice_period_stated",
+      "canonical_value": 51,
+      "rendered_value": "51"
+    },
+    {
+      "assertion_id": "ASSERT-066",
+      "document_id": "DOC-010",
+      "slot_id": "route_stated_in_letter",
+      "canonical_value": "ROUTE_A",
+      "rendered_value": "verhaltensbedingt"
+    },
+    {
+      "assertion_id": "ASSERT-067",
+      "document_id": "DOC-010",
+      "slot_id": "termination_type",
+      "canonical_value": "ORDINARY",
+      "rendered_value": "ordentlich"
+    },
+    {
+      "assertion_id": "ASSERT-068",
+      "document_id": "DOC-010",
+      "slot_id": "termination_issued_at",
+      "canonical_value": "2026-09-10",
+      "rendered_value": "10.09.2026"
+    },
+    {
+      "assertion_id": "ASSERT-069",
+      "document_id": "DOC-010",
+      "slot_id": "termination_effective",
+      "canonical_value": "2026-10-31",
+      "rendered_value": "31.10.2026"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nOrdentliche Kündigung\nDatum: 10.09.2026\nReferenz: NH-KDG-7421\nHiermit kündigen wir das Arbeitsverhältnis ordentlich aus verhaltensbedingten Gründen zum nachstehend angegebenen Beendigungsdatum.\nDokumentierte Angaben\nKündigungsschreiben vorhanden: Ja\nSchriftform verwendet: Ja\nOriginalunterschrift vorhanden: Ja\nUnterzeichnung durch Vertreter: Nein\nAngegebene Kündigungsfrist (Tage): 51\nKündigungsgrund: verhaltensbedingt\nKündigungsart: ordentlich\nAusstellungsdatum: 10.09.2026\nBeendigungsdatum: 31.10.2026\n",
+  "render_source_hash": "sha256:51dde7c8cd5f5f94f196a9c5b07aaab47745de06927f06cf6c0ee253eb531bb4",
+  "artifact_hash": "sha256:68cb775dd80c87e902e036c6f239bd8e3c5cb19d03988de4f191b7b10051f0d9",
+  "page_count": 1
+}

@@ -1,0 +1,200 @@
+# case_definition.schema.yaml
+# ARAM HR Decision Defensibility — Germany Termination
+# Declarative case definitions for test suite.
+# Cases define defects, timelines, missing evidence, route mismatches,
+# deadline violations. No implementation — definitions only.
+
+schema_version: "1.1.0"
+
+case_definition:
+  type: object
+  required:
+    - case_id
+    - case_name
+    - category
+    - route
+    - description
+    - envelope_overrides
+    - evidence_profile
+    - activated_gates
+  properties:
+
+    case_id:
+      type: string
+      # F-22 (schema_version 1.1.0) — widened to the pattern both
+      # implementations already enforce: PIPELINE/Tools/intake_builder/
+      # validator.py CASE_ID_RE and packages/intake-core/core.js
+      # CASE_ID_OK. The previous "exactly three digits, CASE- only" form
+      # rejected ids those two accept (CASE-AZR-1234, ADV-DE-001), so a
+      # file could pass the intake and the builder and still violate the
+      # declared contract. The two implementations are the ground truth
+      # here; the schema was the stale artifact.
+      pattern: "^(?:CASE-[A-Z]{1,3}-\\d{3,6}|ADV-DE-\\d{3})$"
+      description: |
+        Immutable case identifier. CASE-<1-3 letters>-<3-6 digits>, or the
+        ADV-DE-<3 digits> adversarial-fixture form.
+
+    case_name:
+      type: string
+      description: "Human-readable short name."
+
+    category:
+      type: string
+      enum:
+        - DEFENSIBLE
+        - NOT_DEFENSIBLE
+        - LIVE_ONGOING
+        - CANONICAL
+        - OLD_PAST
+      description: "Case classification category."
+
+    route:
+      type: string
+      enum: [ROUTE_A, ROUTE_B, ROUTE_C, ROUTE_D]
+
+    description:
+      type: string
+      description: "Short factual summary."
+
+    expected_verdict:
+      type: string
+      enum: [DEFENSIBLE, NOT_DEFENSIBLE, INDETERMINATE]
+      description: "For golden cases. Optional for LIVE_ONGOING."
+
+    expected_reason_codes:
+      type: array
+      items: { type: string }
+      description: "Expected reason codes on verdict (for goldens)."
+
+    envelope_overrides:
+      type: object
+      description: "Fields that override defaults in the DecisionEnvelope."
+      properties:
+        kschg_applies: { type: boolean }
+        betriebsrat_exists: { type: boolean }
+        special_protections: { type: array, items: { type: string } }
+        tech_used: { type: boolean }
+        mass_layoff_triggered: { type: boolean }
+        termination_type: { type: string, enum: [ORDINARY, EXTRAORDINARY] }
+        tenure_months: { type: integer }
+        employee_count_fte: { type: number }
+
+    envelope_overrides_assumed:
+      type: array
+      items: { type: string }
+      description: |
+        Names of envelope_overrides fields whose values are synthetic
+        defaults rather than source-anchored extractions. Downstream auditors
+        must treat any field listed here as provenance=ASSUMED_DEFAULT.
+
+    evidence_profile:
+      type: object
+      description: "Declares which evidence codes are PRESENT, MISSING, or DEFECTIVE."
+      properties:
+        present:
+          type: array
+          items: { type: string }
+          description: "Evidence codes with valid, complete EOs."
+        missing:
+          type: array
+          items: { type: string }
+          description: "Evidence codes with no EO bound."
+        defective:
+          type: array
+          items:
+            type: object
+            required: [code, defect]
+            properties:
+              code: { type: string }
+              defect:
+                type: string
+                enum:
+                  - TIMESTAMP_AFTER_TERMINATION
+                  - FIELD_MISSING
+                  - FIELD_INVALID
+                  - PROVENANCE_INVALID
+                  - ROUTE_MISMATCH
+                  - DEADLINE_MISSED
+                  - EXPIRED
+                  - WRONG_CONDUCT
+                  - FUNCTION_MISSING
+              details: { type: string }
+          description: "Evidence codes with specific structural defects."
+
+    activated_gates:
+      type: array
+      items: { type: string }
+      description: "Gate node_ids that should be activated for this case."
+
+    timeline:
+      type: object
+      description: "Key dates for timeline-sensitive checks."
+      properties:
+        employment_start: { type: string, format: date }
+        termination_issued: { type: string, format: date }
+        termination_effective: { type: string, format: date }
+        hearing_initiated:
+          type: string
+          format: date
+          description: |
+            For ROUTE_A/B/C: Gremium consultation (§ 102 BetrVG / § 74 LPVG NRW).
+            For ROUTE_D Verdachtskündigung: Verdachtsanhörung of the employee
+            under the proportionality principle (BAG 20.03.2014 – 2 AZR 1037/12).
+            These are legally distinct events and must not be merged.
+        hearing_response_deadline: { type: string, format: date }
+        knowledge_date:
+          type: string
+          format: date
+          description: |
+            § 626 Abs. 2 BGB Fristbeginn — the date the person entitled to
+            terminate obtained reliable and complete positive knowledge of
+            the facts. Extracted from the court-reasoning layer only. Omit
+            (do not fabricate) if the court left Fristbeginn open.
+        two_week_deadline: { type: string, format: date }
+        warning_date: { type: string, format: date }
+        incident_date: { type: string, format: date }
+        approval_date: { type: string, format: date }
+        staff_council_notified:
+          type: string
+          format: date
+          description: |
+            Gremium consultation date for ROUTE_D, when the employee
+            Verdachtsanhörung is recorded in hearing_initiated. Distinct
+            statutory anchor (§ 102 BetrVG / § 74 LPVG NRW). This — not
+            hearing_initiated — is where the § 102 II window is measured
+            from on ROUTE_D (F-10).
+
+        # F-23 (schema_version 1.1.0) — the § 17 KSchG Massenentlassung
+        # sequence. These three keys were already written by the intake
+        # (packages/intake-core/core.js), read by
+        # validation/tools/derive_ground_truth.py and present in the QA
+        # fixtures, but undeclared here: the whole § 17 ordering check ran
+        # on keys outside the contract, surviving only because this object
+        # never set additionalProperties: false. Declared now.
+        mass_layoff_consultation_date:
+          type: string
+          format: date
+          description: |
+            § 17 II KSchG consultation with the Gremium, which must precede
+            the authority notice.
+        mass_layoff_authority_notice_date:
+          type: string
+          format: date
+          description: |
+            § 17 I KSchG Massenentlassungsanzeige filed with the Agentur
+            für Arbeit. Must precede both termination_issued and the
+            effective date.
+        mass_layoff_effective_date:
+          type: string
+          format: date
+          description: |
+            Date the mass layoff takes effect, for the § 17 sequence check.
+
+    determinism_notes:
+      type: string
+      description: "For OLD_PAST cases: why determinism may be limited."
+
+    tags:
+      type: array
+      items: { type: string }
+      description: "Searchable tags."

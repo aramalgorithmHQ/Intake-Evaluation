@@ -1,0 +1,155 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "ASSERT-035",
+      "candidate_id": "CAND-035",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EB-5",
+      "field": "proportionality_analysis_exists",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-5.proportionality_analysis_exists"
+    },
+    {
+      "assertion_id": "ASSERT-036",
+      "candidate_id": "CAND-036",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-5",
+      "field": "tenure_considered",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-5.tenure_considered"
+    },
+    {
+      "assertion_id": "ASSERT-037",
+      "candidate_id": "CAND-037",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-5",
+      "field": "age_considered",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-5.age_considered"
+    },
+    {
+      "assertion_id": "ASSERT-038",
+      "candidate_id": "CAND-038",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-5",
+      "field": "labor_market_considered",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-5.labor_market_considered"
+    },
+    {
+      "assertion_id": "ASSERT-039",
+      "candidate_id": "CAND-039",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-5",
+      "field": "illness_cause_considered",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-5.illness_cause_considered"
+    },
+    {
+      "assertion_id": "ASSERT-040",
+      "candidate_id": "CAND-040",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EB-6",
+      "field": "alternatives_evaluated",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-6.alternatives_evaluated"
+    },
+    {
+      "assertion_id": "ASSERT-041",
+      "candidate_id": "CAND-041",
+      "canonical_value": [
+        "reduzierte Rufbereitschaft",
+        "angepasste Schichtlage",
+        "Teilzeit",
+        "administrative technische Koordination",
+        "anderer freier Arbeitsplatz"
+      ],
+      "criticality": "TIER_2",
+      "evidence_code": "EB-6",
+      "field": "alternatives_list",
+      "rendered_value": "reduzierte Rufbereitschaft; angepasste Schichtlage; Teilzeit; administrative technische Koordination; anderer freier Arbeitsplatz",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-6.alternatives_list"
+    },
+    {
+      "assertion_id": "ASSERT-042",
+      "candidate_id": "CAND-042",
+      "canonical_value": [
+        "Kernaufgaben bleiben präsenzgebunden",
+        "Teilzeit beseitigt Prognoserisiko nicht",
+        "keine geeignete freie Vergleichsstelle vorhanden"
+      ],
+      "criticality": "TIER_2",
+      "evidence_code": "EB-6",
+      "field": "alternatives_rejection_reasons",
+      "rendered_value": "Kernaufgaben bleiben präsenzgebunden; Teilzeit beseitigt Prognoserisiko nicht; keine geeignete freie Vergleichsstelle vorhanden",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-6.alternatives_rejection_reasons"
+    },
+    {
+      "assertion_id": "ASSERT-043",
+      "candidate_id": "CAND-043",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EP-B2",
+      "field": "workplace_adaptation_explored",
+      "rendered_value": "Ja",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EP-B2.workplace_adaptation_explored"
+    },
+    {
+      "assertion_id": "ASSERT-044",
+      "candidate_id": "CAND-044",
+      "canonical_value": "Entlastung Rufbereitschaft, planbare Tagschichten, ergonomische Arbeitsplatzanpassung und Aufgabenumschichtung geprüft.",
+      "criticality": "TIER_2",
+      "evidence_code": "EP-B2",
+      "field": "adaptation_options_documented",
+      "rendered_value": "Entlastung Rufbereitschaft, planbare Tagschichten, ergonomische Arbeitsplatzanpassung und Aufgabenumschichtung geprüft.",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EP-B2.adaptation_options_documented"
+    },
+    {
+      "assertion_id": "ASSERT-045",
+      "candidate_id": "CAND-045",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EP-B3",
+      "field": "alternative_role_assessed",
+      "rendered_value": "Ja",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EP-B3.alternative_role_assessed"
+    },
+    {
+      "assertion_id": "ASSERT-046",
+      "candidate_id": "CAND-046",
+      "canonical_value": "Zum Entscheidungszeitpunkt bestand keine geeignete freie Stelle mit vergleichbarem Anforderungsprofil.",
+      "criticality": "TIER_2",
+      "evidence_code": "EP-B3",
+      "field": "alternative_role_rejection_reason",
+      "rendered_value": "Zum Entscheidungszeitpunkt bestand keine geeignete freie Stelle mit vergleichbarem Anforderungsprofil.",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EP-B3.alternative_role_rejection_reason"
+    }
+  ],
+  "document_id": "DOC-005",
+  "document_type": "PROPORTIONALITY_ALTERNATIVES",
+  "generator": "route-b-bag-pattern-v1",
+  "notes": [
+    "Synthetische Benchmarkentscheidung; keine rechtliche Einzelfallbewertung."
+  ],
+  "render_source": "Interessenabwägung\n\nInteressenabwägung dokumentiert: Ja\n\nBetriebszugehörigkeit berücksichtigt: Ja\n\nAlter berücksichtigt: Ja\n\nArbeitsmarktchancen berücksichtigt: Ja\n\nUrsachen-/Belastungskontext berücksichtigt: Ja\n\nMildere Mittel\n\nAlternativen geprüft: Ja\n\nGeprüfte Alternativen: reduzierte Rufbereitschaft; angepasste Schichtlage; Teilzeit; administrative technische Koordination; anderer freier Arbeitsplatz\n\nErgebnis: Kernaufgaben bleiben präsenzgebunden; Teilzeit beseitigt Prognoserisiko nicht; keine geeignete freie Vergleichsstelle vorhanden\n\nArbeitsplatzanpassung geprüft: Ja\n\nDokumentierte Anpassungen: Entlastung Rufbereitschaft, planbare Tagschichten, ergonomische Arbeitsplatzanpassung und Aufgabenumschichtung geprüft.\n\nAlternative Rolle geprüft: Ja\n\nAblehnungsgrund alternative Rolle: Zum Entscheidungszeitpunkt bestand keine geeignete freie Stelle mit vergleichbarem Anforderungsprofil.\n",
+  "seed": 17824,
+  "source_kind": "DETERMINISTIC_TEMPLATE"
+}

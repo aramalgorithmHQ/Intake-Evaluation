@@ -1,0 +1,64 @@
+case_id: CASE-SYN-7421
+case_name: Synthetic Route A - repeated conduct after warning
+category: CANONICAL
+route: ROUTE_A
+description: Synthetic ordinary conduct-route termination fixture with complete warning, hearing, form, notice, proportionality,
+  and AGG evidence.
+envelope_overrides:
+  kschg_applies: true
+  betriebsrat_exists: true
+  special_protections: []
+  tech_used: false
+  mass_layoff_triggered: false
+  termination_type: ORDINARY
+  tenure_months: 32
+  employee_count_fte: 84.0
+evidence_profile:
+  present:
+  - E0-a
+  - E0-b
+  - E0-c
+  - E0-d
+  - EA-1
+  - EA-2
+  - EA-4
+  - EA-5
+  - EA-6
+  - EA-7
+  - EA-8
+  - EA-9
+  - EA-10
+  - EA-11
+  - EU-WF
+  - EU-NP
+  - EU-CON
+  - EU-AGG
+  missing: []
+  defective: []
+activated_gates:
+- G0
+- G1
+- G2
+- G2.WF
+- G2.NP
+- G2.A1
+- G2.A2
+- G2.A3
+- G3
+- G4
+- G7
+timeline:
+  employment_start: '2024-01-01'
+  warning_date: '2026-05-20'
+  incident_date: '2026-08-17'
+  hearing_initiated: '2026-09-01'
+  hearing_response_deadline: '2026-09-08'
+  termination_issued: '2026-09-10'
+  termination_effective: '2026-10-31'
+tags:
+- synthetic
+- route-a
+- conduct
+- clean
+- works-council
+- l0-l5

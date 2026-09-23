@@ -1,0 +1,68 @@
+case_id: CASE-RD-06824
+case_name: Synthetic Route D - disputed registered-mail receipt
+category: CANONICAL
+route: ROUTE_D
+description: Synthetic extraordinary-termination intake fixture with pregnancy approval, complete §626
+  deadline documentation, and deliberately defective receipt evidence.
+envelope_overrides:
+  kschg_applies: true
+  betriebsrat_exists: false
+  special_protections:
+  - PREGNANT
+  tech_used: false
+  mass_layoff_triggered: false
+  termination_type: EXTRAORDINARY
+  tenure_months: 49
+  employee_count_fte: 84.5
+evidence_profile:
+  present:
+  - E0-a
+  - E0-b
+  - E0-c
+  - E0-d
+  - E0-e
+  - ED-1
+  - ED-2
+  - ED-3
+  - ED-4
+  - ED-5
+  - ED-6
+  - ED-7
+  - ED-8
+  - EP-D1
+  - EP-D2
+  - EU-CON
+  - EU-AGG
+  missing: []
+  defective:
+  - code: ED-11
+    defect: PROVENANCE_INVALID
+    details: Registered-mail tracking status lacks independently sufficient receipt provenance.
+  - code: EU-WF
+    defect: PROVENANCE_INVALID
+    details: delivery_proof is false; written form/signature are present but actual receipt remains unresolved.
+activated_gates:
+- G0
+- G0.1
+- G2
+- G2.WF
+- G2.D1
+- G2.D2
+- G2.D3
+- G3
+- G4
+- G7
+timeline:
+  employment_start: '2022-03-01'
+  termination_issued: '2026-04-18'
+  knowledge_date: '2026-04-07'
+  two_week_deadline: '2026-04-21'
+  approval_date: '2026-04-17'
+  incident_date: '2026-04-02'
+tags:
+- synthetic
+- route_d
+- extraordinary
+- delivery_proof
+- pregnancy_protection
+- two_week_deadline

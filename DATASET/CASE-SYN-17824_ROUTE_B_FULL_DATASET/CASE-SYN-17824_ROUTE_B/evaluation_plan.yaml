@@ -1,0 +1,52 @@
+fixture_id: CASE-SYN-17824
+population: SCRIPTED_L5_A
+scoring_status: SCORED
+layers:
+  L0:
+    applicable_metrics:
+    - Critical Text Recovery Rate
+    - Critical Value Accuracy
+    - Page Recovery & Association Accuracy
+    - Recovery Path Accuracy
+    - Unsafe Continuation Rate
+  L1:
+    applicable_metrics:
+    - Classification Accuracy
+    - Wrong-Confident Classification Rate
+    - Wrong Rule-Pack Routing Rate
+    - Per-Type Precision & Recall
+    not_applicable_metrics:
+    - Correct Abstention / Ambiguity Rate
+  L2:
+    applicable_metrics:
+    - Fact Recall
+    - Fact Precision
+    - Value Accuracy
+    - Safe Rule Abstention Rate
+    - Candidate Evidence Traceability Rate
+  L3:
+    applicable_metrics:
+    - Field Mapping Accuracy
+    - Confirmed-Fact Preservation Rate
+    - Derived-Field Accuracy
+    - Transformation Completeness
+    - Conflict & Provenance Safety
+  L4:
+    applicable_metrics:
+    - Schema Pass Rate
+    - Required-Field Completeness
+    - Invariant Pass Rate
+    - Evidence-State Validity
+  L5:
+    applicable_metrics:
+    - Verified Case Pass Rate
+    - Critical Field Accuracy
+    - Critical Error Escape Rate
+    not_applicable_metrics:
+    - Human Correction Burden
+    note: Human Correction Burden is L5-B only; scripted review actions are diagnostics, not human burden.
+criticality_policy:
+  tier1: must be correct for strict L5 verified-case pass
+  tier2: supporting/corroborating
+  tier3: context
+candidate_matching: OCCURRENCE_LEVEL

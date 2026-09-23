@@ -1,0 +1,73 @@
+{
+  "document_id": "DOC-002",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "BUSINESS_CLOSURE_RESOLUTION",
+  "title": "Gesellschafterbeschluss zur Betriebsstilllegung",
+  "document_date": "2015-01-20",
+  "intro": "Die Gesellschafterversammlung fasst nach dem Wegfall der Auftraege den Beschluss, den einzigen verbleibenden Betrieb vollstaendig einzustellen.",
+  "body": [
+    "Die Entscheidung betrifft alle im Betrieb verbliebenen Arbeitsplaetze. Eine Fortfuehrung des bisherigen Betriebs ist nicht vorgesehen."
+  ],
+  "render_source_rows": [
+    {
+      "slot_id": "business_decision_description",
+      "field": "business_decision_description",
+      "canonical_value": "Vollstaendige Stilllegung des verbleibenden Betriebs nach Kuendigung saemtlicher Kundenauftraege.",
+      "rendered_value": "Vollstaendige Stilllegung des verbleibenden Betriebs nach Kuendigung saemtlicher Kundenauftraege.",
+      "anchor_id": "ANCHOR-DOC-002-001"
+    },
+    {
+      "slot_id": "positions_eliminated",
+      "field": "positions_eliminated",
+      "canonical_value": [
+        "Saemtliche Check-in- und Passagedienst-Positionen"
+      ],
+      "rendered_value": "Saemtliche Check-in- und Passagedienst-Positionen",
+      "anchor_id": "ANCHOR-DOC-002-002"
+    },
+    {
+      "slot_id": "headcount_rationale",
+      "field": "headcount_rationale",
+      "canonical_value": "Kein verbleibender Beschaeftigungsbedarf im Arbeitgeberunternehmen.",
+      "rendered_value": "Kein verbleibender Beschaeftigungsbedarf im Arbeitgeberunternehmen.",
+      "anchor_id": "ANCHOR-DOC-002-003"
+    },
+    {
+      "slot_id": "decision_date",
+      "field": "decision_date",
+      "canonical_value": "2015-01-20",
+      "rendered_value": "20.01.2015",
+      "anchor_id": "ANCHOR-DOC-002-004"
+    },
+    {
+      "slot_id": "closure_effective_date",
+      "field": "closure_effective_date",
+      "canonical_value": "2015-03-31",
+      "rendered_value": "31.03.2015",
+      "anchor_id": "ANCHOR-DOC-002-005"
+    },
+    {
+      "slot_id": "no_business_activity_from",
+      "field": "no_business_activity_from",
+      "canonical_value": "2015-04-01",
+      "rendered_value": "01.04.2015",
+      "anchor_id": "ANCHOR-DOC-002-006"
+    },
+    {
+      "slot_id": "all_jobs_eliminated",
+      "field": "all_jobs_eliminated",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-002-007"
+    }
+  ],
+  "artifact_hash": "sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

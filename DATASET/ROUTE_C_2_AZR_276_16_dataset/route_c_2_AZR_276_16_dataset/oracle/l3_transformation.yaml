@@ -1,0 +1,56 @@
+schema_version: eval.l3.oracle.v1
+fixture_id: CASE-SYN-C-27616
+reconciliation_groups:
+- group_id: RG-TERM-ISSUED
+  field: termination_issued_at
+  candidates:
+  - document_id: DOC-006
+    value: '2015-02-13'
+    role: historical_reference
+    expected_review_state: REJECTED
+  - document_id: DOC-012
+    value: '2015-07-15'
+    role: primary_declaration
+    expected_review_state: CONFIRMED
+  expected_value: '2015-07-15'
+- group_id: RG-TERM-EFFECTIVE
+  field: termination_effective
+  candidates:
+  - document_id: DOC-006
+    value: '2015-07-31'
+    role: historical_reference
+    expected_review_state: REJECTED
+  - document_id: DOC-012
+    value: '2016-01-31'
+    role: primary_declaration
+    expected_review_state: CONFIRMED
+  expected_value: '2016-01-31'
+- group_id: RG-MASS-NOTICE
+  field: notification_date
+  candidates:
+  - document_id: DOC-005
+    value: '2015-01-28'
+    role: historical_reference
+    expected_review_state: REJECTED
+  - document_id: DOC-010
+    value: '2015-06-26'
+    role: administrative_filing
+    expected_review_state: CONFIRMED
+  expected_value: '2015-06-26'
+mapped_state:
+  route: ROUTE_C
+  reason_family: OPERATIONAL
+  termination_type: ORDINARY
+  termination_issued_at: '2015-07-15'
+  termination_effective: '2016-01-31'
+  mass_layoff_notification_date: '2015-06-26'
+  business_closure_effective: '2015-03-31'
+  social_selection_state: NOT_APPLICABLE
+  social_selection_reason: COMPLETE_CLOSURE_ALL_JOBS_ELIMINATED
+  integrationsamt_approval_granted: true
+  integrationsamt_approval_date: '2015-07-08'
+safety_assertions:
+- historical termination does not overwrite final termination
+- historical defective mass-layoff filing does not overwrite valid second filing
+- NOT_APPLICABLE social-selection state is preserved and not converted to MISSING
+- special-protection approval remains linked to final termination

@@ -1,0 +1,111 @@
+schema_version: eval.l4.v1
+fixture_id: CASE-SYN-17824
+normative_schema: case_definition.schema.yaml@1.1.0
+expected_parse_result: PASS
+expected_schema_result: PASS
+required_fields_result: PASS
+invariant_results:
+- id: INV-ROUTE-B-CLASSIFIED
+  expected: PASS
+  basis:
+  - PERSONAL_CAPABILITY -> namespaced ROUTE_B
+- id: INV-KSCHG-THRESHOLD
+  expected: PASS
+  basis:
+  - tenure_months=26
+  - employee_count_fte=180
+- id: INV-BEM-COMPLETE
+  expected: PASS
+  basis:
+  - EB-2
+  - EP-B1
+- id: INV-PROGNOSIS-AND-IMPACT
+  expected: PASS
+  basis:
+  - EB-3
+  - EB-4
+- id: INV-ULTIMA-RATIO
+  expected: PASS
+  basis:
+  - EB-5
+  - EB-6
+  - EP-B2
+  - EP-B3
+- id: INV-SPECIAL-PROTECTION-APPROVAL
+  expected: PASS
+  basis:
+  - E0-e
+  - EB-8
+- id: INV-NO-BR-HEARING-REQUIRED
+  expected: PASS
+  basis:
+  - betriebsrat_exists=false
+  - EB-7=NOT_APPLICABLE
+- id: INV-WRITTEN-FORM
+  expected: PASS
+  basis:
+  - EB-9
+  - EU-WF
+- id: INV-NOTICE-PERIOD
+  expected: PASS
+  basis:
+  - EU-NP
+- id: INV-ANTI-DISCRIMINATION-CHECK
+  expected: PASS
+  basis:
+  - EU-AGG
+- id: INV-NO-AUTOMATED-DECISION-TECH
+  expected: PASS
+  basis:
+  - ET-CD/ET-MT=NOT_APPLICABLE
+evidence_state_results:
+- code: E0-a
+  expected_state: PRESENT
+- code: E0-b
+  expected_state: PRESENT
+- code: E0-c
+  expected_state: PRESENT
+- code: E0-d
+  expected_state: PRESENT
+- code: E0-e
+  expected_state: PRESENT
+- code: EB-1
+  expected_state: PRESENT
+- code: EB-2
+  expected_state: PRESENT
+- code: EB-3
+  expected_state: PRESENT
+- code: EB-4
+  expected_state: PRESENT
+- code: EB-5
+  expected_state: PRESENT
+- code: EB-6
+  expected_state: PRESENT
+- code: EB-8
+  expected_state: PRESENT
+- code: EB-9
+  expected_state: PRESENT
+- code: EU-WF
+  expected_state: PRESENT
+- code: EU-NP
+  expected_state: PRESENT
+- code: EU-CON
+  expected_state: PRESENT
+- code: EU-AGG
+  expected_state: PRESENT
+- code: EU-AGG-1
+  expected_state: PRESENT
+- code: EU-AGG-2
+  expected_state: PRESENT
+- code: EP-B1
+  expected_state: PRESENT
+- code: EP-B2
+  expected_state: PRESENT
+- code: EP-B3
+  expected_state: PRESENT
+- code: EB-7
+  expected_state: NOT_APPLICABLE
+- code: ET-CD
+  expected_state: NOT_APPLICABLE
+- code: ET-MT
+  expected_state: NOT_APPLICABLE

@@ -1,0 +1,1079 @@
+schema_version: eval.provenance.v1
+fixture_id: CASE-RD-06824
+coordinate_space: PDF_POINTS_BOTTOM_LEFT
+anchors:
+- anchor_id: ANCHOR-DOC-001-001
+  assertion_id: ASSERT-001
+  candidate_id: CAND-001
+  field: employee_id
+  page: 1
+  bbox:
+  - 204.09
+  - 676.32
+  - 244.72
+  - 688.32
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: EMP-2047
+  label: Mitarbeiter-ID
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-002
+  assertion_id: ASSERT-002
+  candidate_id: CAND-002
+  field: employee_name
+  page: 1
+  bbox:
+  - 204.09
+  - 650.43
+  - 242.8
+  - 662.43
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Mara Feld
+  label: Name
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-003
+  assertion_id: ASSERT-003
+  candidate_id: CAND-003
+  field: employer
+  page: 1
+  bbox:
+  - 204.09
+  - 624.54
+  - 314.02
+  - 636.54
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nordhafen Diagnostik GmbH
+  label: Arbeitgeber
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-004
+  assertion_id: ASSERT-004
+  candidate_id: CAND-004
+  field: job_title
+  page: 1
+  bbox:
+  - 204.09
+  - 598.65
+  - 315.94
+  - 610.65
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Dokumentationskoordinatorin
+  label: Funktion
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-005
+  assertion_id: ASSERT-005
+  candidate_id: CAND-005
+  field: employment_start_date
+  page: 1
+  bbox:
+  - 204.09
+  - 572.76
+  - 248.07
+  - 584.76
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2022-03-01'
+  label: Beschäftigungsbeginn
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-006
+  assertion_id: ASSERT-006
+  candidate_id: CAND-006
+  field: tenure_continuous
+  page: 1
+  bbox:
+  - 204.09
+  - 546.87
+  - 235.17
+  - 558.87
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Beschäftigung ununterbrochen
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-007
+  assertion_id: ASSERT-007
+  candidate_id: CAND-007
+  field: tenure_months
+  page: 1
+  bbox:
+  - 204.09
+  - 520.98
+  - 213.66
+  - 532.98
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '49'
+  label: Betriebszugehörigkeit Monate
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-008
+  assertion_id: ASSERT-008
+  candidate_id: CAND-008
+  field: employee_count_fte
+  page: 1
+  bbox:
+  - 204.09
+  - 495.09
+  - 220.83
+  - 507.09
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '84.5'
+  label: FTE am Stichtag
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-009
+  assertion_id: ASSERT-009
+  candidate_id: CAND-009
+  field: headcount_date
+  page: 1
+  bbox:
+  - 204.09
+  - 469.19
+  - 248.07
+  - 481.19
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-01'
+  label: Headcount-Stichtag
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-010
+  assertion_id: ASSERT-010
+  candidate_id: CAND-010
+  field: betriebsrat_exists
+  page: 1
+  bbox:
+  - 204.09
+  - 443.3
+  - 247.11
+  - 455.3
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Betriebsrat vorhanden
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-011
+  assertion_id: ASSERT-011
+  candidate_id: CAND-011
+  field: establishment_id
+  page: 1
+  bbox:
+  - 204.09
+  - 417.41
+  - 249.96
+  - 429.41
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: NH-DUS-01
+  label: Betriebsstätte
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-012
+  assertion_id: ASSERT-012
+  candidate_id: CAND-012
+  field: pregnancy_status
+  page: 1
+  bbox:
+  - 204.09
+  - 391.52
+  - 235.17
+  - 403.52
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Schwangerschaft
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-013
+  assertion_id: ASSERT-013
+  candidate_id: CAND-013
+  field: parental_leave_status
+  page: 1
+  bbox:
+  - 204.09
+  - 365.63
+  - 247.11
+  - 377.63
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Elternzeit
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-014
+  assertion_id: ASSERT-014
+  candidate_id: CAND-014
+  field: disability_equivalent
+  page: 1
+  bbox:
+  - 204.09
+  - 339.74
+  - 247.11
+  - 351.74
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Gleichstellung/Schwerbehinderung
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-015
+  assertion_id: ASSERT-015
+  candidate_id: CAND-015
+  field: br_member_status
+  page: 1
+  bbox:
+  - 204.09
+  - 303.55
+  - 247.11
+  - 315.55
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Betriebsratsmitglied
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-016
+  assertion_id: ASSERT-016
+  candidate_id: CAND-016
+  field: dpo_appointment_status
+  page: 1
+  bbox:
+  - 204.09
+  - 277.66
+  - 247.11
+  - 289.66
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Datenschutzbeauftragte
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-017
+  assertion_id: ASSERT-017
+  candidate_id: CAND-017
+  field: election_board_status
+  page: 1
+  bbox:
+  - 204.09
+  - 251.77
+  - 247.11
+  - 263.77
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Wahlvorstand
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-001-018
+  assertion_id: ASSERT-018
+  candidate_id: CAND-018
+  field: military_service_status
+  page: 1
+  bbox:
+  - 204.09
+  - 225.88
+  - 247.11
+  - 237.88
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Wehr-/Zivildienst
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- anchor_id: ANCHOR-DOC-002-001
+  assertion_id: ASSERT-019
+  candidate_id: CAND-019
+  field: triggering_event_date
+  page: 1
+  bbox:
+  - 204.09
+  - 665.82
+  - 248.07
+  - 677.82
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-02'
+  label: Auslösendes Ereignis - Datum
+  artifact_hash: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+- anchor_id: ANCHOR-DOC-002-002
+  assertion_id: ASSERT-020
+  candidate_id: CAND-020
+  field: triggering_event_description
+  page: 1
+  bbox:
+  - 204.09
+  - 629.63
+  - 498.52
+  - 651.93
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Three locked compliance records were altered after final approval; signer and completion
+    fields were back-dated.
+  label: Auslösendes Ereignis - Beschreibung
+  artifact_hash: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+- anchor_id: ANCHOR-DOC-002-003
+  assertion_id: ASSERT-021
+  candidate_id: CAND-021
+  field: witnesses
+  page: 1
+  bbox:
+  - 204.09
+  - 603.74
+  - 265.26
+  - 615.74
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: WIT-01, WIT-02
+  label: Zeugen-IDs
+  artifact_hash: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+- anchor_id: ANCHOR-DOC-002-004
+  assertion_id: ASSERT-022
+  candidate_id: CAND-022
+  field: physical_evidence
+  page: 1
+  bbox:
+  - 204.09
+  - 577.85
+  - 417.25
+  - 589.85
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: SYS-AUDIT-8841, SYS-AUDIT-8842, SYS-AUDIT-8843
+  label: Physische/System-Belege
+  artifact_hash: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+- anchor_id: ANCHOR-DOC-002-005
+  assertion_id: ASSERT-023
+  candidate_id: CAND-023
+  field: investigation_start_date
+  page: 1
+  bbox:
+  - 204.09
+  - 551.96
+  - 248.07
+  - 563.96
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-03'
+  label: Untersuchung begonnen
+  artifact_hash: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+- anchor_id: ANCHOR-DOC-002-006
+  assertion_id: ASSERT-024
+  candidate_id: CAND-024
+  field: investigation_end_date
+  page: 1
+  bbox:
+  - 204.09
+  - 526.07
+  - 248.07
+  - 538.07
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-07'
+  label: Untersuchung beendet
+  artifact_hash: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+- anchor_id: ANCHOR-DOC-002-007
+  assertion_id: ASSERT-025
+  candidate_id: CAND-025
+  field: investigation_log
+  page: 1
+  bbox:
+  - 204.09
+  - 489.88
+  - 500.91
+  - 512.18
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Audit export reviewed; two witness interviews completed; employee statement recorded; access
+    log preserved.
+  label: Untersuchungslog
+  artifact_hash: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+- anchor_id: ANCHOR-DOC-003-001
+  assertion_id: ASSERT-026
+  candidate_id: CAND-026
+  field: knowledge_date
+  page: 1
+  bbox:
+  - 204.09
+  - 665.82
+  - 313.34
+  - 677.82
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-07T11:20:00+02:00'
+  label: Kenntniszeitpunkt
+  artifact_hash: sha256:e31d98e885dd17acc25e9022fe68ed22929bcd0e21d718d0f824fe9cf2ec0386
+- anchor_id: ANCHOR-DOC-003-002
+  assertion_id: ASSERT-027
+  candidate_id: CAND-027
+  field: knowledge_person
+  page: 1
+  bbox:
+  - 204.09
+  - 639.93
+  - 340.77
+  - 651.93
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: PERSON-HR-01 (Leitung Personal)
+  label: Kündigungsberechtigte Stelle
+  artifact_hash: sha256:e31d98e885dd17acc25e9022fe68ed22929bcd0e21d718d0f824fe9cf2ec0386
+- anchor_id: ANCHOR-DOC-003-003
+  assertion_id: ASSERT-028
+  candidate_id: CAND-028
+  field: knowledge_chain
+  page: 1
+  bbox:
+  - 204.09
+  - 603.74
+  - 530.05
+  - 626.04
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Compliance review -> HR case conference -> authorized decision-maker received the complete
+    evidence packet.
+  label: Kenntniskette
+  artifact_hash: sha256:e31d98e885dd17acc25e9022fe68ed22929bcd0e21d718d0f824fe9cf2ec0386
+- anchor_id: ANCHOR-DOC-003-004
+  assertion_id: ASSERT-029
+  candidate_id: CAND-029
+  field: two_week_deadline
+  page: 1
+  bbox:
+  - 204.09
+  - 577.85
+  - 248.07
+  - 589.85
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-21'
+  label: Zwei-Wochen-Frist endet
+  artifact_hash: sha256:e31d98e885dd17acc25e9022fe68ed22929bcd0e21d718d0f824fe9cf2ec0386
+- anchor_id: ANCHOR-DOC-003-005
+  assertion_id: ASSERT-030
+  candidate_id: CAND-030
+  field: termination_issued_at
+  page: 1
+  bbox:
+  - 204.09
+  - 551.96
+  - 313.34
+  - 563.96
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-18T16:10:00+02:00'
+  label: Kündigung ausgestellt am
+  artifact_hash: sha256:e31d98e885dd17acc25e9022fe68ed22929bcd0e21d718d0f824fe9cf2ec0386
+- anchor_id: ANCHOR-DOC-003-006
+  assertion_id: ASSERT-031
+  candidate_id: CAND-031
+  field: deadline_met
+  page: 1
+  bbox:
+  - 204.09
+  - 526.07
+  - 235.17
+  - 538.07
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Frist eingehalten
+  artifact_hash: sha256:e31d98e885dd17acc25e9022fe68ed22929bcd0e21d718d0f824fe9cf2ec0386
+- anchor_id: ANCHOR-DOC-004-001
+  assertion_id: ASSERT-032
+  candidate_id: CAND-032
+  field: important_reason_analysis
+  page: 1
+  bbox:
+  - 204.09
+  - 655.52
+  - 524.34
+  - 677.82
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Employer memo documents the alleged intentional alteration of finalized compliance records
+    and the asserted loss of trust.
+  label: Wichtiger Grund - Dokumentation
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-002
+  assertion_id: ASSERT-033
+  candidate_id: CAND-033
+  field: unreasonable_to_continue_basis
+  page: 1
+  bbox:
+  - 204.09
+  - 619.33
+  - 532.46
+  - 641.63
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Employer memo states that continued access to approval-locked records would create an immediate
+    integrity risk.
+  label: Unzumutbarkeit Fortsetzung
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-003
+  assertion_id: ASSERT-034
+  candidate_id: CAND-034
+  field: proportionality_analysis_exists
+  page: 1
+  bbox:
+  - 204.09
+  - 593.44
+  - 235.17
+  - 605.44
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Interessenabwägung dokumentiert
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-004
+  assertion_id: ASSERT-035
+  candidate_id: CAND-035
+  field: severity_assessment
+  page: 1
+  bbox:
+  - 204.09
+  - 546.95
+  - 533.9
+  - 569.25
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: High trust and record-integrity impact documented; no legal merits conclusion encoded in
+    fixture truth.
+  label: Schweregrad-Einschätzung
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-005
+  assertion_id: ASSERT-036
+  candidate_id: CAND-036
+  field: tenure_considered
+  page: 1
+  bbox:
+  - 204.09
+  - 521.06
+  - 235.17
+  - 533.06
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Betriebszugehörigkeit berücksichtigt
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-006
+  assertion_id: ASSERT-037
+  candidate_id: CAND-037
+  field: prior_conduct_considered
+  page: 1
+  bbox:
+  - 204.09
+  - 484.87
+  - 235.17
+  - 496.87
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Vorverhalten berücksichtigt
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-007
+  assertion_id: ASSERT-038
+  candidate_id: CAND-038
+  field: personal_circumstances_considered
+  page: 1
+  bbox:
+  - 204.09
+  - 458.98
+  - 235.17
+  - 470.98
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Persönliche Umstände berücksichtigt
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-008
+  assertion_id: ASSERT-039
+  candidate_id: CAND-039
+  field: alternatives_evaluated
+  page: 1
+  bbox:
+  - 204.09
+  - 422.79
+  - 235.17
+  - 434.79
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Mildere Mittel geprüft
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-009
+  assertion_id: ASSERT-040
+  candidate_id: CAND-040
+  field: ordinary_termination_insufficient_reason
+  page: 1
+  bbox:
+  - 204.09
+  - 386.59
+  - 535.32
+  - 408.89
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Employer memo records that suspension, transfer and ordinary notice were considered and
+    rejected for the documented access-risk rationale.
+  label: Ordentliche Kündigung als unzureichend dokumentiert
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-010
+  assertion_id: ASSERT-041
+  candidate_id: CAND-041
+  field: warning_necessity_assessed
+  page: 1
+  bbox:
+  - 204.09
+  - 360.7
+  - 235.17
+  - 372.7
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Abmahnungserfordernis geprüft
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-011
+  assertion_id: ASSERT-042
+  candidate_id: CAND-042
+  field: warning_exists_or_exception_justified
+  page: 1
+  bbox:
+  - 204.09
+  - 334.81
+  - 235.17
+  - 346.81
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Abmahnung vorhanden oder Ausnahme begründet
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-012
+  assertion_id: ASSERT-043
+  candidate_id: CAND-043
+  field: warning_justification
+  page: 1
+  bbox:
+  - 204.09
+  - 288.32
+  - 534.39
+  - 310.62
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Employer memo records a no-warning position based on the asserted intentional nature of
+    the record changes; benchmark scores documentation, not legal correctness.
+  label: Abmahnungsbegründung
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-013
+  assertion_id: ASSERT-044
+  candidate_id: CAND-044
+  field: immediate_termination_necessary
+  page: 1
+  bbox:
+  - 204.09
+  - 262.43
+  - 235.17
+  - 274.43
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Sofortige Beendigung als erforderlich dokumentiert
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-014
+  assertion_id: ASSERT-045
+  candidate_id: CAND-045
+  field: immediacy_basis
+  page: 1
+  bbox:
+  - 204.09
+  - 215.94
+  - 511.4
+  - 238.24
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Employer memo records an asserted immediate integrity risk while the employee retains system
+    access.
+  label: Sofortigkeitsbegründung
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-015
+  assertion_id: ASSERT-046
+  candidate_id: CAND-046
+  field: warning_impossibility_justified
+  page: 1
+  bbox:
+  - 204.09
+  - 190.05
+  - 235.17
+  - 202.05
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Warnung als unmöglich/ungeeignet begründet
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-016
+  assertion_id: ASSERT-047
+  candidate_id: CAND-047
+  field: impossibility_basis
+  page: 1
+  bbox:
+  - 204.09
+  - 133.26
+  - 525.3
+  - 155.56
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Employer memo states that a warning would not address the asserted one-time trust breach;
+    this is a document assertion only.
+  label: Begründung Warnungsuntauglichkeit
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-017
+  assertion_id: ASSERT-048
+  candidate_id: CAND-048
+  field: prior_cases_documented
+  page: 1
+  bbox:
+  - 204.09
+  - 107.37
+  - 235.17
+  - 119.37
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Vergleichsfälle dokumentiert
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-018
+  assertion_id: ASSERT-049
+  candidate_id: CAND-049
+  field: treatment_consistent
+  page: 1
+  bbox:
+  - 204.09
+  - 81.48
+  - 235.17
+  - 93.48
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Behandlung konsistent
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-019
+  assertion_id: ASSERT-050
+  candidate_id: CAND-050
+  field: decision_basis_documented
+  page: 2
+  bbox:
+  - 204.09
+  - 720.83
+  - 235.17
+  - 732.83
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Sachlicher Entscheidungsgrund dokumentiert
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-020
+  assertion_id: ASSERT-051
+  candidate_id: CAND-051
+  field: no_protected_ground_indicia
+  page: 2
+  bbox:
+  - 204.09
+  - 684.64
+  - 235.17
+  - 696.64
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Keine Diskriminierungsindizien dokumentiert
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-004-021
+  assertion_id: ASSERT-052
+  candidate_id: CAND-052
+  field: protected_grounds_checked
+  page: 2
+  bbox:
+  - 204.09
+  - 648.45
+  - 493.29
+  - 660.45
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: gender, pregnancy, disability, age, religion, ethnic_origin, sexual_orientation
+  label: Geprüfte AGG-Merkmale
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- anchor_id: ANCHOR-DOC-005-001
+  assertion_id: ASSERT-053
+  candidate_id: CAND-053
+  field: authority_type
+  page: 1
+  bbox:
+  - 204.09
+  - 676.32
+  - 256.66
+  - 688.32
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: LANDESAMT
+  label: Behördentyp
+  artifact_hash: sha256:9508c7886834c0ceb69e15f789b77a9d414b9c4264b06cd7576ce4aed6464ac3
+- anchor_id: ANCHOR-DOC-005-002
+  assertion_id: ASSERT-054
+  candidate_id: CAND-054
+  field: approval_granted
+  page: 1
+  bbox:
+  - 204.09
+  - 650.43
+  - 235.17
+  - 662.43
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Zustimmung erteilt
+  artifact_hash: sha256:9508c7886834c0ceb69e15f789b77a9d414b9c4264b06cd7576ce4aed6464ac3
+- anchor_id: ANCHOR-DOC-005-003
+  assertion_id: ASSERT-055
+  candidate_id: CAND-055
+  field: approval_date
+  page: 1
+  bbox:
+  - 204.09
+  - 624.54
+  - 248.07
+  - 636.54
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-17'
+  label: Zustimmungsdatum
+  artifact_hash: sha256:9508c7886834c0ceb69e15f789b77a9d414b9c4264b06cd7576ce4aed6464ac3
+- anchor_id: ANCHOR-DOC-005-004
+  assertion_id: ASSERT-056
+  candidate_id: CAND-056
+  field: approval_reference
+  page: 1
+  bbox:
+  - 204.09
+  - 598.65
+  - 291.57
+  - 610.65
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: LA-SYN-2026-0417-19
+  label: Aktenzeichen
+  artifact_hash: sha256:9508c7886834c0ceb69e15f789b77a9d414b9c4264b06cd7576ce4aed6464ac3
+- anchor_id: ANCHOR-DOC-005-005
+  assertion_id: ASSERT-057
+  candidate_id: CAND-057
+  field: pregnancy_status
+  page: 1
+  bbox:
+  - 204.09
+  - 572.76
+  - 235.17
+  - 584.76
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Schutzstatus Bezug
+  artifact_hash: sha256:9508c7886834c0ceb69e15f789b77a9d414b9c4264b06cd7576ce4aed6464ac3
+- anchor_id: ANCHOR-DOC-006-001
+  assertion_id: ASSERT-058
+  candidate_id: CAND-058
+  field: letter_exists
+  page: 1
+  bbox:
+  - 204.09
+  - 665.82
+  - 235.17
+  - 677.82
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Schreiben vorhanden
+  artifact_hash: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+- anchor_id: ANCHOR-DOC-006-002
+  assertion_id: ASSERT-059
+  candidate_id: CAND-059
+  field: written_form_used
+  page: 1
+  bbox:
+  - 204.09
+  - 639.93
+  - 235.17
+  - 651.93
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Schriftform verwendet
+  artifact_hash: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+- anchor_id: ANCHOR-DOC-006-003
+  assertion_id: ASSERT-060
+  candidate_id: CAND-060
+  field: original_signature
+  page: 1
+  bbox:
+  - 204.09
+  - 614.04
+  - 235.17
+  - 626.04
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Originalunterschrift dokumentiert
+  artifact_hash: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+- anchor_id: ANCHOR-DOC-006-004
+  assertion_id: ASSERT-061
+  candidate_id: CAND-061
+  field: proxy_signed
+  page: 1
+  bbox:
+  - 204.09
+  - 577.85
+  - 247.11
+  - 589.85
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Vertreter unterschreibt
+  artifact_hash: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+- anchor_id: ANCHOR-DOC-006-005
+  assertion_id: ASSERT-062
+  candidate_id: CAND-062
+  field: termination_issued_at
+  page: 1
+  bbox:
+  - 204.09
+  - 551.96
+  - 313.34
+  - 563.96
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-18T16:10:00+02:00'
+  label: Ausstellungszeitpunkt
+  artifact_hash: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+- anchor_id: ANCHOR-DOC-006-006
+  assertion_id: ASSERT-063
+  candidate_id: CAND-063
+  field: delivery_method
+  page: 1
+  bbox:
+  - 204.09
+  - 526.07
+  - 284.86
+  - 538.07
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: REGISTERED_MAIL
+  label: Versandart vorgesehen
+  artifact_hash: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+- anchor_id: ANCHOR-DOC-006-007
+  assertion_id: ASSERT-064
+  candidate_id: CAND-064
+  field: within_two_week_window
+  page: 1
+  bbox:
+  - 204.09
+  - 500.18
+  - 235.17
+  - 512.18
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Innerhalb Zwei-Wochen-Fenster
+  artifact_hash: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+- anchor_id: ANCHOR-DOC-007-001
+  assertion_id: ASSERT-065
+  candidate_id: CAND-065
+  field: shipment_number
+  page: 1
+  bbox:
+  - 204.09
+  - 665.82
+  - 271.49
+  - 677.82
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: RR041826510DE
+  label: Sendungsnummer
+  artifact_hash: sha256:32004f27cc1afe35f0fbee26b0b2749bb67f6312844398790fc182afe4d9de06
+- anchor_id: ANCHOR-DOC-007-002
+  assertion_id: ASSERT-066
+  candidate_id: CAND-066
+  field: posting_date
+  page: 1
+  bbox:
+  - 204.09
+  - 639.93
+  - 248.07
+  - 651.93
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-18'
+  label: Aufgabedatum
+  artifact_hash: sha256:32004f27cc1afe35f0fbee26b0b2749bb67f6312844398790fc182afe4d9de06
+- anchor_id: ANCHOR-DOC-007-003
+  assertion_id: ASSERT-067
+  candidate_id: CAND-067
+  field: posting_time
+  page: 1
+  bbox:
+  - 204.09
+  - 614.04
+  - 225.61
+  - 626.04
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '16:42'
+  label: Aufgabezeit
+  artifact_hash: sha256:32004f27cc1afe35f0fbee26b0b2749bb67f6312844398790fc182afe4d9de06
+- anchor_id: ANCHOR-DOC-007-004
+  assertion_id: ASSERT-068
+  candidate_id: CAND-068
+  field: delivery_method
+  page: 1
+  bbox:
+  - 204.09
+  - 588.15
+  - 284.86
+  - 600.15
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: REGISTERED_MAIL
+  label: Versandart
+  artifact_hash: sha256:32004f27cc1afe35f0fbee26b0b2749bb67f6312844398790fc182afe4d9de06
+- anchor_id: ANCHOR-DOC-008-001
+  assertion_id: ASSERT-069
+  candidate_id: CAND-069
+  field: shipment_number
+  page: 1
+  bbox:
+  - 204.09
+  - 665.82
+  - 271.49
+  - 677.82
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: RR041826510DE
+  label: Sendungsnummer
+  artifact_hash: sha256:2a6d6bca60b8592b6e7d60666961f1ec1700ce881c6e9d1fc2b1e8a892c8e658
+- anchor_id: ANCHOR-DOC-008-002
+  assertion_id: ASSERT-070
+  candidate_id: CAND-070
+  field: tracking_status
+  page: 1
+  bbox:
+  - 204.09
+  - 639.93
+  - 259.53
+  - 651.93
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: ZUGESTELLT
+  label: Status
+  artifact_hash: sha256:2a6d6bca60b8592b6e7d60666961f1ec1700ce881c6e9d1fc2b1e8a892c8e658
+- anchor_id: ANCHOR-DOC-008-003
+  assertion_id: ASSERT-071
+  candidate_id: CAND-071
+  field: delivery_date
+  page: 1
+  bbox:
+  - 204.09
+  - 614.04
+  - 248.07
+  - 626.04
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: '2026-04-20'
+  label: Statusdatum
+  artifact_hash: sha256:2a6d6bca60b8592b6e7d60666961f1ec1700ce881c6e9d1fc2b1e8a892c8e658
+- anchor_id: ANCHOR-DOC-008-004
+  assertion_id: ASSERT-072
+  candidate_id: CAND-072
+  field: delivery_proof
+  page: 1
+  bbox:
+  - 204.09
+  - 588.15
+  - 247.11
+  - 600.15
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Auslieferungsbeleg vorhanden
+  artifact_hash: sha256:2a6d6bca60b8592b6e7d60666961f1ec1700ce881c6e9d1fc2b1e8a892c8e658
+- anchor_id: ANCHOR-DOC-009-001
+  assertion_id: ASSERT-073
+  candidate_id: CAND-073
+  field: posting_receipt_present
+  page: 1
+  bbox:
+  - 204.09
+  - 655.32
+  - 235.17
+  - 667.32
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Einlieferungsbeleg vorhanden
+  artifact_hash: sha256:c3376a483b9831a84a881ba2ccdfe3540b969be2e52d886a7fc73b0cb7e70c41
+- anchor_id: ANCHOR-DOC-009-002
+  assertion_id: ASSERT-074
+  candidate_id: CAND-074
+  field: tracking_status_present
+  page: 1
+  bbox:
+  - 204.09
+  - 629.43
+  - 235.17
+  - 641.43
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Ja / true
+  label: Online-Sendungsstatus vorhanden
+  artifact_hash: sha256:c3376a483b9831a84a881ba2ccdfe3540b969be2e52d886a7fc73b0cb7e70c41
+- anchor_id: ANCHOR-DOC-009-003
+  assertion_id: ASSERT-075
+  candidate_id: CAND-075
+  field: delivery_proof
+  page: 1
+  bbox:
+  - 204.09
+  - 593.24
+  - 247.11
+  - 605.24
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: Nein / false
+  label: Auslieferungsbeleg vorhanden
+  artifact_hash: sha256:c3376a483b9831a84a881ba2ccdfe3540b969be2e52d886a7fc73b0cb7e70c41
+- anchor_id: ANCHOR-DOC-009-004
+  assertion_id: ASSERT-076
+  candidate_id: CAND-076
+  field: delivery_record_state
+  page: 1
+  bbox:
+  - 204.09
+  - 567.35
+  - 290.11
+  - 579.35
+  coordinate_space: PDF_POINTS_BOTTOM_LEFT
+  source_text: ATTESTED_MISSING
+  label: Evidenzzustand Auslieferungsbeleg
+  artifact_hash: sha256:c3376a483b9831a84a881ba2ccdfe3540b969be2e52d886a7fc73b0cb7e70c41
+rule: Provenance is created by deterministic renderer layout; it is not discovered with Tauri OCR/extraction.

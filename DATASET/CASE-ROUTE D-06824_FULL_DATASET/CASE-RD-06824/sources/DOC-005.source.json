@@ -1,0 +1,114 @@
+{
+  "document_id": "DOC-005",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_id": "authority-approval-v1",
+  "renderer": "reportlab-canvas-v1",
+  "fixture_id": "CASE-RD-06824",
+  "build_time_fixed": "2026-09-22T12:53:00Z",
+  "title": "Zustimmungsbescheid - Sonderkündigungsschutz",
+  "document_date": "2026-04-17",
+  "narrative": "Synthetischer behördlicher Zustimmungsbescheid für die Fixture. Keine reale Behörde oder reale Aktennummer.",
+  "rows": [
+    {
+      "label": "Behördentyp",
+      "field": "authority_type",
+      "value": "LANDESAMT",
+      "evidence_code": "E0-e",
+      "semantic_role": "administrative_filing",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-053",
+      "candidate_id": "CAND-053",
+      "anchor_id": "ANCHOR-DOC-005-001"
+    },
+    {
+      "label": "Zustimmung erteilt",
+      "field": "approval_granted",
+      "value": true,
+      "evidence_code": "E0-e",
+      "semantic_role": "administrative_filing",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-054",
+      "candidate_id": "CAND-054",
+      "anchor_id": "ANCHOR-DOC-005-002"
+    },
+    {
+      "label": "Zustimmungsdatum",
+      "field": "approval_date",
+      "value": "2026-04-17",
+      "evidence_code": "E0-e",
+      "semantic_role": "administrative_filing",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-055",
+      "candidate_id": "CAND-055",
+      "anchor_id": "ANCHOR-DOC-005-003"
+    },
+    {
+      "label": "Aktenzeichen",
+      "field": "approval_reference",
+      "value": "LA-SYN-2026-0417-19",
+      "evidence_code": "E0-e",
+      "semantic_role": "administrative_filing",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-056",
+      "candidate_id": "CAND-056",
+      "anchor_id": "ANCHOR-DOC-005-004"
+    },
+    {
+      "label": "Schutzstatus Bezug",
+      "field": "pregnancy_status",
+      "value": true,
+      "evidence_code": "E0-d",
+      "semantic_role": "administrative_filing",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-057",
+      "candidate_id": "CAND-057",
+      "anchor_id": "ANCHOR-DOC-005-005"
+    }
+  ],
+  "signature": null,
+  "page_count": 1,
+  "artifact_sha256": "sha256:9508c7886834c0ceb69e15f789b77a9d414b9c4264b06cd7576ce4aed6464ac3",
+  "injections": [
+    {
+      "assertion_id": "ASSERT-053",
+      "document_id": "DOC-005",
+      "slot_id": "authority_type",
+      "canonical_value": "LANDESAMT",
+      "rendered_value": "LANDESAMT",
+      "anchor_id": "ANCHOR-DOC-005-001"
+    },
+    {
+      "assertion_id": "ASSERT-054",
+      "document_id": "DOC-005",
+      "slot_id": "approval_granted",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-005-002"
+    },
+    {
+      "assertion_id": "ASSERT-055",
+      "document_id": "DOC-005",
+      "slot_id": "approval_date",
+      "canonical_value": "2026-04-17",
+      "rendered_value": "2026-04-17",
+      "anchor_id": "ANCHOR-DOC-005-003"
+    },
+    {
+      "assertion_id": "ASSERT-056",
+      "document_id": "DOC-005",
+      "slot_id": "approval_reference",
+      "canonical_value": "LA-SYN-2026-0417-19",
+      "rendered_value": "LA-SYN-2026-0417-19",
+      "anchor_id": "ANCHOR-DOC-005-004"
+    },
+    {
+      "assertion_id": "ASSERT-057",
+      "document_id": "DOC-005",
+      "slot_id": "pregnancy_status",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-005-005"
+    }
+  ],
+  "source_hash": "sha256:607d09b0fc28a2f93a6a6e5e0deaa332b443a9e1a479814fb7d53889dd2189bf"
+}

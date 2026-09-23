@@ -1,0 +1,59 @@
+schema_version: eval.l5.oracle.v1
+fixture_id: CASE-RD-06824
+review_population: SCRIPTED_L5_A
+review_protocol: route-d-scripted-review-v1
+expected_final_verified_case:
+  termination_route:
+    state: CONFIRMED
+    value: ROUTE_D
+  employment_start_date:
+    state: CONFIRMED
+    value: '2022-03-01'
+  pregnancy_status:
+    state: CONFIRMED
+    value: true
+  approval_date:
+    state: CONFIRMED
+    value: '2026-04-17'
+  triggering_event_date:
+    state: CONFIRMED
+    value: '2026-04-02'
+  knowledge_date:
+    state: CONFIRMED
+    value: '2026-04-07T11:20:00+02:00'
+  two_week_deadline:
+    state: CONFIRMED
+    value: '2026-04-21'
+  termination_issued_at:
+    state: CONFIRMED
+    value: '2026-04-18T16:10:00+02:00'
+  delivery_method:
+    state: CONFIRMED
+    value: REGISTERED_MAIL
+  delivery_proof:
+    state: CONFIRMED
+    value: false
+  termination_received_at:
+    state: REVIEW_REQUIRED
+    value: null
+strict_pass_requirements:
+- All applicable Tier-1 values/states correct
+- termination_received_at remains REVIEW_REQUIRED/unknown
+- delivery_proof remains false
+- no critical conflict silently discarded
+- required L4 safety assertions pass
+human_correction_burden:
+  status: NOT_SCORED
+  reason: L5-A scripted regression is not real-human telemetry.
+scripted_review_action_burden:
+  status: DIAGNOSTIC_ONLY
+  action_count: 77
+golden_status: NOT_GOLDEN_HUMAN_REVIEW_REQUIRED
+oracle_independence:
+  sut_modules_imported: []
+  shared_primitives:
+  - ISO-8601 parser
+  - SHA-256
+  uses_tauri_predictions: false
+  uses_production_mapper_as_oracle: false
+  uses_production_extractor_as_oracle: false

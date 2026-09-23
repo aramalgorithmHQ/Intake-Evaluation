@@ -1,0 +1,211 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "ASSERT-063",
+      "candidate_id": "CAND-063",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-9",
+      "field": "letter_exists",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_declaration",
+      "slot_id": "EB-9.letter_exists"
+    },
+    {
+      "assertion_id": "ASSERT-064",
+      "candidate_id": "CAND-064",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EB-9",
+      "field": "written_form_used",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_declaration",
+      "slot_id": "EB-9.written_form_used"
+    },
+    {
+      "assertion_id": "ASSERT-065",
+      "candidate_id": "CAND-065",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EB-9",
+      "field": "original_signature",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_declaration",
+      "slot_id": "EB-9.original_signature"
+    },
+    {
+      "assertion_id": "ASSERT-066",
+      "candidate_id": "CAND-066",
+      "canonical_value": "PERSONAL_HANDOVER",
+      "criticality": "TIER_2",
+      "evidence_code": "EB-9",
+      "field": "delivery_method",
+      "rendered_value": "PERSONAL_HANDOVER",
+      "semantic_role": "primary_declaration",
+      "slot_id": "EB-9.delivery_method"
+    },
+    {
+      "assertion_id": "ASSERT-067",
+      "candidate_id": "CAND-067",
+      "canonical_value": "2024-03-28",
+      "criticality": "TIER_1",
+      "evidence_code": "EB-9",
+      "field": "delivery_date",
+      "rendered_value": "28.03.2024",
+      "semantic_role": "primary_declaration",
+      "slot_id": "EB-9.delivery_date"
+    },
+    {
+      "assertion_id": "ASSERT-068",
+      "candidate_id": "CAND-068",
+      "canonical_value": "2024-03-28",
+      "criticality": "TIER_1",
+      "evidence_code": "EB-9",
+      "field": "termination_issued_at",
+      "rendered_value": "28.03.2024",
+      "semantic_role": "primary_declaration",
+      "slot_id": "EB-9.termination_issued_at"
+    },
+    {
+      "assertion_id": "ASSERT-069",
+      "candidate_id": "CAND-069",
+      "canonical_value": "2024-06-30",
+      "criticality": "TIER_1",
+      "evidence_code": "EB-9",
+      "field": "termination_effective",
+      "rendered_value": "30.06.2024",
+      "semantic_role": "primary_declaration",
+      "slot_id": "EB-9.termination_effective"
+    },
+    {
+      "assertion_id": "ASSERT-070",
+      "candidate_id": "CAND-070",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EU-WF",
+      "field": "written_form_used",
+      "rendered_value": "Ja",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EU-WF.written_form_used"
+    },
+    {
+      "assertion_id": "ASSERT-071",
+      "candidate_id": "CAND-071",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EU-WF",
+      "field": "original_signature",
+      "rendered_value": "Ja",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EU-WF.original_signature"
+    },
+    {
+      "assertion_id": "ASSERT-072",
+      "candidate_id": "CAND-072",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "EU-WF",
+      "field": "proxy_signed",
+      "rendered_value": "Nein",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EU-WF.proxy_signed"
+    },
+    {
+      "assertion_id": "ASSERT-073",
+      "candidate_id": "CAND-073",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "EU-WF",
+      "field": "vollmacht_attached",
+      "rendered_value": "Nein",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EU-WF.vollmacht_attached"
+    },
+    {
+      "assertion_id": "ASSERT-074",
+      "candidate_id": "CAND-074",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EU-WF",
+      "field": "delivery_proof",
+      "rendered_value": "Ja",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EU-WF.delivery_proof"
+    },
+    {
+      "assertion_id": "ASSERT-075",
+      "candidate_id": "CAND-075",
+      "canonical_value": "PERSONAL_HANDOVER",
+      "criticality": "TIER_2",
+      "evidence_code": "EU-WF",
+      "field": "delivery_method",
+      "rendered_value": "PERSONAL_HANDOVER",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EU-WF.delivery_method"
+    },
+    {
+      "assertion_id": "ASSERT-076",
+      "candidate_id": "CAND-076",
+      "canonical_value": "2024-03-28",
+      "criticality": "TIER_1",
+      "evidence_code": "EU-WF",
+      "field": "delivery_date",
+      "rendered_value": "28.03.2024",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EU-WF.delivery_date"
+    },
+    {
+      "assertion_id": "ASSERT-077",
+      "candidate_id": "CAND-077",
+      "canonical_value": 30,
+      "criticality": "TIER_2",
+      "evidence_code": "EU-NP",
+      "field": "statutory_minimum_days",
+      "rendered_value": "30",
+      "semantic_role": "derived_support",
+      "slot_id": "EU-NP.statutory_minimum_days"
+    },
+    {
+      "assertion_id": "ASSERT-078",
+      "candidate_id": "CAND-078",
+      "canonical_value": 90,
+      "criticality": "TIER_2",
+      "evidence_code": "EU-NP",
+      "field": "contractual_minimum_days",
+      "rendered_value": "90",
+      "semantic_role": "primary_source",
+      "slot_id": "EU-NP.contractual_minimum_days"
+    },
+    {
+      "assertion_id": "ASSERT-079",
+      "candidate_id": "CAND-079",
+      "canonical_value": 94,
+      "criticality": "TIER_2",
+      "evidence_code": "EU-NP",
+      "field": "actual_notice_days",
+      "rendered_value": "94",
+      "semantic_role": "derived_support",
+      "slot_id": "EU-NP.actual_notice_days"
+    },
+    {
+      "assertion_id": "ASSERT-080",
+      "candidate_id": "CAND-080",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EU-NP",
+      "field": "terminates_on_valid_date",
+      "rendered_value": "Ja",
+      "semantic_role": "derived_support",
+      "slot_id": "EU-NP.terminates_on_valid_date"
+    }
+  ],
+  "document_id": "DOC-008",
+  "document_type": "TERMINATION_LETTER_DELIVERY_PROOF",
+  "generator": "route-b-bag-pattern-v1",
+  "notes": [
+    "Persönliche Übergabe am 28.03.2024, Empfang quittiert durch den Arbeitnehmer; Zeugin: Lara König."
+  ],
+  "render_source": "Kündigung\n\nKündigungsschreiben vorhanden: Ja\n\nSchriftform verwendet: Ja\n\nOriginalunterschrift vorhanden: Ja\n\nZustellmethode: PERSONAL_HANDOVER\n\nZugang am: 28.03.2024\n\nKündigung ausgesprochen am: 28.03.2024\n\nBeendigung zum: 30.06.2024\n\nForm / Frist\n\nPapierform: Ja\n\nOriginalunterschrift: Ja\n\nDurch Vertreter unterzeichnet: Nein\n\nVollmacht beigefügt: Nein\n\nZugangsnachweis vorhanden: Ja\n\nZustellart: PERSONAL_HANDOVER\n\nZugangsnachweis Datum: 28.03.2024\n\nGesetzliches Minimum (Tage): 30\n\nVertragliches Minimum (Tage): 90\n\nTatsächliche Frist (Tage): 94\n\nBeendigungsdatum fristgerecht: Ja\n",
+  "seed": 17824,
+  "source_kind": "DETERMINISTIC_TEMPLATE"
+}

@@ -1,0 +1,83 @@
+{
+  "document_id": "DOC-003",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "SOCIAL_SELECTION_APPLICABILITY_MEMO",
+  "title": "Vermerk zur Sozialauswahl",
+  "document_date": "2015-06-09",
+  "intro": "Pruefvermerk fuer die Wiederholungskuendigungen nach bereits vollzogener Stilllegung. Es wird keine Rangfolge zwischen Arbeitnehmern gebildet, weil keine Arbeitsplaetze fortbestehen.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "social_selection_applicable",
+      "field": "social_selection_applicable",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-003-001"
+    },
+    {
+      "slot_id": "social_selection_reason",
+      "field": "social_selection_reason",
+      "canonical_value": "Vollstaendige Stilllegung des einzigen Betriebs; alle Arbeitsverhaeltnisse sollen zum jeweils fruehestmoeglichen Termin enden.",
+      "rendered_value": "Vollstaendige Stilllegung des einzigen Betriebs; alle Arbeitsverhaeltnisse sollen zum jeweils fruehestmoeglichen Termin enden.",
+      "anchor_id": "ANCHOR-DOC-003-002"
+    },
+    {
+      "slot_id": "comparable_pool_state",
+      "field": "comparable_pool_state",
+      "canonical_value": "NOT_APPLICABLE",
+      "rendered_value": "Nicht anwendbar",
+      "anchor_id": "ANCHOR-DOC-003-003"
+    },
+    {
+      "slot_id": "social_data_state",
+      "field": "social_data_state",
+      "canonical_value": "NOT_APPLICABLE",
+      "rendered_value": "Nicht anwendbar",
+      "anchor_id": "ANCHOR-DOC-003-004"
+    },
+    {
+      "slot_id": "weighting_model_state",
+      "field": "weighting_model_state",
+      "canonical_value": "NOT_APPLICABLE",
+      "rendered_value": "Nicht anwendbar",
+      "anchor_id": "ANCHOR-DOC-003-005"
+    },
+    {
+      "slot_id": "scoring_matrix_state",
+      "field": "scoring_matrix_state",
+      "canonical_value": "NOT_APPLICABLE",
+      "rendered_value": "Nicht anwendbar",
+      "anchor_id": "ANCHOR-DOC-003-006"
+    },
+    {
+      "slot_id": "ranked_list_state",
+      "field": "ranked_list_state",
+      "canonical_value": "NOT_APPLICABLE",
+      "rendered_value": "Nicht anwendbar",
+      "anchor_id": "ANCHOR-DOC-003-007"
+    },
+    {
+      "slot_id": "exemptions_claimed",
+      "field": "exemptions_claimed",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-003-008"
+    },
+    {
+      "slot_id": "selection_guidelines_exist",
+      "field": "selection_guidelines_exist",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-003-009"
+    }
+  ],
+  "artifact_hash": "sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

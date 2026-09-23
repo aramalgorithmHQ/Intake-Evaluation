@@ -1,0 +1,47 @@
+schema_version: eval.review.script.v1
+fixture_id: CASE-SYN-C-27616
+review_population: SCRIPTED_L5_A
+actions:
+- review_action_id: RA-001
+  action: REJECT
+  field: termination_issued_at
+  document_id: DOC-006
+  value: '2015-02-13'
+  reason: historical invalidated first attempt
+- review_action_id: RA-002
+  action: REJECT
+  field: termination_effective
+  document_id: DOC-006
+  value: '2015-07-31'
+  reason: historical invalidated first attempt
+- review_action_id: RA-003
+  action: REJECT
+  field: mass_layoff_notification_date
+  document_id: DOC-005
+  value: '2015-01-28'
+  reason: historical defective filing
+- review_action_id: RA-004
+  action: CONFIRM
+  field: mass_layoff_notification_date
+  document_id: DOC-010
+  value: '2015-06-26'
+- review_action_id: RA-005
+  action: CONFIRM
+  field: termination_issued_at
+  document_id: DOC-012
+  value: '2015-07-15'
+- review_action_id: RA-006
+  action: CONFIRM
+  field: termination_effective
+  document_id: DOC-012
+  value: '2016-01-31'
+- review_action_id: RA-007
+  action: CONFIRM
+  field: integrationsamt_approval_date
+  document_id: DOC-011
+  value: '2015-07-08'
+- review_action_id: RA-008
+  action: MARK_NOT_APPLICABLE
+  field: social_selection
+  value: null
+  reason: complete closure; contract review note CG-001

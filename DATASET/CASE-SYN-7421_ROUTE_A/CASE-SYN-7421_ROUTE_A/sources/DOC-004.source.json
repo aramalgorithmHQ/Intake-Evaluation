@@ -1,0 +1,142 @@
+{
+  "document_id": "DOC-004",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Abmahnung",
+  "document_date": "20.05.2026",
+  "reference": "NH-ABM-2026-0520",
+  "intro": "Formelle Abmahnung wegen unentschuldigten Verlassens des Arbeitsplatzes während des laufenden Dispositionsdienstes.",
+  "template_rows": [
+    {
+      "label": "Abmahnung vorhanden",
+      "value_placeholder": "{{ASSERT-025}}"
+    },
+    {
+      "label": "Datum der Abmahnung",
+      "value_placeholder": "{{ASSERT-026}}"
+    },
+    {
+      "label": "Gleichartiger Pflichtverstoß",
+      "value_placeholder": "{{ASSERT-027}}"
+    },
+    {
+      "label": "Zugang nachgewiesen",
+      "value_placeholder": "{{ASSERT-028}}"
+    },
+    {
+      "label": "Dokumentationsfunktion erfüllt",
+      "value_placeholder": "{{ASSERT-029}}"
+    },
+    {
+      "label": "Rügefunktion erfüllt",
+      "value_placeholder": "{{ASSERT-030}}"
+    },
+    {
+      "label": "Warnfunktion erfüllt",
+      "value_placeholder": "{{ASSERT-031}}"
+    },
+    {
+      "label": "Abmahnung abgelaufen",
+      "value_placeholder": "{{ASSERT-032}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Abmahnung vorhanden",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Datum der Abmahnung",
+      "display_value": "20.05.2026"
+    },
+    {
+      "label": "Gleichartiger Pflichtverstoß",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Zugang nachgewiesen",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Dokumentationsfunktion erfüllt",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Rügefunktion erfüllt",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Warnfunktion erfüllt",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Abmahnung abgelaufen",
+      "display_value": "Nein"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-025",
+      "document_id": "DOC-004",
+      "slot_id": "warning_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-026",
+      "document_id": "DOC-004",
+      "slot_id": "warning_date",
+      "canonical_value": "2026-05-20",
+      "rendered_value": "20.05.2026"
+    },
+    {
+      "assertion_id": "ASSERT-027",
+      "document_id": "DOC-004",
+      "slot_id": "warning_same_conduct",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-028",
+      "document_id": "DOC-004",
+      "slot_id": "warning_delivery_proof",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-029",
+      "document_id": "DOC-004",
+      "slot_id": "documentation_function",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-030",
+      "document_id": "DOC-004",
+      "slot_id": "censure_function",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-031",
+      "document_id": "DOC-004",
+      "slot_id": "warning_function",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-032",
+      "document_id": "DOC-004",
+      "slot_id": "warning_expired",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nAbmahnung\nDatum: 20.05.2026\nReferenz: NH-ABM-2026-0520\nFormelle Abmahnung wegen unentschuldigten Verlassens des Arbeitsplatzes während des laufenden Dispositionsdienstes.\nDokumentierte Angaben\nAbmahnung vorhanden: Ja\nDatum der Abmahnung: 20.05.2026\nGleichartiger Pflichtverstoß: Ja\nZugang nachgewiesen: Ja\nDokumentationsfunktion erfüllt: Ja\nRügefunktion erfüllt: Ja\nWarnfunktion erfüllt: Ja\nAbmahnung abgelaufen: Nein\n",
+  "render_source_hash": "sha256:592d752bf329f67876b7ed14594e2c449f9ad1941789fd710d2051b3fd03f257",
+  "artifact_hash": "sha256:056266d9b4b3f3ad21b57d4fc961aef7c4f98a767c1cd559169e8ef40ff945bc",
+  "page_count": 1
+}

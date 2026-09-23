@@ -1,0 +1,153 @@
+{
+  "document_id": "DOC-001",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "HR_ESTABLISHMENT_SNAPSHOT",
+  "title": "Personal- und Betriebsstammdaten",
+  "document_date": "2015-07-01",
+  "intro": "Interne Stammdatenübersicht zur Vorbereitung einer betriebsbedingten Beendigung. Die Angaben sind auf den Zeitpunkt vor Ausspruch der Wiederholungskuendigung bezogen.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "employee_count_fte",
+      "field": "employee_count_fte",
+      "canonical_value": 190,
+      "rendered_value": "190",
+      "anchor_id": "ANCHOR-DOC-001-001"
+    },
+    {
+      "slot_id": "headcount_date",
+      "field": "headcount_date",
+      "canonical_value": "2014-09-30",
+      "rendered_value": "30.09.2014",
+      "anchor_id": "ANCHOR-DOC-001-002"
+    },
+    {
+      "slot_id": "employment_start_date",
+      "field": "employment_start_date",
+      "canonical_value": "2007-04-01",
+      "rendered_value": "01.04.2007",
+      "anchor_id": "ANCHOR-DOC-001-003"
+    },
+    {
+      "slot_id": "tenure_continuous",
+      "field": "tenure_continuous",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-001-004"
+    },
+    {
+      "slot_id": "tenure_months",
+      "field": "tenure_months",
+      "canonical_value": 99,
+      "rendered_value": "99",
+      "anchor_id": "ANCHOR-DOC-001-005"
+    },
+    {
+      "slot_id": "betriebsrat_exists",
+      "field": "betriebsrat_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-001-006"
+    },
+    {
+      "slot_id": "establishment_id",
+      "field": "establishment_id",
+      "canonical_value": "BER-T",
+      "rendered_value": "BER-T",
+      "anchor_id": "ANCHOR-DOC-001-007"
+    },
+    {
+      "slot_id": "kschg_applies",
+      "field": "kschg_applies",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-001-008"
+    },
+    {
+      "slot_id": "mass_layoff_triggered",
+      "field": "mass_layoff_triggered",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-001-009"
+    },
+    {
+      "slot_id": "dismissals_planned",
+      "field": "dismissals_planned",
+      "canonical_value": 188,
+      "rendered_value": "188",
+      "anchor_id": "ANCHOR-DOC-001-010"
+    },
+    {
+      "slot_id": "disability_gdb",
+      "field": "disability_gdb",
+      "canonical_value": 40,
+      "rendered_value": "40",
+      "anchor_id": "ANCHOR-DOC-001-011"
+    },
+    {
+      "slot_id": "disability_equivalent",
+      "field": "disability_equivalent",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-001-012"
+    },
+    {
+      "slot_id": "pregnancy_status",
+      "field": "pregnancy_status",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-001-013"
+    },
+    {
+      "slot_id": "parental_leave_status",
+      "field": "parental_leave_status",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-001-014"
+    },
+    {
+      "slot_id": "br_member_status",
+      "field": "br_member_status",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-001-015"
+    },
+    {
+      "slot_id": "dpo_appointment_status",
+      "field": "dpo_appointment_status",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-001-017"
+    },
+    {
+      "slot_id": "election_board_status",
+      "field": "election_board_status",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-001-018"
+    },
+    {
+      "slot_id": "military_service_status",
+      "field": "military_service_status",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-001-019"
+    },
+    {
+      "slot_id": "tech_used",
+      "field": "tech_used",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-001-020"
+    }
+  ],
+  "artifact_hash": "sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "document_id": "DOC-001",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Arbeitsvertrag - Stammdatenblatt",
+  "document_date": "01.01.2024",
+  "reference": "NH-EMP-7421",
+  "intro": "Dieses Blatt enthält die für das Arbeitsverhältnis maßgeblichen Stammdaten. Die Namen und Vorgänge sind fiktiv.",
+  "template_rows": [
+    {
+      "label": "Mitarbeiterin",
+      "value_placeholder": "{{ASSERT-001}}"
+    },
+    {
+      "label": "Personalnummer",
+      "value_placeholder": "{{ASSERT-002}}"
+    },
+    {
+      "label": "Funktion",
+      "value_placeholder": "{{ASSERT-003}}"
+    },
+    {
+      "label": "Beschäftigungsbeginn",
+      "value_placeholder": "{{ASSERT-004}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Mitarbeiterin",
+      "display_value": "Mara Hoffmann"
+    },
+    {
+      "label": "Personalnummer",
+      "display_value": "EMP-7421"
+    },
+    {
+      "label": "Funktion",
+      "display_value": "Dispositionskoordinatorin"
+    },
+    {
+      "label": "Beschäftigungsbeginn",
+      "display_value": "01.01.2024"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-001",
+      "document_id": "DOC-001",
+      "slot_id": "employee_full_name",
+      "canonical_value": "Mara Hoffmann",
+      "rendered_value": "Mara Hoffmann"
+    },
+    {
+      "assertion_id": "ASSERT-002",
+      "document_id": "DOC-001",
+      "slot_id": "employee_id",
+      "canonical_value": "EMP-7421",
+      "rendered_value": "EMP-7421"
+    },
+    {
+      "assertion_id": "ASSERT-003",
+      "document_id": "DOC-001",
+      "slot_id": "job_title",
+      "canonical_value": "Dispositionskoordinatorin",
+      "rendered_value": "Dispositionskoordinatorin"
+    },
+    {
+      "assertion_id": "ASSERT-004",
+      "document_id": "DOC-001",
+      "slot_id": "employment_start_date",
+      "canonical_value": "2024-01-01",
+      "rendered_value": "01.01.2024"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nArbeitsvertrag - Stammdatenblatt\nDatum: 01.01.2024\nReferenz: NH-EMP-7421\nDieses Blatt enthält die für das Arbeitsverhältnis maßgeblichen Stammdaten. Die Namen und Vorgänge sind fiktiv.\nDokumentierte Angaben\nMitarbeiterin: Mara Hoffmann\nPersonalnummer: EMP-7421\nFunktion: Dispositionskoordinatorin\nBeschäftigungsbeginn: 01.01.2024\n",
+  "render_source_hash": "sha256:46139ed82020b7dcb48ff31d8ae01faa31a8e14a3d3c6b62f70a52c75c05343e",
+  "artifact_hash": "sha256:07ed9c3cadf498bcaef5e0a02a75d5cacd6eda97ae418973e6007fd91d6d3c16",
+  "page_count": 1
+}

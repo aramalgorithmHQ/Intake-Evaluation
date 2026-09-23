@@ -1,0 +1,4 @@
+fixture_id: CASE-RD-06824
+mutations: []
+note: No post-render mutation applied. The delivery-evidence gap is authored as fixture evidence state,
+  not as an undeclared mutation.

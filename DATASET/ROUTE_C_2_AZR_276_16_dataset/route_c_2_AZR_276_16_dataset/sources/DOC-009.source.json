@@ -1,0 +1,69 @@
+{
+  "document_id": "DOC-009",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "CONSULTATION_MINUTES",
+  "title": "Konsultationsvermerk zur zweiten Kuendigungswelle",
+  "document_date": "2015-06-26",
+  "intro": "Zusammenfassender Vermerk ueber die Beratungen im Konsultationsverfahren nach § 17 KSchG.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "works_council_proposals_date",
+      "field": "works_council_proposals_date",
+      "canonical_value": "2015-06-17",
+      "rendered_value": "17.06.2015",
+      "anchor_id": "ANCHOR-DOC-009-001"
+    },
+    {
+      "slot_id": "consultation_meeting_date",
+      "field": "consultation_meeting_date",
+      "canonical_value": "2015-06-24",
+      "rendered_value": "24.06.2015",
+      "anchor_id": "ANCHOR-DOC-009-002"
+    },
+    {
+      "slot_id": "presentation_sent_date",
+      "field": "presentation_sent_date",
+      "canonical_value": "2015-06-24",
+      "rendered_value": "24.06.2015",
+      "anchor_id": "ANCHOR-DOC-009-003"
+    },
+    {
+      "slot_id": "works_council_followup_date",
+      "field": "works_council_followup_date",
+      "canonical_value": "2015-06-25",
+      "rendered_value": "25.06.2015",
+      "anchor_id": "ANCHOR-DOC-009-004"
+    },
+    {
+      "slot_id": "consultation_closed_date",
+      "field": "consultation_closed_date",
+      "canonical_value": "2015-06-26",
+      "rendered_value": "26.06.2015",
+      "anchor_id": "ANCHOR-DOC-009-005"
+    },
+    {
+      "slot_id": "agreement_reached",
+      "field": "agreement_reached",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-009-006"
+    },
+    {
+      "slot_id": "consultation_status",
+      "field": "consultation_status",
+      "canonical_value": "COMPLETED_WITHOUT_AGREEMENT",
+      "rendered_value": "Ausreichend beraten; keine Einigung",
+      "anchor_id": "ANCHOR-DOC-009-007"
+    }
+  ],
+  "artifact_hash": "sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

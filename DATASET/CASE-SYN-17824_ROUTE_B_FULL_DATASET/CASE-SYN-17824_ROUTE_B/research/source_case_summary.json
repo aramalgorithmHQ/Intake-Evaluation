@@ -1,0 +1,21 @@
+{
+  "official_source": {
+    "case_number": "2 AZR 178/24",
+    "court": "Bundesarbeitsgericht",
+    "decision_date": "2025-04-03",
+    "ecli": "ECLI:DE:BAG:2025:030425.U.2AZR178.24.0",
+    "url": "https://www.bundesarbeitsgericht.de/entscheidung/2-azr-178-24/"
+  },
+  "source_supported_pattern": [
+    "The litigation concerned an ordinary termination during the KSchG waiting period.",
+    "The claimant was severely disabled; the employer knew the disability when hiring.",
+    "There was no works council and no representative body for severely disabled employees.",
+    "The employer asserted lack of professional suitability and stated that no other suitable vacancy existed.",
+    "The BAG held that a preventive procedure under section 167(1) SGB IX was not required during the KSchG waiting period and upheld the termination on the established facts."
+  ],
+  "synthetic_fixture_changes": [
+    "The synthetic employee has more than six months tenure so the supplied Route B KSchG gates are exercisable.",
+    "The absence record, BEM process, health prognosis, operational impact, proportionality analysis, authority approval and AGG review are synthetic benchmark evidence.",
+    "The synthetic fixture is not evidence of what happened in the BAG litigation and must not be cited as a factual summary of that case."
+  ]
+}

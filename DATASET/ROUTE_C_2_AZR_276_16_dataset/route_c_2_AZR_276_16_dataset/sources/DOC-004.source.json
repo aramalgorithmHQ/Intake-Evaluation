@@ -1,0 +1,92 @@
+{
+  "document_id": "DOC-004",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "ALTERNATIVES_ASSESSMENT",
+  "title": "Pruefung milderer Mittel und Weiterbeschaeftigung",
+  "document_date": "2015-06-09",
+  "intro": "Vor Einleitung der Wiederholungskuendigung werden betriebliche Weiterbeschaeftigungs- und Alternativmoeglichkeiten dokumentiert.",
+  "body": [
+    "Eine konzernweite Ersatzbeschaeftigung wird nicht als gesicherte Arbeitgebermoeglichkeit behandelt."
+  ],
+  "render_source_rows": [
+    {
+      "slot_id": "proportionality_analysis_exists",
+      "field": "proportionality_analysis_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-004-001"
+    },
+    {
+      "slot_id": "alternatives_evaluated",
+      "field": "alternatives_evaluated",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-004-002"
+    },
+    {
+      "slot_id": "per_employee_alternatives",
+      "field": "per_employee_alternatives",
+      "canonical_value": [
+        {
+          "employee": "Mara Klein",
+          "transfer": "keine Stelle",
+          "retraining": "kein Zielarbeitsplatz",
+          "voluntary_redundancy": "geprueft"
+        }
+      ],
+      "rendered_value": "[{\"employee\": \"Mara Klein\", \"transfer\": \"keine Stelle\", \"retraining\": \"kein Zielarbeitsplatz\", \"voluntary_redundancy\": \"geprueft\"}]",
+      "anchor_id": "ANCHOR-DOC-004-003"
+    },
+    {
+      "slot_id": "transfer_possibility_examined",
+      "field": "transfer_possibility_examined",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-004-004"
+    },
+    {
+      "slot_id": "transfer_rejection_reason",
+      "field": "transfer_rejection_reason",
+      "canonical_value": "Nach vollstaendiger Stilllegung besteht beim Arbeitgeber keine freie oder fortbestehende Stelle.",
+      "rendered_value": "Nach vollstaendiger Stilllegung besteht beim Arbeitgeber keine freie oder fortbestehende Stelle.",
+      "anchor_id": "ANCHOR-DOC-004-005"
+    },
+    {
+      "slot_id": "retraining_assessed",
+      "field": "retraining_assessed",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-004-006"
+    },
+    {
+      "slot_id": "retraining_rejection_reason",
+      "field": "retraining_rejection_reason",
+      "canonical_value": "Kein fortbestehender Zielarbeitsplatz im Arbeitgeberunternehmen.",
+      "rendered_value": "Kein fortbestehender Zielarbeitsplatz im Arbeitgeberunternehmen.",
+      "anchor_id": "ANCHOR-DOC-004-007"
+    },
+    {
+      "slot_id": "voluntary_redundancy_evaluated",
+      "field": "voluntary_redundancy_evaluated",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-004-008"
+    },
+    {
+      "slot_id": "voluntary_redundancy_offered",
+      "field": "voluntary_redundancy_offered",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-004-009"
+    }
+  ],
+  "artifact_hash": "sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

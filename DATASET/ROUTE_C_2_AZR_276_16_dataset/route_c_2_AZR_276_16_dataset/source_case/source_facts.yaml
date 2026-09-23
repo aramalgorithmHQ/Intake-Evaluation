@@ -1,0 +1,115 @@
+source_case:
+  court: Bundesarbeitsgericht
+  senate: 2. Senat
+  docket: 2 AZR 276/16
+  decision_date: '2016-09-22'
+  ecli: ECLI:DE:BAG:2016:220916.U.2AZR276.16.0
+  official_url: https://www.bundesarbeitsgericht.de/entscheidung/2-azr-276-16/
+  retrieved_on: '2026-09-22'
+supported_facts:
+- id: SRC-01
+  paragraphs:
+  - 2
+  - 3
+  fact: Employee worked in check-in/passenger services; was treated as equivalent to a severely disabled person;
+    had acted as a works-council replacement member in August 2014.
+- id: SRC-02
+  paragraphs:
+  - 3
+  - 6
+  fact: Employer had about 190 employees; customer orders were terminated no later than 31 March 2015; closure preparation
+    followed.
+- id: SRC-03
+  paragraphs:
+  - 7
+  - 12
+  fact: Works council was informed of the planned closure; the shareholders decided on complete closure effective
+    31 March 2015.
+- id: SRC-04
+  paragraphs:
+  - 12
+  - 13
+  - 21
+  - 33
+  fact: First mass-layoff filing was made on 28 January 2015; first termination was issued 13 February 2015 effective
+    31 July 2015; the BAG held the first termination ineffective because the mass-layoff notification did not satisfy
+    section 17(3) KSchG.
+- id: SRC-05
+  paragraphs:
+  - 14
+  - 40
+  - 50
+  - 55
+  - 59
+  fact: For the second wave, the works council received section 17 information on 10 June 2015; individual section
+    102 processes began 12 June; proposals and consultation occurred through 24-26 June.
+- id: SRC-06
+  paragraphs:
+  - 14
+  - 69
+  - 70
+  fact: Second mass-layoff filings were made on 26 June 2015 after the renewed consultation process.
+- id: SRC-07
+  paragraphs:
+  - 15
+  - 35
+  - 62
+  - 63
+  - 64
+  - 67
+  - 71
+  fact: Second termination was issued 15 July 2015 effective 31 January 2016 after renewed Integrationsamt approval;
+    BAG upheld this termination.
+- id: SRC-08
+  paragraphs:
+  - 64
+  fact: Because the only operation was completely closed and all employment relationships were to be ended as early
+    as permitted, no social selection under section 1(3) KSchG was required.
+- id: SRC-09
+  paragraphs:
+  - 64
+  fact: After complete closure there were no continued-employment opportunities within the employer.
+- id: SRC-10
+  paragraphs:
+  - 22
+  fact: The planned dismissals involved all 188 remaining employees and therefore triggered the mass-layoff procedure.
+synthetic_extensions:
+- field: employment_start_date
+  value: '2007-04-01'
+  reason: Exact employment start is not stated in the decision; supplied deterministically for threshold/notice-period
+    evaluation.
+- field: disability_gdb
+  value: 40
+  reason: Decision states equivalence to severe disability but not the numerical GdB; synthetic value chosen consistently
+    with equivalence.
+- field: integrationsamt_approval_date
+  value: '2015-07-08'
+  reason: Decision confirms renewed approval before 15 July 2015 but not the exact approval date.
+- field: works_council_individual_response
+  value: OBJECTED on 2015-06-18
+  reason: Decision does not provide a specific section 102 response for the synthetic employee; deterministic value
+    added to exercise the evidence schema.
+- field: notice_period_minima
+  value:
+    statutory_minimum_days: 120
+    contractual_minimum_days: 180
+  reason: Synthetic compatibility fields; court decision only confirms 31 January 2016 as the effective date under
+    the applicable collective agreement.
+- field: AGG_review
+  value: synthetic internal review
+  reason: Not a litigated issue in the source; included only to satisfy universal evaluation evidence coverage.
+contract_gaps:
+- id: CG-001
+  topic: Route C social selection on complete closure
+  source_behavior: Social selection not required on complete closure of the only operation when all employment relationships
+    end.
+  current_contract_behavior: EC-2 through EC-6 are declared required whenever route == ROUTE_C.
+  handling: Preserve NOT_APPLICABLE; do not fabricate pool, social data, weights, matrix, or ranking. Fixture remains
+    contract-review required.
+- id: CG-002
+  topic: Works-council replacement-member closure exception
+  source_behavior: Decision applies section 15(4) KSchG closure exception to the replacement-member context.
+  current_contract_behavior: G0.4 expresses ordinary termination of BR_MEMBER as structurally prohibited and does
+    not encode a complete-closure exception.
+  handling: Represent replacement-member activity as contextual, not as BR_MEMBER enum truth; flag for contract
+    owner review.

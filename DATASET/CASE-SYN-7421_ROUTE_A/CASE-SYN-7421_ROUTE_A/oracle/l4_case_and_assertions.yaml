@@ -1,0 +1,70 @@
+schema_version: eval.l4.oracle.v1
+fixture_id: CASE-SYN-7421
+normative_schema:
+  source: case_definition.schema.yaml
+  sha256: sha256:8d8f1e1cd0e4e941579d442586b42bfe48538d7469f8e7686364087a900c1026
+expected_parse_result: PASS
+expected_schema_result: PASS
+required_field_expectations:
+  case_id: PRESENT
+  case_name: PRESENT
+  category: PRESENT
+  route: PRESENT
+  description: PRESENT
+  envelope_overrides: PRESENT
+  evidence_profile: PRESENT
+  activated_gates: PRESENT
+expected_invariants:
+- id: INV-001
+  name: employment_start_before_termination
+  expected: PASS
+- id: INV-002
+  name: warning_before_incident
+  expected: PASS
+- id: INV-003
+  name: hearing_before_termination
+  expected: PASS
+- id: INV-004
+  name: hearing_response_before_termination
+  expected: PASS
+- id: INV-005
+  name: delivery_equals_termination_issued
+  expected: PASS
+- id: INV-006
+  name: effective_after_issued
+  expected: PASS
+- id: INV-007
+  name: no_special_protection_trigger
+  expected: PASS
+- id: INV-008
+  name: tech_gates_not_applicable
+  expected: PASS
+- id: INV-009
+  name: all_route_a_required_evidence_present
+  expected: PASS
+- id: INV-010
+  name: no_silent_conflict
+  expected: PASS
+evidence_state_expectations:
+  PRESENT:
+  - E0-a
+  - E0-b
+  - E0-c
+  - E0-d
+  - EA-1
+  - EA-2
+  - EA-4
+  - EA-5
+  - EA-6
+  - EA-7
+  - EA-8
+  - EA-9
+  - EA-10
+  - EA-11
+  - EU-WF
+  - EU-NP
+  - EU-CON
+  - EU-AGG
+  MISSING: []
+  DEFECTIVE: []
+schema_validation_errors: []

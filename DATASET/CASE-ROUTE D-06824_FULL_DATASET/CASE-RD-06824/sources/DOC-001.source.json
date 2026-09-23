@@ -1,0 +1,361 @@
+{
+  "document_id": "DOC-001",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_id": "status-record-v1",
+  "renderer": "reportlab-canvas-v1",
+  "fixture_id": "CASE-RD-06824",
+  "build_time_fixed": "2026-09-22T12:53:00Z",
+  "title": "Personalstammdaten und Schutzstatus",
+  "document_date": "2026-04-01",
+  "narrative": "Interne Stammdatenübersicht für die strukturierte Fallprüfung. Personen- und Firmennamen sind rein synthetisch.",
+  "rows": [
+    {
+      "label": "Mitarbeiter-ID",
+      "field": "employee_id",
+      "value": "EMP-2047",
+      "evidence_code": "E0-b",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-001",
+      "candidate_id": "CAND-001",
+      "anchor_id": "ANCHOR-DOC-001-001"
+    },
+    {
+      "label": "Name",
+      "field": "employee_name",
+      "value": "Mara Feld",
+      "evidence_code": "E0-b",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-002",
+      "candidate_id": "CAND-002",
+      "anchor_id": "ANCHOR-DOC-001-002"
+    },
+    {
+      "label": "Arbeitgeber",
+      "field": "employer",
+      "value": "Nordhafen Diagnostik GmbH",
+      "evidence_code": "E0-a",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-003",
+      "candidate_id": "CAND-003",
+      "anchor_id": "ANCHOR-DOC-001-003"
+    },
+    {
+      "label": "Funktion",
+      "field": "job_title",
+      "value": "Dokumentationskoordinatorin",
+      "evidence_code": "E0-b",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-004",
+      "candidate_id": "CAND-004",
+      "anchor_id": "ANCHOR-DOC-001-004"
+    },
+    {
+      "label": "Beschäftigungsbeginn",
+      "field": "employment_start_date",
+      "value": "2022-03-01",
+      "evidence_code": "E0-b",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-005",
+      "candidate_id": "CAND-005",
+      "anchor_id": "ANCHOR-DOC-001-005"
+    },
+    {
+      "label": "Beschäftigung ununterbrochen",
+      "field": "tenure_continuous",
+      "value": true,
+      "evidence_code": "E0-b",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-006",
+      "candidate_id": "CAND-006",
+      "anchor_id": "ANCHOR-DOC-001-006"
+    },
+    {
+      "label": "Betriebszugehörigkeit Monate",
+      "field": "tenure_months",
+      "value": 49,
+      "evidence_code": "E0-b",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-007",
+      "candidate_id": "CAND-007",
+      "anchor_id": "ANCHOR-DOC-001-007"
+    },
+    {
+      "label": "FTE am Stichtag",
+      "field": "employee_count_fte",
+      "value": 84.5,
+      "evidence_code": "E0-a",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-008",
+      "candidate_id": "CAND-008",
+      "anchor_id": "ANCHOR-DOC-001-008"
+    },
+    {
+      "label": "Headcount-Stichtag",
+      "field": "headcount_date",
+      "value": "2026-04-01",
+      "evidence_code": "E0-a",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-009",
+      "candidate_id": "CAND-009",
+      "anchor_id": "ANCHOR-DOC-001-009"
+    },
+    {
+      "label": "Betriebsrat vorhanden",
+      "field": "betriebsrat_exists",
+      "value": false,
+      "evidence_code": "E0-c",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-010",
+      "candidate_id": "CAND-010",
+      "anchor_id": "ANCHOR-DOC-001-010"
+    },
+    {
+      "label": "Betriebsstätte",
+      "field": "establishment_id",
+      "value": "NH-DUS-01",
+      "evidence_code": "E0-c",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-011",
+      "candidate_id": "CAND-011",
+      "anchor_id": "ANCHOR-DOC-001-011"
+    },
+    {
+      "label": "Schwangerschaft",
+      "field": "pregnancy_status",
+      "value": true,
+      "evidence_code": "E0-d",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-012",
+      "candidate_id": "CAND-012",
+      "anchor_id": "ANCHOR-DOC-001-012"
+    },
+    {
+      "label": "Elternzeit",
+      "field": "parental_leave_status",
+      "value": false,
+      "evidence_code": "E0-d",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-013",
+      "candidate_id": "CAND-013",
+      "anchor_id": "ANCHOR-DOC-001-013"
+    },
+    {
+      "label": "Gleichstellung/Schwerbehinderung",
+      "field": "disability_equivalent",
+      "value": false,
+      "evidence_code": "E0-d",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-014",
+      "candidate_id": "CAND-014",
+      "anchor_id": "ANCHOR-DOC-001-014"
+    },
+    {
+      "label": "Betriebsratsmitglied",
+      "field": "br_member_status",
+      "value": false,
+      "evidence_code": "E0-d",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-015",
+      "candidate_id": "CAND-015",
+      "anchor_id": "ANCHOR-DOC-001-015"
+    },
+    {
+      "label": "Datenschutzbeauftragte",
+      "field": "dpo_appointment_status",
+      "value": false,
+      "evidence_code": "E0-d",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-016",
+      "candidate_id": "CAND-016",
+      "anchor_id": "ANCHOR-DOC-001-016"
+    },
+    {
+      "label": "Wahlvorstand",
+      "field": "election_board_status",
+      "value": false,
+      "evidence_code": "E0-d",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-017",
+      "candidate_id": "CAND-017",
+      "anchor_id": "ANCHOR-DOC-001-017"
+    },
+    {
+      "label": "Wehr-/Zivildienst",
+      "field": "military_service_status",
+      "value": false,
+      "evidence_code": "E0-d",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-018",
+      "candidate_id": "CAND-018",
+      "anchor_id": "ANCHOR-DOC-001-018"
+    }
+  ],
+  "signature": null,
+  "page_count": 1,
+  "artifact_sha256": "sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d",
+  "injections": [
+    {
+      "assertion_id": "ASSERT-001",
+      "document_id": "DOC-001",
+      "slot_id": "employee_id",
+      "canonical_value": "EMP-2047",
+      "rendered_value": "EMP-2047",
+      "anchor_id": "ANCHOR-DOC-001-001"
+    },
+    {
+      "assertion_id": "ASSERT-002",
+      "document_id": "DOC-001",
+      "slot_id": "employee_name",
+      "canonical_value": "Mara Feld",
+      "rendered_value": "Mara Feld",
+      "anchor_id": "ANCHOR-DOC-001-002"
+    },
+    {
+      "assertion_id": "ASSERT-003",
+      "document_id": "DOC-001",
+      "slot_id": "employer",
+      "canonical_value": "Nordhafen Diagnostik GmbH",
+      "rendered_value": "Nordhafen Diagnostik GmbH",
+      "anchor_id": "ANCHOR-DOC-001-003"
+    },
+    {
+      "assertion_id": "ASSERT-004",
+      "document_id": "DOC-001",
+      "slot_id": "job_title",
+      "canonical_value": "Dokumentationskoordinatorin",
+      "rendered_value": "Dokumentationskoordinatorin",
+      "anchor_id": "ANCHOR-DOC-001-004"
+    },
+    {
+      "assertion_id": "ASSERT-005",
+      "document_id": "DOC-001",
+      "slot_id": "employment_start_date",
+      "canonical_value": "2022-03-01",
+      "rendered_value": "2022-03-01",
+      "anchor_id": "ANCHOR-DOC-001-005"
+    },
+    {
+      "assertion_id": "ASSERT-006",
+      "document_id": "DOC-001",
+      "slot_id": "tenure_continuous",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-001-006"
+    },
+    {
+      "assertion_id": "ASSERT-007",
+      "document_id": "DOC-001",
+      "slot_id": "tenure_months",
+      "canonical_value": 49,
+      "rendered_value": "49",
+      "anchor_id": "ANCHOR-DOC-001-007"
+    },
+    {
+      "assertion_id": "ASSERT-008",
+      "document_id": "DOC-001",
+      "slot_id": "employee_count_fte",
+      "canonical_value": 84.5,
+      "rendered_value": "84.5",
+      "anchor_id": "ANCHOR-DOC-001-008"
+    },
+    {
+      "assertion_id": "ASSERT-009",
+      "document_id": "DOC-001",
+      "slot_id": "headcount_date",
+      "canonical_value": "2026-04-01",
+      "rendered_value": "2026-04-01",
+      "anchor_id": "ANCHOR-DOC-001-009"
+    },
+    {
+      "assertion_id": "ASSERT-010",
+      "document_id": "DOC-001",
+      "slot_id": "betriebsrat_exists",
+      "canonical_value": false,
+      "rendered_value": "Nein / false",
+      "anchor_id": "ANCHOR-DOC-001-010"
+    },
+    {
+      "assertion_id": "ASSERT-011",
+      "document_id": "DOC-001",
+      "slot_id": "establishment_id",
+      "canonical_value": "NH-DUS-01",
+      "rendered_value": "NH-DUS-01",
+      "anchor_id": "ANCHOR-DOC-001-011"
+    },
+    {
+      "assertion_id": "ASSERT-012",
+      "document_id": "DOC-001",
+      "slot_id": "pregnancy_status",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-001-012"
+    },
+    {
+      "assertion_id": "ASSERT-013",
+      "document_id": "DOC-001",
+      "slot_id": "parental_leave_status",
+      "canonical_value": false,
+      "rendered_value": "Nein / false",
+      "anchor_id": "ANCHOR-DOC-001-013"
+    },
+    {
+      "assertion_id": "ASSERT-014",
+      "document_id": "DOC-001",
+      "slot_id": "disability_equivalent",
+      "canonical_value": false,
+      "rendered_value": "Nein / false",
+      "anchor_id": "ANCHOR-DOC-001-014"
+    },
+    {
+      "assertion_id": "ASSERT-015",
+      "document_id": "DOC-001",
+      "slot_id": "br_member_status",
+      "canonical_value": false,
+      "rendered_value": "Nein / false",
+      "anchor_id": "ANCHOR-DOC-001-015"
+    },
+    {
+      "assertion_id": "ASSERT-016",
+      "document_id": "DOC-001",
+      "slot_id": "dpo_appointment_status",
+      "canonical_value": false,
+      "rendered_value": "Nein / false",
+      "anchor_id": "ANCHOR-DOC-001-016"
+    },
+    {
+      "assertion_id": "ASSERT-017",
+      "document_id": "DOC-001",
+      "slot_id": "election_board_status",
+      "canonical_value": false,
+      "rendered_value": "Nein / false",
+      "anchor_id": "ANCHOR-DOC-001-017"
+    },
+    {
+      "assertion_id": "ASSERT-018",
+      "document_id": "DOC-001",
+      "slot_id": "military_service_status",
+      "canonical_value": false,
+      "rendered_value": "Nein / false",
+      "anchor_id": "ANCHOR-DOC-001-018"
+    }
+  ],
+  "source_hash": "sha256:0f973f275f102799ba8888fb734ad9c6820fa476ef2630d74f305738bc769453"
+}

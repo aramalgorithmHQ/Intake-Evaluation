@@ -1,0 +1,64 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "ASSERT-016",
+      "candidate_id": "CAND-016",
+      "canonical_value": 24,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-1",
+      "field": "absence_record_months",
+      "rendered_value": "24",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-1.absence_record_months"
+    },
+    {
+      "assertion_id": "ASSERT-017",
+      "candidate_id": "CAND-017",
+      "canonical_value": [
+        "14.02.-04.03.2022",
+        "11.07.-29.07.2022",
+        "09.01.-10.02.2023",
+        "05.06.-30.06.2023",
+        "06.11.-24.11.2023",
+        "08.01.-02.02.2024"
+      ],
+      "criticality": "TIER_2",
+      "evidence_code": "EB-1",
+      "field": "absence_dates",
+      "rendered_value": "14.02.-04.03.2022; 11.07.-29.07.2022; 09.01.-10.02.2023; 05.06.-30.06.2023; 06.11.-24.11.2023; 08.01.-02.02.2024",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-1.absence_dates"
+    },
+    {
+      "assertion_id": "ASSERT-018",
+      "candidate_id": "CAND-018",
+      "canonical_value": 164,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-1",
+      "field": "total_absence_days",
+      "rendered_value": "164",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-1.total_absence_days"
+    },
+    {
+      "assertion_id": "ASSERT-019",
+      "candidate_id": "CAND-019",
+      "canonical_value": "Mehrere längere, voneinander getrennte Arbeitsunfähigkeitszeiträume in beiden Vergleichsjahren.",
+      "criticality": "TIER_2",
+      "evidence_code": "EB-1",
+      "field": "pattern_description",
+      "rendered_value": "Mehrere längere, voneinander getrennte Arbeitsunfähigkeitszeiträume in beiden Vergleichsjahren.",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-1.pattern_description"
+    }
+  ],
+  "document_id": "DOC-002",
+  "document_type": "ABSENCE_RECORD",
+  "generator": "route-b-bag-pattern-v1",
+  "notes": [
+    "Synthetische Testdaten; keine realen Gesundheitsdaten."
+  ],
+  "render_source": "Auswertung\n\nAuswertungszeitraum (Monate): 24\n\nFehlzeitenblöcke: 14.02.-04.03.2022; 11.07.-29.07.2022; 09.01.-10.02.2023; 05.06.-30.06.2023; 06.11.-24.11.2023; 08.01.-02.02.2024\n\nFehltage gesamt: 164\n\nMuster: Mehrere längere, voneinander getrennte Arbeitsunfähigkeitszeiträume in beiden Vergleichsjahren.\n",
+  "seed": 17824,
+  "source_kind": "DETERMINISTIC_TEMPLATE"
+}

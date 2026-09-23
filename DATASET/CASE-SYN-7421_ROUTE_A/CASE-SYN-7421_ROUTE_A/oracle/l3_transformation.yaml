@@ -1,0 +1,135 @@
+schema_version: eval.l3.oracle.v1
+fixture_id: CASE-SYN-7421
+input_candidate_count: 78
+expected_conflicts: []
+review_actions_ref: reviewer/scripted_actions.yaml
+expected_mapped_state:
+  employee.employment_start:
+    state: CONFIRMED
+    value: '2024-01-01'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-004
+  thresholds.employee_count_fte:
+    state: CONFIRMED
+    value: 84.0
+    criticality: TIER_1
+    provenance_assertion: ASSERT-005
+  employee.tenure_months:
+    state: CONFIRMED
+    value: 32
+    criticality: TIER_1
+    provenance_assertion: ASSERT-008
+  thresholds.kschg_applies:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: null
+  thresholds.betriebsrat_exists:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: ASSERT-009
+  thresholds.special_protections:
+    state: CONFIRMED
+    value: []
+    criticality: TIER_1
+    provenance_assertion: null
+  thresholds.tech_used:
+    state: CONFIRMED
+    value: false
+    criticality: TIER_1
+    provenance_assertion: ASSERT-018
+  thresholds.mass_layoff_triggered:
+    state: CONFIRMED
+    value: false
+    criticality: TIER_1
+    provenance_assertion: ASSERT-019
+  conduct.incident_date:
+    state: CONFIRMED
+    value: '2026-08-17'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-020
+  conduct.warning_date:
+    state: CONFIRMED
+    value: '2026-05-20'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-026
+  procedures.works_council.hearing_initiated_at:
+    state: CONFIRMED
+    value: '2026-09-01T09:00:00+02:00'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-046
+  procedures.works_council.hearing_response_deadline:
+    state: CONFIRMED
+    value: '2026-09-08T09:00:00+02:00'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-052
+  procedures.works_council.hearing_response_received_at:
+    state: CONFIRMED
+    value: '2026-09-05T14:30:00+02:00'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-053
+  procedures.works_council.hearing_response_type:
+    state: CONFIRMED
+    value: APPROVED
+    criticality: TIER_1
+    provenance_assertion: ASSERT-054
+  decision.termination_type:
+    state: CONFIRMED
+    value: ORDINARY
+    criticality: TIER_1
+    provenance_assertion: ASSERT-067
+  decision.termination_issued_at:
+    state: CONFIRMED
+    value: '2026-09-10'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-068
+  decision.termination_effective:
+    state: CONFIRMED
+    value: '2026-10-31'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-069
+  decision.written_form_used:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: ASSERT-062
+  decision.original_signature:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: ASSERT-063
+  decision.delivery_date:
+    state: CONFIRMED
+    value: '2026-09-10'
+    criticality: TIER_1
+    provenance_assertion: ASSERT-071
+  decision.notice_period_valid:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: ASSERT-058
+  conduct.proportionality_analysis_exists:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: ASSERT-037
+  conduct.alternatives_evaluated:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: ASSERT-042
+  compliance.decision_basis_documented:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: ASSERT-076
+  compliance.no_protected_ground_indicia:
+    state: CONFIRMED
+    value: true
+    criticality: TIER_1
+    provenance_assertion: ASSERT-077
+expected_safety:
+  manual_value_overwrite: false
+  silent_conflict_resolution: false
+  provenance_lineage_required: true

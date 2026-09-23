@@ -1,0 +1,24 @@
+schema_version: eval.l5.oracle.v1
+fixture_id: CASE-SYN-C-27616
+review_population: SCRIPTED_L5_A
+review_protocol: source-adapted-route-c-v1
+expected_final_verified_case:
+  route: ROUTE_C
+  reason_family: OPERATIONAL
+  termination_type: ORDINARY
+  termination_issued_at: '2015-07-15'
+  termination_effective: '2016-01-31'
+  business_closure_effective: '2015-03-31'
+  mass_layoff_notification_date: '2015-06-26'
+  works_council_hearing_initiated: '2015-06-12T09:00:00+02:00'
+  social_selection_state: NOT_APPLICABLE
+  integrationsamt_approval_granted: true
+  integrationsamt_approval_date: '2015-07-08'
+strict_pass_conditions:
+- all final Tier-1 values above correct
+- historical first termination not selected
+- historical first mass-layoff filing not selected
+- NOT_APPLICABLE social-selection state preserved
+- no critical conflict silently discarded
+- L4 safety invariants pass
+human_correction_burden: NOT_SCORED_L5_A_SCRIPTED

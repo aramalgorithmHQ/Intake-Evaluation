@@ -1,0 +1,36 @@
+fixture_id: CASE-RD-06824
+purpose: SUT-visible input only
+documents:
+- document_id: DOC-001
+  filename: DOC-001_personalakte_status.pdf
+  sha256: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+- document_id: DOC-002
+  filename: DOC-002_untersuchungsbericht.pdf
+  sha256: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+- document_id: DOC-003
+  filename: DOC-003_kenntnis_fristvermerk.pdf
+  sha256: sha256:e31d98e885dd17acc25e9022fe68ed22929bcd0e21d718d0f824fe9cf2ec0386
+- document_id: DOC-004
+  filename: DOC-004_entscheidungsvermerk.pdf
+  sha256: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+- document_id: DOC-005
+  filename: DOC-005_behoerdenzustimmung.pdf
+  sha256: sha256:9508c7886834c0ceb69e15f789b77a9d414b9c4264b06cd7576ce4aed6464ac3
+- document_id: DOC-006
+  filename: DOC-006_kuendigungsschreiben.pdf
+  sha256: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+- document_id: DOC-007
+  filename: DOC-007_einlieferungsbeleg.pdf
+  sha256: sha256:32004f27cc1afe35f0fbee26b0b2749bb67f6312844398790fc182afe4d9de06
+- document_id: DOC-008
+  filename: DOC-008_sendungsstatus.pdf
+  sha256: sha256:2a6d6bca60b8592b6e7d60666961f1ec1700ce881c6e9d1fc2b1e8a892c8e658
+- document_id: DOC-009
+  filename: DOC-009_evidenzregister.pdf
+  sha256: sha256:c3376a483b9831a84a881ba2ccdfe3540b969be2e52d886a7fc73b0cb7e70c41
+hidden_from_sut:
+- fixture_spec.yaml
+- oracle/
+- reviewer/
+- validation/
+- contracts/evaluation_contract.route_d.v1.yaml

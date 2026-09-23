@@ -1,0 +1,79 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "ASSERT-029",
+      "candidate_id": "CAND-029",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EB-3",
+      "field": "prognosis_negative",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-3.prognosis_negative"
+    },
+    {
+      "assertion_id": "ASSERT-030",
+      "candidate_id": "CAND-030",
+      "canonical_value": "Fortgesetztes Muster längerer Ausfallzeiten; keine belastbare Stabilisierung für den Prognosezeitraum dokumentiert.",
+      "criticality": "TIER_2",
+      "evidence_code": "EB-3",
+      "field": "prognosis_basis",
+      "rendered_value": "Fortgesetztes Muster längerer Ausfallzeiten; keine belastbare Stabilisierung für den Prognosezeitraum dokumentiert.",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-3.prognosis_basis"
+    },
+    {
+      "assertion_id": "ASSERT-031",
+      "candidate_id": "CAND-031",
+      "canonical_value": "2024-02-20",
+      "criticality": "TIER_2",
+      "evidence_code": "EB-3",
+      "field": "prognosis_date",
+      "rendered_value": "20.02.2024",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-3.prognosis_date"
+    },
+    {
+      "assertion_id": "ASSERT-032",
+      "candidate_id": "CAND-032",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EB-4",
+      "field": "operational_impact_documented",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-4.operational_impact_documented"
+    },
+    {
+      "assertion_id": "ASSERT-033",
+      "candidate_id": "CAND-033",
+      "canonical_value": "Wiederholte Umplanung von Rufbereitschaften, Schichttausch und Einsatz externer Vertretung in der technischen Leitung.",
+      "criticality": "TIER_2",
+      "evidence_code": "EB-4",
+      "field": "disruption_description",
+      "rendered_value": "Wiederholte Umplanung von Rufbereitschaften, Schichttausch und Einsatz externer Vertretung in der technischen Leitung.",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-4.disruption_description"
+    },
+    {
+      "assertion_id": "ASSERT-034",
+      "candidate_id": "CAND-034",
+      "canonical_value": "2023: 18.600 EUR Zusatzkosten für Überstunden und externe Vertretung; 2024 bis 29.02.: 4.900 EUR.",
+      "criticality": "TIER_2",
+      "evidence_code": "EB-4",
+      "field": "cost_data",
+      "rendered_value": "2023: 18.600 EUR Zusatzkosten für Überstunden und externe Vertretung; 2024 bis 29.02.: 4.900 EUR.",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-4.cost_data"
+    }
+  ],
+  "document_id": "DOC-004",
+  "document_type": "HEALTH_PROGNOSIS_OPERATIONAL_IMPACT",
+  "generator": "route-b-bag-pattern-v1",
+  "notes": [
+    "Keine Diagnose wird bewertet; das Dokument bildet nur die synthetisch definierte Prognose-/Auswirkungsbehauptung ab."
+  ],
+  "render_source": "Prognose\n\nNegative Gesundheitsprognose: Ja\n\nPrognosegrundlage: Fortgesetztes Muster längerer Ausfallzeiten; keine belastbare Stabilisierung für den Prognosezeitraum dokumentiert.\n\nPrognosedatum: 20.02.2024\n\nBetriebliche Auswirkungen\n\nBetriebliche Beeinträchtigung dokumentiert: Ja\n\nStörungsbild: Wiederholte Umplanung von Rufbereitschaften, Schichttausch und Einsatz externer Vertretung in der technischen Leitung.\n\nKosten-/Belastungsdaten: 2023: 18.600 EUR Zusatzkosten für Überstunden und externe Vertretung; 2024 bis 29.02.: 4.900 EUR.\n",
+  "seed": 17824,
+  "source_kind": "DETERMINISTIC_TEMPLATE"
+}

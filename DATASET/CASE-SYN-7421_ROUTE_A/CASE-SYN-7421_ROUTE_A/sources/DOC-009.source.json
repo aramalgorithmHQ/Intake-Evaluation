@@ -1,0 +1,112 @@
+{
+  "document_id": "DOC-009",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Kündigungsfrist - Berechnung",
+  "document_date": "09.09.2026",
+  "reference": "NH-NP-7421",
+  "intro": "Rechenblatt zur Prüfung der für die ordentliche Kündigung vorgesehenen Beendigungsfrist.",
+  "template_rows": [
+    {
+      "label": "Gesetzlicher Mindestwert (Tage)",
+      "value_placeholder": "{{ASSERT-055}}"
+    },
+    {
+      "label": "Vertraglicher Mindestwert (Tage)",
+      "value_placeholder": "{{ASSERT-056}}"
+    },
+    {
+      "label": "Tatsächliche Frist (Tage)",
+      "value_placeholder": "{{ASSERT-057}}"
+    },
+    {
+      "label": "Beendigung auf zulässigem Termin",
+      "value_placeholder": "{{ASSERT-058}}"
+    },
+    {
+      "label": "Kündigung ausgesprochen am",
+      "value_placeholder": "{{ASSERT-059}}"
+    },
+    {
+      "label": "Beendigungsdatum",
+      "value_placeholder": "{{ASSERT-060}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Gesetzlicher Mindestwert (Tage)",
+      "display_value": "30"
+    },
+    {
+      "label": "Vertraglicher Mindestwert (Tage)",
+      "display_value": "30"
+    },
+    {
+      "label": "Tatsächliche Frist (Tage)",
+      "display_value": "51"
+    },
+    {
+      "label": "Beendigung auf zulässigem Termin",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Kündigung ausgesprochen am",
+      "display_value": "10.09.2026"
+    },
+    {
+      "label": "Beendigungsdatum",
+      "display_value": "31.10.2026"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-055",
+      "document_id": "DOC-009",
+      "slot_id": "statutory_minimum_days",
+      "canonical_value": 30,
+      "rendered_value": "30"
+    },
+    {
+      "assertion_id": "ASSERT-056",
+      "document_id": "DOC-009",
+      "slot_id": "contractual_minimum_days",
+      "canonical_value": 30,
+      "rendered_value": "30"
+    },
+    {
+      "assertion_id": "ASSERT-057",
+      "document_id": "DOC-009",
+      "slot_id": "actual_notice_days",
+      "canonical_value": 51,
+      "rendered_value": "51"
+    },
+    {
+      "assertion_id": "ASSERT-058",
+      "document_id": "DOC-009",
+      "slot_id": "terminates_on_valid_date",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-059",
+      "document_id": "DOC-009",
+      "slot_id": "termination_issued_at",
+      "canonical_value": "2026-09-10",
+      "rendered_value": "10.09.2026"
+    },
+    {
+      "assertion_id": "ASSERT-060",
+      "document_id": "DOC-009",
+      "slot_id": "termination_effective",
+      "canonical_value": "2026-10-31",
+      "rendered_value": "31.10.2026"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nKündigungsfrist - Berechnung\nDatum: 09.09.2026\nReferenz: NH-NP-7421\nRechenblatt zur Prüfung der für die ordentliche Kündigung vorgesehenen Beendigungsfrist.\nDokumentierte Angaben\nGesetzlicher Mindestwert (Tage): 30\nVertraglicher Mindestwert (Tage): 30\nTatsächliche Frist (Tage): 51\nBeendigung auf zulässigem Termin: Ja\nKündigung ausgesprochen am: 10.09.2026\nBeendigungsdatum: 31.10.2026\n",
+  "render_source_hash": "sha256:d107cea92e374a40af904413ec23daa29039b215950d9b3ecab37b7491d7588f",
+  "artifact_hash": "sha256:1dc75fe1119e81c2e06f3776790571f34211c95644064efe92c6c79f3b88f5dd",
+  "page_count": 1
+}

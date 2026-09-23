@@ -1,0 +1,79 @@
+{
+  "fixture_id": "CASE-SYN-7421",
+  "mode": "BYTE_REPLAYABLE",
+  "pass": true,
+  "documents": [
+    {
+      "document_id": "DOC-001",
+      "original_hash": "sha256:07ed9c3cadf498bcaef5e0a02a75d5cacd6eda97ae418973e6007fd91d6d3c16",
+      "replay_hash": "sha256:07ed9c3cadf498bcaef5e0a02a75d5cacd6eda97ae418973e6007fd91d6d3c16",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-002",
+      "original_hash": "sha256:5aeab45fdb2e059d38d5bb90447355a3f398325c6fac0104a7171785fabeb43d",
+      "replay_hash": "sha256:5aeab45fdb2e059d38d5bb90447355a3f398325c6fac0104a7171785fabeb43d",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-003",
+      "original_hash": "sha256:894d6985a164c6c04f1c8469018e710b9df8c6b5ff9a8f92b28d6ff9e8cb34dd",
+      "replay_hash": "sha256:894d6985a164c6c04f1c8469018e710b9df8c6b5ff9a8f92b28d6ff9e8cb34dd",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-004",
+      "original_hash": "sha256:056266d9b4b3f3ad21b57d4fc961aef7c4f98a767c1cd559169e8ef40ff945bc",
+      "replay_hash": "sha256:056266d9b4b3f3ad21b57d4fc961aef7c4f98a767c1cd559169e8ef40ff945bc",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-005",
+      "original_hash": "sha256:b9c8e637dbee0c68f11beaf7a56a175b2c07b5a94e7f2c953d88cabcf17bcd33",
+      "replay_hash": "sha256:b9c8e637dbee0c68f11beaf7a56a175b2c07b5a94e7f2c953d88cabcf17bcd33",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-006",
+      "original_hash": "sha256:c557fb32667051bcf6f1d76d949793e4f3fcfabee2fd0be90275f77b9b58ad9a",
+      "replay_hash": "sha256:c557fb32667051bcf6f1d76d949793e4f3fcfabee2fd0be90275f77b9b58ad9a",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-007",
+      "original_hash": "sha256:e2bce3e134f2c044865d66dfcdc7bd6a94a1aa43cfe69e31a5bcfebb3645b57d",
+      "replay_hash": "sha256:e2bce3e134f2c044865d66dfcdc7bd6a94a1aa43cfe69e31a5bcfebb3645b57d",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-008",
+      "original_hash": "sha256:4eb82b4fde6311cb59d34f33c93aa61348677ac78f43975dc1ae30e522bba74c",
+      "replay_hash": "sha256:4eb82b4fde6311cb59d34f33c93aa61348677ac78f43975dc1ae30e522bba74c",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-009",
+      "original_hash": "sha256:1dc75fe1119e81c2e06f3776790571f34211c95644064efe92c6c79f3b88f5dd",
+      "replay_hash": "sha256:1dc75fe1119e81c2e06f3776790571f34211c95644064efe92c6c79f3b88f5dd",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-010",
+      "original_hash": "sha256:68cb775dd80c87e902e036c6f239bd8e3c5cb19d03988de4f191b7b10051f0d9",
+      "replay_hash": "sha256:68cb775dd80c87e902e036c6f239bd8e3c5cb19d03988de4f191b7b10051f0d9",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-011",
+      "original_hash": "sha256:f2231cea0e45fb36eb6f4491151a224328296b2015fd38e5493a4e0c219d2db3",
+      "replay_hash": "sha256:f2231cea0e45fb36eb6f4491151a224328296b2015fd38e5493a4e0c219d2db3",
+      "byte_equal": true
+    },
+    {
+      "document_id": "DOC-012",
+      "original_hash": "sha256:91e3a322c6730acf7a3bcb13439f5d3f11c3df961545616c4f7a38b098b4aa49",
+      "replay_hash": "sha256:91e3a322c6730acf7a3bcb13439f5d3f11c3df961545616c4f7a38b098b4aa49",
+      "byte_equal": true
+    }
+  ]
+}

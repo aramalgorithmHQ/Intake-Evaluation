@@ -1,0 +1,4 @@
+fixture_id: CASE-SYN-C-27616
+mutations: []
+replay_mode: BYTE_REPLAYABLE_FOR_INDIVIDUAL_DOCUMENTS
+note: No presentation/evidence mutations in baseline fixture.

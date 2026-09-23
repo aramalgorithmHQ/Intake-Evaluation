@@ -1,0 +1,88 @@
+schema_version: eval.l1.oracle.v1
+fixture_id: CASE-SYN-7421
+taxonomy: tauri.eval.document_type@1.0.0
+documents:
+- document_id: DOC-001
+  expected_type: EMPLOYMENT_CONTRACT
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: universal_threshold
+- document_id: DOC-002
+  expected_type: ESTABLISHMENT_STATUS_MEMO
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: universal_threshold
+- document_id: DOC-003
+  expected_type: INCIDENT_REPORT
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: route_a_conduct
+- document_id: DOC-004
+  expected_type: WARNING_NOTICE
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: route_a_conduct
+- document_id: DOC-005
+  expected_type: CONDUCT_ASSESSMENT
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: route_a_conduct
+- document_id: DOC-006
+  expected_type: PROPORTIONALITY_ASSESSMENT
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: route_a_conduct
+- document_id: DOC-007
+  expected_type: WORKS_COUNCIL_HEARING
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: route_a_conduct_hearing
+- document_id: DOC-008
+  expected_type: WORKS_COUNCIL_RESPONSE
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: route_a_conduct_hearing
+- document_id: DOC-009
+  expected_type: NOTICE_PERIOD_CALCULATION
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: universal_notice_period
+- document_id: DOC-010
+  expected_type: TERMINATION_LETTER
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: route_a_termination_letter
+- document_id: DOC-011
+  expected_type: DELIVERY_PROOF
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: route_a_delivery
+- document_id: DOC-012
+  expected_type: COMPLIANCE_REVIEW
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.document_routing
+    value: universal_compliance

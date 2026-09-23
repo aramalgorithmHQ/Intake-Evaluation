@@ -1,0 +1,142 @@
+{
+  "document_id": "DOC-007",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Anhörung des Betriebsrats",
+  "document_date": "01.09.2026",
+  "reference": "NH-BR-AH-7421",
+  "intro": "Anhörung zur beabsichtigten ordentlichen verhaltensbedingten Kündigung. Die wesentlichen Personaldaten und Kündigungsgründe sind beigefügt.",
+  "template_rows": [
+    {
+      "label": "Anhörungsschreiben vorhanden",
+      "value_placeholder": "{{ASSERT-045}}"
+    },
+    {
+      "label": "Anhörung eingeleitet",
+      "value_placeholder": "{{ASSERT-046}}"
+    },
+    {
+      "label": "Mitarbeiteridentität enthalten",
+      "value_placeholder": "{{ASSERT-047}}"
+    },
+    {
+      "label": "Kündigungsart enthalten",
+      "value_placeholder": "{{ASSERT-048}}"
+    },
+    {
+      "label": "Kündigungsgrund enthalten",
+      "value_placeholder": "{{ASSERT-049}}"
+    },
+    {
+      "label": "Verhaltensbedingte Einordnung enthalten",
+      "value_placeholder": "{{ASSERT-050}}"
+    },
+    {
+      "label": "Kündigungsgrund",
+      "value_placeholder": "{{ASSERT-051}}"
+    },
+    {
+      "label": "Stellungnahmefrist",
+      "value_placeholder": "{{ASSERT-052}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Anhörungsschreiben vorhanden",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Anhörung eingeleitet",
+      "display_value": "01.09.2026 09:00"
+    },
+    {
+      "label": "Mitarbeiteridentität enthalten",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Kündigungsart enthalten",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Kündigungsgrund enthalten",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Verhaltensbedingte Einordnung enthalten",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Kündigungsgrund",
+      "display_value": "verhaltensbedingt"
+    },
+    {
+      "label": "Stellungnahmefrist",
+      "display_value": "08.09.2026 09:00"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-045",
+      "document_id": "DOC-007",
+      "slot_id": "hearing_document_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-046",
+      "document_id": "DOC-007",
+      "slot_id": "hearing_initiated_at",
+      "canonical_value": "2026-09-01T09:00:00+02:00",
+      "rendered_value": "01.09.2026 09:00"
+    },
+    {
+      "assertion_id": "ASSERT-047",
+      "document_id": "DOC-007",
+      "slot_id": "hearing_contains_employee_identity",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-048",
+      "document_id": "DOC-007",
+      "slot_id": "hearing_contains_termination_type",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-049",
+      "document_id": "DOC-007",
+      "slot_id": "hearing_contains_termination_reason",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-050",
+      "document_id": "DOC-007",
+      "slot_id": "hearing_contains_route",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-051",
+      "document_id": "DOC-007",
+      "slot_id": "hearing_route_stated",
+      "canonical_value": "ROUTE_A",
+      "rendered_value": "verhaltensbedingt"
+    },
+    {
+      "assertion_id": "ASSERT-052",
+      "document_id": "DOC-007",
+      "slot_id": "hearing_response_deadline",
+      "canonical_value": "2026-09-08T09:00:00+02:00",
+      "rendered_value": "08.09.2026 09:00"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nAnhörung des Betriebsrats\nDatum: 01.09.2026\nReferenz: NH-BR-AH-7421\nAnhörung zur beabsichtigten ordentlichen verhaltensbedingten Kündigung. Die wesentlichen Personaldaten und Kündigungsgründe sind beigefügt.\nDokumentierte Angaben\nAnhörungsschreiben vorhanden: Ja\nAnhörung eingeleitet: 01.09.2026 09:00\nMitarbeiteridentität enthalten: Ja\nKündigungsart enthalten: Ja\nKündigungsgrund enthalten: Ja\nVerhaltensbedingte Einordnung enthalten: Ja\nKündigungsgrund: verhaltensbedingt\nStellungnahmefrist: 08.09.2026 09:00\n",
+  "render_source_hash": "sha256:cca31af6a15ad7c215cdbe53e45fa1bc1ceae6210deb0d2a66eb1dce9dba5df2",
+  "artifact_hash": "sha256:e2bce3e134f2c044865d66dfcdc7bd6a94a1aa43cfe69e31a5bcfebb3645b57d",
+  "page_count": 1
+}

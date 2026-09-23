@@ -1,0 +1,166 @@
+{
+  "document_id": "DOC-002",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_id": "investigation-v1",
+  "renderer": "reportlab-canvas-v1",
+  "fixture_id": "CASE-RD-06824",
+  "build_time_fixed": "2026-09-22T12:53:00Z",
+  "title": "Interner Untersuchungsbericht",
+  "document_date": "2026-04-07",
+  "narrative": "Der Bericht dokumentiert nur den synthetischen Untersuchungsstand. Er enthält keine autonome rechtliche Bewertung der Wirksamkeit einer Kündigung.",
+  "rows": [
+    {
+      "label": "Auslösendes Ereignis - Datum",
+      "field": "triggering_event_date",
+      "value": "2026-04-02",
+      "evidence_code": "ED-1",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-019",
+      "candidate_id": "CAND-019",
+      "anchor_id": "ANCHOR-DOC-002-001"
+    },
+    {
+      "label": "Auslösendes Ereignis - Beschreibung",
+      "field": "triggering_event_description",
+      "value": "Three locked compliance records were altered after final approval; signer and completion fields were back-dated.",
+      "evidence_code": "ED-1",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-020",
+      "candidate_id": "CAND-020",
+      "anchor_id": "ANCHOR-DOC-002-002"
+    },
+    {
+      "label": "Zeugen-IDs",
+      "field": "witnesses",
+      "value": [
+        "WIT-01",
+        "WIT-02"
+      ],
+      "evidence_code": "ED-1",
+      "semantic_role": "corroborating_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-021",
+      "candidate_id": "CAND-021",
+      "anchor_id": "ANCHOR-DOC-002-003"
+    },
+    {
+      "label": "Physische/System-Belege",
+      "field": "physical_evidence",
+      "value": [
+        "SYS-AUDIT-8841",
+        "SYS-AUDIT-8842",
+        "SYS-AUDIT-8843"
+      ],
+      "evidence_code": "ED-1",
+      "semantic_role": "corroborating_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-022",
+      "candidate_id": "CAND-022",
+      "anchor_id": "ANCHOR-DOC-002-004"
+    },
+    {
+      "label": "Untersuchung begonnen",
+      "field": "investigation_start_date",
+      "value": "2026-04-03",
+      "evidence_code": "ED-4",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-023",
+      "candidate_id": "CAND-023",
+      "anchor_id": "ANCHOR-DOC-002-005"
+    },
+    {
+      "label": "Untersuchung beendet",
+      "field": "investigation_end_date",
+      "value": "2026-04-07",
+      "evidence_code": "ED-4",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-024",
+      "candidate_id": "CAND-024",
+      "anchor_id": "ANCHOR-DOC-002-006"
+    },
+    {
+      "label": "Untersuchungslog",
+      "field": "investigation_log",
+      "value": "Audit export reviewed; two witness interviews completed; employee statement recorded; access log preserved.",
+      "evidence_code": "ED-4",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-025",
+      "candidate_id": "CAND-025",
+      "anchor_id": "ANCHOR-DOC-002-007"
+    }
+  ],
+  "signature": null,
+  "page_count": 1,
+  "artifact_sha256": "sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf",
+  "injections": [
+    {
+      "assertion_id": "ASSERT-019",
+      "document_id": "DOC-002",
+      "slot_id": "triggering_event_date",
+      "canonical_value": "2026-04-02",
+      "rendered_value": "2026-04-02",
+      "anchor_id": "ANCHOR-DOC-002-001"
+    },
+    {
+      "assertion_id": "ASSERT-020",
+      "document_id": "DOC-002",
+      "slot_id": "triggering_event_description",
+      "canonical_value": "Three locked compliance records were altered after final approval; signer and completion fields were back-dated.",
+      "rendered_value": "Three locked compliance records were altered after final approval; signer and completion fields were back-dated.",
+      "anchor_id": "ANCHOR-DOC-002-002"
+    },
+    {
+      "assertion_id": "ASSERT-021",
+      "document_id": "DOC-002",
+      "slot_id": "witnesses",
+      "canonical_value": [
+        "WIT-01",
+        "WIT-02"
+      ],
+      "rendered_value": "WIT-01, WIT-02",
+      "anchor_id": "ANCHOR-DOC-002-003"
+    },
+    {
+      "assertion_id": "ASSERT-022",
+      "document_id": "DOC-002",
+      "slot_id": "physical_evidence",
+      "canonical_value": [
+        "SYS-AUDIT-8841",
+        "SYS-AUDIT-8842",
+        "SYS-AUDIT-8843"
+      ],
+      "rendered_value": "SYS-AUDIT-8841, SYS-AUDIT-8842, SYS-AUDIT-8843",
+      "anchor_id": "ANCHOR-DOC-002-004"
+    },
+    {
+      "assertion_id": "ASSERT-023",
+      "document_id": "DOC-002",
+      "slot_id": "investigation_start_date",
+      "canonical_value": "2026-04-03",
+      "rendered_value": "2026-04-03",
+      "anchor_id": "ANCHOR-DOC-002-005"
+    },
+    {
+      "assertion_id": "ASSERT-024",
+      "document_id": "DOC-002",
+      "slot_id": "investigation_end_date",
+      "canonical_value": "2026-04-07",
+      "rendered_value": "2026-04-07",
+      "anchor_id": "ANCHOR-DOC-002-006"
+    },
+    {
+      "assertion_id": "ASSERT-025",
+      "document_id": "DOC-002",
+      "slot_id": "investigation_log",
+      "canonical_value": "Audit export reviewed; two witness interviews completed; employee statement recorded; access log preserved.",
+      "rendered_value": "Audit export reviewed; two witness interviews completed; employee statement recorded; access log preserved.",
+      "anchor_id": "ANCHOR-DOC-002-007"
+    }
+  ],
+  "source_hash": "sha256:440f28692105030df46b943b9e1fb5202f3d38657e78d31030491c00452518d8"
+}

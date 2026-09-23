@@ -1,0 +1,67 @@
+case_id: CASE-SYN-17824
+case_name: Synthetic Route B - severe disability / recurring illness
+category: CANONICAL
+route: ROUTE_B
+description: Synthetic personal-capability termination fixture with complete Route B evidence, severe-disability approval,
+  no works council, and no automated decision system.
+envelope_overrides:
+  kschg_applies: true
+  betriebsrat_exists: false
+  special_protections:
+  - SEVERE_DISABILITY
+  tech_used: false
+  mass_layoff_triggered: false
+  termination_type: ORDINARY
+  tenure_months: 26
+  employee_count_fte: 180
+envelope_overrides_assumed: []
+evidence_profile:
+  present:
+  - E0-a
+  - E0-b
+  - E0-c
+  - E0-d
+  - E0-e
+  - EB-1
+  - EB-2
+  - EB-3
+  - EB-4
+  - EB-5
+  - EB-6
+  - EB-8
+  - EB-9
+  - EU-WF
+  - EU-NP
+  - EU-CON
+  - EU-AGG
+  - EU-AGG-1
+  - EU-AGG-2
+  - EP-B1
+  - EP-B2
+  - EP-B3
+  missing: []
+  defective: []
+activated_gates:
+- G0
+- G0.3
+- G2
+- G2.WF
+- G2.NP
+- G2.B1
+- G2.B2
+- G3
+- G4
+- G7
+timeline:
+  employment_start: '2022-01-03'
+  termination_issued: '2024-03-28'
+  termination_effective: '2024-06-30'
+  approval_date: '2024-03-20'
+tags:
+- SYNTHETIC
+- ROUTE_B
+- PERSONAL_CAPABILITY
+- SEVERE_DISABILITY
+- BEM
+- NO_BETRIEBSRAT
+- SOURCE_INSPIRED_BAG_2_AZR_178_24

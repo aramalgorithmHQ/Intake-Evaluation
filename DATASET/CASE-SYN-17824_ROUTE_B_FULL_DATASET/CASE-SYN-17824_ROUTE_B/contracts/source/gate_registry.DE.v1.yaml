@@ -1,0 +1,1046 @@
+# gate_registry.DE.v1.yaml
+# ARAM HR Decision Defensibility — Germany Termination
+# Doctrine: ARAM-CON-001 v2.1
+# Source: germany-termination-complete-outline.md §10
+# Immutable node_ids. SemVer-controlled.
+
+doctrine_version: "1.0.0"
+jurisdiction: DE
+decision_type: TERMINATION
+registry_hash_seed: "gate_registry.DE.v1"
+# WP4 (ARAM-DDU-DE-EDE improvement plan) -- added G3 and G7, which carry the
+# same TERMINATIVE severity as the gates already listed here but were
+# previously omitted from this display/triage tag. Display-only: certificate
+# eligibility never keyed on this list (see
+# vendor/aram_ddu/ddu_validator/validator.py::_issue_certificate, §9a of
+# docs/PIPELINE_TRUTH.md); this only affects the "required path" badge shown
+# in rendered reports.
+required_path_gates: [G0, G1, G2, G3, G5, G6, G7]
+# ARAM-DDU-DE v1.0 WP2 — single source of truth for consequence_scope.severity
+# values used anywhere in this registry. vendor/aram_ddu/ddu_extractor/models.py's
+# SEVERITIES set MUST be kept in lockstep with this list (enforced by a contract
+# test, not dynamic runtime loading, to avoid coupling the dataclass to registry
+# I/O). See docs/ARAM-DDU-DE-STD-001.md §4 and schemas/ddu/ddu-severity.schema.json.
+allowed_severities: [ABSOLUTE_BAR, TERMINATIVE, HIGH, MEDIUM, LOW, NON_FATAL]
+
+# ─────────────────────────────────────────────
+# G0: SPECIAL PROTECTION SCREEN
+# §17 MuSchG, §18 BEEG, §168 SGB IX, §15 KSchG,
+# §38 Abs. 2 BDSG, §15 Abs. 3 KSchG, §2 ArbPlSchG
+# ─────────────────────────────────────────────
+gates:
+  - node_id: G0
+    node_type: GATE
+    node_kind: AGGREGATE
+    label: "Special Protection Screen"
+    applies_if: "always"
+    fail_closed_behavior: MISSING_FAIL
+    deterministic_signature:
+      function_name: eval_gate_aggregate
+      args:
+        aggregation: ALL_SUBGATES_PASS_OR_NA
+    reason_codes_on_fail:
+      - G0_SPECIAL_PROTECTION_VIOLATED
+    consequence_scope:
+      consequence_licensed: "Termination despite special protection status only after official authority approval or statutory exception"
+      severity: ABSOLUTE_BAR
+      proportionality_scope: "Termination of employment"
+    procedure_requirements:
+      required_step: "Assessment of special protection status and, where required, obtaining official authority approval"
+      responsible_actor: "Employer"
+      deadline: "before notice of termination is issued"
+      non_waivable: true
+
+    subgates:
+      - node_id: G0.1
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Pregnancy protection (§17 MuSchG)"
+        applies_if: "PREGNANT in envelope.thresholds.special_protections"
+        requires_evidence_codes: [E0-d, E0-e]
+        requires_fields:
+          - E0-d.pregnancy_status
+          - E0-e.authority_type
+          - E0-e.approval_granted
+          - E0-e.approval_date
+        deterministic_signature:
+          function_name: check_external_authority_approval
+          args:
+            authority_type: LANDESAMT
+            protection_category: PREGNANT
+            approval_required_before: termination_issued_at
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G0_1_PREGNANCY_NO_APPROVAL
+          - G0_1_PREGNANCY_APPROVAL_AFTER_TERMINATION
+
+      - node_id: G0.2
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Parental leave protection (§18 BEEG)"
+        applies_if: "PARENTAL_LEAVE in envelope.thresholds.special_protections"
+        requires_evidence_codes: [E0-d, E0-e]
+        requires_fields:
+          - E0-d.parental_leave_status
+          - E0-d.parental_leave_start
+          - E0-d.parental_leave_end
+          - E0-e.authority_type
+          - E0-e.approval_granted
+          - E0-e.approval_date
+        deterministic_signature:
+          function_name: check_external_authority_approval
+          args:
+            authority_type: LANDESAMT
+            protection_category: PARENTAL_LEAVE
+            approval_required_before: termination_issued_at
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G0_2_PARENTAL_LEAVE_NO_APPROVAL
+          - G0_2_PARENTAL_LEAVE_APPROVAL_AFTER_TERMINATION
+
+      - node_id: G0.3
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Severe disability protection (§168 SGB IX)"
+        # WP4 -- links to this file's pre-existing, previously-unreferenced
+        # BAG_7_AZR_259_01 citations: entry (§168 SGB IX, Integrationsamt
+        # approval requirement), an exact subject match for this subgate.
+        default_bag_citation_id: BAG_7_AZR_259_01
+        citation_mapping_status: PENDING_LEGAL_REVIEW
+        applies_if: "SEVERE_DISABILITY in envelope.thresholds.special_protections"
+        requires_evidence_codes: [E0-d, E0-e]
+        requires_fields:
+          - E0-d.disability_gdb
+          - E0-d.disability_equivalent
+          - E0-e.authority_type
+          - E0-e.approval_granted
+          - E0-e.approval_date
+        deterministic_signature:
+          function_name: check_external_authority_approval
+          args:
+            authority_type: INTEGRATIONSAMT
+            protection_category: SEVERE_DISABILITY
+            approval_required_before: termination_issued_at
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G0_3_DISABILITY_NO_INTEGRATIONSAMT
+          - G0_3_DISABILITY_APPROVAL_AFTER_TERMINATION
+
+      - node_id: G0.4
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Works council member protection (§15 KSchG)"
+        applies_if: "BR_MEMBER in envelope.thresholds.special_protections"
+        requires_evidence_codes: [E0-d, E0-f]
+        requires_fields:
+          - E0-d.br_member_status
+          - E0-d.br_member_tenure_start
+          - E0-d.br_member_tenure_end
+        deterministic_signature:
+          function_name: check_br_member_protection
+          args:
+            # Only extraordinary termination possible; ordinary is structurally prohibited
+            requires_extraordinary: true
+            requires_103_consent: true
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G0_4_BR_MEMBER_ORDINARY_PROHIBITED
+          - G0_4_BR_MEMBER_NO_103_CONSENT
+
+      - node_id: G0.5
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Data protection officer (§38 Abs. 2 BDSG)"
+        applies_if: "DPO in envelope.thresholds.special_protections"
+        requires_evidence_codes: [E0-d]
+        requires_fields:
+          - E0-d.dpo_appointment_status
+          - E0-d.dpo_appointment_date
+          - E0-d.dpo_removal_date
+        deterministic_signature:
+          function_name: check_dpo_protection
+          args:
+            # Ordinary termination prohibited during appointment + 1 year post-removal
+            requires_extraordinary: true
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G0_5_DPO_ORDINARY_PROHIBITED
+
+      - node_id: G0.6
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Election board member protection (§15 Abs. 3 KSchG)"
+        applies_if: "ELECTION_BOARD in envelope.thresholds.special_protections"
+        requires_evidence_codes: [E0-d, E0-f]
+        requires_fields:
+          - E0-d.election_board_status
+        deterministic_signature:
+          function_name: check_br_member_protection
+          args:
+            requires_extraordinary: true
+            requires_103_consent: true
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G0_6_ELECTION_BOARD_ORDINARY_PROHIBITED
+          - G0_6_ELECTION_BOARD_NO_103_CONSENT
+
+      - node_id: G0.7
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Military/civil service (§2 ArbPlSchG)"
+        applies_if: "MILITARY_SERVICE in envelope.thresholds.special_protections"
+        requires_evidence_codes: [E0-d]
+        requires_fields:
+          - E0-d.military_service_status
+          - E0-d.military_service_start
+          - E0-d.military_service_end
+        deterministic_signature:
+          function_name: check_absolute_bar
+          args:
+            bar_type: MILITARY_SERVICE
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G0_7_MILITARY_ABSOLUTE_BAR
+
+  # ─────────────────────────────────────────────
+  # G1: WORKS COUNCIL HEARING (§102 BetrVG)
+  # 8 sub-gates for deep verification
+  # ─────────────────────────────────────────────
+  - node_id: G1
+    node_type: GATE
+    node_kind: AGGREGATE
+    label: "Works Council Hearing (§102 BetrVG)"
+    # WP4 (ARAM-DDU-DE-EDE improvement plan) -- links this gate to the
+    # already-existing citations: entry below whose rule_citation (§102
+    # BetrVG) is this gate's entire, singular legal subject. Not a new
+    # citation: BAG_2_AZR_31_94 was already present in this file's
+    # citations: block, unreferenced by any gate, before this change.
+    default_bag_citation_id: BAG_2_AZR_31_94
+    citation_mapping_status: PENDING_LEGAL_REVIEW
+    applies_if: "envelope.thresholds.betriebsrat_exists == true"
+    fail_closed_behavior: MISSING_FAIL
+    deterministic_signature:
+      function_name: eval_gate_aggregate
+      args:
+        aggregation: ALL_SUBGATES_PASS_OR_NA
+    reason_codes_on_fail:
+      - G1_WORKS_COUNCIL_HEARING_DEFECTIVE
+    consequence_scope:
+      consequence_licensed: "Termination with proper works council hearing pursuant to § 102 BetrVG"
+      severity: TERMINATIVE
+      proportionality_scope: "Termination of employment"
+    procedure_requirements:
+      required_step: "Works council hearing pursuant to § 102 BetrVG before notice of termination is issued"
+      responsible_actor: "Employer"
+      deadline: "before notice of termination; minimum 1 week (ordinary) / 3 days (extraordinary)"
+      non_waivable: true
+
+    subgates:
+      - node_id: G1.1
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Hearing initiated before termination"
+        applies_if: "envelope.thresholds.betriebsrat_exists == true"
+        requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+        requires_fields:
+          - hearing_initiated_at
+        deterministic_signature:
+          function_name: check_timestamp_before
+          args:
+            field: hearing_initiated_at
+            before: termination_issued_at
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G1_1_HEARING_NOT_BEFORE_TERMINATION
+
+      - node_id: G1.2
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Hearing notice letter (Anhörungsschreiben) contains required information"
+        applies_if: "envelope.thresholds.betriebsrat_exists == true"
+        requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+        requires_fields:
+          - hearing_document_exists
+          - hearing_contains_employee_identity
+          - hearing_contains_termination_type
+          - hearing_contains_termination_reason
+          - hearing_contains_route
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - hearing_document_exists
+              - hearing_contains_employee_identity
+              - hearing_contains_termination_type
+              - hearing_contains_termination_reason
+              - hearing_contains_route
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G1_2_HEARING_DOCUMENT_INCOMPLETE
+
+      - node_id: G1.3
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Route stated in hearing matches termination letter"
+        applies_if: "envelope.thresholds.betriebsrat_exists == true"
+        requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+        requires_fields:
+          - hearing_route_stated
+        deterministic_signature:
+          function_name: check_route_match
+          args:
+            hearing_field: hearing_route_stated
+            envelope_field: envelope.route
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G1_3_ROUTE_MISMATCH_HEARING_VS_LETTER
+
+      - node_id: G1.4
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Response window respected (ordinary: 1 week; extraordinary: 3 days)"
+        applies_if: "envelope.thresholds.betriebsrat_exists == true"
+        requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+        requires_fields:
+          - hearing_initiated_at
+          - hearing_response_deadline
+          - hearing_response_received_at
+          - termination_issued_at
+        deterministic_signature:
+          function_name: check_hearing_response_window
+          args:
+            ordinary_window_days: 7
+            extraordinary_window_days: 3
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G1_4_RESPONSE_WINDOW_VIOLATED
+
+      - node_id: G1.5
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Works council response documented"
+        applies_if: "envelope.thresholds.betriebsrat_exists == true"
+        requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+        requires_fields:
+          - hearing_response_type
+        deterministic_signature:
+          function_name: check_field_in_enum
+          args:
+            field: hearing_response_type
+            allowed: [APPROVED, OBJECTED, NO_RESPONSE, PARTIAL_OBJECTION]
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G1_5_HEARING_RESPONSE_NOT_DOCUMENTED
+
+      - node_id: G1.6
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Social selection data included (Route C only)"
+        applies_if: "envelope.route == ROUTE_C AND envelope.thresholds.betriebsrat_exists == true"
+        requires_evidence_codes: [EC-10]
+        requires_fields:
+          - hearing_contains_social_selection_data
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - hearing_contains_social_selection_data
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G1_6_SOCIAL_SELECTION_NOT_IN_HEARING
+
+      - node_id: G1.7
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Termination not issued before response window expired"
+        applies_if: "envelope.thresholds.betriebsrat_exists == true"
+        requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+        requires_fields:
+          - hearing_response_deadline
+          - termination_issued_at
+        deterministic_signature:
+          function_name: check_timestamp_not_before
+          args:
+            field: termination_issued_at
+            not_before: hearing_response_deadline
+            unless: hearing_response_received_at_before_deadline
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G1_7_TERMINATION_BEFORE_RESPONSE_WINDOW_EXPIRED
+
+      - node_id: G1.8
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "§103 consent obtained (if BR member extraordinary)"
+        applies_if: "BR_MEMBER in envelope.thresholds.special_protections OR ELECTION_BOARD in envelope.thresholds.special_protections AND envelope.route == ROUTE_D OR envelope.decision.termination_type == EXTRAORDINARY"
+        requires_evidence_codes: [E0-f]
+        requires_fields:
+          - br_consent_103_obtained
+          - br_consent_103_date
+        deterministic_signature:
+          function_name: check_103_consent
+          args:
+            consent_required_before: termination_issued_at
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G1_8_NO_103_CONSENT_FOR_BR_MEMBER
+
+  # ─────────────────────────────────────────────
+  # G2: SOCIAL JUSTIFICATION / STANDARD CHECKS
+  # KSchG toggles social justification scope only
+  # Route C has 7 sub-gates (social selection deep)
+  # ─────────────────────────────────────────────
+  - node_id: G2
+    node_type: GATE
+    node_kind: AGGREGATE
+    label: "Social Justification / Standard Compliance"
+    applies_if: "always"
+    fail_closed_behavior: MISSING_FAIL
+    deterministic_signature:
+      function_name: eval_gate_g2
+      args:
+        kschg_toggle: envelope.thresholds.kschg_applies
+    reason_codes_on_fail:
+      - G2_SOCIAL_JUSTIFICATION_DEFECTIVE
+    consequence_scope:
+      consequence_licensed: "Ordinary or extraordinary termination after establishing a substantive justification ground"
+      severity: TERMINATIVE
+      proportionality_scope: "Termination of employment"
+    procedure_requirements:
+      required_step: "Establishing and documenting a termination ground (conduct-, person-, or operationally-based) at the time notice is issued"
+      responsible_actor: "Employer"
+      deadline: "at the time notice of termination is issued"
+      non_waivable: true
+
+    subgates:
+      # Universal sub-gates (all routes)
+      - node_id: G2.WF
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Written form compliance (§623 BGB)"
+        applies_if: "always"
+        requires_evidence_codes: [EU-WF]
+        requires_fields:
+          - EU-WF.written_form_used
+          - EU-WF.original_signature
+          - EU-WF.delivery_proof
+        deterministic_signature:
+          function_name: check_written_form
+          args:
+            require_physical_paper: true
+            require_original_signature: true
+            require_delivery_proof: true
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_WF_NO_WRITTEN_FORM
+          - G2_WF_NO_ORIGINAL_SIGNATURE
+          - G2_WF_NO_DELIVERY_PROOF
+          - G2_WF_PROXY_NO_VOLLMACHT
+
+      - node_id: G2.NP
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Notice period compliance (§622 BGB)"
+        applies_if: "envelope.decision.termination_type == ORDINARY"
+        requires_evidence_codes: [EU-NP]
+        requires_fields:
+          - EU-NP.statutory_minimum_days
+          - EU-NP.contractual_minimum_days
+          - EU-NP.actual_notice_days
+          - EU-NP.terminates_on_valid_date
+        deterministic_signature:
+          function_name: check_notice_period
+          args:
+            tenure_months: envelope.employee.tenure_months
+            notice_period_table: DE_622_BGB
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_NP_NOTICE_PERIOD_TOO_SHORT
+          - G2_NP_INVALID_TERMINATION_DATE
+
+      # Route A specific sub-gates
+      - node_id: G2.A1
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Conduct: incident documentation"
+        applies_if: "envelope.route == ROUTE_A AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EA-1]
+        requires_fields:
+          - EA-1.incident_date
+          - EA-1.incident_description
+          - EA-1.contractual_duty_breached
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - incident_date
+              - incident_description
+              - contractual_duty_breached
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_A1_INCIDENT_NOT_DOCUMENTED
+
+      - node_id: G2.A2
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Conduct: Abmahnung (warning) validity"
+        # WP4 -- links to this file's pre-existing, previously-unreferenced
+        # BAG_2_AZR_736_13 citations: entry (prior written warning required
+        # for conduct-related termination), an exact subject match for this
+        # subgate specifically -- not the whole G2 gate, which covers many
+        # unrelated routes (written form, notice period, personal, operational,
+        # extraordinary).
+        default_bag_citation_id: BAG_2_AZR_736_13
+        citation_mapping_status: PENDING_LEGAL_REVIEW
+        applies_if: "envelope.route == ROUTE_A AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EA-2, EA-3]
+        requires_fields:
+          - EA-2.warning_exists
+          - EA-2.warning_date
+          - EA-2.warning_same_conduct
+          - EA-2.warning_delivery_proof
+          - EA-2.documentation_function
+          - EA-2.censure_function
+          - EA-2.warning_function
+        deterministic_signature:
+          function_name: check_abmahnung_validity
+          args:
+            expiry_months: 36
+            three_functions_required: true
+            same_conduct_required: true
+            no_warning_exception_code: EA-3
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_A2_NO_VALID_WARNING
+          - G2_A2_WARNING_EXPIRED
+          - G2_A2_WARNING_DIFFERENT_CONDUCT
+          - G2_A2_WARNING_MISSING_FUNCTION
+          - G2_A2_NO_WARNING_EXCEPTION_UNJUSTIFIED
+
+      - node_id: G2.A3
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Conduct: culpability + negative prognosis"
+        applies_if: "envelope.route == ROUTE_A AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EA-4, EA-5]
+        requires_fields:
+          - EA-4.culpability_assessment
+          - EA-5.negative_prognosis_basis
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - culpability_assessment
+              - negative_prognosis_basis
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_A3_NO_CULPABILITY_ASSESSMENT
+          - G2_A3_NO_NEGATIVE_PROGNOSIS
+
+      # Route B specific sub-gates
+      - node_id: G2.B1
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Personal: absence record + BEM"
+        applies_if: "envelope.route == ROUTE_B AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EB-1, EB-2]
+        requires_fields:
+          - EB-1.absence_record_months
+          - EB-1.absence_dates
+          - EB-2.bem_initiated
+          - EB-2.bem_invitation_sent
+          - EB-2.bem_employee_response
+        deterministic_signature:
+          function_name: check_bem_compliance
+          args:
+            min_absence_record_months: 24
+            bem_required: true
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_B1_INSUFFICIENT_ABSENCE_RECORD
+          - G2_B1_NO_BEM_PROCESS
+
+      - node_id: G2.B2
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Personal: negative health prognosis + operational impact"
+        applies_if: "envelope.route == ROUTE_B AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EB-3, EB-4]
+        requires_fields:
+          - EB-3.prognosis_negative
+          - EB-3.prognosis_basis
+          - EB-4.operational_impact_documented
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - prognosis_negative
+              - prognosis_basis
+              - operational_impact_documented
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_B2_NO_NEGATIVE_PROGNOSIS
+          - G2_B2_NO_OPERATIONAL_IMPACT
+
+      # Route C specific sub-gates (7 sub-gates for social selection deep)
+      - node_id: G2.C1
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Operational: business decision documented"
+        applies_if: "envelope.route == ROUTE_C AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EC-1]
+        requires_fields:
+          - EC-1.business_decision_description
+          - EC-1.positions_eliminated
+          - EC-1.headcount_rationale
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - business_decision_description
+              - positions_eliminated
+              - headcount_rationale
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_C1_NO_BUSINESS_DECISION_DOCUMENT
+
+      - node_id: G2.C2
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Operational: comparable pool defined"
+        applies_if: "envelope.route == ROUTE_C AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EC-2]
+        requires_fields:
+          - EC-2.pool_employees
+          - EC-2.comparability_test_hierarchical
+          - EC-2.comparability_test_interchangeable
+          - EC-2.comparability_test_same_establishment
+        deterministic_signature:
+          function_name: check_comparable_pool
+          args:
+            three_tests_required: true
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_C2_COMPARABLE_POOL_UNDEFINED
+          - G2_C2_COMPARABILITY_TEST_MISSING
+
+      - node_id: G2.C3
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Operational: social data complete for all pool members"
+        applies_if: "envelope.route == ROUTE_C AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EC-3]
+        requires_fields:
+          - EC-3.social_data_complete
+          - EC-3.pool_member_count
+          - EC-3.data_coverage_count
+        deterministic_signature:
+          function_name: check_social_data_completeness
+          args:
+            required_per_member:
+              - tenure
+              - age
+              - dependents
+              - disability_status
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_C3_SOCIAL_DATA_INCOMPLETE
+
+      - node_id: G2.C4
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Operational: weighting model documented"
+        applies_if: "envelope.route == ROUTE_C AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EC-4]
+        requires_fields:
+          - EC-4.weighting_model_exists
+          - EC-4.weighting_justification
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - weighting_model_exists
+              - weighting_justification
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_C4_NO_WEIGHTING_MODEL
+
+      - node_id: G2.C5
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Operational: complete scoring matrix + ranked list"
+        applies_if: "envelope.route == ROUTE_C AND envelope.thresholds.kschg_applies == true"
+        requires_evidence_codes: [EC-5, EC-6]
+        requires_fields:
+          - EC-5.scoring_matrix_complete
+          - EC-6.ranked_list_exists
+          - EC-6.selected_employee_lowest_score
+        deterministic_signature:
+          function_name: check_scoring_matrix
+          args:
+            all_cells_required: true
+            lowest_score_selected: true
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_C5_SCORING_MATRIX_INCOMPLETE
+          - G2_C5_SELECTION_NOT_LOWEST_SCORE
+
+      - node_id: G2.C6
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Operational: exemption justifications (§1 Abs. 3 S. 2)"
+        applies_if: "envelope.route == ROUTE_C AND envelope.thresholds.kschg_applies == true AND EC-7.exemptions_claimed == true"
+        requires_evidence_codes: [EC-7]
+        requires_fields:
+          - EC-7.exemption_employee_ids
+          - EC-7.exemption_justifications
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - exemption_employee_ids
+              - exemption_justifications
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_C6_EXEMPTION_UNJUSTIFIED
+
+      - node_id: G2.C7
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Operational: mass layoff notification (§17 KSchG)"
+        applies_if: "envelope.thresholds.mass_layoff_triggered == true"
+        requires_evidence_codes: [EC-11]
+        requires_fields:
+          - EC-11.notification_filed
+          - EC-11.notification_date
+          - EC-11.agency_receipt_date
+        deterministic_signature:
+          function_name: check_mass_layoff_notification
+          args:
+            filed_before: termination_issued_at
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_C7_NO_MASS_LAYOFF_NOTIFICATION
+          - G2_C7_NOTIFICATION_AFTER_TERMINATION
+
+      # Route D specific sub-gates
+      - node_id: G2.D1
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Extraordinary: important reason documented"
+        # WP4 -- links to this file's pre-existing, previously-unreferenced
+        # BAG_2_AZR_419_07 citations: entry (§626 BGB important-reason
+        # standard). Deliberately NOT attached to the sibling G2.D2 (two-week
+        # deadline, §626 Abs. 2) or G2.D3 (warning necessity) subgates, which
+        # test different, unrelated requirements and are unaffected by this
+        # citation -- G2.D2 already carries its own real, distinct citations
+        # via bag_citation_registry.json (tier 2 of the resolver).
+        default_bag_citation_id: BAG_2_AZR_419_07
+        citation_mapping_status: PENDING_LEGAL_REVIEW
+        applies_if: "envelope.route == ROUTE_D OR envelope.decision.termination_type == EXTRAORDINARY"
+        requires_evidence_codes: [ED-1, ED-5]
+        requires_fields:
+          - ED-1.triggering_event_date
+          - ED-1.triggering_event_description
+          - ED-5.important_reason_analysis
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - triggering_event_date
+              - triggering_event_description
+              - important_reason_analysis
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_D1_NO_IMPORTANT_REASON
+
+      - node_id: G2.D2
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Extraordinary: two-week deadline compliance (§626 Abs. 2)"
+        applies_if: "envelope.route == ROUTE_D OR envelope.decision.termination_type == EXTRAORDINARY"
+        requires_evidence_codes: [ED-2, ED-3]
+        requires_fields:
+          - ED-2.knowledge_date
+          - ED-3.two_week_deadline
+          - ED-3.termination_issued_at
+        deterministic_signature:
+          function_name: check_two_week_deadline
+          args:
+            knowledge_field: ED-2.knowledge_date
+            deadline_field: ED-3.two_week_deadline
+            issued_field: termination_issued_at
+            max_days: 14
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_D2_TWO_WEEK_DEADLINE_MISSED
+          - G2_D2_KNOWLEDGE_DATE_UNDOCUMENTED
+
+      - node_id: G2.D3
+        node_type: SUBGATE
+        node_kind: LEAF
+        label: "Extraordinary: warning necessity assessment"
+        applies_if: "envelope.route == ROUTE_D OR envelope.decision.termination_type == EXTRAORDINARY"
+        requires_evidence_codes: [ED-8]
+        requires_fields:
+          - ED-8.warning_necessity_assessed
+          - ED-8.warning_exists_or_exception_justified
+        deterministic_signature:
+          function_name: check_fields_present
+          args:
+            required_fields:
+              - warning_necessity_assessed
+              - warning_exists_or_exception_justified
+        fail_closed_behavior: MISSING_FAIL
+        reason_codes_on_fail:
+          - G2_D3_WARNING_NECESSITY_NOT_ASSESSED
+
+  # ─────────────────────────────────────────────
+  # G3: ULTIMA RATIO (LAST RESORT)
+  # ─────────────────────────────────────────────
+  - node_id: G3
+    node_type: GATE
+    node_kind: LEAF
+    label: "Ultima Ratio (Last Resort / Proportionality)"
+    # WP4 -- links to this file's pre-existing, previously-unreferenced
+    # BAG_2_AZR_343_13 citations: entry (ultima ratio / consider all milder
+    # means before termination), an exact subject match; G3 has no subgates.
+    default_bag_citation_id: BAG_2_AZR_343_13
+    citation_mapping_status: PENDING_LEGAL_REVIEW
+    applies_if: "always"
+    requires_evidence_codes: [EA-6, EA-7, EB-5, EB-6, EC-9, ED-6, ED-7]
+    requires_fields:
+      - proportionality_analysis_exists
+      - alternatives_evaluated
+    deterministic_signature:
+      function_name: check_ultima_ratio
+      args:
+        requires_proportionality: true
+        requires_alternatives_evaluation: true
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail:
+      - G3_NO_PROPORTIONALITY_ANALYSIS
+      - G3_NO_ALTERNATIVES_EVALUATION
+    consequence_scope:
+      consequence_licensed: "Termination as last resort after reviewing all milder alternatives"
+      severity: TERMINATIVE
+      proportionality_scope: "Proportionality of termination of employment"
+    procedure_requirements:
+      required_step: "Review and documentation of milder means (transfer, warning, amended contract) before notice of termination is issued"
+      responsible_actor: "Employer"
+      deadline: "before notice of termination is issued"
+      non_waivable: true
+    subgates: []
+
+  # ─────────────────────────────────────────────
+  # G4: CONSISTENCY
+  # ─────────────────────────────────────────────
+  - node_id: G4
+    node_type: GATE
+    node_kind: LEAF
+    label: "Consistency (Equal Treatment)"
+    applies_if: "always"
+    requires_evidence_codes: [EU-CON]
+    requires_fields: []
+    deterministic_signature:
+      function_name: check_consistency_evidence
+      args:
+        optional: true
+    fail_closed_behavior: MISSING_INDET
+    reason_codes_on_fail:
+      - G4_CONSISTENCY_EVIDENCE_MISSING
+    consequence_scope:
+      consequence_licensed: "Termination respecting the equal treatment principle for comparable employees"
+      severity: NON_FATAL
+      proportionality_scope: "Equal treatment principle"
+    procedure_requirements:
+      required_step: "Documentation of the decision basis without arbitrary differentiation between comparable employees"
+      responsible_actor: "Employer"
+      deadline: "at the time notice of termination is issued"
+      non_waivable: false
+    subgates: []
+
+  # ─────────────────────────────────────────────
+  # G5: CO-DETERMINATION TECH (§87(1) Nr. 6 BetrVG)
+  # ─────────────────────────────────────────────
+  - node_id: G5
+    node_type: GATE
+    node_kind: LEAF
+    label: "Co-Determination Tech (§87(1) Nr. 6 BetrVG)"
+    # WP4 -- links to this file's pre-existing, previously-unreferenced
+    # BAG_1_ABR_2_07 citations: entry (§87(1) Nr.6 BetrVG tech
+    # co-determination), an exact subject match; G5 has no subgates.
+    default_bag_citation_id: BAG_1_ABR_2_07
+    citation_mapping_status: PENDING_LEGAL_REVIEW
+    applies_if: "envelope.thresholds.tech_used == true"
+    requires_evidence_codes: [ET-CD]
+    requires_fields:
+      - ET-CD.works_council_involved_in_tech_deployment
+      - ET-CD.tech_agreement_exists
+    deterministic_signature:
+      function_name: check_tech_codetermination
+      args:
+        requires_br_involvement: true
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail:
+      - G5_NO_TECH_CODETERMINATION
+      - G5_NO_TECH_AGREEMENT
+    consequence_scope:
+      consequence_licensed: "Deployment of technical monitoring systems with works council consent pursuant to § 87(1) No. 6 BetrVG"
+      severity: TERMINATIVE
+      proportionality_scope: "Co-determination right on introduction and use of technical monitoring systems"
+    procedure_requirements:
+      required_step: "Works council involvement and conclusion of a works agreement before deploying the technical system"
+      responsible_actor: "Employer"
+      deadline: "before the technical system is deployed"
+      non_waivable: true
+    subgates: []
+
+  # ─────────────────────────────────────────────
+  # G6: MODEL TRANSPARENCY
+  # ─────────────────────────────────────────────
+  - node_id: G6
+    node_type: GATE
+    node_kind: LEAF
+    label: "Model Transparency (GDPR Art. 22 / AI Act)"
+    applies_if: "envelope.thresholds.tech_used == true"
+    requires_evidence_codes: [ET-MT]
+    requires_fields:
+      - ET-MT.employee_informed_of_ai
+      - ET-MT.human_oversight_documented
+      - ET-MT.gdpr_art22_assessment
+    deterministic_signature:
+      function_name: check_model_transparency
+      args:
+        requires_employee_notification: true
+        requires_human_oversight: true
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail:
+      - G6_EMPLOYEE_NOT_INFORMED_OF_AI
+      - G6_NO_HUMAN_OVERSIGHT
+      - G6_NO_ART22_ASSESSMENT
+    consequence_scope:
+      consequence_licensed: "Deployment of automated decision-making systems with documented transparency and human oversight (GDPR Art. 22 / AI Act)"
+      severity: TERMINATIVE
+      proportionality_scope: "Transparency and human oversight in algorithmic decision-making"
+    procedure_requirements:
+      required_step: "Employee notification of AI use, documentation of human oversight, and completion of a GDPR Art. 22 assessment"
+      responsible_actor: "Employer"
+      deadline: "before the automated decision is used"
+      non_waivable: true
+    subgates: []
+
+  # ─────────────────────────────────────────────
+  # G7: ANTI-DISCRIMINATION (AGG)
+  # ─────────────────────────────────────────────
+  - node_id: G7
+    node_type: GATE
+    node_kind: LEAF
+    label: "Anti-Discrimination (AGG)"
+    # WP4 -- links to this file's pre-existing, previously-unreferenced
+    # BAG_8_AZR_642_08 citations: entry (§22 AGG burden-of-proof shift), an
+    # exact subject match; G7 has no subgates.
+    default_bag_citation_id: BAG_8_AZR_642_08
+    citation_mapping_status: PENDING_LEGAL_REVIEW
+    applies_if: "always"
+    requires_evidence_codes: [EU-AGG]
+    requires_fields:
+      - EU-AGG.decision_basis_documented
+      - EU-AGG.no_protected_ground_indicia
+    deterministic_signature:
+      function_name: check_anti_discrimination
+      args:
+        protected_grounds:
+          - race
+          - ethnic_origin
+          - gender
+          - religion
+          - disability
+          - age
+          - sexual_orientation
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail:
+      - G7_AGG_DECISION_BASIS_UNDOCUMENTED
+      - G7_AGG_PROTECTED_GROUND_INDICIA
+    consequence_scope:
+      consequence_licensed: "Termination without connection to AGG-protected characteristics"
+      severity: TERMINATIVE
+      proportionality_scope: "Non-discrimination in the termination decision"
+    procedure_requirements:
+      required_step: "Documentation of objective decision basis; exclusion of any indicia of disadvantage based on protected characteristics (§ 22 AGG reversed burden of proof)"
+      responsible_actor: "Employer"
+      deadline: "at the time notice of termination is issued"
+      non_waivable: true
+    subgates: []
+
+# ─────────────────────────────────────────────
+# CITATIONS
+# Canonical BAG/court rulings referenced by warrant_ref.bag_citation_id
+# in case YAML findings. Each entry must have a unique bag_citation_id.
+# ─────────────────────────────────────────────
+citations:
+  - bag_citation_id: BAG_2_AZR_736_13
+    rule_text: "An ordinary termination for conduct-related reasons generally requires a prior written warning (Abmahnung) relating to the same type of conduct, unless the breach is of a particularly serious nature."
+    rule_citation: "§ 1 Abs. 2 KSchG"
+    citation_string: "BAG, Judgment of 20.11.2014, 2 AZR 651/13"
+    rn: "para. 22"
+    source: case_law
+
+  - bag_citation_id: BAG_2_AZR_31_94
+    rule_text: "The works council hearing pursuant to § 102 BetrVG must be completed before notice of termination is issued; a defective or omitted hearing renders the termination void."
+    rule_citation: "§ 102 BetrVG"
+    citation_string: "BAG, Judgment of 16.01.2003, 2 AZR 707/01"
+    rn: "para. 18"
+    source: case_law
+
+  # WP4 (ARAM-DDU-DE-EDE improvement plan): deliberately left unlinked via
+  # default_bag_citation_id. Its rule_text states the general operational-
+  # termination-plus-social-selection standard, which spans the whole
+  # G2.C1-C7 subgate cluster (business decision, comparable pool, social
+  # data, weighting model, scoring matrix, exemptions, mass layoff notice) --
+  # no single subgate is a precise match, and there is no intermediate
+  # "G2.C" grouping node to attach to. Needs a legal-review decision: pick
+  # the single most-central subgate (candidates: G2.C2 "comparable pool
+  # defined" or G2.C3 "social data complete"), or leave unlinked pending a
+  # finer-grained citation. Not linked here to avoid guessing.
+  - bag_citation_id: BAG_2_AZR_591_14
+    rule_text: "An operational termination requires that urgent operational needs preclude continued employment and that a proper social selection process pursuant to § 1(3) KSchG has been carried out."
+    rule_citation: "§ 1 Abs. 2, Abs. 3 KSchG"
+    citation_string: "BAG, Judgment of 29.01.2015, 2 AZR 605/14"
+    rn: "para. 14"
+    source: case_law
+
+  - bag_citation_id: BAG_2_AZR_343_13
+    rule_text: "The principle of proportionality (ultima ratio) requires the employer, before issuing notice of termination, to consider all milder means and assess their suitability for resolving the underlying issue."
+    rule_citation: "§ 1 Abs. 2 KSchG"
+    citation_string: "BAG, Judgment of 20.06.2013, 2 AZR 396/12"
+    rn: "para. 17"
+    source: case_law
+
+  - bag_citation_id: BAG_2_AZR_419_07
+    rule_text: "An extraordinary termination pursuant to § 626 BGB requires an important reason that, weighing all circumstances of the individual case and the interests of both parties, makes continued employment unreasonable."
+    rule_citation: "§ 626 BGB"
+    citation_string: "BAG, Judgment of 27.09.2007, 2 AZR 811/06"
+    rn: "para. 23"
+    source: case_law
+
+  - bag_citation_id: BAG_7_AZR_259_01
+    rule_text: "The special protection against termination for severely disabled employees requires prior approval from the Integration Office (Integrationsamt); a termination issued without such approval is void."
+    rule_citation: "§ 168 SGB IX"
+    citation_string: "BAG, Judgment of 23.01.2002, 7 AZR 440/01"
+    rn: "para. 15"
+    source: case_law
+
+  - bag_citation_id: BAG_8_AZR_642_08
+    rule_text: "Where there are indicia of disadvantage based on a ground listed in § 1 AGG, the employer bears the burden of proving that no violation of the prohibition of discrimination occurred."
+    rule_citation: "§ 22 AGG"
+    citation_string: "BAG, Judgment of 22.10.2009, 8 AZR 642/08"
+    rn: "para. 12"
+    source: case_law
+
+  - bag_citation_id: BAG_1_ABR_2_07
+    rule_text: "The works council has a mandatory co-determination right under § 87(1) No. 6 BetrVG with respect to the introduction and use of technical devices designed to monitor the conduct or performance of employees."
+    rule_citation: "§ 87 Abs. 1 Nr. 6 BetrVG"
+    citation_string: "BAG, Ruling of 26.08.2008, 1 ABR 16/07"
+    rn: "para. 20"
+    source: case_law

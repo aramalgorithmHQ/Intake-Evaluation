@@ -1,0 +1,82 @@
+{
+  "document_id": "DOC-011",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Zustellnachweis",
+  "document_date": "10.09.2026",
+  "reference": "NH-ZUG-7421",
+  "intro": "Nachweis der persönlichen Übergabe des Kündigungsschreibens an die Mitarbeiterin.",
+  "template_rows": [
+    {
+      "label": "Zustellart",
+      "value_placeholder": "{{ASSERT-070}}"
+    },
+    {
+      "label": "Zustelldatum",
+      "value_placeholder": "{{ASSERT-071}}"
+    },
+    {
+      "label": "Zustellzeugin",
+      "value_placeholder": "{{ASSERT-072}}"
+    },
+    {
+      "label": "Zustellnachweis vorhanden",
+      "value_placeholder": "{{ASSERT-073}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Zustellart",
+      "display_value": "persönliche Übergabe"
+    },
+    {
+      "label": "Zustelldatum",
+      "display_value": "10.09.2026"
+    },
+    {
+      "label": "Zustellzeugin",
+      "display_value": "Julia Klein"
+    },
+    {
+      "label": "Zustellnachweis vorhanden",
+      "display_value": "Ja"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-070",
+      "document_id": "DOC-011",
+      "slot_id": "delivery_method",
+      "canonical_value": "PERSONAL_HANDOVER",
+      "rendered_value": "persönliche Übergabe"
+    },
+    {
+      "assertion_id": "ASSERT-071",
+      "document_id": "DOC-011",
+      "slot_id": "delivery_date",
+      "canonical_value": "2026-09-10",
+      "rendered_value": "10.09.2026"
+    },
+    {
+      "assertion_id": "ASSERT-072",
+      "document_id": "DOC-011",
+      "slot_id": "delivery_witness",
+      "canonical_value": "Julia Klein",
+      "rendered_value": "Julia Klein"
+    },
+    {
+      "assertion_id": "ASSERT-073",
+      "document_id": "DOC-011",
+      "slot_id": "delivery_proof",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nZustellnachweis\nDatum: 10.09.2026\nReferenz: NH-ZUG-7421\nNachweis der persönlichen Übergabe des Kündigungsschreibens an die Mitarbeiterin.\nDokumentierte Angaben\nZustellart: persönliche Übergabe\nZustelldatum: 10.09.2026\nZustellzeugin: Julia Klein\nZustellnachweis vorhanden: Ja\n",
+  "render_source_hash": "sha256:5d07c9e46b66fa21ae63415e5006bf35bafb780d670b329ca2c883beeffca8e5",
+  "artifact_hash": "sha256:f2231cea0e45fb36eb6f4491151a224328296b2015fd38e5493a4e0c219d2db3",
+  "page_count": 1
+}

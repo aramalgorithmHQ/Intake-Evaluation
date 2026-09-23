@@ -1,0 +1,1362 @@
+# evidence_codes.DE.v1.yaml
+# ARAM HR Decision Defensibility — Germany Termination
+# Doctrine: ARAM-CON-001 v2.1
+# Structural sufficiency rules only — no judgment.
+# Timestamp rule: EO.created_at < envelope.decision.termination_issued_at
+
+doctrine_version: "1.0.0"
+jurisdiction: DE
+decision_type: TERMINATION
+
+# ─────────────────────────────────────────────
+# E0: THRESHOLD / SPECIAL PROTECTION (ALL ROUTES)
+# ─────────────────────────────────────────────
+evidence_codes:
+
+  - code: E0-a
+    label: "Establishment data"
+    category: THRESHOLD
+    description: "Employee count and FTE calculation at establishment level."
+    required_when: "always"
+    gate_refs: [G2]
+    required_fields:
+      - field: employee_count_fte
+        type: number
+        description: "Full-time equivalent count per §23 Abs. 1 KSchG."
+      - field: headcount_date
+        type: date
+        description: "Date the count was taken."
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: E0-b
+    label: "Employee tenure"
+    category: THRESHOLD
+    description: "Employment start date and continuity for Wartezeit check."
+    required_when: "always"
+    gate_refs: [G2]
+    required_fields:
+      - field: employment_start_date
+        type: date
+      - field: tenure_continuous
+        type: boolean
+      - field: tenure_months
+        type: integer
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: E0-c
+    label: "Betriebsrat existence"
+    category: THRESHOLD
+    description: "Confirmation of works council at establishment level."
+    required_when: "always"
+    gate_refs: [G1]
+    required_fields:
+      - field: betriebsrat_exists
+        type: boolean
+      - field: establishment_id
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: E0-d
+    label: "Special protection status"
+    category: THRESHOLD
+    description: "Determination of all special protection categories."
+    required_when: "always"
+    gate_refs: [G0]
+    required_fields:
+      - field: pregnancy_status
+        type: boolean
+      - field: parental_leave_status
+        type: boolean
+      - field: parental_leave_start
+        type: date
+        required_if: "parental_leave_status == true"
+      - field: parental_leave_end
+        type: date
+        required_if: "parental_leave_status == true"
+      - field: disability_gdb
+        type: integer
+        required_if: "severe_disability == true"
+      - field: disability_equivalent
+        type: boolean
+      - field: br_member_status
+        type: boolean
+      - field: br_member_tenure_start
+        type: date
+        required_if: "br_member_status == true"
+      - field: br_member_tenure_end
+        type: date
+        required_if: "br_member_status == true"
+      - field: dpo_appointment_status
+        type: boolean
+      - field: dpo_appointment_date
+        type: date
+        required_if: "dpo_appointment_status == true"
+      - field: dpo_removal_date
+        type: date
+        required_if: "dpo_appointment_status == true"
+      - field: election_board_status
+        type: boolean
+      - field: military_service_status
+        type: boolean
+      - field: military_service_start
+        type: date
+        required_if: "military_service_status == true"
+      - field: military_service_end
+        type: date
+        required_if: "military_service_status == true"
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: E0-e
+    label: "External authority approval"
+    category: THRESHOLD
+    description: "Approval from Landesamt, Integrationsamt, or court."
+    required_when: "any special protection requires external approval"
+    gate_refs: [G0]
+    required_fields:
+      - field: authority_type
+        type: string
+        enum: [LANDESAMT, INTEGRATIONSAMT, LABOR_COURT]
+      - field: approval_granted
+        type: boolean
+      - field: approval_date
+        type: date
+      - field: approval_reference
+        type: string
+    timestamp_rule: "approval_date < termination_issued_at"
+
+  - code: E0-f
+    label: "§103 BetrVG consent"
+    category: THRESHOLD
+    description: "Works council consent for extraordinary termination of BR/election board member."
+    required_when: "BR_MEMBER or ELECTION_BOARD in special_protections AND route == ROUTE_D"
+    gate_refs: [G0, G1]
+    required_fields:
+      - field: br_consent_103_obtained
+        type: boolean
+      - field: br_consent_103_date
+        type: date
+      - field: court_substitution_if_refused
+        type: boolean
+      - field: court_order_date
+        type: date
+        required_if: "court_substitution_if_refused == true"
+    timestamp_rule: "br_consent_103_date < termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # EA: ROUTE A — CONDUCT (Verhaltensbedingt)
+  # ─────────────────────────────────────────────
+  - code: EA-1
+    label: "Incident documentation"
+    category: ROUTE_A
+    description: "Specific facts, dates, times, locations, witnesses for each breach."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G2]
+    required_fields:
+      - field: incident_date
+        type: date
+      - field: incident_description
+        type: string
+      - field: contractual_duty_breached
+        type: string
+      - field: witnesses
+        type: array
+      - field: evidence_references
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EA-2
+    label: "Prior Abmahnung (warning)"
+    category: ROUTE_A
+    description: "Copy of warning(s), delivery proof, content analysis."
+    required_when: "route == ROUTE_A (unless EA-3 exception)"
+    gate_refs: [G2]
+    required_fields:
+      - field: warning_exists
+        type: boolean
+      - field: warning_date
+        type: date
+      - field: warning_same_conduct
+        type: boolean
+      - field: warning_delivery_proof
+        type: boolean
+      - field: documentation_function
+        type: boolean
+        description: "Specific description of misconduct."
+      - field: censure_function
+        type: boolean
+        description: "Clear statement employer regards as breach."
+      - field: warning_function
+        type: boolean
+        description: "Explicit notice repetition will result in termination."
+      - field: warning_expired
+        type: boolean
+        description: "True if >36 months since warning with unblemished conduct."
+    timestamp_rule: "warning_date < termination_issued_at"
+
+  - code: EA-3
+    label: "No-warning exception justification"
+    category: ROUTE_A
+    description: "Why warning was unnecessary or futile."
+    required_when: "route == ROUTE_A AND EA-2.warning_exists == false"
+    gate_refs: [G2]
+    required_fields:
+      - field: exception_claimed
+        type: boolean
+      - field: exception_basis
+        type: string
+        enum: [SEVERITY_EXTREME, FUTILITY_DEMONSTRATED]
+      - field: exception_justification
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EA-4
+    label: "Culpability evidence"
+    category: ROUTE_A
+    description: "Employee was capable and chose to breach."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G2]
+    required_fields:
+      - field: culpability_assessment
+        type: string
+      - field: culpability_type
+        type: string
+        enum: [INTENTIONAL, NEGLIGENT]
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EA-5
+    label: "Negative prognosis"
+    category: ROUTE_A
+    description: "Basis for expecting future breaches."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G2]
+    required_fields:
+      - field: negative_prognosis_basis
+        type: string
+      - field: prognosis_evidence
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EA-6
+    label: "Proportionality / interest balancing"
+    category: ROUTE_A
+    description: "Written analysis of severity vs tenure vs circumstances."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G2, G3, G3.A1]
+    required_fields:
+      - field: proportionality_analysis_exists
+        type: boolean
+      - field: severity_assessment
+        type: string
+      - field: tenure_considered
+        type: boolean
+      - field: personal_circumstances_considered
+        type: boolean
+      - field: employer_impact_considered
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EA-7
+    label: "Alternatives evaluation"
+    category: ROUTE_A
+    description: "Transfer, changed conditions, additional warning considered."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G3, G3.A2, G3.A3]
+    required_fields:
+      - field: alternatives_evaluated
+        type: boolean
+      - field: alternatives_list
+        type: array
+      - field: alternatives_rejection_reasons
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EA-8
+    label: "Works council hearing record (Route A)"
+    category: ROUTE_A
+    description: "Complete Anhörungsschreiben + response + timing."
+    required_when: "route == ROUTE_A AND betriebsrat_exists == true"
+    gate_refs: [G1]
+    required_fields:
+      - field: hearing_document_exists
+        type: boolean
+      - field: hearing_initiated_at
+        type: datetime
+      - field: hearing_contains_employee_identity
+        type: boolean
+      - field: hearing_contains_termination_type
+        type: boolean
+      - field: hearing_contains_termination_reason
+        type: boolean
+      - field: hearing_contains_route
+        type: boolean
+      - field: hearing_route_stated
+        type: string
+      - field: hearing_response_deadline
+        type: datetime
+      - field: hearing_response_received_at
+        type: datetime
+      - field: hearing_response_type
+        type: string
+        enum: [APPROVED, OBJECTED, NO_RESPONSE, PARTIAL_OBJECTION]
+    timestamp_rule: "hearing_initiated_at < termination_issued_at"
+
+  - code: EA-9
+    label: "Termination letter (Route A)"
+    category: ROUTE_A
+    description: "Written form, signature, notice period, route."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G2]
+    required_fields:
+      - field: letter_exists
+        type: boolean
+      - field: written_form_used
+        type: boolean
+      - field: original_signature
+        type: boolean
+      - field: notice_period_stated
+        type: integer
+      - field: route_stated_in_letter
+        type: string
+    timestamp_rule: "N/A — this IS the termination event"
+
+  - code: EA-10
+    label: "Delivery proof (Route A)"
+    category: ROUTE_A
+    description: "Personal handover with witness or registered mail."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G2]
+    required_fields:
+      - field: delivery_method
+        type: string
+        enum: [PERSONAL_HANDOVER, REGISTERED_MAIL]
+      - field: delivery_date
+        type: date
+      - field: delivery_witness
+        type: string
+        required_if: "delivery_method == PERSONAL_HANDOVER"
+    timestamp_rule: "delivery_date == termination_issued_at"
+
+  - code: EA-11
+    label: "Consistency evidence (Route A)"
+    category: ROUTE_A
+    description: "Prior similar case treatment."
+    required_when: "optional"
+    gate_refs: [G4, G4.1, G4.2]
+    required_fields:
+      - field: prior_cases_documented
+        type: boolean
+      - field: treatment_consistent
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # EB: ROUTE B — PERSONAL CAPABILITY (Personenbedingt)
+  # ─────────────────────────────────────────────
+  - code: EB-1
+    label: "Absence record"
+    category: ROUTE_B
+    description: "Minimum 24 months absence data."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G2]
+    required_fields:
+      - field: absence_record_months
+        type: integer
+      - field: absence_dates
+        type: array
+      - field: total_absence_days
+        type: integer
+      - field: pattern_description
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EB-2
+    label: "BEM documentation"
+    category: ROUTE_B
+    description: "Betriebliches Eingliederungsmanagement process record."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G2, G3, G3.B1]
+    required_fields:
+      - field: bem_initiated
+        type: boolean
+      - field: bem_invitation_sent
+        type: boolean
+      - field: bem_invitation_date
+        type: date
+      - field: bem_employee_response
+        type: string
+        enum: [ACCEPTED, DECLINED]
+      - field: bem_exploration_documented
+        type: boolean
+        required_if: "bem_employee_response == ACCEPTED"
+      - field: bem_works_council_involved
+        type: boolean
+        required_if: "betriebsrat_exists == true"
+      - field: bem_integrationsamt_involved
+        type: boolean
+        required_if: "severe_disability == true"
+    timestamp_rule: "bem_invitation_date < termination_issued_at"
+
+  - code: EB-3
+    label: "Negative health prognosis"
+    category: ROUTE_B
+    description: "Medical documentation or documented absence pattern."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G2]
+    required_fields:
+      - field: prognosis_negative
+        type: boolean
+      - field: prognosis_basis
+        type: string
+      - field: prognosis_date
+        type: date
+    timestamp_rule: "prognosis_date <= termination_issued_at"
+
+  - code: EB-4
+    label: "Operational impact"
+    category: ROUTE_B
+    description: "Specific disruptions, overtime, colleague burden."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G2]
+    required_fields:
+      - field: operational_impact_documented
+        type: boolean
+      - field: disruption_description
+        type: string
+      - field: cost_data
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EB-5
+    label: "Interest balancing (Route B)"
+    category: ROUTE_B
+    description: "Comprehensive proportionality analysis."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G2, G3, G3.B2]
+    required_fields:
+      - field: proportionality_analysis_exists
+        type: boolean
+      - field: tenure_considered
+        type: boolean
+      - field: age_considered
+        type: boolean
+      - field: labor_market_considered
+        type: boolean
+      - field: illness_cause_considered
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EB-6
+    label: "Alternatives evaluation (Route B)"
+    category: ROUTE_B
+    description: "Transfer, part-time, workplace modification, retraining."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G3, G3.B3]
+    required_fields:
+      - field: alternatives_evaluated
+        type: boolean
+      - field: alternatives_list
+        type: array
+      - field: alternatives_rejection_reasons
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EB-7
+    label: "Works council hearing record (Route B)"
+    category: ROUTE_B
+    description: "Complete Anhörungsschreiben + response + timing."
+    required_when: "route == ROUTE_B AND betriebsrat_exists == true"
+    gate_refs: [G1]
+    required_fields:
+      - field: hearing_document_exists
+        type: boolean
+      - field: hearing_initiated_at
+        type: datetime
+      - field: hearing_contains_employee_identity
+        type: boolean
+      - field: hearing_contains_termination_type
+        type: boolean
+      - field: hearing_contains_termination_reason
+        type: boolean
+      - field: hearing_contains_route
+        type: boolean
+      - field: hearing_route_stated
+        type: string
+      - field: hearing_response_deadline
+        type: datetime
+      - field: hearing_response_received_at
+        type: datetime
+      - field: hearing_response_type
+        type: string
+        enum: [APPROVED, OBJECTED, NO_RESPONSE, PARTIAL_OBJECTION]
+    timestamp_rule: "hearing_initiated_at < termination_issued_at"
+
+  - code: EB-8
+    label: "Integrationsamt approval (Route B)"
+    category: ROUTE_B
+    description: "Required if employee is severely disabled."
+    required_when: "route == ROUTE_B AND severe_disability == true"
+    gate_refs: [G0]
+    required_fields:
+      - field: integrationsamt_approval
+        type: boolean
+      - field: approval_date
+        type: date
+      - field: approval_reference
+        type: string
+    timestamp_rule: "approval_date < termination_issued_at"
+
+  - code: EB-9
+    label: "Termination letter + delivery proof (Route B)"
+    category: ROUTE_B
+    description: "§623 BGB compliance."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G2]
+    required_fields:
+      - field: letter_exists
+        type: boolean
+      - field: written_form_used
+        type: boolean
+      - field: original_signature
+        type: boolean
+      - field: delivery_method
+        type: string
+      - field: delivery_date
+        type: date
+    timestamp_rule: "delivery_date == termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # EC: ROUTE C — OPERATIONAL (Betriebsbedingt)
+  # ─────────────────────────────────────────────
+  - code: EC-1
+    label: "Business decision document"
+    category: ROUTE_C
+    description: "Organizational change, positions eliminated, rationale."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G2]
+    required_fields:
+      - field: business_decision_description
+        type: string
+      - field: positions_eliminated
+        type: array
+      - field: headcount_rationale
+        type: string
+      - field: decision_date
+        type: date
+    timestamp_rule: "decision_date < termination_issued_at"
+
+  - code: EC-2
+    label: "Comparable employee pool"
+    category: ROUTE_C
+    description: "All employees considered with 3 comparability tests."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G2]
+    required_fields:
+      - field: pool_employees
+        type: array
+      - field: comparability_test_hierarchical
+        type: boolean
+      - field: comparability_test_interchangeable
+        type: boolean
+      - field: comparability_test_same_establishment
+        type: boolean
+      - field: inclusion_exclusion_reasoning
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EC-3
+    label: "Social data for all pool members"
+    category: ROUTE_C
+    description: "Tenure, age, dependents, disability for every member."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G2]
+    required_fields:
+      - field: social_data_complete
+        type: boolean
+      - field: pool_member_count
+        type: integer
+      - field: data_coverage_count
+        type: integer
+      - field: member_data
+        type: array
+        description: "Array of {employee_id, tenure, age, dependents, disability_status}."
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EC-4
+    label: "Weighting model"
+    category: ROUTE_C
+    description: "Point allocations per criterion with justification."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G2]
+    required_fields:
+      - field: weighting_model_exists
+        type: boolean
+      - field: weighting_justification
+        type: string
+      - field: tenure_weight
+        type: number
+      - field: age_weight
+        type: number
+      - field: dependents_weight
+        type: number
+      - field: disability_weight
+        type: number
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EC-5
+    label: "Complete scoring matrix"
+    category: ROUTE_C
+    description: "All pool members scored across all 4 criteria."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G2]
+    required_fields:
+      - field: scoring_matrix_complete
+        type: boolean
+      - field: matrix_data
+        type: array
+        description: "Array of {employee_id, tenure_score, age_score, dependents_score, disability_score, total}."
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EC-6
+    label: "Ranked list"
+    category: ROUTE_C
+    description: "Employees ordered by social protection score."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G2]
+    required_fields:
+      - field: ranked_list_exists
+        type: boolean
+      - field: selected_employee_lowest_score
+        type: boolean
+      - field: ranked_employees
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EC-7
+    label: "Exemption justifications"
+    category: ROUTE_C
+    description: "§1 Abs. 3 S. 2 KSchG exemptions."
+    required_when: "route == ROUTE_C AND exemptions_claimed == true"
+    gate_refs: [G2]
+    required_fields:
+      - field: exemptions_claimed
+        type: boolean
+      - field: exemption_employee_ids
+        type: array
+      - field: exemption_justifications
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EC-8
+    label: "Selection guidelines compliance"
+    category: ROUTE_C
+    description: "§1 Abs. 4 / §95 BetrVG guidelines."
+    required_when: "route == ROUTE_C AND selection_guidelines_exist == true"
+    gate_refs: [G2]
+    required_fields:
+      - field: guidelines_exist
+        type: boolean
+      - field: guidelines_followed
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EC-9
+    label: "Alternatives evaluation (Route C)"
+    category: ROUTE_C
+    description: "Transfer, reduced hours, retraining, voluntary exit per employee."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G3, G3.C1, G3.C2, G3.C3]
+    required_fields:
+      - field: alternatives_evaluated
+        type: boolean
+      - field: per_employee_alternatives
+        type: array
+        description: "Array of {employee_id, alternatives_considered, rejection_reasons}."
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EC-10
+    label: "Works council hearing (Route C)"
+    category: ROUTE_C
+    description: "Must include social selection data per BAG."
+    required_when: "route == ROUTE_C AND betriebsrat_exists == true"
+    gate_refs: [G1]
+    required_fields:
+      - field: hearing_document_exists
+        type: boolean
+      - field: hearing_initiated_at
+        type: datetime
+      - field: hearing_contains_employee_identity
+        type: boolean
+      - field: hearing_contains_termination_type
+        type: boolean
+      - field: hearing_contains_termination_reason
+        type: boolean
+      - field: hearing_contains_route
+        type: boolean
+      - field: hearing_route_stated
+        type: string
+      - field: hearing_contains_social_selection_data
+        type: boolean
+      - field: hearing_response_deadline
+        type: datetime
+      - field: hearing_response_received_at
+        type: datetime
+      - field: hearing_response_type
+        type: string
+        enum: [APPROVED, OBJECTED, NO_RESPONSE, PARTIAL_OBJECTION]
+    timestamp_rule: "hearing_initiated_at < termination_issued_at"
+
+  - code: EC-11
+    label: "Mass layoff notification"
+    category: ROUTE_C
+    description: "Massenentlassungsanzeige + Agentur für Arbeit receipt."
+    required_when: "route == ROUTE_C AND mass_layoff_triggered == true"
+    gate_refs: [G2]
+    required_fields:
+      - field: notification_filed
+        type: boolean
+      - field: notification_date
+        type: date
+      - field: agency_receipt_date
+        type: date
+    timestamp_rule: "notification_date < termination_issued_at"
+
+  - code: EC-12
+    label: "Termination letter + delivery proof (Route C)"
+    category: ROUTE_C
+    description: "§623 BGB + §622 BGB compliance."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G2]
+    required_fields:
+      - field: letter_exists
+        type: boolean
+      - field: written_form_used
+        type: boolean
+      - field: original_signature
+        type: boolean
+      - field: delivery_method
+        type: string
+      - field: delivery_date
+        type: date
+    timestamp_rule: "delivery_date == termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # ED: ROUTE D — EXTRAORDINARY (Außerordentlich)
+  # ─────────────────────────────────────────────
+  - code: ED-1
+    label: "Triggering event documentation"
+    category: ROUTE_D
+    description: "Specific facts with date, time, witnesses."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G2]
+    required_fields:
+      - field: triggering_event_date
+        type: date
+      - field: triggering_event_description
+        type: string
+      - field: witnesses
+        type: array
+      - field: physical_evidence
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ED-2
+    label: "Knowledge date evidence"
+    category: ROUTE_D
+    description: "Who knew, when, chain to decision-maker."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G2]
+    required_fields:
+      - field: knowledge_date
+        type: datetime
+      - field: knowledge_person
+        type: string
+      - field: knowledge_chain
+        type: string
+    timestamp_rule: "knowledge_date <= termination_issued_at"
+
+  - code: ED-3
+    label: "Two-week deadline calculation"
+    category: ROUTE_D
+    description: "knowledge_date + 14 days = deadline."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G2]
+    required_fields:
+      - field: two_week_deadline
+        type: date
+      - field: termination_issued_at
+        type: datetime
+      - field: deadline_met
+        type: boolean
+    timestamp_rule: "N/A — computed"
+
+  - code: ED-4
+    label: "Investigation file"
+    category: ROUTE_D
+    description: "Daily log, witness statements, evidence, conclusion."
+    required_when: "route == ROUTE_D AND investigation_conducted == true"
+    gate_refs: [G2]
+    required_fields:
+      - field: investigation_start_date
+        type: date
+      - field: investigation_end_date
+        type: date
+      - field: investigation_log
+        type: string
+    timestamp_rule: "investigation_end_date <= termination_issued_at"
+
+  - code: ED-5
+    label: "Important reason analysis"
+    category: ROUTE_D
+    description: "Why continued employment until notice period end is unreasonable."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G2]
+    required_fields:
+      - field: important_reason_analysis
+        type: string
+      - field: unreasonable_to_continue_basis
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ED-6
+    label: "Interest balancing (Route D)"
+    category: ROUTE_D
+    description: "Severity vs tenure, prior conduct, circumstances."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G2, G3, G3.D1]
+    required_fields:
+      - field: proportionality_analysis_exists
+        type: boolean
+      - field: severity_assessment
+        type: string
+      - field: tenure_considered
+        type: boolean
+      - field: prior_conduct_considered
+        type: boolean
+      - field: personal_circumstances_considered
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ED-7
+    label: "Alternatives assessment (Route D)"
+    category: ROUTE_D
+    description: "Why ordinary termination with notice is insufficient."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G3, G3.D2]
+    required_fields:
+      - field: alternatives_evaluated
+        type: boolean
+      - field: ordinary_termination_insufficient_reason
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ED-8
+    label: "Warning necessity assessment"
+    category: ROUTE_D
+    description: "Was prior Abmahnung required?"
+    required_when: "route == ROUTE_D"
+    gate_refs: [G2]
+    required_fields:
+      - field: warning_necessity_assessed
+        type: boolean
+      - field: warning_exists_or_exception_justified
+        type: boolean
+      - field: justification
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ED-9
+    label: "Works council hearing (Route D, 3-day)"
+    category: ROUTE_D
+    description: "Compressed 3-day window."
+    required_when: "route == ROUTE_D AND betriebsrat_exists == true"
+    gate_refs: [G1]
+    required_fields:
+      - field: hearing_document_exists
+        type: boolean
+      - field: hearing_initiated_at
+        type: datetime
+      - field: hearing_contains_employee_identity
+        type: boolean
+      - field: hearing_contains_termination_type
+        type: boolean
+      - field: hearing_contains_termination_reason
+        type: boolean
+      - field: hearing_contains_route
+        type: boolean
+      - field: hearing_route_stated
+        type: string
+      - field: hearing_response_deadline
+        type: datetime
+      - field: hearing_response_received_at
+        type: datetime
+      - field: hearing_response_type
+        type: string
+        enum: [APPROVED, OBJECTED, NO_RESPONSE, PARTIAL_OBJECTION]
+    timestamp_rule: "hearing_initiated_at < termination_issued_at"
+
+  - code: ED-10
+    label: "§103 consent / court order (Route D, BR member)"
+    category: ROUTE_D
+    description: "Without this, extraordinary termination of BR member is void."
+    required_when: "route == ROUTE_D AND BR_MEMBER in special_protections"
+    gate_refs: [G0]
+    required_fields:
+      - field: consent_103_obtained
+        type: boolean
+      - field: consent_103_date
+        type: date
+      - field: court_substitution
+        type: boolean
+    timestamp_rule: "consent_103_date < termination_issued_at"
+
+  - code: ED-11
+    label: "Termination letter + delivery proof (Route D)"
+    category: ROUTE_D
+    description: "§623 BGB. No notice period. Within 2-week window."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G2]
+    required_fields:
+      - field: letter_exists
+        type: boolean
+      - field: written_form_used
+        type: boolean
+      - field: original_signature
+        type: boolean
+      - field: delivery_method
+        type: string
+      - field: delivery_date
+        type: date
+      - field: within_two_week_window
+        type: boolean
+    timestamp_rule: "delivery_date <= two_week_deadline"
+
+  # ─────────────────────────────────────────────
+  # EU: UNIVERSAL EVIDENCE (ALL ROUTES)
+  # ─────────────────────────────────────────────
+  - code: EU-WF
+    label: "Written form (§623 BGB)"
+    category: UNIVERSAL
+    description: "Physical paper, original signature, delivery."
+    required_when: "always"
+    gate_refs: [G2]
+    required_fields:
+      - field: written_form_used
+        type: boolean
+      - field: original_signature
+        type: boolean
+      - field: proxy_signed
+        type: boolean
+      - field: vollmacht_attached
+        type: boolean
+        required_if: "proxy_signed == true"
+      - field: delivery_proof
+        type: boolean
+      - field: delivery_method
+        type: string
+        enum: [PERSONAL_HANDOVER, REGISTERED_MAIL]
+      - field: delivery_date
+        type: date
+    timestamp_rule: "delivery_date == termination_issued_at"
+
+  - code: EU-NP
+    label: "Notice period (§622 BGB)"
+    category: UNIVERSAL
+    description: "Statutory/contractual minimum vs actual."
+    required_when: "envelope.decision.termination_type == ORDINARY"
+    gate_refs: [G2]
+    required_fields:
+      - field: statutory_minimum_days
+        type: integer
+      - field: contractual_minimum_days
+        type: integer
+      - field: actual_notice_days
+        type: integer
+      - field: terminates_on_valid_date
+        type: boolean
+        description: "15th or end of month per §622."
+    timestamp_rule: "N/A — computed"
+
+  - code: EU-CON
+    label: "Consistency evidence"
+    category: UNIVERSAL
+    description: "Prior similar case treatment."
+    required_when: "optional"
+    gate_refs: [G4, G4.1, G4.2, G4.3, G4.4, G4.5]
+    required_fields:
+      - field: prior_cases_documented
+        type: boolean
+      - field: treatment_consistent
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EU-AGG
+    label: "Anti-discrimination (AGG)"
+    category: UNIVERSAL
+    description: "Decision basis documented, no protected ground indicia."
+    required_when: "always"
+    gate_refs: [G7, G7.1, G7.2]
+    required_fields:
+      - field: decision_basis_documented
+        type: boolean
+      - field: no_protected_ground_indicia
+        type: boolean
+      - field: protected_grounds_checked
+        type: array
+        description: "Which grounds were affirmatively checked."
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # ET: TECH EVIDENCE (CONDITIONAL: tech_used == true)
+  # ─────────────────────────────────────────────
+  - code: ET-CD
+    label: "Co-determination tech (§87(1) Nr. 6 BetrVG)"
+    category: TECH
+    description: "Works council involvement in tech deployment."
+    required_when: "tech_used == true"
+    gate_refs: [G5, G5.1, G5.2]
+    required_fields:
+      - field: works_council_involved_in_tech_deployment
+        type: boolean
+      - field: tech_agreement_exists
+        type: boolean
+      - field: tech_description
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ET-MT
+    label: "Model transparency"
+    category: TECH
+    description: "Employee informed, human oversight, Art. 22 assessment."
+    required_when: "tech_used == true"
+    gate_refs: [G6, G6.1, G6.2, G6.3]
+    required_fields:
+      - field: employee_informed_of_ai
+        type: boolean
+      - field: human_oversight_documented
+        type: boolean
+      - field: oversight_person
+        type: string
+      - field: oversight_authority_to_override
+        type: boolean
+      - field: gdpr_art22_assessment
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # EP: PROPORTIONALITY SUB-GATE EVIDENCE (G3)
+  # Backported from gate_registry.DE.v1.1 sub-gates
+  # ─────────────────────────────────────────────
+  - code: EP-A1
+    label: "Warning effectiveness evaluated"
+    category: ROUTE_A
+    description: "Assessment that prior warning was effective and understood by employee."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G3]
+    required_fields:
+      - field: warning_effectiveness_evaluated
+        type: boolean
+      - field: effectiveness_basis
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-A2
+    label: "Repetition risk assessment"
+    category: ROUTE_A
+    description: "Documented basis for expecting repeated misconduct."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G3]
+    required_fields:
+      - field: repetition_risk_documented
+        type: boolean
+      - field: repetition_risk_basis
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-A3
+    label: "Milder sanction consideration"
+    category: ROUTE_A
+    description: "Evidence that milder sanctions were considered and rejected."
+    required_when: "route == ROUTE_A"
+    gate_refs: [G3]
+    required_fields:
+      - field: milder_sanction_considered
+        type: boolean
+      - field: milder_sanction_rejected_reason
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-B1
+    label: "BEM proper conduct verification"
+    category: ROUTE_B
+    description: "Verification that BEM process was properly conducted per statutory requirements."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G3]
+    required_fields:
+      - field: bem_properly_conducted
+        type: boolean
+      - field: bem_adequacy_basis
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-B2
+    label: "Workplace adaptation exploration"
+    category: ROUTE_B
+    description: "Documentation that workplace adaptations were explored before termination."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G3]
+    required_fields:
+      - field: workplace_adaptation_explored
+        type: boolean
+      - field: adaptation_options_documented
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-B3
+    label: "Alternative role assessment"
+    category: ROUTE_B
+    description: "Assessment of alternative roles within the organization."
+    required_when: "route == ROUTE_B"
+    gate_refs: [G3]
+    required_fields:
+      - field: alternative_role_assessed
+        type: boolean
+      - field: alternative_role_rejection_reason
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-C1
+    label: "Transfer possibility examination"
+    category: ROUTE_C
+    description: "Examination of transfer options for affected employee."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G3]
+    required_fields:
+      - field: transfer_possibility_examined
+        type: boolean
+      - field: transfer_rejection_reason
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-C2
+    label: "Retraining possibility assessment"
+    category: ROUTE_C
+    description: "Assessment of retraining options as alternative to termination."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G3]
+    required_fields:
+      - field: retraining_assessed
+        type: boolean
+      - field: retraining_rejection_reason
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-C3
+    label: "Voluntary redundancy evaluation"
+    category: ROUTE_C
+    description: "Evaluation of voluntary redundancy offer before compulsory termination."
+    required_when: "route == ROUTE_C"
+    gate_refs: [G3]
+    required_fields:
+      - field: voluntary_redundancy_evaluated
+        type: boolean
+      - field: voluntary_redundancy_offered
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-D1
+    label: "Immediate termination necessity"
+    category: ROUTE_D
+    description: "Justification that immediate termination without notice is necessary."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G3]
+    required_fields:
+      - field: immediate_termination_necessary
+        type: boolean
+      - field: immediacy_basis
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EP-D2
+    label: "Warning impossibility justification"
+    category: ROUTE_D
+    description: "Justification that prior warning was impossible or would have been futile."
+    required_when: "route == ROUTE_D"
+    gate_refs: [G3]
+    required_fields:
+      - field: warning_impossibility_justified
+        type: boolean
+      - field: impossibility_basis
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # EQ: CONSISTENCY SUB-GATE EVIDENCE (G4)
+  # Backported from gate_registry.DE.v1.1 sub-gates
+  # ─────────────────────────────────────────────
+  - code: EQ-1
+    label: "Prior similar cases reviewed"
+    category: UNIVERSAL
+    description: "Review of prior similar cases for consistency analysis."
+    required_when: "optional"
+    gate_refs: [G4]
+    required_fields:
+      - field: prior_cases_reviewed
+        type: boolean
+      - field: prior_cases_count
+        type: integer
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EQ-2
+    label: "Comparable misconduct cases compared"
+    category: UNIVERSAL
+    description: "Comparison with comparable misconduct or comparator cases."
+    required_when: "optional"
+    gate_refs: [G4]
+    required_fields:
+      - field: comparable_cases_compared
+        type: boolean
+      - field: comparator_cases
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EQ-3
+    label: "Policy consistency validated"
+    category: UNIVERSAL
+    description: "Validation that termination is consistent with company policy."
+    required_when: "optional"
+    gate_refs: [G4]
+    required_fields:
+      - field: policy_consistency_validated
+        type: boolean
+      - field: policy_reference
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EQ-4
+    label: "Discrimination risk check (AGG)"
+    category: UNIVERSAL
+    description: "Check for discriminatory patterns in termination decisions."
+    required_when: "always"
+    gate_refs: [G4]
+    required_fields:
+      - field: discrimination_risk_checked
+        type: boolean
+      - field: agg_grounds_reviewed
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EQ-5
+    label: "Selective enforcement check"
+    category: UNIVERSAL
+    description: "Check whether rules were selectively enforced against employee."
+    required_when: "optional"
+    gate_refs: [G4]
+    required_fields:
+      - field: selective_enforcement_checked
+        type: boolean
+      - field: enforcement_pattern_documented
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # ET-CD-*: CO-DETERMINATION TECH SUB-GATE EVIDENCE (G5)
+  # Backported from gate_registry.DE.v1.1 sub-gates
+  # ─────────────────────────────────────────────
+  - code: ET-CD-1
+    label: "Works council tech involvement verified"
+    category: TECH
+    description: "Verification that works council was involved in tech deployment decision."
+    required_when: "tech_used == true"
+    gate_refs: [G5]
+    required_fields:
+      - field: works_council_tech_involvement_verified
+        type: boolean
+      - field: involvement_documentation
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ET-CD-2
+    label: "Tech agreement verified"
+    category: TECH
+    description: "Verification that a valid tech agreement exists for the deployed system."
+    required_when: "tech_used == true"
+    gate_refs: [G5]
+    required_fields:
+      - field: tech_agreement_verified
+        type: boolean
+      - field: agreement_reference
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # ET-MT-*: MODEL TRANSPARENCY SUB-GATE EVIDENCE (G6)
+  # Backported from gate_registry.DE.v1.1 sub-gates
+  # ─────────────────────────────────────────────
+  - code: ET-MT-1
+    label: "Employee AI notification verified"
+    category: TECH
+    description: "Verification that employee was informed about AI use in the decision."
+    required_when: "tech_used == true"
+    gate_refs: [G6]
+    required_fields:
+      - field: employee_ai_notification_verified
+        type: boolean
+      - field: notification_date
+        type: date
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ET-MT-2
+    label: "Human oversight verified"
+    category: TECH
+    description: "Verification that meaningful human oversight was in place."
+    required_when: "tech_used == true"
+    gate_refs: [G6]
+    required_fields:
+      - field: human_oversight_verified
+        type: boolean
+      - field: oversight_person_documented
+        type: boolean
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: ET-MT-3
+    label: "GDPR Art. 22 assessment verified"
+    category: TECH
+    description: "Verification that Art. 22 automated decision-making assessment was conducted."
+    required_when: "tech_used == true"
+    gate_refs: [G6]
+    required_fields:
+      - field: art22_assessment_verified
+        type: boolean
+      - field: assessment_reference
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  # ─────────────────────────────────────────────
+  # EU-AGG-*: ANTI-DISCRIMINATION SUB-GATE EVIDENCE (G7)
+  # Backported from gate_registry.DE.v1.1 sub-gates
+  # ─────────────────────────────────────────────
+  - code: EU-AGG-1
+    label: "Decision basis documented for AGG review"
+    category: UNIVERSAL
+    description: "Decision basis is documented sufficiently for AGG compliance review."
+    required_when: "always"
+    gate_refs: [G7]
+    required_fields:
+      - field: decision_basis_agg_documented
+        type: boolean
+      - field: decision_basis_reference
+        type: string
+    timestamp_rule: "created_at <= termination_issued_at"
+
+  - code: EU-AGG-2
+    label: "No protected-ground indicia detected"
+    category: UNIVERSAL
+    description: "Affirmative check that no protected-ground indicia are present."
+    required_when: "always"
+    gate_refs: [G7]
+    required_fields:
+      - field: protected_ground_indicia_absent
+        type: boolean
+      - field: grounds_checked
+        type: array
+    timestamp_rule: "created_at <= termination_issued_at"

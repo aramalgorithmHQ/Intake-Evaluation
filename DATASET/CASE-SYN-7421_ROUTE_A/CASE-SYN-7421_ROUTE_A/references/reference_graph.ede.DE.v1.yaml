@@ -1,0 +1,1139 @@
+# reference_graph.ede.DE.v1.yaml
+# EDE Reference Graph — Germany Termination
+# Derived from gate_registry.DE.v1.yaml
+# Explicit G0 -> G1 -> G2 -> G3 -> G4 -> G5 -> G6 -> G7
+# Plus intra-gate sub-gate ordering.
+# Specification-locked; immutable per doctrine version.
+
+ref_graph_id: "ede-de-term-v1"
+ref_graph_hash: "sha256:placeholder_computed_at_build_time"
+graph_type: REFERENCE
+engine: EDE
+doctrine_version: "1.0.1"
+jurisdiction: DE
+decision_type: TERMINATION
+
+nodes:
+  # ── G0: Special Protection ──
+  - node_id: G0
+    node_type: GATE
+    label: "Special Protection Screen"
+    applies_if: "always"
+    deterministic_signature: { function_name: eval_gate_aggregate, args: { aggregation: ALL_SUBGATES_PASS_OR_NA } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G0_SPECIAL_PROTECTION_VIOLATED]
+    ux:
+      title_en: "Special Protection Screen"
+      title_de: "Sonderkündigungsschutz-Prüfung"
+      statute:
+        short: null
+        long_en: null
+        long_de: null
+      question_en: "Does any special protection apply?"
+      question_de: "Besteht Sonderkündigungsschutz?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: "Certain employees enjoy enhanced dismissal protection; authority approval may be required before termination."
+      explainer_de: "Bestimmte Arbeitnehmer genießen besonderen Kündigungsschutz; vor der Kündigung kann eine behördliche Genehmigung erforderlich sein."
+      lawyer_view:
+        display_priority: 10
+        show_in_summary: true
+
+  - node_id: G0.1
+    node_type: SUBGATE
+    label: "Pregnancy (§17 MuSchG)"
+    applies_if: "PREGNANT in special_protections"
+    requires_evidence_codes: [E0-d, E0-e]
+    requires_fields: [pregnancy_status, authority_type, approval_granted, approval_date]
+    deterministic_signature: { function_name: check_external_authority_approval, args: { authority_type: LANDESAMT, protection_category: PREGNANT } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G0_1_PREGNANCY_NO_APPROVAL, G0_1_PREGNANCY_APPROVAL_AFTER_TERMINATION]
+    ux:
+      title_en: "Pregnancy Protection"
+      title_de: "Mutterschutz (Schwangerschaft)"
+      statute:
+        short: "§17 MuSchG"
+        long_en: "§17 Maternity Protection Act"
+        long_de: "§17 Mutterschutzgesetz"
+      question_en: "Has authority approval been obtained for termination during pregnancy (§17 MuSchG)?"
+      question_de: "Liegt die behördliche Genehmigung zur Kündigung während der Schwangerschaft vor (§17 MuSchG)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 11
+        show_in_summary: false
+
+  - node_id: G0.2
+    node_type: SUBGATE
+    label: "Parental leave (§18 BEEG)"
+    applies_if: "PARENTAL_LEAVE in special_protections"
+    requires_evidence_codes: [E0-d, E0-e]
+    requires_fields: [parental_leave_status, authority_type, approval_granted, approval_date]
+    deterministic_signature: { function_name: check_external_authority_approval, args: { authority_type: LANDESAMT, protection_category: PARENTAL_LEAVE } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G0_2_PARENTAL_LEAVE_NO_APPROVAL, G0_2_PARENTAL_LEAVE_APPROVAL_AFTER_TERMINATION]
+    ux:
+      title_en: "Parental Leave Protection"
+      title_de: "Elternzeitschutz"
+      statute:
+        short: "§18 BEEG"
+        long_en: "§18 Federal Parental Allowance and Leave Act"
+        long_de: "§18 Bundeselterngeld- und Elternzeitgesetz"
+      question_en: "Has authority approval been obtained for termination during parental leave (§18 BEEG)?"
+      question_de: "Liegt die behördliche Genehmigung zur Kündigung während der Elternzeit vor (§18 BEEG)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 12
+        show_in_summary: false
+
+  - node_id: G0.3
+    node_type: SUBGATE
+    label: "Severe disability (§168 SGB IX)"
+    applies_if: "SEVERE_DISABILITY in special_protections"
+    requires_evidence_codes: [E0-d, E0-e]
+    requires_fields: [disability_gdb, authority_type, approval_granted, approval_date]
+    deterministic_signature: { function_name: check_external_authority_approval, args: { authority_type: INTEGRATIONSAMT, protection_category: SEVERE_DISABILITY } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G0_3_DISABILITY_NO_INTEGRATIONSAMT, G0_3_DISABILITY_APPROVAL_AFTER_TERMINATION]
+    ux:
+      title_en: "Severe Disability Protection"
+      title_de: "Schwerbehindertenschutz"
+      statute:
+        short: "§168 SGB IX"
+        long_en: "§168 Social Code Book IX"
+        long_de: "§168 Sozialgesetzbuch IX"
+      question_en: "Has Integrationsamt approval been obtained for termination of a severely disabled employee (§168 SGB IX)?"
+      question_de: "Liegt die Zustimmung des Integrationsamts zur Kündigung eines schwerbehinderten Arbeitnehmers vor (§168 SGB IX)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 13
+        show_in_summary: false
+
+  - node_id: G0.4
+    node_type: SUBGATE
+    label: "BR member (§15 KSchG)"
+    applies_if: "BR_MEMBER in special_protections"
+    requires_evidence_codes: [E0-d, E0-f]
+    requires_fields: [br_member_status]
+    deterministic_signature: { function_name: check_br_member_protection, args: { requires_extraordinary: true, requires_103_consent: true } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G0_4_BR_MEMBER_ORDINARY_PROHIBITED, G0_4_BR_MEMBER_NO_103_CONSENT]
+    ux:
+      title_en: "Works Council Member Protection"
+      title_de: "Betriebsratsmitgliedschutz"
+      statute:
+        short: "§15 KSchG"
+        long_en: "§15 Dismissal Protection Act"
+        long_de: "§15 Kündigungsschutzgesetz"
+      question_en: "Is the termination of a works council member consistent with §15 KSchG?"
+      question_de: "Ist die Kündigung eines Betriebsratsmitglieds nach §15 KSchG kriterienkonform?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 14
+        show_in_summary: false
+
+  - node_id: G0.5
+    node_type: SUBGATE
+    label: "DPO (§38 Abs. 2 BDSG)"
+    applies_if: "DPO in special_protections"
+    requires_evidence_codes: [E0-d]
+    requires_fields: [dpo_appointment_status, dpo_appointment_date, dpo_removal_date]
+    deterministic_signature: { function_name: check_dpo_protection, args: { requires_extraordinary: true } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G0_5_DPO_ORDINARY_PROHIBITED]
+    ux:
+      title_en: "Data Protection Officer Protection"
+      title_de: "Datenschutzbeauftragten-Schutz"
+      statute:
+        short: "§38 Abs. 2 BDSG"
+        long_en: "§38(2) Federal Data Protection Act"
+        long_de: "§38 Abs. 2 Bundesdatenschutzgesetz"
+      question_en: "Is the DPO termination restricted to extraordinary cause (§38 Abs. 2 BDSG)?"
+      question_de: "Ist die Kündigung des Datenschutzbeauftragten auf außerordentliche Gründe beschränkt (§38 Abs. 2 BDSG)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 15
+        show_in_summary: false
+
+  - node_id: G0.6
+    node_type: SUBGATE
+    label: "Election board (§15 Abs. 3 KSchG)"
+    applies_if: "ELECTION_BOARD in special_protections"
+    requires_evidence_codes: [E0-d, E0-f]
+    requires_fields: [election_board_status]
+    deterministic_signature: { function_name: check_br_member_protection, args: { requires_extraordinary: true, requires_103_consent: true } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G0_6_ELECTION_BOARD_ORDINARY_PROHIBITED, G0_6_ELECTION_BOARD_NO_103_CONSENT]
+    ux:
+      title_en: "Election Board Member Protection"
+      title_de: "Wahlvorstandsschutz"
+      statute:
+        short: "§15 Abs. 3 KSchG"
+        long_en: "§15(3) Dismissal Protection Act"
+        long_de: "§15 Abs. 3 Kündigungsschutzgesetz"
+      question_en: "Is the termination of an election board member consistent with §15 Abs. 3 KSchG?"
+      question_de: "Ist die Kündigung eines Wahlvorstandsmitglieds nach §15 Abs. 3 KSchG kriterienkonform?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 16
+        show_in_summary: false
+
+  - node_id: G0.7
+    node_type: SUBGATE
+    label: "Military/civil service (§2 ArbPlSchG)"
+    applies_if: "MILITARY_SERVICE in special_protections"
+    requires_evidence_codes: [E0-d]
+    requires_fields: [military_service_status, military_service_start, military_service_end]
+    deterministic_signature: { function_name: check_absolute_bar, args: { bar_type: MILITARY_SERVICE } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G0_7_MILITARY_ABSOLUTE_BAR]
+    ux:
+      title_en: "Military/Civil Service Protection"
+      title_de: "Wehr-/Zivildienstschutz"
+      statute:
+        short: "§2 ArbPlSchG"
+        long_en: "§2 Workplace Protection Act"
+        long_de: "§2 Arbeitsplatzschutzgesetz"
+      question_en: "Does military/civil service protection bar this termination (§2 ArbPlSchG)?"
+      question_de: "Steht der Wehr-/Zivildienstschutz der Kündigung entgegen (§2 ArbPlSchG)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 17
+        show_in_summary: false
+
+  # ── G1: Works Council Hearing ──
+  - node_id: G1
+    node_type: GATE
+    label: "Works Council Hearing (§102 BetrVG)"
+    applies_if: "betriebsrat_exists == true"
+    deterministic_signature: { function_name: eval_gate_aggregate, args: { aggregation: ALL_SUBGATES_PASS_OR_NA } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_WORKS_COUNCIL_HEARING_DEFECTIVE]
+    ux:
+      title_en: "Works Council Hearing"
+      title_de: "Betriebsratsanhörung"
+      statute:
+        short: "§102 BetrVG"
+        long_en: "§102 Works Constitution Act"
+        long_de: "§102 Betriebsverfassungsgesetz"
+      question_en: "Was the works council properly heard before termination?"
+      question_de: "Wurde der Betriebsrat ordnungsgemäß nach §102 BetrVG angehört?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: "A termination without proper works council consultation is structurally deficient per §102 BetrVG criteria."
+      explainer_de: "Eine ohne ordnungsgemäße Betriebsratsanhörung ausgesprochene Kündigung ist nach §102 BetrVG strukturell defizitär."
+      lawyer_view:
+        display_priority: 20
+        show_in_summary: true
+
+  - node_id: G1.1
+    node_type: SUBGATE
+    label: "Hearing before termination"
+    applies_if: "betriebsrat_exists == true"
+    requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+    requires_fields: [hearing_initiated_at]
+    deterministic_signature: { function_name: check_timestamp_before, args: { field: hearing_initiated_at, before: termination_issued_at } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_1_HEARING_NOT_BEFORE_TERMINATION]
+    ux:
+      title_en: "Hearing Before Termination"
+      title_de: "Anhörung vor Kündigung"
+      statute:
+        short: "§102 BetrVG"
+        long_en: "§102 Works Constitution Act"
+        long_de: "§102 Betriebsverfassungsgesetz"
+      question_en: "Was the works council hearing initiated before the termination was issued?"
+      question_de: "Wurde die Betriebsratsanhörung vor Ausspruch der Kündigung eingeleitet?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 21
+        show_in_summary: false
+
+  - node_id: G1.2
+    node_type: SUBGATE
+    label: "Hearing document complete"
+    applies_if: "betriebsrat_exists == true"
+    requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+    requires_fields: [hearing_document_exists, hearing_contains_employee_identity, hearing_contains_termination_type, hearing_contains_termination_reason, hearing_contains_route]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [hearing_document_exists, hearing_contains_employee_identity, hearing_contains_termination_type, hearing_contains_termination_reason, hearing_contains_route] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_2_HEARING_DOCUMENT_INCOMPLETE]
+    ux:
+      title_en: "Hearing Document Completeness"
+      title_de: "Vollständigkeit der Anhörungsunterlagen"
+      statute:
+        short: "§102 BetrVG"
+        long_en: "§102 Works Constitution Act"
+        long_de: "§102 Betriebsverfassungsgesetz"
+      question_en: "Does the hearing document contain all required information?"
+      question_de: "Enthält das Anhörungsschreiben alle erforderlichen Angaben?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 22
+        show_in_summary: false
+
+  - node_id: G1.3
+    node_type: SUBGATE
+    label: "Route match hearing vs letter"
+    applies_if: "betriebsrat_exists == true"
+    requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+    requires_fields: [hearing_route_stated]
+    deterministic_signature: { function_name: check_route_match, args: { hearing_field: hearing_route_stated, envelope_field: route } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_3_ROUTE_MISMATCH_HEARING_VS_LETTER]
+    ux:
+      title_en: "Route Match: Hearing vs. Letter"
+      title_de: "Übereinstimmung Kündigungsgrund: Anhörung vs. Schreiben"
+      statute:
+        short: "§102 BetrVG"
+        long_en: "§102 Works Constitution Act"
+        long_de: "§102 Betriebsverfassungsgesetz"
+      question_en: "Does the termination route stated in the hearing match the termination letter?"
+      question_de: "Stimmt der in der Anhörung genannte Kündigungsgrund mit dem Kündigungsschreiben überein?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 23
+        show_in_summary: false
+
+  - node_id: G1.4
+    node_type: SUBGATE
+    label: "Response window"
+    applies_if: "betriebsrat_exists == true"
+    requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+    requires_fields: [hearing_initiated_at, hearing_response_deadline, termination_issued_at]
+    deterministic_signature: { function_name: check_hearing_response_window, args: { ordinary_window_days: 7, extraordinary_window_days: 3 } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_4_RESPONSE_WINDOW_VIOLATED]
+    ux:
+      title_en: "Response Window Compliance"
+      title_de: "Einhaltung der Stellungnahmefrist"
+      statute:
+        short: "§102 BetrVG"
+        long_en: "§102 Works Constitution Act"
+        long_de: "§102 Betriebsverfassungsgesetz"
+      question_en: "Was the statutory response window observed before issuing the termination?"
+      question_de: "Wurde die gesetzliche Stellungnahmefrist vor Ausspruch der Kündigung eingehalten?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 24
+        show_in_summary: false
+
+  - node_id: G1.5
+    node_type: SUBGATE
+    label: "Response documented"
+    applies_if: "betriebsrat_exists == true"
+    requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+    requires_fields: [hearing_response_type]
+    deterministic_signature: { function_name: check_field_in_enum, args: { field: hearing_response_type, allowed: [APPROVED, OBJECTED, NO_RESPONSE, PARTIAL_OBJECTION] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_5_HEARING_RESPONSE_NOT_DOCUMENTED]
+    ux:
+      title_en: "Response Documentation"
+      title_de: "Dokumentation der Stellungnahme"
+      statute:
+        short: "§102 BetrVG"
+        long_en: "§102 Works Constitution Act"
+        long_de: "§102 Betriebsverfassungsgesetz"
+      question_en: "Is the works council response properly documented?"
+      question_de: "Ist die Stellungnahme des Betriebsrats ordnungsgemäß dokumentiert?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 25
+        show_in_summary: false
+
+  - node_id: G1.6
+    node_type: SUBGATE
+    label: "Social selection in hearing (Route C)"
+    applies_if: "route == ROUTE_C AND betriebsrat_exists == true"
+    requires_evidence_codes: [EC-10]
+    requires_fields: [hearing_contains_social_selection_data]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [hearing_contains_social_selection_data] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_6_SOCIAL_SELECTION_NOT_IN_HEARING]
+    ux:
+      title_en: "Social Selection Data in Hearing"
+      title_de: "Sozialdaten in der Anhörung (betriebsbedingt)"
+      statute:
+        short: "§102 BetrVG"
+        long_en: "§102 Works Constitution Act"
+        long_de: "§102 Betriebsverfassungsgesetz"
+      question_en: "Were social selection data included in the works council hearing (Route C)?"
+      question_de: "Wurden die Sozialauswahldaten in der Betriebsratsanhörung mitgeteilt (betriebsbedingt)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 26
+        show_in_summary: false
+
+  - node_id: G1.7
+    node_type: SUBGATE
+    label: "Not issued before window expired"
+    applies_if: "betriebsrat_exists == true"
+    requires_evidence_codes: [EA-8, EB-7, EC-10, ED-9]
+    requires_fields: [hearing_response_deadline, termination_issued_at]
+    deterministic_signature: { function_name: check_timestamp_not_before, args: { field: termination_issued_at, not_before: hearing_response_deadline } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_7_TERMINATION_BEFORE_RESPONSE_WINDOW_EXPIRED]
+    ux:
+      title_en: "No Premature Termination"
+      title_de: "Keine vorzeitige Kündigung"
+      statute:
+        short: "§102 BetrVG"
+        long_en: "§102 Works Constitution Act"
+        long_de: "§102 Betriebsverfassungsgesetz"
+      question_en: "Was the termination not issued before the response window expired?"
+      question_de: "Wurde die Kündigung nicht vor Ablauf der Stellungnahmefrist ausgesprochen?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 27
+        show_in_summary: false
+
+  - node_id: G1.8
+    node_type: SUBGATE
+    label: "§103 consent (BR member extraordinary)"
+    applies_if: "BR_MEMBER in special_protections OR ELECTION_BOARD in special_protections AND route == ROUTE_D OR termination_type == EXTRAORDINARY"
+    requires_evidence_codes: [E0-f]
+    requires_fields: [br_consent_103_obtained, br_consent_103_date]
+    deterministic_signature: { function_name: check_103_consent, args: { consent_required_before: termination_issued_at } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G1_8_NO_103_CONSENT_FOR_BR_MEMBER]
+    ux:
+      title_en: "§103 Consent for BR Member"
+      title_de: "§103-Zustimmung für Betriebsratsmitglied"
+      statute:
+        short: "§103 BetrVG"
+        long_en: "§103 Works Constitution Act"
+        long_de: "§103 Betriebsverfassungsgesetz"
+      question_en: "Has the works council given consent under §103 BetrVG for extraordinary termination of a BR member?"
+      question_de: "Hat der Betriebsrat der außerordentlichen Kündigung eines BR-Mitglieds nach §103 BetrVG zugestimmt?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 28
+        show_in_summary: false
+
+  # ── G2: Social Justification ──
+  - node_id: G2
+    node_type: GATE
+    label: "Social Justification / Standard"
+    applies_if: "always"
+    deterministic_signature: { function_name: eval_gate_g2, args: { kschg_toggle: kschg_applies } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_SOCIAL_JUSTIFICATION_DEFECTIVE]
+    ux:
+      title_en: "Criteria Consistency"
+      title_de: "Kriterienkonformität"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Is the termination criteria-consistent under §1 KSchG?"
+      question_de: "Ist die Kündigung kriterienkonform (§1 KSchG)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: "Under the Dismissal Protection Act, a termination must be criteria-consistent with conduct, personal, or operational reasons."
+      explainer_de: "Nach dem Kündigungsschutzgesetz muss eine Kündigung durch verhaltens-, personen- oder betriebsbedingte Gründe kriterienkonform sein."
+      lawyer_view:
+        display_priority: 30
+        show_in_summary: true
+
+  - node_id: G2.WF
+    node_type: SUBGATE
+    label: "Written form (§623 BGB)"
+    applies_if: "always"
+    requires_evidence_codes: [EU-WF]
+    requires_fields: [written_form_used, original_signature, delivery_proof]
+    deterministic_signature: { function_name: check_written_form, args: { require_physical_paper: true } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_WF_NO_WRITTEN_FORM, G2_WF_NO_ORIGINAL_SIGNATURE, G2_WF_NO_DELIVERY_PROOF, G2_WF_PROXY_NO_VOLLMACHT]
+    ux:
+      title_en: "Written Form Requirement"
+      title_de: "Schriftformerfordernis"
+      statute:
+        short: "§623 BGB"
+        long_en: "§623 German Civil Code"
+        long_de: "§623 Bürgerliches Gesetzbuch"
+      question_en: "Does the termination comply with the written form requirement (§623 BGB)?"
+      question_de: "Entspricht die Kündigung dem Schriftformerfordernis (§623 BGB)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 31
+        show_in_summary: false
+
+  - node_id: G2.NP
+    node_type: SUBGATE
+    label: "Notice period (§622 BGB)"
+    applies_if: "termination_type == ORDINARY"
+    requires_evidence_codes: [EU-NP]
+    requires_fields: [statutory_minimum_days, actual_notice_days, terminates_on_valid_date]
+    deterministic_signature: { function_name: check_notice_period, args: { notice_period_table: DE_622_BGB } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_NP_NOTICE_PERIOD_TOO_SHORT, G2_NP_INVALID_TERMINATION_DATE]
+    ux:
+      title_en: "Notice Period Compliance"
+      title_de: "Einhaltung der Kündigungsfrist"
+      statute:
+        short: "§622 BGB"
+        long_en: "§622 German Civil Code"
+        long_de: "§622 Bürgerliches Gesetzbuch"
+      question_en: "Does the notice period comply with §622 BGB?"
+      question_de: "Wurde die Kündigungsfrist nach §622 BGB eingehalten?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 32
+        show_in_summary: false
+
+  - node_id: G2.A1
+    node_type: SUBGATE
+    label: "Conduct: incident docs"
+    applies_if: "route == ROUTE_A AND kschg_applies == true"
+    requires_evidence_codes: [EA-1]
+    requires_fields: [incident_date, incident_description, contractual_duty_breached]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [incident_date, incident_description, contractual_duty_breached] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_A1_INCIDENT_NOT_DOCUMENTED]
+    ux:
+      title_en: "Conduct: Incident Documentation"
+      title_de: "Verhaltensbedingt: Vorfallsdokumentation"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Is the conduct incident properly documented?"
+      question_de: "Ist der Pflichtverstoß ordnungsgemäß dokumentiert?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 33
+        show_in_summary: false
+
+  - node_id: G2.A2
+    node_type: SUBGATE
+    label: "Conduct: Abmahnung"
+    applies_if: "route == ROUTE_A AND kschg_applies == true"
+    requires_evidence_codes: [EA-2, EA-3]
+    requires_fields: [warning_exists, warning_date, warning_same_conduct, documentation_function, censure_function, warning_function]
+    deterministic_signature: { function_name: check_abmahnung_validity, args: { expiry_months: 36 } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_A2_NO_VALID_WARNING, G2_A2_WARNING_EXPIRED, G2_A2_WARNING_DIFFERENT_CONDUCT, G2_A2_WARNING_MISSING_FUNCTION, G2_A2_NO_WARNING_EXCEPTION_UNJUSTIFIED]
+    ux:
+      title_en: "Conduct: Prior Warning (Abmahnung)"
+      title_de: "Verhaltensbedingt: Abmahnung"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Was a valid prior warning (Abmahnung) issued for the same conduct?"
+      question_de: "Wurde eine wirksame Abmahnung wegen desselben Verhaltens erteilt?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 34
+        show_in_summary: false
+
+  - node_id: G2.A3
+    node_type: SUBGATE
+    label: "Conduct: culpability + prognosis"
+    applies_if: "route == ROUTE_A AND kschg_applies == true"
+    requires_evidence_codes: [EA-4, EA-5]
+    requires_fields: [culpability_assessment, negative_prognosis_basis]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [culpability_assessment, negative_prognosis_basis] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_A3_NO_CULPABILITY_ASSESSMENT, G2_A3_NO_NEGATIVE_PROGNOSIS]
+    ux:
+      title_en: "Conduct: Culpability and Prognosis"
+      title_de: "Verhaltensbedingt: Verschulden und Prognose"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Are culpability and negative prognosis established?"
+      question_de: "Sind Verschulden und negative Prognose belegt?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 35
+        show_in_summary: false
+
+  - node_id: G2.B1
+    node_type: SUBGATE
+    label: "Personal: absence + BEM"
+    applies_if: "route == ROUTE_B AND kschg_applies == true"
+    requires_evidence_codes: [EB-1, EB-2]
+    requires_fields: [absence_record_months, bem_initiated, bem_invitation_sent]
+    deterministic_signature: { function_name: check_bem_compliance, args: { min_absence_record_months: 24 } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_B1_INSUFFICIENT_ABSENCE_RECORD, G2_B1_NO_BEM_PROCESS]
+    ux:
+      title_en: "Personal: Absence Record and BEM"
+      title_de: "Personenbedingt: Fehlzeitennachweis und BEM"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Is there an adequate absence record and was a BEM process conducted?"
+      question_de: "Liegt ein ausreichender Fehlzeitennachweis vor und wurde ein BEM durchgeführt?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 36
+        show_in_summary: false
+
+  - node_id: G2.B2
+    node_type: SUBGATE
+    label: "Personal: prognosis + impact"
+    applies_if: "route == ROUTE_B AND kschg_applies == true"
+    requires_evidence_codes: [EB-3, EB-4]
+    requires_fields: [prognosis_negative, prognosis_basis, operational_impact_documented]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [prognosis_negative, prognosis_basis, operational_impact_documented] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_B2_NO_NEGATIVE_PROGNOSIS, G2_B2_NO_OPERATIONAL_IMPACT]
+    ux:
+      title_en: "Personal: Prognosis and Impact"
+      title_de: "Personenbedingt: Prognose und Beeinträchtigung"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Is there a negative prognosis with documented operational impact?"
+      question_de: "Liegt eine negative Prognose mit dokumentierter betrieblicher Beeinträchtigung vor?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 37
+        show_in_summary: false
+
+  - node_id: G2.C1
+    node_type: SUBGATE
+    label: "Operational: business decision"
+    applies_if: "route == ROUTE_C AND kschg_applies == true"
+    requires_evidence_codes: [EC-1]
+    requires_fields: [business_decision_description, positions_eliminated, headcount_rationale]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [business_decision_description, positions_eliminated, headcount_rationale] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_C1_NO_BUSINESS_DECISION_DOCUMENT]
+    ux:
+      title_en: "Operational: Business Decision"
+      title_de: "Betriebsbedingt: Unternehmerentscheidung"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Is the underlying business decision documented?"
+      question_de: "Ist die zugrunde liegende Unternehmerentscheidung dokumentiert?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 38
+        show_in_summary: false
+
+  - node_id: G2.C2
+    node_type: SUBGATE
+    label: "Operational: comparable pool"
+    applies_if: "route == ROUTE_C AND kschg_applies == true"
+    requires_evidence_codes: [EC-2]
+    requires_fields: [pool_employees, comparability_test_hierarchical, comparability_test_interchangeable, comparability_test_same_establishment]
+    deterministic_signature: { function_name: check_comparable_pool, args: { three_tests_required: true } }
+    fail_closed_behavior: MISSING_INDET  # v1.9 Phase 2b
+    reason_codes_on_fail: [G2_C2_COMPARABLE_POOL_UNDEFINED, G2_C2_COMPARABILITY_TEST_MISSING]
+    ux:
+      title_en: "Operational: Comparable Employee Pool"
+      title_de: "Betriebsbedingt: Vergleichbarer Arbeitnehmerkreis"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Is the pool of comparable employees properly defined?"
+      question_de: "Ist der Kreis vergleichbarer Arbeitnehmer ordnungsgemäß bestimmt?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 39
+        show_in_summary: false
+
+  - node_id: G2.C3
+    node_type: SUBGATE
+    label: "Operational: social data complete"
+    applies_if: "route == ROUTE_C AND kschg_applies == true"
+    requires_evidence_codes: [EC-3]
+    requires_fields: [social_data_complete, pool_member_count, data_coverage_count]
+    deterministic_signature: { function_name: check_social_data_completeness, args: { required_per_member: [tenure, age, dependents, disability_status] } }
+    fail_closed_behavior: MISSING_INDET  # v1.9 Phase 2b
+    reason_codes_on_fail: [G2_C3_SOCIAL_DATA_INCOMPLETE]
+    ux:
+      title_en: "Operational: Social Data Completeness"
+      title_de: "Betriebsbedingt: Vollständigkeit der Sozialdaten"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Are social selection data complete for all pool members?"
+      question_de: "Sind die Sozialdaten für alle Vergleichsarbeitnehmer vollständig?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 40
+        show_in_summary: false
+
+  - node_id: G2.C4
+    node_type: SUBGATE
+    label: "Operational: weighting model"
+    applies_if: "route == ROUTE_C AND kschg_applies == true"
+    requires_evidence_codes: [EC-4]
+    requires_fields: [weighting_model_exists, weighting_justification]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [weighting_model_exists, weighting_justification] } }
+    fail_closed_behavior: MISSING_INDET  # v1.9 Phase 2b
+    reason_codes_on_fail: [G2_C4_NO_WEIGHTING_MODEL]
+    ux:
+      title_en: "Operational: Weighting Model"
+      title_de: "Betriebsbedingt: Gewichtungsmodell"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Does a justified weighting model exist for social selection?"
+      question_de: "Liegt ein begründetes Gewichtungsmodell für die Sozialauswahl vor?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 41
+        show_in_summary: false
+
+  - node_id: G2.C5
+    node_type: SUBGATE
+    label: "Operational: scoring matrix"
+    applies_if: "route == ROUTE_C AND kschg_applies == true"
+    requires_evidence_codes: [EC-5, EC-6]
+    requires_fields: [scoring_matrix_complete, ranked_list_exists, selected_employee_lowest_score]
+    deterministic_signature: { function_name: check_scoring_matrix, args: { all_cells_required: true } }
+    fail_closed_behavior: MISSING_INDET  # v1.9 Phase 2b
+    reason_codes_on_fail: [G2_C5_SCORING_MATRIX_INCOMPLETE, G2_C5_SELECTION_NOT_LOWEST_SCORE]
+    ux:
+      title_en: "Operational: Scoring Matrix"
+      title_de: "Betriebsbedingt: Punktematrix"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Is the scoring matrix complete and was the lowest-scoring employee selected?"
+      question_de: "Ist die Punktematrix vollständig und wurde der Arbeitnehmer mit der niedrigsten Punktzahl ausgewählt?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 42
+        show_in_summary: false
+
+  - node_id: G2.C6
+    node_type: SUBGATE
+    label: "Operational: exemptions"
+    applies_if: "route == ROUTE_C AND kschg_applies == true AND EC-7.exemptions_claimed == true"
+    requires_evidence_codes: [EC-7]
+    requires_fields: [exemption_employee_ids, exemption_justifications]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [exemption_employee_ids, exemption_justifications] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_C6_EXEMPTION_UNJUSTIFIED]
+    ux:
+      title_en: "Operational: Exemptions"
+      title_de: "Betriebsbedingt: Herausnahmen"
+      statute:
+        short: "§1 KSchG"
+        long_en: "§1 Dismissal Protection Act"
+        long_de: "§1 Kündigungsschutzgesetz"
+      question_en: "Are any claimed exemptions from social selection justified?"
+      question_de: "Sind Herausnahmen aus der Sozialauswahl kriterienkonform?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 43
+        show_in_summary: false
+
+  - node_id: G2.C7
+    node_type: SUBGATE
+    label: "Operational: mass layoff (§17 KSchG)"
+    applies_if: "mass_layoff_triggered == true"
+    requires_evidence_codes: [EC-11]
+    requires_fields: [notification_filed, notification_date, agency_receipt_date]
+    deterministic_signature: { function_name: check_mass_layoff_notification, args: { filed_before: termination_issued_at } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_C7_NO_MASS_LAYOFF_NOTIFICATION, G2_C7_NOTIFICATION_AFTER_TERMINATION]
+    ux:
+      title_en: "Operational: Mass Layoff Notification"
+      title_de: "Betriebsbedingt: Massenentlassungsanzeige"
+      statute:
+        short: "§17 KSchG"
+        long_en: "§17 Dismissal Protection Act"
+        long_de: "§17 Kündigungsschutzgesetz"
+      question_en: "Was the mass layoff notification filed with the employment agency (§17 KSchG)?"
+      question_de: "Wurde die Massenentlassungsanzeige bei der Agentur für Arbeit erstattet (§17 KSchG)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 44
+        show_in_summary: false
+
+  - node_id: G2.D1
+    node_type: SUBGATE
+    label: "Extraordinary: important reason"
+    applies_if: "route == ROUTE_D OR termination_type == EXTRAORDINARY"
+    requires_evidence_codes: [ED-1, ED-5]
+    requires_fields: [triggering_event_date, triggering_event_description, important_reason_analysis]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [triggering_event_date, triggering_event_description, important_reason_analysis] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_D1_NO_IMPORTANT_REASON]
+    ux:
+      title_en: "Extraordinary: Important Reason"
+      title_de: "Außerordentlich: Wichtiger Grund"
+      statute:
+        short: "§626 BGB"
+        long_en: "§626 German Civil Code"
+        long_de: "§626 Bürgerliches Gesetzbuch"
+      question_en: "Is an important reason for extraordinary termination documented?"
+      question_de: "Ist ein wichtiger Grund für die außerordentliche Kündigung dokumentiert?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 45
+        show_in_summary: false
+
+  - node_id: G2.D2
+    node_type: SUBGATE
+    label: "Extraordinary: two-week deadline"
+    applies_if: "route == ROUTE_D OR termination_type == EXTRAORDINARY"
+    requires_evidence_codes: [ED-2, ED-3]
+    requires_fields: [knowledge_date, two_week_deadline, termination_issued_at]
+    deterministic_signature: { function_name: check_two_week_deadline, args: { max_days: 14 } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_D2_TWO_WEEK_DEADLINE_MISSED, G2_D2_KNOWLEDGE_DATE_UNDOCUMENTED]
+    ux:
+      title_en: "Extraordinary: Two-Week Deadline"
+      title_de: "Außerordentlich: Zwei-Wochen-Frist"
+      statute:
+        short: "§626 Abs. 2 BGB"
+        long_en: "§626(2) German Civil Code"
+        long_de: "§626 Abs. 2 Bürgerliches Gesetzbuch"
+      question_en: "Was the termination issued within two weeks of obtaining knowledge (§626 Abs. 2 BGB)?"
+      question_de: "Wurde die Kündigung innerhalb von zwei Wochen nach Kenntniserlangung ausgesprochen (§626 Abs. 2 BGB)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 46
+        show_in_summary: false
+
+  - node_id: G2.D3
+    node_type: SUBGATE
+    label: "Extraordinary: warning necessity"
+    applies_if: "route == ROUTE_D OR termination_type == EXTRAORDINARY"
+    requires_evidence_codes: [ED-8]
+    requires_fields: [warning_necessity_assessed, warning_exists_or_exception_justified]
+    deterministic_signature: { function_name: check_fields_present, args: { required_fields: [warning_necessity_assessed, warning_exists_or_exception_justified] } }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G2_D3_WARNING_NECESSITY_NOT_ASSESSED]
+    ux:
+      title_en: "Extraordinary: Warning Necessity"
+      title_de: "Außerordentlich: Abmahnungserfordernis"
+      statute:
+        short: "§626 BGB"
+        long_en: "§626 German Civil Code"
+        long_de: "§626 Bürgerliches Gesetzbuch"
+      question_en: "Has the necessity of a prior warning been assessed for extraordinary termination?"
+      question_de: "Wurde das Abmahnungserfordernis bei der außerordentlichen Kündigung geprüft?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: null
+      explainer_de: null
+      lawyer_view:
+        display_priority: 47
+        show_in_summary: false
+
+  # ── G3: Ultima Ratio ──
+  - node_id: G3
+    node_type: GATE
+    label: "Ultima Ratio"
+    applies_if: "always"
+    requires_evidence_codes: [EA-6, EA-7, EB-5, EB-6, EC-9, ED-6, ED-7]
+    requires_fields: [proportionality_analysis_exists, alternatives_evaluated]
+    deterministic_signature: { function_name: check_ultima_ratio, args: {} }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G3_NO_PROPORTIONALITY_ANALYSIS, G3_NO_ALTERNATIVES_EVALUATION]
+    ux:
+      title_en: "Ultima Ratio Principle"
+      title_de: "Ultima-Ratio-Prinzip"
+      statute:
+        short: null
+        long_en: null
+        long_de: null
+      question_en: "Were milder means exhausted (ultima ratio)?"
+      question_de: "Wurden mildere Mittel ausgeschöpft (Ultima Ratio)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: "Termination must be the last resort; the employer must show that no less severe measure was available."
+      explainer_de: "Die Kündigung muss letztes Mittel sein; der Arbeitgeber muss nachweisen, dass kein milderes Mittel zur Verfügung stand."
+      lawyer_view:
+        display_priority: 40
+        show_in_summary: true
+
+  # ── G4: Consistency ──
+  - node_id: G4
+    node_type: GATE
+    label: "Consistency"
+    applies_if: "always"
+    requires_evidence_codes: [EU-CON]
+    deterministic_signature: { function_name: check_consistency_evidence, args: { optional: true } }
+    fail_closed_behavior: MISSING_INDET
+    reason_codes_on_fail: [G4_CONSISTENCY_EVIDENCE_MISSING]
+    ux:
+      title_en: "Consistency and Equal Treatment"
+      title_de: "Gleichbehandlung und Konsistenz"
+      statute:
+        short: null
+        long_en: null
+        long_de: null
+      question_en: "Is there consistent / equal treatment vs comparators?"
+      question_de: "Wurde Gleichbehandlung/Konsistenz gegenüber Vergleichsfällen gewahrt?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: "The employer must treat comparable employees consistently; selective enforcement may indicate improper motive."
+      explainer_de: "Der Arbeitgeber muss vergleichbare Arbeitnehmer konsistent behandeln; selektive Durchsetzung kann auf sachfremde Motive hindeuten."
+      lawyer_view:
+        display_priority: 50
+        show_in_summary: true
+
+  # ── G5: Co-Determination Tech ──
+  - node_id: G5
+    node_type: GATE
+    label: "Co-Determination Tech"
+    applies_if: "tech_used == true"
+    requires_evidence_codes: [ET-CD]
+    requires_fields: [works_council_involved_in_tech_deployment, tech_agreement_exists]
+    deterministic_signature: { function_name: check_tech_codetermination, args: {} }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G5_NO_TECH_CODETERMINATION, G5_NO_TECH_AGREEMENT]
+    ux:
+      title_en: "Co-Determination on Technical Monitoring"
+      title_de: "Mitbestimmung bei technischer Überwachung"
+      statute:
+        short: "§87(1) Nr. 6 BetrVG"
+        long_en: "§87(1) No. 6 Works Constitution Act"
+        long_de: "§87 Abs. 1 Nr. 6 Betriebsverfassungsgesetz"
+      question_en: "Does co-determination re. technical monitoring apply?"
+      question_de: "Greift Mitbestimmung bei technischer Überwachung (§87 Abs.1 Nr.6 BetrVG)?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: "If technical systems capable of monitoring employees were used, the works council must have been involved per §87(1) Nr. 6 BetrVG."
+      explainer_de: "Wurden technische Einrichtungen zur Überwachung eingesetzt, muss der Betriebsrat nach §87 Abs. 1 Nr. 6 BetrVG beteiligt worden sein."
+      lawyer_view:
+        display_priority: 60
+        show_in_summary: true
+
+  # ── G6: Model Transparency ──
+  - node_id: G6
+    node_type: GATE
+    label: "Model Transparency"
+    applies_if: "tech_used == true"
+    requires_evidence_codes: [ET-MT]
+    requires_fields: [employee_informed_of_ai, human_oversight_documented, gdpr_art22_assessment]
+    deterministic_signature: { function_name: check_model_transparency, args: {} }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G6_EMPLOYEE_NOT_INFORMED_OF_AI, G6_NO_HUMAN_OVERSIGHT, G6_NO_ART22_ASSESSMENT]
+    ux:
+      title_en: "Model Transparency and Automated Decisions"
+      title_de: "Modelltransparenz und automatisierte Entscheidungen"
+      statute:
+        short: "GDPR Art. 22"
+        long_en: "Article 22 General Data Protection Regulation"
+        long_de: "Art. 22 Datenschutz-Grundverordnung"
+      question_en: "Is model transparency / automated decision compliance met (GDPR Art.22)?"
+      question_de: "Sind Transparenz/Automationsanforderungen (Art. 22 DSGVO) erfüllt?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: "If AI or automated decision-making was used, the employee must be informed and human oversight documented per GDPR Art. 22."
+      explainer_de: "Wurde KI oder automatisierte Entscheidungsfindung eingesetzt, muss der Arbeitnehmer informiert und menschliche Aufsicht gemäß Art. 22 DSGVO dokumentiert sein."
+      lawyer_view:
+        display_priority: 70
+        show_in_summary: true
+
+  # ── G7: Anti-Discrimination ──
+  - node_id: G7
+    node_type: GATE
+    label: "Anti-Discrimination (AGG)"
+    applies_if: "always"
+    requires_evidence_codes: [EU-AGG]
+    requires_fields: [decision_basis_documented, no_protected_ground_indicia]
+    deterministic_signature: { function_name: check_anti_discrimination, args: {} }
+    fail_closed_behavior: MISSING_FAIL
+    reason_codes_on_fail: [G7_AGG_DECISION_BASIS_UNDOCUMENTED, G7_AGG_PROTECTED_GROUND_INDICIA]
+    ux:
+      title_en: "Anti-Discrimination Compliance"
+      title_de: "Diskriminierungsfreiheit (AGG)"
+      statute:
+        short: "AGG §22"
+        long_en: "§22 General Equal Treatment Act"
+        long_de: "§22 Allgemeines Gleichbehandlungsgesetz"
+      question_en: "Any discrimination indicator shifting burden under AGG §22?"
+      question_de: "Gibt es Indizien für Diskriminierung i.S.d. §22 AGG?"
+      answer_options_en: ["Yes", "No", "Not Applicable", "Unknown"]
+      answer_options_de: ["Ja", "Nein", "Nicht anwendbar", "Unklar"]
+      explainer_en: "If there are indications of discrimination based on a protected ground, the burden of proof shifts to the employer under AGG §22."
+      explainer_de: "Liegen Indizien für eine Diskriminierung wegen eines geschützten Merkmals vor, kehrt sich die Beweislast nach §22 AGG um."
+      lawyer_view:
+        display_priority: 80
+        show_in_summary: true
+
+# ─────────────────────────────────────────────
+# EDGES: Execution order
+# ─────────────────────────────────────────────
+edges:
+  # Inter-gate SEQUENCE (strict order)
+  - { from_node: G0, to_node: G1, edge_type: SEQUENCE }
+  - { from_node: G1, to_node: G2, edge_type: SEQUENCE }
+  - { from_node: G2, to_node: G3, edge_type: SEQUENCE }
+  - { from_node: G3, to_node: G4, edge_type: SEQUENCE }
+  - { from_node: G4, to_node: G5, edge_type: SEQUENCE }
+  - { from_node: G5, to_node: G6, edge_type: SEQUENCE }
+  - { from_node: G6, to_node: G7, edge_type: SEQUENCE }
+
+  # G0 CONTAINS sub-gates
+  - { from_node: G0, to_node: G0.1, edge_type: CONTAINS }
+  - { from_node: G0, to_node: G0.2, edge_type: CONTAINS }
+  - { from_node: G0, to_node: G0.3, edge_type: CONTAINS }
+  - { from_node: G0, to_node: G0.4, edge_type: CONTAINS }
+  - { from_node: G0, to_node: G0.5, edge_type: CONTAINS }
+  - { from_node: G0, to_node: G0.6, edge_type: CONTAINS }
+  - { from_node: G0, to_node: G0.7, edge_type: CONTAINS }
+  # G0 intra-gate order
+  - { from_node: G0.1, to_node: G0.2, edge_type: SEQUENCE }
+  - { from_node: G0.2, to_node: G0.3, edge_type: SEQUENCE }
+  - { from_node: G0.3, to_node: G0.4, edge_type: SEQUENCE }
+  - { from_node: G0.4, to_node: G0.5, edge_type: SEQUENCE }
+  - { from_node: G0.5, to_node: G0.6, edge_type: SEQUENCE }
+  - { from_node: G0.6, to_node: G0.7, edge_type: SEQUENCE }
+
+  # G1 CONTAINS
+  - { from_node: G1, to_node: G1.1, edge_type: CONTAINS }
+  - { from_node: G1, to_node: G1.2, edge_type: CONTAINS }
+  - { from_node: G1, to_node: G1.3, edge_type: CONTAINS }
+  - { from_node: G1, to_node: G1.4, edge_type: CONTAINS }
+  - { from_node: G1, to_node: G1.5, edge_type: CONTAINS }
+  - { from_node: G1, to_node: G1.6, edge_type: CONTAINS }
+  - { from_node: G1, to_node: G1.7, edge_type: CONTAINS }
+  - { from_node: G1, to_node: G1.8, edge_type: CONTAINS }
+  # G1 intra-gate order
+  - { from_node: G1.1, to_node: G1.2, edge_type: SEQUENCE }
+  - { from_node: G1.2, to_node: G1.3, edge_type: SEQUENCE }
+  - { from_node: G1.3, to_node: G1.4, edge_type: SEQUENCE }
+  - { from_node: G1.4, to_node: G1.5, edge_type: SEQUENCE }
+  - { from_node: G1.5, to_node: G1.6, edge_type: SEQUENCE }
+  - { from_node: G1.6, to_node: G1.7, edge_type: SEQUENCE }
+  - { from_node: G1.7, to_node: G1.8, edge_type: SEQUENCE }
+
+  # G2 CONTAINS
+  - { from_node: G2, to_node: G2.WF, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.NP, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.A1, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.A2, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.A3, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.B1, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.B2, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.C1, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.C2, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.C3, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.C4, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.C5, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.C6, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.C7, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.D1, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.D2, edge_type: CONTAINS }
+  - { from_node: G2, to_node: G2.D3, edge_type: CONTAINS }
+  # G2 intra-gate order (universal first, then route-specific)
+  - { from_node: G2.WF, to_node: G2.NP, edge_type: SEQUENCE }
+  - { from_node: G2.NP, to_node: G2.A1, edge_type: SEQUENCE }
+  - { from_node: G2.A1, to_node: G2.A2, edge_type: SEQUENCE }
+  - { from_node: G2.A2, to_node: G2.A3, edge_type: SEQUENCE }
+  - { from_node: G2.NP, to_node: G2.B1, edge_type: SEQUENCE }
+  - { from_node: G2.B1, to_node: G2.B2, edge_type: SEQUENCE }
+  - { from_node: G2.NP, to_node: G2.C1, edge_type: SEQUENCE }
+  - { from_node: G2.C1, to_node: G2.C2, edge_type: SEQUENCE }
+  - { from_node: G2.C2, to_node: G2.C3, edge_type: SEQUENCE }
+  - { from_node: G2.C3, to_node: G2.C4, edge_type: SEQUENCE }
+  - { from_node: G2.C4, to_node: G2.C5, edge_type: SEQUENCE }
+  - { from_node: G2.C5, to_node: G2.C6, edge_type: SEQUENCE }
+  - { from_node: G2.C6, to_node: G2.C7, edge_type: SEQUENCE }
+  - { from_node: G2.NP, to_node: G2.D1, edge_type: SEQUENCE }
+  - { from_node: G2.D1, to_node: G2.D2, edge_type: SEQUENCE }
+  - { from_node: G2.D2, to_node: G2.D3, edge_type: SEQUENCE }

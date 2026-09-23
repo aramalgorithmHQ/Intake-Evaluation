@@ -1,0 +1,11 @@
+fixture_id: CASE-SYN-C-27616
+status: PENDING_HUMAN_REVIEW
+golden_promotion_allowed: false
+required_reviews:
+  evaluation_engineering: PENDING
+  domain_plausibility: PENDING
+  tier1_facts_100pct: PENDING
+  tier1_provenance_100pct: PENDING
+  contract_owner_CG_001: PENDING
+  contract_owner_CG_002: PENDING
+note: Generator cannot promote its own output. Resolve contract gaps before product scoring.

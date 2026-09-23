@@ -1,0 +1,81 @@
+contract_id: tauri-intake-eval-de-routeb-local@1.0.0
+status: LOCAL_PINNED_EVALUATION_SNAPSHOT
+jurisdiction: DE
+decision_type: TERMINATION
+source_artifacts:
+- path: contracts/source/gate_registry.DE.v1.yaml
+  sha256: 6d7ceed9e875cbf44229a63bb17a14b009c2062ee86490696c4036c82379b4aa
+- path: contracts/source/evidence_codes.DE.v1.yaml
+  sha256: 73cd10369ca12c600ab3037603688f793a7446b0dc2a900e64f7a24a73726c00
+- path: contracts/source/case_definition.schema.yaml
+  sha256: 8d8f1e1cd0e4e941579d442586b42bfe48538d7469f8e7686364087a900c1026
+- path: contracts/source/reference_graph.ede.DE.v1.yaml
+  sha256: ea8ec227af14d4ded8f1f60388cc7b44a77a89874d1131d1b9b9b2ba40ead5ed
+semantic_namespaces:
+  tauri.eval.de.reason_family:
+    owner: evaluation_contract
+    values:
+    - CONDUCT
+    - PERSONAL_CAPABILITY
+    - OPERATIONAL
+    - UNSPECIFIED
+  tauri.eval.de.document_type:
+    owner: evaluation_contract
+    values:
+    - HR_THRESHOLD_RECORD
+    - ABSENCE_RECORD
+    - BEM_RECORD
+    - HEALTH_PROGNOSIS_OPERATIONAL_IMPACT
+    - PROPORTIONALITY_ALTERNATIVES
+    - AUTHORITY_APPROVAL
+    - AGG_CONSISTENCY_REVIEW
+    - TERMINATION_LETTER_DELIVERY_PROOF
+  tauri.eval.candidate.semantic_role:
+    owner: evaluation_contract
+    values:
+    - primary_source
+    - primary_declaration
+    - corroborating_source
+    - derived_support
+route_mapping:
+  PERSONAL_CAPABILITY:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+states:
+  fact:
+  - CONFIRMED
+  - UNKNOWN
+  - NOT_APPLICABLE
+  - CONFLICTING
+  - REVIEW_REQUIRED
+  evidence:
+  - PRESENT
+  - ATTESTED_MISSING
+  - DEFECTIVE
+  - NOT_PROVIDED
+  - NOT_APPLICABLE
+  reviewer:
+  - PENDING
+  - CONFIRMED
+  - REJECTED
+  - CORRECTED
+  - MARKED_UNKNOWN
+  - UNRESOLVED_CONFLICT
+criticality:
+- TIER_1
+- TIER_2
+- TIER_3
+candidate_matching:
+  mode: OCCURRENCE_LEVEL
+  identity:
+  - field
+  - normalized_value
+  - document_id
+  - semantic_role
+  - assertion_id
+oracle_independence:
+  sut_modules_imported: []
+  shared_primitives:
+  - ISO-8601 date parser
+  - SHA-256
+  statement: Expected values are compiled from fixture_spec and renderer anchors only.

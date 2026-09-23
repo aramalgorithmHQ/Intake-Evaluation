@@ -1,0 +1,53 @@
+schema_version: eval.l3.oracle.v1
+fixture_id: CASE-RD-06824
+input_candidate_oracle: l2_candidates.yaml
+review_script: ../reviewer/scripted_actions.yaml
+expected_state:
+  termination_route:
+    state: CONFIRMED
+    value: ROUTE_D
+  employment_start_date:
+    state: CONFIRMED
+    value: '2022-03-01'
+  pregnancy_status:
+    state: CONFIRMED
+    value: true
+  approval_date:
+    state: CONFIRMED
+    value: '2026-04-17'
+  triggering_event_date:
+    state: CONFIRMED
+    value: '2026-04-02'
+  knowledge_date:
+    state: CONFIRMED
+    value: '2026-04-07T11:20:00+02:00'
+  two_week_deadline:
+    state: CONFIRMED
+    value: '2026-04-21'
+  termination_issued_at:
+    state: CONFIRMED
+    value: '2026-04-18T16:10:00+02:00'
+  delivery_method:
+    state: CONFIRMED
+    value: REGISTERED_MAIL
+  delivery_proof:
+    state: CONFIRMED
+    value: false
+  termination_received_at:
+    state: REVIEW_REQUIRED
+    value: null
+conflicts:
+- field: termination_received_at
+  state: REVIEW_REQUIRED
+  reason: Tracking assertion is not accepted as receipt proof.
+provenance_requirements:
+- Preserve source document and anchor for confirmed values
+- Retain rejected tracking candidate lineage
+oracle_independence:
+  sut_modules_imported: []
+  shared_primitives:
+  - ISO-8601 parser
+  - SHA-256
+  uses_tauri_predictions: false
+  uses_production_mapper_as_oracle: false
+  uses_production_extractor_as_oracle: false

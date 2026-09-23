@@ -1,0 +1,25 @@
+fixture_id: CASE-SYN-C-27616
+allowed_paths:
+- documents/DOC-001.pdf
+- documents/DOC-002.pdf
+- documents/DOC-003.pdf
+- documents/DOC-004.pdf
+- documents/DOC-005.pdf
+- documents/DOC-006.pdf
+- documents/DOC-007.pdf
+- documents/DOC-008.pdf
+- documents/DOC-009.pdf
+- documents/DOC-010.pdf
+- documents/DOC-011.pdf
+- documents/DOC-012.pdf
+- documents/DOC-013.pdf
+hidden_from_sut:
+- fixture_spec.yaml
+- oracle/
+- reviewer/
+- approvals/
+- validation/
+- source_case/
+- contracts/
+- sources/
+answer_key_isolation: ENFORCED_BY_PACKAGE_LAYOUT

@@ -1,0 +1,21 @@
+sut_compatibility_contract:
+  snapshot_id: tauri-intake-v43-fixture-local-route-a
+  version: 1.0.0
+  surface: TAURI_INTAKE_V43
+  status: FIXTURE_LOCAL_COMPATIBILITY_SNAPSHOT
+  case_definition_schema:
+    file: case_definition.schema.yaml
+    sha256: sha256:8d8f1e1cd0e4e941579d442586b42bfe48538d7469f8e7686364087a900c1026
+  route_mapping:
+    namespace: tauri.eval.de.procedural_route
+    ROUTE_A: ROUTE_A
+  review_actions_supported:
+  - CONFIRM
+  - REJECT
+  - CORRECT
+  - MARK_UNKNOWN
+  - LEAVE_PENDING
+  - SELECT_CONFLICT_CANDIDATE
+  - LEAVE_CONFLICT_UNRESOLVED
+  - FINAL_EXPORT
+  note: Descriptive adapter snapshot for this generated fixture; not used to author expected truth.

@@ -1,0 +1,645 @@
+schema_version: eval.l0.v1
+fixture_id: CASE-SYN-17824
+documents:
+- document_id: DOC-001
+  artifact_hash: sha256:6d69248bfec61d93840b88b1b82eba0719fdce4a92fd6e26eadea13b798ce55e
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-001
+    field: employee_count_fte
+    canonical_value: 180
+    anchor_id: ANCHOR-DOC-001-001
+    page: 1
+    source_text: '180'
+    criticality: TIER_1
+  - assertion_id: ASSERT-002
+    field: headcount_date
+    canonical_value: '2024-03-01'
+    anchor_id: ANCHOR-DOC-001-002
+    page: 1
+    source_text: 01.03.2024
+    criticality: TIER_2
+  - assertion_id: ASSERT-003
+    field: employment_start_date
+    canonical_value: '2022-01-03'
+    anchor_id: ANCHOR-DOC-001-003
+    page: 1
+    source_text: 03.01.2022
+    criticality: TIER_1
+  - assertion_id: ASSERT-004
+    field: tenure_continuous
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-001-004
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-005
+    field: tenure_months
+    canonical_value: 26
+    anchor_id: ANCHOR-DOC-001-005
+    page: 1
+    source_text: '26'
+    criticality: TIER_1
+  - assertion_id: ASSERT-006
+    field: betriebsrat_exists
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-006
+    page: 1
+    source_text: Nein
+    criticality: TIER_1
+  - assertion_id: ASSERT-007
+    field: establishment_id
+    canonical_value: NW-HAM-01
+    anchor_id: ANCHOR-DOC-001-007
+    page: 1
+    source_text: NW-HAM-01
+    criticality: TIER_2
+  - assertion_id: ASSERT-008
+    field: pregnancy_status
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-008
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-009
+    field: parental_leave_status
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-009
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-010
+    field: disability_gdb
+    canonical_value: 50
+    anchor_id: ANCHOR-DOC-001-010
+    page: 1
+    source_text: '50'
+    criticality: TIER_1
+  - assertion_id: ASSERT-011
+    field: disability_equivalent
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-011
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-012
+    field: br_member_status
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-012
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-013
+    field: dpo_appointment_status
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-013
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-014
+    field: election_board_status
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-014
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-015
+    field: military_service_status
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-015
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+- document_id: DOC-002
+  artifact_hash: sha256:8e8541c3618eddf1564ad2904dbc29ca19c8f2b06d424fa5511c1fd5e073f338
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-016
+    field: absence_record_months
+    canonical_value: 24
+    anchor_id: ANCHOR-DOC-002-016
+    page: 1
+    source_text: '24'
+    criticality: TIER_2
+  - assertion_id: ASSERT-017
+    field: absence_dates
+    canonical_value:
+    - 14.02.-04.03.2022
+    - 11.07.-29.07.2022
+    - 09.01.-10.02.2023
+    - 05.06.-30.06.2023
+    - 06.11.-24.11.2023
+    - 08.01.-02.02.2024
+    anchor_id: ANCHOR-DOC-002-017
+    page: 1
+    source_text: 14.02.-04.03.2022; 11.07.-29.07.2022; 09.01.-10.02.2023; 05.06.-30.06.2023; 06.11.-24.11.2023; 08.01.-02.02.2024
+    criticality: TIER_2
+  - assertion_id: ASSERT-018
+    field: total_absence_days
+    canonical_value: 164
+    anchor_id: ANCHOR-DOC-002-018
+    page: 1
+    source_text: '164'
+    criticality: TIER_2
+  - assertion_id: ASSERT-019
+    field: pattern_description
+    canonical_value: Mehrere längere, voneinander getrennte Arbeitsunfähigkeitszeiträume in beiden Vergleichsjahren.
+    anchor_id: ANCHOR-DOC-002-019
+    page: 1
+    source_text: Mehrere längere, voneinander getrennte Arbeitsunfähigkeitszeiträume in beiden Vergleichsjahren.
+    criticality: TIER_2
+- document_id: DOC-003
+  artifact_hash: sha256:168937376540a2b2988ce17ac7b1b2b85a391583e617818466e9bc67db0dde85
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-020
+    field: bem_initiated
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-003-020
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-021
+    field: bem_invitation_sent
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-003-021
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-022
+    field: bem_invitation_date
+    canonical_value: '2023-11-16'
+    anchor_id: ANCHOR-DOC-003-022
+    page: 1
+    source_text: 16.11.2023
+    criticality: TIER_2
+  - assertion_id: ASSERT-023
+    field: bem_employee_response
+    canonical_value: ACCEPTED
+    anchor_id: ANCHOR-DOC-003-023
+    page: 1
+    source_text: ACCEPTED
+    criticality: TIER_2
+  - assertion_id: ASSERT-024
+    field: bem_exploration_documented
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-003-024
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-025
+    field: bem_works_council_involved
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-003-025
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-026
+    field: bem_integrationsamt_involved
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-003-026
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-027
+    field: bem_properly_conducted
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-003-027
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-028
+    field: bem_adequacy_basis
+    canonical_value: Einladung, Zustimmung, Gespräch am 05.12.2023, Maßnahmenprüfung und Abschlussvermerk liegen vollständig
+      vor.
+    anchor_id: ANCHOR-DOC-003-028
+    page: 1
+    source_text: Einladung, Zustimmung, Gespräch am 05.12.2023, Maßnahmenprüfung und Abschlussvermerk liegen vollständig vor.
+    criticality: TIER_2
+- document_id: DOC-004
+  artifact_hash: sha256:b23a556456da976da8b566dec349ceb7f7b20623167b826571d45cfbd7ed4ff6
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-029
+    field: prognosis_negative
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-029
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-030
+    field: prognosis_basis
+    canonical_value: Fortgesetztes Muster längerer Ausfallzeiten; keine belastbare Stabilisierung für den Prognosezeitraum
+      dokumentiert.
+    anchor_id: ANCHOR-DOC-004-030
+    page: 1
+    source_text: Fortgesetztes Muster längerer Ausfallzeiten; keine belastbare Stabilisierung für den Prognosezeitraum dokumentiert.
+    criticality: TIER_2
+  - assertion_id: ASSERT-031
+    field: prognosis_date
+    canonical_value: '2024-02-20'
+    anchor_id: ANCHOR-DOC-004-031
+    page: 1
+    source_text: 20.02.2024
+    criticality: TIER_2
+  - assertion_id: ASSERT-032
+    field: operational_impact_documented
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-032
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-033
+    field: disruption_description
+    canonical_value: Wiederholte Umplanung von Rufbereitschaften, Schichttausch und Einsatz externer Vertretung in der technischen
+      Leitung.
+    anchor_id: ANCHOR-DOC-004-033
+    page: 1
+    source_text: Wiederholte Umplanung von Rufbereitschaften, Schichttausch und Einsatz externer Vertretung in der technischen
+      Leitung.
+    criticality: TIER_2
+  - assertion_id: ASSERT-034
+    field: cost_data
+    canonical_value: '2023: 18.600 EUR Zusatzkosten für Überstunden und externe Vertretung; 2024 bis 29.02.: 4.900 EUR.'
+    anchor_id: ANCHOR-DOC-004-034
+    page: 1
+    source_text: '2023: 18.600 EUR Zusatzkosten für Überstunden und externe Vertretung; 2024 bis 29.02.: 4.900 EUR.'
+    criticality: TIER_2
+- document_id: DOC-005
+  artifact_hash: sha256:6a9b8bec37a80ef396b994a4f799152b0a8fcfbfa81c70367a0b7531ba001d07
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-035
+    field: proportionality_analysis_exists
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-035
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-036
+    field: tenure_considered
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-036
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-037
+    field: age_considered
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-037
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-038
+    field: labor_market_considered
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-038
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-039
+    field: illness_cause_considered
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-039
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-040
+    field: alternatives_evaluated
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-040
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-041
+    field: alternatives_list
+    canonical_value:
+    - reduzierte Rufbereitschaft
+    - angepasste Schichtlage
+    - Teilzeit
+    - administrative technische Koordination
+    - anderer freier Arbeitsplatz
+    anchor_id: ANCHOR-DOC-005-041
+    page: 1
+    source_text: reduzierte Rufbereitschaft; angepasste Schichtlage; Teilzeit; administrative technische Koordination; anderer
+      freier Arbeitsplatz
+    criticality: TIER_2
+  - assertion_id: ASSERT-042
+    field: alternatives_rejection_reasons
+    canonical_value:
+    - Kernaufgaben bleiben präsenzgebunden
+    - Teilzeit beseitigt Prognoserisiko nicht
+    - keine geeignete freie Vergleichsstelle vorhanden
+    anchor_id: ANCHOR-DOC-005-042
+    page: 1
+    source_text: Kernaufgaben bleiben präsenzgebunden; Teilzeit beseitigt Prognoserisiko nicht; keine geeignete freie Vergleichsstelle
+      vorhanden
+    criticality: TIER_2
+  - assertion_id: ASSERT-043
+    field: workplace_adaptation_explored
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-043
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-044
+    field: adaptation_options_documented
+    canonical_value: Entlastung Rufbereitschaft, planbare Tagschichten, ergonomische Arbeitsplatzanpassung und Aufgabenumschichtung
+      geprüft.
+    anchor_id: ANCHOR-DOC-005-044
+    page: 1
+    source_text: Entlastung Rufbereitschaft, planbare Tagschichten, ergonomische Arbeitsplatzanpassung und Aufgabenumschichtung
+      geprüft.
+    criticality: TIER_2
+  - assertion_id: ASSERT-045
+    field: alternative_role_assessed
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-045
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-046
+    field: alternative_role_rejection_reason
+    canonical_value: Zum Entscheidungszeitpunkt bestand keine geeignete freie Stelle mit vergleichbarem Anforderungsprofil.
+    anchor_id: ANCHOR-DOC-005-046
+    page: 1
+    source_text: Zum Entscheidungszeitpunkt bestand keine geeignete freie Stelle mit vergleichbarem Anforderungsprofil.
+    criticality: TIER_2
+- document_id: DOC-006
+  artifact_hash: sha256:cf2d45424595451d46122132a31ab941b7369819d1de0817825b3d92b111f149
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-047
+    field: authority_type
+    canonical_value: INTEGRATIONSAMT
+    anchor_id: ANCHOR-DOC-006-047
+    page: 1
+    source_text: INTEGRATIONSAMT
+    criticality: TIER_2
+  - assertion_id: ASSERT-048
+    field: approval_granted
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-006-048
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-049
+    field: approval_date
+    canonical_value: '2024-03-20'
+    anchor_id: ANCHOR-DOC-006-049
+    page: 1
+    source_text: 20.03.2024
+    criticality: TIER_1
+  - assertion_id: ASSERT-050
+    field: approval_reference
+    canonical_value: IA-SYN-2024-117
+    anchor_id: ANCHOR-DOC-006-050
+    page: 1
+    source_text: IA-SYN-2024-117
+    criticality: TIER_2
+  - assertion_id: ASSERT-051
+    field: integrationsamt_approval
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-006-051
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-052
+    field: approval_date
+    canonical_value: '2024-03-20'
+    anchor_id: ANCHOR-DOC-006-052
+    page: 1
+    source_text: 20.03.2024
+    criticality: TIER_1
+  - assertion_id: ASSERT-053
+    field: approval_reference
+    canonical_value: IA-SYN-2024-117
+    anchor_id: ANCHOR-DOC-006-053
+    page: 1
+    source_text: IA-SYN-2024-117
+    criticality: TIER_2
+- document_id: DOC-007
+  artifact_hash: sha256:803a4b001c061273a6dceac3ec2f5c40f509b0d1dfed290873d95e43783610ef
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-054
+    field: prior_cases_documented
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-007-054
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-055
+    field: treatment_consistent
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-007-055
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-056
+    field: decision_basis_documented
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-007-056
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-057
+    field: no_protected_ground_indicia
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-007-057
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-058
+    field: protected_grounds_checked
+    canonical_value:
+    - Behinderung
+    - Alter
+    - Geschlecht
+    - Religion
+    - ethnische Herkunft
+    - sexuelle Identität
+    anchor_id: ANCHOR-DOC-007-058
+    page: 1
+    source_text: Behinderung; Alter; Geschlecht; Religion; ethnische Herkunft; sexuelle Identität
+    criticality: TIER_2
+  - assertion_id: ASSERT-059
+    field: decision_basis_agg_documented
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-007-059
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-060
+    field: decision_basis_reference
+    canonical_value: HR-REVIEW-SYN-2024-031
+    anchor_id: ANCHOR-DOC-007-060
+    page: 1
+    source_text: HR-REVIEW-SYN-2024-031
+    criticality: TIER_2
+  - assertion_id: ASSERT-061
+    field: protected_ground_indicia_absent
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-007-061
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-062
+    field: grounds_checked
+    canonical_value:
+    - disability
+    - age
+    - gender
+    - religion
+    - ethnic_origin
+    - sexual_orientation
+    anchor_id: ANCHOR-DOC-007-062
+    page: 1
+    source_text: disability; age; gender; religion; ethnic_origin; sexual_orientation
+    criticality: TIER_2
+- document_id: DOC-008
+  artifact_hash: sha256:bb081fe025e5fe416615718728f41b6a414b08e0f0884c5f2d2ee2de7ced0453
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-063
+    field: letter_exists
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-063
+    page: 1
+    source_text: Ja
+    criticality: TIER_2
+  - assertion_id: ASSERT-064
+    field: written_form_used
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-064
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-065
+    field: original_signature
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-065
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-066
+    field: delivery_method
+    canonical_value: PERSONAL_HANDOVER
+    anchor_id: ANCHOR-DOC-008-066
+    page: 1
+    source_text: PERSONAL_HANDOVER
+    criticality: TIER_2
+  - assertion_id: ASSERT-067
+    field: delivery_date
+    canonical_value: '2024-03-28'
+    anchor_id: ANCHOR-DOC-008-067
+    page: 1
+    source_text: 28.03.2024
+    criticality: TIER_1
+  - assertion_id: ASSERT-068
+    field: termination_issued_at
+    canonical_value: '2024-03-28'
+    anchor_id: ANCHOR-DOC-008-068
+    page: 1
+    source_text: 28.03.2024
+    criticality: TIER_1
+  - assertion_id: ASSERT-069
+    field: termination_effective
+    canonical_value: '2024-06-30'
+    anchor_id: ANCHOR-DOC-008-069
+    page: 1
+    source_text: 30.06.2024
+    criticality: TIER_1
+  - assertion_id: ASSERT-070
+    field: written_form_used
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-070
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-071
+    field: original_signature
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-071
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-072
+    field: proxy_signed
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-008-072
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-073
+    field: vollmacht_attached
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-008-073
+    page: 1
+    source_text: Nein
+    criticality: TIER_2
+  - assertion_id: ASSERT-074
+    field: delivery_proof
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-074
+    page: 1
+    source_text: Ja
+    criticality: TIER_1
+  - assertion_id: ASSERT-075
+    field: delivery_method
+    canonical_value: PERSONAL_HANDOVER
+    anchor_id: ANCHOR-DOC-008-075
+    page: 1
+    source_text: PERSONAL_HANDOVER
+    criticality: TIER_2
+  - assertion_id: ASSERT-076
+    field: delivery_date
+    canonical_value: '2024-03-28'
+    anchor_id: ANCHOR-DOC-008-076
+    page: 1
+    source_text: 28.03.2024
+    criticality: TIER_1
+  - assertion_id: ASSERT-077
+    field: statutory_minimum_days
+    canonical_value: 30
+    anchor_id: ANCHOR-DOC-008-077
+    page: 1
+    source_text: '30'
+    criticality: TIER_2
+  - assertion_id: ASSERT-078
+    field: contractual_minimum_days
+    canonical_value: 90
+    anchor_id: ANCHOR-DOC-008-078
+    page: 1
+    source_text: '90'
+    criticality: TIER_2
+  - assertion_id: ASSERT-079
+    field: actual_notice_days
+    canonical_value: 94
+    anchor_id: ANCHOR-DOC-008-079
+    page: 1
+    source_text: '94'
+    criticality: TIER_2
+  - assertion_id: ASSERT-080
+    field: terminates_on_valid_date
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-080
+    page: 1
+    source_text: Ja
+    criticality: TIER_1

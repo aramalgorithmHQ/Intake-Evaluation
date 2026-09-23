@@ -1,0 +1,20 @@
+fixture_id: CASE-SYN-17824
+mode: end_to_end
+visible_paths:
+- documents/DOC-001.pdf
+- documents/DOC-002.pdf
+- documents/DOC-003.pdf
+- documents/DOC-004.pdf
+- documents/DOC-005.pdf
+- documents/DOC-006.pdf
+- documents/DOC-007.pdf
+- documents/DOC-008.pdf
+scripted_review_input: reviewer/scripted_actions.yaml (only when harness mode=scripted_review)
+hidden_paths:
+- fixture_spec.yaml
+- oracle/
+- approvals/
+- validation/
+- research/source_case_summary.json
+leakage_policy: No expected labels, candidate IDs, oracle values or validation results are copied into the document payloads
+  or filenames.

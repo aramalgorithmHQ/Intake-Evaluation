@@ -1,0 +1,103 @@
+{
+  "document_id": "DOC-003",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Vorfallsbericht",
+  "document_date": "18.08.2026",
+  "reference": "NH-INC-2026-0817",
+  "intro": "Dokumentation eines wiederholten Verstoßes gegen die Anwesenheits- und Abstimmungspflichten im laufenden Dispositionsdienst.",
+  "template_rows": [
+    {
+      "label": "Vorfallsdatum",
+      "value_placeholder": "{{ASSERT-020}}"
+    },
+    {
+      "label": "Vorfall",
+      "value_placeholder": "{{ASSERT-021}}"
+    },
+    {
+      "label": "Verletzte Pflicht",
+      "value_placeholder": "{{ASSERT-022}}"
+    },
+    {
+      "label": "Zeugen",
+      "value_placeholder": "{{ASSERT-023}}"
+    },
+    {
+      "label": "Belege",
+      "value_placeholder": "{{ASSERT-024}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Vorfallsdatum",
+      "display_value": "17.08.2026"
+    },
+    {
+      "label": "Vorfall",
+      "display_value": "Unentschuldigtes Verlassen des laufenden Dispositionsdienstes vor Schichtende ohne Freigabe der Schichtleitung."
+    },
+    {
+      "label": "Verletzte Pflicht",
+      "display_value": "Anwesenheits- und Abstimmungspflicht im laufenden Dispositionsdienst"
+    },
+    {
+      "label": "Zeugen",
+      "display_value": "Anna Weber; Lukas Frank"
+    },
+    {
+      "label": "Belege",
+      "display_value": "Schichtprotokoll 17.08.2026; Zutrittslog 17.08.2026"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-020",
+      "document_id": "DOC-003",
+      "slot_id": "incident_date",
+      "canonical_value": "2026-08-17",
+      "rendered_value": "17.08.2026"
+    },
+    {
+      "assertion_id": "ASSERT-021",
+      "document_id": "DOC-003",
+      "slot_id": "incident_description",
+      "canonical_value": "Unentschuldigtes Verlassen des laufenden Dispositionsdienstes vor Schichtende ohne Freigabe der Schichtleitung.",
+      "rendered_value": "Unentschuldigtes Verlassen des laufenden Dispositionsdienstes vor Schichtende ohne Freigabe der Schichtleitung."
+    },
+    {
+      "assertion_id": "ASSERT-022",
+      "document_id": "DOC-003",
+      "slot_id": "contractual_duty_breached",
+      "canonical_value": "Anwesenheits- und Abstimmungspflicht im laufenden Dispositionsdienst",
+      "rendered_value": "Anwesenheits- und Abstimmungspflicht im laufenden Dispositionsdienst"
+    },
+    {
+      "assertion_id": "ASSERT-023",
+      "document_id": "DOC-003",
+      "slot_id": "witnesses",
+      "canonical_value": [
+        "Anna Weber",
+        "Lukas Frank"
+      ],
+      "rendered_value": "Anna Weber; Lukas Frank"
+    },
+    {
+      "assertion_id": "ASSERT-024",
+      "document_id": "DOC-003",
+      "slot_id": "evidence_references",
+      "canonical_value": [
+        "Schichtprotokoll 17.08.2026",
+        "Zutrittslog 17.08.2026"
+      ],
+      "rendered_value": "Schichtprotokoll 17.08.2026; Zutrittslog 17.08.2026"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nVorfallsbericht\nDatum: 18.08.2026\nReferenz: NH-INC-2026-0817\nDokumentation eines wiederholten Verstoßes gegen die Anwesenheits- und Abstimmungspflichten im laufenden Dispositionsdienst.\nDokumentierte Angaben\nVorfallsdatum: 17.08.2026\nVorfall: Unentschuldigtes Verlassen des laufenden Dispositionsdienstes vor Schichtende ohne Freigabe der Schichtleitung.\nVerletzte Pflicht: Anwesenheits- und Abstimmungspflicht im laufenden Dispositionsdienst\nZeugen: Anna Weber; Lukas Frank\nBelege: Schichtprotokoll 17.08.2026; Zutrittslog 17.08.2026\n",
+  "render_source_hash": "sha256:055a7bb02ff80049f6c39b482a56101677d7a906fecde91c5bd6c327271c9081",
+  "artifact_hash": "sha256:894d6985a164c6c04f1c8469018e710b9df8c6b5ff9a8f92b28d6ff9e8cb34dd",
+  "page_count": 1
+}

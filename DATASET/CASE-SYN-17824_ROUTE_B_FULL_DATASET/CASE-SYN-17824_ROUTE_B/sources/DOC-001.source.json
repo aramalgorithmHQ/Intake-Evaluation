@@ -1,0 +1,179 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "ASSERT-001",
+      "candidate_id": "CAND-001",
+      "canonical_value": 180,
+      "criticality": "TIER_1",
+      "evidence_code": "E0-a",
+      "field": "employee_count_fte",
+      "rendered_value": "180",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-a.employee_count_fte"
+    },
+    {
+      "assertion_id": "ASSERT-002",
+      "candidate_id": "CAND-002",
+      "canonical_value": "2024-03-01",
+      "criticality": "TIER_2",
+      "evidence_code": "E0-a",
+      "field": "headcount_date",
+      "rendered_value": "01.03.2024",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-a.headcount_date"
+    },
+    {
+      "assertion_id": "ASSERT-003",
+      "candidate_id": "CAND-003",
+      "canonical_value": "2022-01-03",
+      "criticality": "TIER_1",
+      "evidence_code": "E0-b",
+      "field": "employment_start_date",
+      "rendered_value": "03.01.2022",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-b.employment_start_date"
+    },
+    {
+      "assertion_id": "ASSERT-004",
+      "candidate_id": "CAND-004",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "E0-b",
+      "field": "tenure_continuous",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-b.tenure_continuous"
+    },
+    {
+      "assertion_id": "ASSERT-005",
+      "candidate_id": "CAND-005",
+      "canonical_value": 26,
+      "criticality": "TIER_1",
+      "evidence_code": "E0-b",
+      "field": "tenure_months",
+      "rendered_value": "26",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-b.tenure_months"
+    },
+    {
+      "assertion_id": "ASSERT-006",
+      "candidate_id": "CAND-006",
+      "canonical_value": false,
+      "criticality": "TIER_1",
+      "evidence_code": "E0-c",
+      "field": "betriebsrat_exists",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-c.betriebsrat_exists"
+    },
+    {
+      "assertion_id": "ASSERT-007",
+      "candidate_id": "CAND-007",
+      "canonical_value": "NW-HAM-01",
+      "criticality": "TIER_2",
+      "evidence_code": "E0-c",
+      "field": "establishment_id",
+      "rendered_value": "NW-HAM-01",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-c.establishment_id"
+    },
+    {
+      "assertion_id": "ASSERT-008",
+      "candidate_id": "CAND-008",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "E0-d",
+      "field": "pregnancy_status",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-d.pregnancy_status"
+    },
+    {
+      "assertion_id": "ASSERT-009",
+      "candidate_id": "CAND-009",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "E0-d",
+      "field": "parental_leave_status",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-d.parental_leave_status"
+    },
+    {
+      "assertion_id": "ASSERT-010",
+      "candidate_id": "CAND-010",
+      "canonical_value": 50,
+      "criticality": "TIER_1",
+      "evidence_code": "E0-d",
+      "field": "disability_gdb",
+      "rendered_value": "50",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-d.disability_gdb"
+    },
+    {
+      "assertion_id": "ASSERT-011",
+      "candidate_id": "CAND-011",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "E0-d",
+      "field": "disability_equivalent",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-d.disability_equivalent"
+    },
+    {
+      "assertion_id": "ASSERT-012",
+      "candidate_id": "CAND-012",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "E0-d",
+      "field": "br_member_status",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-d.br_member_status"
+    },
+    {
+      "assertion_id": "ASSERT-013",
+      "candidate_id": "CAND-013",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "E0-d",
+      "field": "dpo_appointment_status",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-d.dpo_appointment_status"
+    },
+    {
+      "assertion_id": "ASSERT-014",
+      "candidate_id": "CAND-014",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "E0-d",
+      "field": "election_board_status",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-d.election_board_status"
+    },
+    {
+      "assertion_id": "ASSERT-015",
+      "candidate_id": "CAND-015",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "E0-d",
+      "field": "military_service_status",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "E0-d.military_service_status"
+    }
+  ],
+  "document_id": "DOC-001",
+  "document_type": "HR_THRESHOLD_RECORD",
+  "generator": "route-b-bag-pattern-v1",
+  "notes": [
+    "Schwerbehindertenvertretung: nicht eingerichtet.",
+    "Schwerbehinderung war dem Arbeitgeber vor der Kündigungsentscheidung bekannt."
+  ],
+  "render_source": "Beschäftigung\n\nMitarbeiterzahl (FTE): 180\n\nStichtag Mitarbeiterzahl: 01.03.2024\n\nBeschäftigungsbeginn: 03.01.2022\n\nBeschäftigung ununterbrochen: Ja\n\nBetriebszugehörigkeit (Monate): 26\n\nBetriebsrat vorhanden: Nein\n\nBetriebs-ID: NW-HAM-01\n\nSonderstatus\n\nSchwangerschaft: Nein\n\nElternzeit: Nein\n\nGrad der Behinderung (GdB): 50\n\nGleichstellung: Nein\n\nBetriebsratsmitglied: Nein\n\nDatenschutzbeauftragter: Nein\n\nWahlvorstand: Nein\n\nWehr-/Dienstschutz: Nein\n",
+  "seed": 17824,
+  "source_kind": "DETERMINISTIC_TEMPLATE"
+}

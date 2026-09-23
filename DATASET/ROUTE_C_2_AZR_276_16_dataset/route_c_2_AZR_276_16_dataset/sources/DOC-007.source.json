@@ -1,0 +1,62 @@
+{
+  "document_id": "DOC-007",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "MASS_LAYOFF_CONSULTATION_NOTICE",
+  "title": "Unterrichtung nach § 17 Abs. 2 KSchG - zweite Welle",
+  "document_date": "2015-06-10",
+  "intro": "Unterrichtung des Betriebsrats ueber die vorsorglich geplanten Wiederholungskuendigungen nach vollzogener Betriebsstilllegung.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "mass_layoff_consultation_notice_date",
+      "field": "mass_layoff_consultation_notice_date",
+      "canonical_value": "2015-06-10",
+      "rendered_value": "10.06.2015",
+      "anchor_id": "ANCHOR-DOC-007-001"
+    },
+    {
+      "slot_id": "affected_employee_count",
+      "field": "affected_employee_count",
+      "canonical_value": 188,
+      "rendered_value": "188",
+      "anchor_id": "ANCHOR-DOC-007-002"
+    },
+    {
+      "slot_id": "planned_dismissal_reason",
+      "field": "planned_dismissal_reason",
+      "canonical_value": "Betrieb bleibt vollstaendig stillgelegt; keine Wiederaufnahme des Geschaeftsbetriebs beabsichtigt.",
+      "rendered_value": "Betrieb bleibt vollstaendig stillgelegt; keine Wiederaufnahme des Geschaeftsbetriebs beabsichtigt.",
+      "anchor_id": "ANCHOR-DOC-007-003"
+    },
+    {
+      "slot_id": "consultation_requested",
+      "field": "consultation_requested",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-007-004"
+    },
+    {
+      "slot_id": "transmission_method",
+      "field": "transmission_method",
+      "canonical_value": "FAX",
+      "rendered_value": "Telefax",
+      "anchor_id": "ANCHOR-DOC-007-005"
+    },
+    {
+      "slot_id": "social_selection_applicable",
+      "field": "social_selection_applicable",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-007-006"
+    }
+  ],
+  "artifact_hash": "sha256:af6369803ad6efc5c392da4da5ca6e3b46e50e66889fa66355a351df530290bc",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "document_id": "DOC-009",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_id": "evidence-inventory-v1",
+  "renderer": "reportlab-canvas-v1",
+  "fixture_id": "CASE-RD-06824",
+  "build_time_fixed": "2026-09-22T12:53:00Z",
+  "title": "Evidenzregister - Zugangsnachweis",
+  "document_date": "2026-09-01",
+  "narrative": "Das Register dokumentiert den Aktenbestand: Einlieferungsbeleg und Online-Status sind vorhanden; ein reproduzierbarer Auslieferungsbeleg ist nicht vorhanden. Dies ist eine explizite Evidenzzustandsangabe, nicht bloß fehlender Upload.",
+  "rows": [
+    {
+      "label": "Einlieferungsbeleg vorhanden",
+      "field": "posting_receipt_present",
+      "value": true,
+      "evidence_code": "ED-11",
+      "semantic_role": "system_log",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-073",
+      "candidate_id": "CAND-073",
+      "anchor_id": "ANCHOR-DOC-009-001"
+    },
+    {
+      "label": "Online-Sendungsstatus vorhanden",
+      "field": "tracking_status_present",
+      "value": true,
+      "evidence_code": "ED-11",
+      "semantic_role": "system_log",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-074",
+      "candidate_id": "CAND-074",
+      "anchor_id": "ANCHOR-DOC-009-002"
+    },
+    {
+      "label": "Auslieferungsbeleg vorhanden",
+      "field": "delivery_proof",
+      "value": false,
+      "evidence_code": "EU-WF",
+      "semantic_role": "system_log",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-075",
+      "candidate_id": "CAND-075",
+      "anchor_id": "ANCHOR-DOC-009-003"
+    },
+    {
+      "label": "Evidenzzustand Auslieferungsbeleg",
+      "field": "delivery_record_state",
+      "value": "ATTESTED_MISSING",
+      "evidence_code": "EU-WF",
+      "semantic_role": "system_log",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-076",
+      "candidate_id": "CAND-076",
+      "anchor_id": "ANCHOR-DOC-009-004"
+    }
+  ],
+  "signature": null,
+  "page_count": 1,
+  "artifact_sha256": "sha256:c3376a483b9831a84a881ba2ccdfe3540b969be2e52d886a7fc73b0cb7e70c41",
+  "injections": [
+    {
+      "assertion_id": "ASSERT-073",
+      "document_id": "DOC-009",
+      "slot_id": "posting_receipt_present",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-009-001"
+    },
+    {
+      "assertion_id": "ASSERT-074",
+      "document_id": "DOC-009",
+      "slot_id": "tracking_status_present",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-009-002"
+    },
+    {
+      "assertion_id": "ASSERT-075",
+      "document_id": "DOC-009",
+      "slot_id": "delivery_proof",
+      "canonical_value": false,
+      "rendered_value": "Nein / false",
+      "anchor_id": "ANCHOR-DOC-009-003"
+    },
+    {
+      "assertion_id": "ASSERT-076",
+      "document_id": "DOC-009",
+      "slot_id": "delivery_record_state",
+      "canonical_value": "ATTESTED_MISSING",
+      "rendered_value": "ATTESTED_MISSING",
+      "anchor_id": "ANCHOR-DOC-009-004"
+    }
+  ],
+  "source_hash": "sha256:0abc6158fc90168730b25488922275d84f6a35cf393248d4a8308085ab1ca210"
+}

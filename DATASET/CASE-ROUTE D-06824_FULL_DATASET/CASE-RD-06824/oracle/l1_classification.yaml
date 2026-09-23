@@ -1,0 +1,74 @@
+schema_version: eval.l1.oracle.v1
+fixture_id: CASE-RD-06824
+documents:
+- document_id: DOC-001
+  expected_type: EMPLOYEE_STATUS_RECORD
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+- document_id: DOC-002
+  expected_type: INVESTIGATION_REPORT
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+- document_id: DOC-003
+  expected_type: KNOWLEDGE_DEADLINE_MEMO
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+- document_id: DOC-004
+  expected_type: TERMINATION_DECISION_MEMO
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+- document_id: DOC-005
+  expected_type: AUTHORITY_APPROVAL
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+- document_id: DOC-006
+  expected_type: TERMINATION_LETTER
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+- document_id: DOC-007
+  expected_type: POSTAL_POSTING_RECEIPT
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+- document_id: DOC-008
+  expected_type: POSTAL_TRACKING_STATUS
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+- document_id: DOC-009
+  expected_type: EVIDENCE_INVENTORY
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+oracle_independence:
+  sut_modules_imported: []
+  shared_primitives:
+  - ISO-8601 parser
+  - SHA-256
+  uses_tauri_predictions: false
+  uses_production_mapper_as_oracle: false
+  uses_production_extractor_as_oracle: false

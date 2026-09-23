@@ -1,0 +1,62 @@
+{
+  "document_id": "DOC-011",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "EXTERNAL_AUTHORITY_APPROVAL",
+  "title": "Zustimmung des Integrationsamts",
+  "document_date": "2015-07-08",
+  "intro": "Fiktiv ausgestalteter Zustimmungsbescheid fuer die source-grounded Tatsache, dass vor der Wiederholungskuendigung erneut die Zustimmung des Integrationsamts vorlag.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "authority_type",
+      "field": "authority_type",
+      "canonical_value": "INTEGRATIONSAMT",
+      "rendered_value": "Integrationsamt",
+      "anchor_id": "ANCHOR-DOC-011-001"
+    },
+    {
+      "slot_id": "approval_granted",
+      "field": "approval_granted",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-011-002"
+    },
+    {
+      "slot_id": "approval_date",
+      "field": "approval_date",
+      "canonical_value": "2015-07-08",
+      "rendered_value": "08.07.2015",
+      "anchor_id": "ANCHOR-DOC-011-003"
+    },
+    {
+      "slot_id": "approval_reference",
+      "field": "approval_reference",
+      "canonical_value": "IA-B-2015-0715-C",
+      "rendered_value": "IA-B-2015-0715-C",
+      "anchor_id": "ANCHOR-DOC-011-004"
+    },
+    {
+      "slot_id": "applies_to_termination_issued_at",
+      "field": "applies_to_termination_issued_at",
+      "canonical_value": "2015-07-15",
+      "rendered_value": "15.07.2015",
+      "anchor_id": "ANCHOR-DOC-011-005"
+    },
+    {
+      "slot_id": "disability_equivalent",
+      "field": "disability_equivalent",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-011-006"
+    }
+  ],
+  "artifact_hash": "sha256:23a0a34551f649a66ac586218b51a735bed198c876629c5d4383b325052da049",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

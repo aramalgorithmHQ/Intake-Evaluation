@@ -1,0 +1,6 @@
+PDF: /mnt/data/CASE-SYN-7421_ROUTE_A/CASE-SYN-7421_source_bundle.pdf
+Pages: 12
+Encrypted: False
+Openable (PyMuPDF): True
+Likely scanned: False
+XFA present: False

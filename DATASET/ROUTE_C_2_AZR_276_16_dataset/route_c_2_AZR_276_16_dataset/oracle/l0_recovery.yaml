@@ -1,0 +1,686 @@
+schema_version: eval.l0.oracle.v1
+fixture_id: CASE-SYN-C-27616
+documents:
+- document_id: DOC-001
+  artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-001
+    canonical_value: 190
+    anchor_id: ANCHOR-DOC-001-001
+    page: 1
+    source_text: '190'
+  - assertion_id: ASSERT-002
+    canonical_value: '2014-09-30'
+    anchor_id: ANCHOR-DOC-001-002
+    page: 1
+    source_text: 30.09.2014
+  - assertion_id: ASSERT-003
+    canonical_value: '2007-04-01'
+    anchor_id: ANCHOR-DOC-001-003
+    page: 1
+    source_text: 01.04.2007
+  - assertion_id: ASSERT-004
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-001-004
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-005
+    canonical_value: 99
+    anchor_id: ANCHOR-DOC-001-005
+    page: 1
+    source_text: '99'
+  - assertion_id: ASSERT-006
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-001-006
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-007
+    canonical_value: BER-T
+    anchor_id: ANCHOR-DOC-001-007
+    page: 1
+    source_text: BER-T
+  - assertion_id: ASSERT-008
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-001-008
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-009
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-001-009
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-010
+    canonical_value: 188
+    anchor_id: ANCHOR-DOC-001-010
+    page: 1
+    source_text: '188'
+  - assertion_id: ASSERT-011
+    canonical_value: 40
+    anchor_id: ANCHOR-DOC-001-011
+    page: 1
+    source_text: '40'
+  - assertion_id: ASSERT-012
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-001-012
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-013
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-013
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-014
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-014
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-015
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-015
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-016
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-017
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-017
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-018
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-018
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-019
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-019
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-020
+    page: 1
+    source_text: Nein
+- document_id: DOC-002
+  artifact_hash: sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-020
+    canonical_value: Vollstaendige Stilllegung des verbleibenden Betriebs nach Kuendigung saemtlicher Kundenauftraege.
+    anchor_id: ANCHOR-DOC-002-001
+    page: 1
+    source_text: Vollstaendige Stilllegung des verbleibenden Betriebs nach Kuendigung saemtlicher Kundenauftraege.
+  - assertion_id: ASSERT-021
+    canonical_value:
+    - Saemtliche Check-in- und Passagedienst-Positionen
+    anchor_id: ANCHOR-DOC-002-002
+    page: 1
+    source_text: Saemtliche Check-in- und Passagedienst-Positionen
+  - assertion_id: ASSERT-022
+    canonical_value: Kein verbleibender Beschaeftigungsbedarf im Arbeitgeberunternehmen.
+    anchor_id: ANCHOR-DOC-002-003
+    page: 1
+    source_text: Kein verbleibender Beschaeftigungsbedarf im Arbeitgeberunternehmen.
+  - assertion_id: ASSERT-023
+    canonical_value: '2015-01-20'
+    anchor_id: ANCHOR-DOC-002-004
+    page: 1
+    source_text: 20.01.2015
+  - assertion_id: ASSERT-024
+    canonical_value: '2015-03-31'
+    anchor_id: ANCHOR-DOC-002-005
+    page: 1
+    source_text: 31.03.2015
+  - assertion_id: ASSERT-025
+    canonical_value: '2015-04-01'
+    anchor_id: ANCHOR-DOC-002-006
+    page: 1
+    source_text: 01.04.2015
+  - assertion_id: ASSERT-026
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-002-007
+    page: 1
+    source_text: Ja
+- document_id: DOC-003
+  artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-027
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-003-001
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-028
+    canonical_value: Vollstaendige Stilllegung des einzigen Betriebs; alle Arbeitsverhaeltnisse sollen zum jeweils
+      fruehestmoeglichen Termin enden.
+    anchor_id: ANCHOR-DOC-003-002
+    page: 1
+    source_text: Vollstaendige Stilllegung des einzigen Betriebs; alle Arbeitsverhaeltnisse sollen zum jeweils fruehestmoeglichen
+      Termin enden.
+  - assertion_id: ASSERT-029
+    canonical_value: NOT_APPLICABLE
+    anchor_id: ANCHOR-DOC-003-003
+    page: 1
+    source_text: Nicht anwendbar
+  - assertion_id: ASSERT-030
+    canonical_value: NOT_APPLICABLE
+    anchor_id: ANCHOR-DOC-003-004
+    page: 1
+    source_text: Nicht anwendbar
+  - assertion_id: ASSERT-031
+    canonical_value: NOT_APPLICABLE
+    anchor_id: ANCHOR-DOC-003-005
+    page: 1
+    source_text: Nicht anwendbar
+  - assertion_id: ASSERT-032
+    canonical_value: NOT_APPLICABLE
+    anchor_id: ANCHOR-DOC-003-006
+    page: 1
+    source_text: Nicht anwendbar
+  - assertion_id: ASSERT-033
+    canonical_value: NOT_APPLICABLE
+    anchor_id: ANCHOR-DOC-003-007
+    page: 1
+    source_text: Nicht anwendbar
+  - assertion_id: ASSERT-034
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-003-008
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-035
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-003-009
+    page: 1
+    source_text: Nein
+- document_id: DOC-004
+  artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-036
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-001
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-037
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-002
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-038
+    canonical_value:
+    - employee: Mara Klein
+      transfer: keine Stelle
+      retraining: kein Zielarbeitsplatz
+      voluntary_redundancy: geprueft
+    anchor_id: ANCHOR-DOC-004-003
+    page: 1
+    source_text: '[{"employee": "Mara Klein", "transfer": "keine Stelle", "retraining": "kein Zielarbeitsplatz",
+      "voluntary_redundancy": "geprueft"}]'
+  - assertion_id: ASSERT-039
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-004
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-040
+    canonical_value: Nach vollstaendiger Stilllegung besteht beim Arbeitgeber keine freie oder fortbestehende Stelle.
+    anchor_id: ANCHOR-DOC-004-005
+    page: 1
+    source_text: Nach vollstaendiger Stilllegung besteht beim Arbeitgeber keine freie oder fortbestehende Stelle.
+  - assertion_id: ASSERT-041
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-006
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-042
+    canonical_value: Kein fortbestehender Zielarbeitsplatz im Arbeitgeberunternehmen.
+    anchor_id: ANCHOR-DOC-004-007
+    page: 1
+    source_text: Kein fortbestehender Zielarbeitsplatz im Arbeitgeberunternehmen.
+  - assertion_id: ASSERT-043
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-008
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-044
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-004-009
+    page: 1
+    source_text: Nein
+- document_id: DOC-005
+  artifact_hash: sha256:dfd2cd5b4b7160c8e74c7223df24c0746b7c4c30e381d79fa641822f91d004ce
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-045
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-001
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-046
+    canonical_value: '2015-01-28'
+    anchor_id: ANCHOR-DOC-005-002
+    page: 1
+    source_text: 28.01.2015
+  - assertion_id: ASSERT-047
+    canonical_value: '2015-01-28'
+    anchor_id: ANCHOR-DOC-005-003
+    page: 1
+    source_text: 28.01.2015
+  - assertion_id: ASSERT-048
+    canonical_value: 188
+    anchor_id: ANCHOR-DOC-005-004
+    page: 1
+    source_text: '188'
+  - assertion_id: ASSERT-049
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-005-005
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-050
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-005-006
+    page: 1
+    source_text: Spaeter als fehlerhaft beurteilt
+- document_id: DOC-006
+  artifact_hash: sha256:36db4bfd3c70f7291be053a968b3691d8d3af1992571a42d2b11c04afe354d50
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-051
+    canonical_value: '2015-02-13'
+    anchor_id: ANCHOR-DOC-006-001
+    page: 1
+    source_text: 13.02.2015
+  - assertion_id: ASSERT-052
+    canonical_value: '2015-07-31'
+    anchor_id: ANCHOR-DOC-006-002
+    page: 1
+    source_text: 31.07.2015
+  - assertion_id: ASSERT-053
+    canonical_value: ORDINARY
+    anchor_id: ANCHOR-DOC-006-003
+    page: 1
+    source_text: Ordentliche Kuendigung
+  - assertion_id: ASSERT-054
+    canonical_value: ROUTE_C
+    anchor_id: ANCHOR-DOC-006-004
+    page: 1
+    source_text: betriebsbedingt - Betriebsstilllegung
+  - assertion_id: ASSERT-055
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-006-005
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-056
+    canonical_value: INVALIDATED
+    anchor_id: ANCHOR-DOC-006-006
+    page: 1
+    source_text: Erste Kuendigung durch BAG nicht als wirksam behandelt
+- document_id: DOC-007
+  artifact_hash: sha256:af6369803ad6efc5c392da4da5ca6e3b46e50e66889fa66355a351df530290bc
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-057
+    canonical_value: '2015-06-10'
+    anchor_id: ANCHOR-DOC-007-001
+    page: 1
+    source_text: 10.06.2015
+  - assertion_id: ASSERT-058
+    canonical_value: 188
+    anchor_id: ANCHOR-DOC-007-002
+    page: 1
+    source_text: '188'
+  - assertion_id: ASSERT-059
+    canonical_value: Betrieb bleibt vollstaendig stillgelegt; keine Wiederaufnahme des Geschaeftsbetriebs beabsichtigt.
+    anchor_id: ANCHOR-DOC-007-003
+    page: 1
+    source_text: Betrieb bleibt vollstaendig stillgelegt; keine Wiederaufnahme des Geschaeftsbetriebs beabsichtigt.
+  - assertion_id: ASSERT-060
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-007-004
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-061
+    canonical_value: FAX
+    anchor_id: ANCHOR-DOC-007-005
+    page: 1
+    source_text: Telefax
+  - assertion_id: ASSERT-062
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-007-006
+    page: 1
+    source_text: Nein
+- document_id: DOC-008
+  artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-063
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-001
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-064
+    canonical_value: '2015-06-12T09:00:00+02:00'
+    anchor_id: ANCHOR-DOC-008-002
+    page: 1
+    source_text: 12.06.2015 09:00 Uhr
+  - assertion_id: ASSERT-065
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-003
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-066
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-004
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-067
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-005
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-068
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-008-006
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-069
+    canonical_value: ROUTE_C
+    anchor_id: ANCHOR-DOC-008-007
+    page: 1
+    source_text: betriebsbedingt - vollstaendige Betriebsstilllegung
+  - assertion_id: ASSERT-070
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-008-008
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-071
+    canonical_value: '2015-06-19T18:00:00+02:00'
+    anchor_id: ANCHOR-DOC-008-009
+    page: 1
+    source_text: 19.06.2015 18:00 Uhr
+  - assertion_id: ASSERT-072
+    canonical_value: '2015-06-18T16:00:00+02:00'
+    anchor_id: ANCHOR-DOC-008-010
+    page: 1
+    source_text: 18.06.2015 16:00 Uhr
+  - assertion_id: ASSERT-073
+    canonical_value: OBJECTED
+    anchor_id: ANCHOR-DOC-008-011
+    page: 1
+    source_text: Bedenken / Widerspruch
+- document_id: DOC-009
+  artifact_hash: sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-074
+    canonical_value: '2015-06-17'
+    anchor_id: ANCHOR-DOC-009-001
+    page: 1
+    source_text: 17.06.2015
+  - assertion_id: ASSERT-075
+    canonical_value: '2015-06-24'
+    anchor_id: ANCHOR-DOC-009-002
+    page: 1
+    source_text: 24.06.2015
+  - assertion_id: ASSERT-076
+    canonical_value: '2015-06-24'
+    anchor_id: ANCHOR-DOC-009-003
+    page: 1
+    source_text: 24.06.2015
+  - assertion_id: ASSERT-077
+    canonical_value: '2015-06-25'
+    anchor_id: ANCHOR-DOC-009-004
+    page: 1
+    source_text: 25.06.2015
+  - assertion_id: ASSERT-078
+    canonical_value: '2015-06-26'
+    anchor_id: ANCHOR-DOC-009-005
+    page: 1
+    source_text: 26.06.2015
+  - assertion_id: ASSERT-079
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-009-006
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-080
+    canonical_value: COMPLETED_WITHOUT_AGREEMENT
+    anchor_id: ANCHOR-DOC-009-007
+    page: 1
+    source_text: Ausreichend beraten; keine Einigung
+- document_id: DOC-010
+  artifact_hash: sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-081
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-010-001
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-082
+    canonical_value: '2015-06-26'
+    anchor_id: ANCHOR-DOC-010-002
+    page: 1
+    source_text: 26.06.2015
+  - assertion_id: ASSERT-083
+    canonical_value: '2015-06-26'
+    anchor_id: ANCHOR-DOC-010-003
+    page: 1
+    source_text: 26.06.2015
+  - assertion_id: ASSERT-084
+    canonical_value: 188
+    anchor_id: ANCHOR-DOC-010-004
+    page: 1
+    source_text: '188'
+  - assertion_id: ASSERT-085
+    canonical_value: '2015-06-10'
+    anchor_id: ANCHOR-DOC-010-005
+    page: 1
+    source_text: 10.06.2015
+  - assertion_id: ASSERT-086
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-010-006
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-087
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-010-007
+    page: 1
+    source_text: Ja
+- document_id: DOC-011
+  artifact_hash: sha256:23a0a34551f649a66ac586218b51a735bed198c876629c5d4383b325052da049
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-088
+    canonical_value: INTEGRATIONSAMT
+    anchor_id: ANCHOR-DOC-011-001
+    page: 1
+    source_text: Integrationsamt
+  - assertion_id: ASSERT-089
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-011-002
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-090
+    canonical_value: '2015-07-08'
+    anchor_id: ANCHOR-DOC-011-003
+    page: 1
+    source_text: 08.07.2015
+  - assertion_id: ASSERT-091
+    canonical_value: IA-B-2015-0715-C
+    anchor_id: ANCHOR-DOC-011-004
+    page: 1
+    source_text: IA-B-2015-0715-C
+  - assertion_id: ASSERT-092
+    canonical_value: '2015-07-15'
+    anchor_id: ANCHOR-DOC-011-005
+    page: 1
+    source_text: 15.07.2015
+  - assertion_id: ASSERT-093
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-011-006
+    page: 1
+    source_text: Ja
+- document_id: DOC-012
+  artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-094
+    canonical_value: '2015-07-15'
+    anchor_id: ANCHOR-DOC-012-001
+    page: 1
+    source_text: 15.07.2015
+  - assertion_id: ASSERT-095
+    canonical_value: '2016-01-31'
+    anchor_id: ANCHOR-DOC-012-002
+    page: 1
+    source_text: 31.01.2016
+  - assertion_id: ASSERT-096
+    canonical_value: ORDINARY
+    anchor_id: ANCHOR-DOC-012-003
+    page: 1
+    source_text: Ordentliche Kuendigung
+  - assertion_id: ASSERT-097
+    canonical_value: ROUTE_C
+    anchor_id: ANCHOR-DOC-012-004
+    page: 1
+    source_text: betriebsbedingt - vollstaendige Betriebsstilllegung
+  - assertion_id: ASSERT-098
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-012-005
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-099
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-012-006
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-100
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-012-007
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-101
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-012-008
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-102
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-012-009
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-103
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-012-010
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-104
+    canonical_value: PERSONAL_HANDOVER
+    anchor_id: ANCHOR-DOC-012-011
+    page: 1
+    source_text: Persoenliche Uebergabe
+  - assertion_id: ASSERT-105
+    canonical_value: '2015-07-15'
+    anchor_id: ANCHOR-DOC-012-012
+    page: 1
+    source_text: 15.07.2015
+  - assertion_id: ASSERT-106
+    canonical_value: 120
+    anchor_id: ANCHOR-DOC-012-013
+    page: 1
+    source_text: '120'
+  - assertion_id: ASSERT-107
+    canonical_value: 180
+    anchor_id: ANCHOR-DOC-012-014
+    page: 1
+    source_text: '180'
+  - assertion_id: ASSERT-108
+    canonical_value: 200
+    anchor_id: ANCHOR-DOC-012-015
+    page: 1
+    source_text: '200'
+  - assertion_id: ASSERT-109
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-012-016
+    page: 1
+    source_text: Ja
+- document_id: DOC-013
+  artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-110
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-013-001
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-111
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-013-002
+    page: 1
+    source_text: Nein
+  - assertion_id: ASSERT-112
+    canonical_value:
+    - Alter
+    - Behinderung
+    - Geschlecht
+    - Religion/Weltanschauung
+    - ethnische Herkunft
+    - sexuelle Identitaet
+    anchor_id: ANCHOR-DOC-013-003
+    page: 1
+    source_text: Alter, Behinderung, Geschlecht, Religion/Weltanschauung, ethnische Herkunft, sexuelle Identitaet
+  - assertion_id: ASSERT-113
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-013-004
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-114
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-013-005
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-115
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-013-006
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-116
+    canonical_value: Vollstaendige Betriebsstilllegung / Gesellschafterbeschluss 20.01.2015
+    anchor_id: ANCHOR-DOC-013-007
+    page: 1
+    source_text: Vollstaendige Betriebsstilllegung / Gesellschafterbeschluss 20.01.2015
+  - assertion_id: ASSERT-117
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-013-008
+    page: 1
+    source_text: Ja
+  - assertion_id: ASSERT-118
+    canonical_value:
+    - AGG § 1 Merkmale
+    anchor_id: ANCHOR-DOC-013-009
+    page: 1
+    source_text: AGG § 1 Merkmale

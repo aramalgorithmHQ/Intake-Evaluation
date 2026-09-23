@@ -1,0 +1,28 @@
+request_version: '2'
+count: 1
+seed: 68024
+target:
+  layer: L5
+  behavior: END_TO_END_ROUTE_D_DELIVERY_FAIL_CLOSED
+  surface: TAURI_INTAKE_V43
+scenario:
+  reason_family: CONDUCT
+  termination_form: EXTRAORDINARY
+  procedures:
+    works_council: false
+    mass_layoff: false
+    public_sector: false
+  protections:
+  - PREGNANT
+challenge:
+  difficulty: ADVERSARIAL
+  evidence_condition: DEFECTIVE
+  document_quality: CLEAN
+features:
+- DISPUTED_REGISTERED_MAIL_RECEIPT
+- ATTESTED_MISSING_DELIVERY_RECORD
+- SPECIAL_PROTECTION_APPROVAL
+- TWO_WEEK_DEADLINE
+- MULTIPLE_DATES
+operator_comment: Synthetic Route D fixture inspired by the delivery-proof stress pattern in BAG 2 AZR
+  68/24; not a reproduction of the real case.

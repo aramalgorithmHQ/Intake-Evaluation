@@ -1,0 +1,8 @@
+fixture_id: CASE-SYN-17824
+status: PENDING_INDEPENDENT_REVIEW
+golden: false
+tier1_fact_review: NOT_COMPLETED
+tier1_provenance_review: NOT_COMPLETED
+domain_plausibility_review: NOT_COMPLETED
+promotion_allowed: false
+note: The generator cannot promote its own fixture. Independent human review is required.

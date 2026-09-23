@@ -1,0 +1,103 @@
+schema_version: eval.l4.oracle.v1
+fixture_id: CASE-SYN-C-27616
+normative_schema_ref: case_definition.schema.yaml@1.1.0
+expected_parse_result: PASS
+expected_schema_result: PASS
+schema_errors_expected: []
+required_field_assertions:
+- field: case_id
+  expected: PRESENT
+- field: case_name
+  expected: PRESENT
+- field: category
+  expected: PRESENT
+- field: route
+  expected: PRESENT
+- field: description
+  expected: PRESENT
+- field: envelope_overrides
+  expected: PRESENT
+- field: evidence_profile
+  expected: PRESENT
+- field: activated_gates
+  expected: PRESENT
+evidence_state_assertions:
+- evidence_code: E0-a
+  expected_state: PRESENT
+- evidence_code: E0-b
+  expected_state: PRESENT
+- evidence_code: E0-c
+  expected_state: PRESENT
+- evidence_code: E0-d
+  expected_state: PRESENT
+- evidence_code: E0-e
+  expected_state: PRESENT
+- evidence_code: E0-f
+  expected_state: NOT_APPLICABLE
+- evidence_code: EU-WF
+  expected_state: PRESENT
+- evidence_code: EU-NP
+  expected_state: PRESENT
+- evidence_code: EU-AGG
+  expected_state: PRESENT
+- evidence_code: EU-AGG-1
+  expected_state: PRESENT
+- evidence_code: EU-AGG-2
+  expected_state: PRESENT
+- evidence_code: EQ-4
+  expected_state: PRESENT
+- evidence_code: EC-1
+  expected_state: PRESENT
+- evidence_code: EC-2
+  expected_state: NOT_APPLICABLE
+- evidence_code: EC-3
+  expected_state: NOT_APPLICABLE
+- evidence_code: EC-4
+  expected_state: NOT_APPLICABLE
+- evidence_code: EC-5
+  expected_state: NOT_APPLICABLE
+- evidence_code: EC-6
+  expected_state: NOT_APPLICABLE
+- evidence_code: EC-7
+  expected_state: NOT_APPLICABLE
+- evidence_code: EC-8
+  expected_state: NOT_APPLICABLE
+- evidence_code: EC-9
+  expected_state: PRESENT
+- evidence_code: EC-10
+  expected_state: PRESENT
+- evidence_code: EC-11
+  expected_state: PRESENT
+- evidence_code: EC-12
+  expected_state: PRESENT
+- evidence_code: EP-C1
+  expected_state: PRESENT
+- evidence_code: EP-C2
+  expected_state: PRESENT
+- evidence_code: EP-C3
+  expected_state: PRESENT
+- evidence_code: ET-CD
+  expected_state: NOT_APPLICABLE
+- evidence_code: ET-MT
+  expected_state: NOT_APPLICABLE
+invariant_assertions:
+- id: INV-NO-HISTORICAL-OVERWRITE
+  expected: PASS
+  rule: Historical first termination and filing remain visible but do not become final values.
+- id: INV-NOT-APPLICABLE-NOT-MISSING
+  expected: PASS
+  rule: EC-2 through EC-6 remain NOT_APPLICABLE for source-grounded complete closure.
+- id: INV-APPROVAL-BEFORE-FINAL-NOTICE
+  expected: PASS
+  rule: Integrationsamt approval date is before final termination issue date.
+- id: INV-MASS-NOTICE-BEFORE-FINAL-NOTICE
+  expected: PASS
+  rule: Final mass-layoff filing is before final termination issue date.
+- id: INV-HUMAN-AUTHORITY
+  expected: PASS
+  rule: Fixture is not self-promoted to golden.
+contract_conflicts:
+- id: CG-001
+  scoring_status: NOT_SCORED_CONTRACT_ERROR_FOR_AFFECTED_ASSERTIONS
+- id: CG-002
+  scoring_status: NOT_SCORED_CONTRACT_ERROR_FOR_AFFECTED_ASSERTIONS

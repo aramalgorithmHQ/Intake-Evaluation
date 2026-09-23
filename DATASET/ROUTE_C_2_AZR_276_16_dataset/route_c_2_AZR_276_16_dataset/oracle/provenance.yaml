@@ -1,0 +1,1906 @@
+schema_version: eval.provenance.v1
+fixture_id: CASE-SYN-C-27616
+items:
+- assertion_id: ASSERT-001
+  candidate_id: CAND-001
+  field: employee_count_fte
+  value: 190
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-001
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 692.89
+    - 224.51
+    - 703.89
+    source_text: '190'
+- assertion_id: ASSERT-002
+  candidate_id: CAND-002
+  field: headcount_date
+  value: '2014-09-30'
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-002
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 663.89
+    - 253.53
+    - 674.89
+    source_text: 30.09.2014
+- assertion_id: ASSERT-003
+  candidate_id: CAND-003
+  field: employment_start_date
+  value: '2007-04-01'
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-003
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 634.89
+    - 253.53
+    - 645.89
+    source_text: 01.04.2007
+- assertion_id: ASSERT-004
+  candidate_id: CAND-004
+  field: tenure_continuous
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-004
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 605.89
+    - 219.19
+    - 616.89
+    source_text: Ja
+- assertion_id: ASSERT-005
+  candidate_id: CAND-005
+  field: tenure_months
+  value: 99
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-005
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 576.89
+    - 219.67
+    - 587.89
+    source_text: '99'
+- assertion_id: ASSERT-006
+  candidate_id: CAND-006
+  field: betriebsrat_exists
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-006
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 547.89
+    - 219.19
+    - 558.89
+    source_text: Ja
+- assertion_id: ASSERT-007
+  candidate_id: CAND-007
+  field: establishment_id
+  value: BER-T
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-007
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 518.89
+    - 236.1
+    - 529.89
+    source_text: BER-T
+- assertion_id: ASSERT-008
+  candidate_id: CAND-008
+  field: kschg_applies
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-008
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 489.89
+    - 219.19
+    - 500.89
+    source_text: Ja
+- assertion_id: ASSERT-009
+  candidate_id: CAND-009
+  field: mass_layoff_triggered
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-009
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 460.89
+    - 219.19
+    - 471.89
+    source_text: Ja
+- assertion_id: ASSERT-010
+  candidate_id: CAND-010
+  field: dismissals_planned
+  value: 188
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-010
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 431.89
+    - 224.51
+    - 442.89
+    source_text: '188'
+- assertion_id: ASSERT-011
+  candidate_id: CAND-011
+  field: disability_gdb
+  value: 40
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-011
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 402.89
+    - 219.67
+    - 413.89
+    source_text: '40'
+- assertion_id: ASSERT-012
+  candidate_id: CAND-012
+  field: disability_equivalent
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-012
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 367.89
+    - 219.19
+    - 378.89
+    source_text: Ja
+- assertion_id: ASSERT-013
+  candidate_id: CAND-013
+  field: pregnancy_status
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-013
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 332.89
+    - 227.89
+    - 343.89
+    source_text: Nein
+- assertion_id: ASSERT-014
+  candidate_id: CAND-014
+  field: parental_leave_status
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-014
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 303.89
+    - 227.89
+    - 314.89
+    source_text: Nein
+- assertion_id: ASSERT-015
+  candidate_id: CAND-015
+  field: br_member_status
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-015
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 274.89
+    - 227.89
+    - 285.89
+    source_text: Nein
+- assertion_id: ASSERT-016
+  candidate_id: CAND-016
+  field: dpo_appointment_status
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-017
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 210.89
+    - 227.89
+    - 221.89
+    source_text: Nein
+- assertion_id: ASSERT-017
+  candidate_id: CAND-017
+  field: election_board_status
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-018
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 181.89
+    - 227.89
+    - 192.89
+    source_text: Nein
+- assertion_id: ASSERT-018
+  candidate_id: CAND-018
+  field: military_service_status
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-019
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 152.89
+    - 227.89
+    - 163.89
+    source_text: Nein
+- assertion_id: ASSERT-019
+  candidate_id: CAND-019
+  field: tech_used
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-001
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-001-020
+    artifact_hash: sha256:bf7f33c0a984ee1d4592d1e1c06f4f62a23c5a34de2ab52ce298d1c36032503d
+    page: 1
+    bbox:
+    - 210
+    - 123.89
+    - 227.89
+    - 134.89
+    source_text: Nein
+- assertion_id: ASSERT-020
+  candidate_id: CAND-020
+  field: business_decision_description
+  value: Vollstaendige Stilllegung des verbleibenden Betriebs nach Kuendigung saemtlicher Kundenauftraege.
+  semantic_role: primary_source
+  document_id: DOC-002
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-002-001
+    artifact_hash: sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d
+    page: 1
+    bbox:
+    - 210
+    - 649.89
+    - 529.64
+    - 671.89
+    source_text: Vollstaendige Stilllegung des verbleibenden Betriebs nach Kuendigung saemtlicher Kundenauftraege.
+- assertion_id: ASSERT-021
+  candidate_id: CAND-021
+  field: positions_eliminated
+  value:
+  - Saemtliche Check-in- und Passagedienst-Positionen
+  semantic_role: primary_source
+  document_id: DOC-002
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-002-002
+    artifact_hash: sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d
+    page: 1
+    bbox:
+    - 210
+    - 625.89
+    - 412.6
+    - 636.89
+    source_text: Saemtliche Check-in- und Passagedienst-Positionen
+- assertion_id: ASSERT-022
+  candidate_id: CAND-022
+  field: headcount_rationale
+  value: Kein verbleibender Beschaeftigungsbedarf im Arbeitgeberunternehmen.
+  semantic_role: primary_source
+  document_id: DOC-002
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-002-003
+    artifact_hash: sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d
+    page: 1
+    bbox:
+    - 210
+    - 596.89
+    - 486.6
+    - 607.89
+    source_text: Kein verbleibender Beschaeftigungsbedarf im Arbeitgeberunternehmen.
+- assertion_id: ASSERT-023
+  candidate_id: CAND-023
+  field: decision_date
+  value: '2015-01-20'
+  semantic_role: primary_source
+  document_id: DOC-002
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-002-004
+    artifact_hash: sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d
+    page: 1
+    bbox:
+    - 210
+    - 567.89
+    - 253.53
+    - 578.89
+    source_text: 20.01.2015
+- assertion_id: ASSERT-024
+  candidate_id: CAND-024
+  field: closure_effective_date
+  value: '2015-03-31'
+  semantic_role: primary_source
+  document_id: DOC-002
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-002-005
+    artifact_hash: sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d
+    page: 1
+    bbox:
+    - 210
+    - 538.89
+    - 253.53
+    - 549.89
+    source_text: 31.03.2015
+- assertion_id: ASSERT-025
+  candidate_id: CAND-025
+  field: no_business_activity_from
+  value: '2015-04-01'
+  semantic_role: primary_source
+  document_id: DOC-002
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-002-006
+    artifact_hash: sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d
+    page: 1
+    bbox:
+    - 210
+    - 509.89
+    - 253.53
+    - 520.89
+    source_text: 01.04.2015
+- assertion_id: ASSERT-026
+  candidate_id: CAND-026
+  field: all_jobs_eliminated
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-002
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-002-007
+    artifact_hash: sha256:bb72444c228478d7bb4efb9cfde4dda2877c41c38eaf9913037fd6ef2283856d
+    page: 1
+    bbox:
+    - 210
+    - 480.89
+    - 219.19
+    - 491.89
+    source_text: Ja
+- assertion_id: ASSERT-027
+  candidate_id: CAND-027
+  field: social_selection_applicable
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-001
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 692.89
+    - 227.89
+    - 703.89
+    source_text: Nein
+- assertion_id: ASSERT-028
+  candidate_id: CAND-028
+  field: social_selection_reason
+  value: Vollstaendige Stilllegung des einzigen Betriebs; alle Arbeitsverhaeltnisse sollen zum jeweils fruehestmoeglichen
+    Termin enden.
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-002
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 646.89
+    - 533.48
+    - 668.89
+    source_text: Vollstaendige Stilllegung des einzigen Betriebs; alle Arbeitsverhaeltnisse sollen zum jeweils fruehestmoeglichen
+      Termin enden.
+- assertion_id: ASSERT-029
+  candidate_id: CAND-029
+  field: comparable_pool_state
+  value: NOT_APPLICABLE
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-003
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 622.89
+    - 275.28
+    - 633.89
+    source_text: Nicht anwendbar
+- assertion_id: ASSERT-030
+  candidate_id: CAND-030
+  field: social_data_state
+  value: NOT_APPLICABLE
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-004
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 593.89
+    - 275.28
+    - 604.89
+    source_text: Nicht anwendbar
+- assertion_id: ASSERT-031
+  candidate_id: CAND-031
+  field: weighting_model_state
+  value: NOT_APPLICABLE
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-005
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 564.89
+    - 275.28
+    - 575.89
+    source_text: Nicht anwendbar
+- assertion_id: ASSERT-032
+  candidate_id: CAND-032
+  field: scoring_matrix_state
+  value: NOT_APPLICABLE
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-006
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 535.89
+    - 275.28
+    - 546.89
+    source_text: Nicht anwendbar
+- assertion_id: ASSERT-033
+  candidate_id: CAND-033
+  field: ranked_list_state
+  value: NOT_APPLICABLE
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-007
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 506.89
+    - 275.28
+    - 517.89
+    source_text: Nicht anwendbar
+- assertion_id: ASSERT-034
+  candidate_id: CAND-034
+  field: exemptions_claimed
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-008
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 477.89
+    - 227.89
+    - 488.89
+    source_text: Nein
+- assertion_id: ASSERT-035
+  candidate_id: CAND-035
+  field: selection_guidelines_exist
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-003
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-003-009
+    artifact_hash: sha256:6d278bce2b8b1af437cc7a44c59d478ce07fa8de6c36a852d3723d49e7e924f6
+    page: 1
+    bbox:
+    - 210
+    - 442.89
+    - 227.89
+    - 453.89
+    source_text: Nein
+- assertion_id: ASSERT-036
+  candidate_id: CAND-036
+  field: proportionality_analysis_exists
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-001
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 672.89
+    - 219.19
+    - 683.89
+    source_text: Ja
+- assertion_id: ASSERT-037
+  candidate_id: CAND-037
+  field: alternatives_evaluated
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-002
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 637.89
+    - 219.19
+    - 648.89
+    source_text: Ja
+- assertion_id: ASSERT-038
+  candidate_id: CAND-038
+  field: per_employee_alternatives
+  value:
+  - employee: Mara Klein
+    transfer: keine Stelle
+    retraining: kein Zielarbeitsplatz
+    voluntary_redundancy: geprueft
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-003
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 597.89
+    - 479.46
+    - 619.89
+    source_text: '[{"employee": "Mara Klein", "transfer": "keine Stelle", "retraining": "kein Zielarbeitsplatz",
+      "voluntary_redundancy": "geprueft"}]'
+- assertion_id: ASSERT-039
+  candidate_id: CAND-039
+  field: transfer_possibility_examined
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-004
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 573.89
+    - 219.19
+    - 584.89
+    source_text: Ja
+- assertion_id: ASSERT-040
+  candidate_id: CAND-040
+  field: transfer_rejection_reason
+  value: Nach vollstaendiger Stilllegung besteht beim Arbeitgeber keine freie oder fortbestehende Stelle.
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-005
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 533.89
+    - 490.94
+    - 555.89
+    source_text: Nach vollstaendiger Stilllegung besteht beim Arbeitgeber keine freie oder fortbestehende Stelle.
+- assertion_id: ASSERT-041
+  candidate_id: CAND-041
+  field: retraining_assessed
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-006
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 509.89
+    - 219.19
+    - 520.89
+    source_text: Ja
+- assertion_id: ASSERT-042
+  candidate_id: CAND-042
+  field: retraining_rejection_reason
+  value: Kein fortbestehender Zielarbeitsplatz im Arbeitgeberunternehmen.
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-007
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 480.89
+    - 464.34
+    - 491.89
+    source_text: Kein fortbestehender Zielarbeitsplatz im Arbeitgeberunternehmen.
+- assertion_id: ASSERT-043
+  candidate_id: CAND-043
+  field: voluntary_redundancy_evaluated
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-008
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 451.89
+    - 219.19
+    - 462.89
+    source_text: Ja
+- assertion_id: ASSERT-044
+  candidate_id: CAND-044
+  field: voluntary_redundancy_offered
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-004
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-004-009
+    artifact_hash: sha256:3300f28391ed21acfafc2eb8a5299c50974c3fef7e33543fcef8ed70cf324ea4
+    page: 1
+    bbox:
+    - 210
+    - 422.89
+    - 227.89
+    - 433.89
+    source_text: Nein
+- assertion_id: ASSERT-045
+  candidate_id: CAND-045
+  field: notification_filed
+  value: true
+  semantic_role: historical_reference
+  document_id: DOC-005
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-005-001
+    artifact_hash: sha256:dfd2cd5b4b7160c8e74c7223df24c0746b7c4c30e381d79fa641822f91d004ce
+    page: 1
+    bbox:
+    - 210
+    - 692.89
+    - 219.19
+    - 703.89
+    source_text: Ja
+- assertion_id: ASSERT-046
+  candidate_id: CAND-046
+  field: notification_date
+  value: '2015-01-28'
+  semantic_role: historical_reference
+  document_id: DOC-005
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-005-002
+    artifact_hash: sha256:dfd2cd5b4b7160c8e74c7223df24c0746b7c4c30e381d79fa641822f91d004ce
+    page: 1
+    bbox:
+    - 210
+    - 663.89
+    - 253.53
+    - 674.89
+    source_text: 28.01.2015
+- assertion_id: ASSERT-047
+  candidate_id: CAND-047
+  field: agency_receipt_date
+  value: '2015-01-28'
+  semantic_role: historical_reference
+  document_id: DOC-005
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-005-003
+    artifact_hash: sha256:dfd2cd5b4b7160c8e74c7223df24c0746b7c4c30e381d79fa641822f91d004ce
+    page: 1
+    bbox:
+    - 210
+    - 634.89
+    - 253.53
+    - 645.89
+    source_text: 28.01.2015
+- assertion_id: ASSERT-048
+  candidate_id: CAND-048
+  field: employees_notified
+  value: 188
+  semantic_role: historical_reference
+  document_id: DOC-005
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-005-004
+    artifact_hash: sha256:dfd2cd5b4b7160c8e74c7223df24c0746b7c4c30e381d79fa641822f91d004ce
+    page: 1
+    bbox:
+    - 210
+    - 605.89
+    - 224.51
+    - 616.89
+    source_text: '188'
+- assertion_id: ASSERT-049
+  candidate_id: CAND-049
+  field: works_council_statement_attached
+  value: false
+  semantic_role: historical_reference
+  document_id: DOC-005
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-005-005
+    artifact_hash: sha256:dfd2cd5b4b7160c8e74c7223df24c0746b7c4c30e381d79fa641822f91d004ce
+    page: 1
+    bbox:
+    - 210
+    - 576.89
+    - 227.89
+    - 587.89
+    source_text: Nein
+- assertion_id: ASSERT-050
+  candidate_id: CAND-050
+  field: notification_valid
+  value: false
+  semantic_role: court_decision
+  document_id: DOC-005
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-005-006
+    artifact_hash: sha256:dfd2cd5b4b7160c8e74c7223df24c0746b7c4c30e381d79fa641822f91d004ce
+    page: 1
+    bbox:
+    - 210
+    - 541.89
+    - 326.06
+    - 552.89
+    source_text: Spaeter als fehlerhaft beurteilt
+- assertion_id: ASSERT-051
+  candidate_id: CAND-051
+  field: termination_issued_at
+  value: '2015-02-13'
+  semantic_role: historical_reference
+  document_id: DOC-006
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-006-001
+    artifact_hash: sha256:36db4bfd3c70f7291be053a968b3691d8d3af1992571a42d2b11c04afe354d50
+    page: 1
+    bbox:
+    - 210
+    - 692.89
+    - 253.53
+    - 703.89
+    source_text: 13.02.2015
+- assertion_id: ASSERT-052
+  candidate_id: CAND-052
+  field: termination_effective
+  value: '2015-07-31'
+  semantic_role: historical_reference
+  document_id: DOC-006
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-006-002
+    artifact_hash: sha256:36db4bfd3c70f7291be053a968b3691d8d3af1992571a42d2b11c04afe354d50
+    page: 1
+    bbox:
+    - 210
+    - 663.89
+    - 253.53
+    - 674.89
+    source_text: 31.07.2015
+- assertion_id: ASSERT-053
+  candidate_id: CAND-053
+  field: termination_type
+  value: ORDINARY
+  semantic_role: historical_reference
+  document_id: DOC-006
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-006-003
+    artifact_hash: sha256:36db4bfd3c70f7291be053a968b3691d8d3af1992571a42d2b11c04afe354d50
+    page: 1
+    bbox:
+    - 210
+    - 634.89
+    - 303.33
+    - 645.89
+    source_text: Ordentliche Kuendigung
+- assertion_id: ASSERT-054
+  candidate_id: CAND-054
+  field: route
+  value: ROUTE_C
+  semantic_role: historical_reference
+  document_id: DOC-006
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-006-004
+    artifact_hash: sha256:36db4bfd3c70f7291be053a968b3691d8d3af1992571a42d2b11c04afe354d50
+    page: 1
+    bbox:
+    - 210
+    - 605.89
+    - 347.81
+    - 616.89
+    source_text: betriebsbedingt - Betriebsstilllegung
+- assertion_id: ASSERT-055
+  candidate_id: CAND-055
+  field: integrationsamt_approval_before_termination
+  value: true
+  semantic_role: historical_reference
+  document_id: DOC-006
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-006-005
+    artifact_hash: sha256:36db4bfd3c70f7291be053a968b3691d8d3af1992571a42d2b11c04afe354d50
+    page: 1
+    bbox:
+    - 210
+    - 576.89
+    - 219.19
+    - 587.89
+    source_text: Ja
+- assertion_id: ASSERT-056
+  candidate_id: CAND-056
+  field: historical_outcome
+  value: INVALIDATED
+  semantic_role: court_decision
+  document_id: DOC-006
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-006-006
+    artifact_hash: sha256:36db4bfd3c70f7291be053a968b3691d8d3af1992571a42d2b11c04afe354d50
+    page: 1
+    bbox:
+    - 210
+    - 541.89
+    - 433.4
+    - 552.89
+    source_text: Erste Kuendigung durch BAG nicht als wirksam behandelt
+- assertion_id: ASSERT-057
+  candidate_id: CAND-057
+  field: mass_layoff_consultation_notice_date
+  value: '2015-06-10'
+  semantic_role: primary_source
+  document_id: DOC-007
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-007-001
+    artifact_hash: sha256:af6369803ad6efc5c392da4da5ca6e3b46e50e66889fa66355a351df530290bc
+    page: 1
+    bbox:
+    - 210
+    - 692.89
+    - 253.53
+    - 703.89
+    source_text: 10.06.2015
+- assertion_id: ASSERT-058
+  candidate_id: CAND-058
+  field: affected_employee_count
+  value: 188
+  semantic_role: primary_source
+  document_id: DOC-007
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-007-002
+    artifact_hash: sha256:af6369803ad6efc5c392da4da5ca6e3b46e50e66889fa66355a351df530290bc
+    page: 1
+    bbox:
+    - 210
+    - 663.89
+    - 224.51
+    - 674.89
+    source_text: '188'
+- assertion_id: ASSERT-059
+  candidate_id: CAND-059
+  field: planned_dismissal_reason
+  value: Betrieb bleibt vollstaendig stillgelegt; keine Wiederaufnahme des Geschaeftsbetriebs beabsichtigt.
+  semantic_role: primary_source
+  document_id: DOC-007
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-007-003
+    artifact_hash: sha256:af6369803ad6efc5c392da4da5ca6e3b46e50e66889fa66355a351df530290bc
+    page: 1
+    bbox:
+    - 210
+    - 623.89
+    - 535.91
+    - 645.89
+    source_text: Betrieb bleibt vollstaendig stillgelegt; keine Wiederaufnahme des Geschaeftsbetriebs beabsichtigt.
+- assertion_id: ASSERT-060
+  candidate_id: CAND-060
+  field: consultation_requested
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-007
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-007-004
+    artifact_hash: sha256:af6369803ad6efc5c392da4da5ca6e3b46e50e66889fa66355a351df530290bc
+    page: 1
+    bbox:
+    - 210
+    - 599.89
+    - 219.19
+    - 610.89
+    source_text: Ja
+- assertion_id: ASSERT-061
+  candidate_id: CAND-061
+  field: transmission_method
+  value: FAX
+  semantic_role: primary_source
+  document_id: DOC-007
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-007-005
+    artifact_hash: sha256:af6369803ad6efc5c392da4da5ca6e3b46e50e66889fa66355a351df530290bc
+    page: 1
+    bbox:
+    - 210
+    - 553.89
+    - 238.53
+    - 564.89
+    source_text: Telefax
+- assertion_id: ASSERT-062
+  candidate_id: CAND-062
+  field: social_selection_applicable
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-007
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-007-006
+    artifact_hash: sha256:af6369803ad6efc5c392da4da5ca6e3b46e50e66889fa66355a351df530290bc
+    page: 1
+    bbox:
+    - 210
+    - 524.89
+    - 227.89
+    - 535.89
+    source_text: Nein
+- assertion_id: ASSERT-063
+  candidate_id: CAND-063
+  field: hearing_document_exists
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-001
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 687.89
+    - 219.19
+    - 698.89
+    source_text: Ja
+- assertion_id: ASSERT-064
+  candidate_id: CAND-064
+  field: hearing_initiated_at
+  value: '2015-06-12T09:00:00+02:00'
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-002
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 658.89
+    - 294.16
+    - 669.89
+    source_text: 12.06.2015 09:00 Uhr
+- assertion_id: ASSERT-065
+  candidate_id: CAND-065
+  field: hearing_contains_employee_identity
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-003
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 629.89
+    - 219.19
+    - 640.89
+    source_text: Ja
+- assertion_id: ASSERT-066
+  candidate_id: CAND-066
+  field: hearing_contains_termination_type
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-004
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 600.89
+    - 219.19
+    - 611.89
+    source_text: Ja
+- assertion_id: ASSERT-067
+  candidate_id: CAND-067
+  field: hearing_contains_termination_reason
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-005
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 571.89
+    - 219.19
+    - 582.89
+    source_text: Ja
+- assertion_id: ASSERT-068
+  candidate_id: CAND-068
+  field: hearing_contains_route
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-006
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 542.89
+    - 219.19
+    - 553.89
+    source_text: Ja
+- assertion_id: ASSERT-069
+  candidate_id: CAND-069
+  field: hearing_route_stated
+  value: ROUTE_C
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-007
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 507.89
+    - 401.0
+    - 518.89
+    source_text: betriebsbedingt - vollstaendige Betriebsstilllegung
+- assertion_id: ASSERT-070
+  candidate_id: CAND-070
+  field: hearing_contains_social_selection_data
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-008
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 478.89
+    - 227.89
+    - 489.89
+    source_text: Nein
+- assertion_id: ASSERT-071
+  candidate_id: CAND-071
+  field: hearing_response_deadline
+  value: '2015-06-19T18:00:00+02:00'
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-009
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 449.89
+    - 294.16
+    - 460.89
+    source_text: 19.06.2015 18:00 Uhr
+- assertion_id: ASSERT-072
+  candidate_id: CAND-072
+  field: hearing_response_received_at
+  value: '2015-06-18T16:00:00+02:00'
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-010
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 420.89
+    - 294.16
+    - 431.89
+    source_text: 18.06.2015 16:00 Uhr
+- assertion_id: ASSERT-073
+  candidate_id: CAND-073
+  field: hearing_response_type
+  value: OBJECTED
+  semantic_role: primary_source
+  document_id: DOC-008
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-008-011
+    artifact_hash: sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c
+    page: 1
+    bbox:
+    - 210
+    - 391.89
+    - 305.26
+    - 402.89
+    source_text: Bedenken / Widerspruch
+- assertion_id: ASSERT-074
+  candidate_id: CAND-074
+  field: works_council_proposals_date
+  value: '2015-06-17'
+  semantic_role: primary_source
+  document_id: DOC-009
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-009-001
+    artifact_hash: sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af
+    page: 1
+    bbox:
+    - 210
+    - 704.89
+    - 253.53
+    - 715.89
+    source_text: 17.06.2015
+- assertion_id: ASSERT-075
+  candidate_id: CAND-075
+  field: consultation_meeting_date
+  value: '2015-06-24'
+  semantic_role: primary_source
+  document_id: DOC-009
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-009-002
+    artifact_hash: sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af
+    page: 1
+    bbox:
+    - 210
+    - 675.89
+    - 253.53
+    - 686.89
+    source_text: 24.06.2015
+- assertion_id: ASSERT-076
+  candidate_id: CAND-076
+  field: presentation_sent_date
+  value: '2015-06-24'
+  semantic_role: primary_source
+  document_id: DOC-009
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-009-003
+    artifact_hash: sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af
+    page: 1
+    bbox:
+    - 210
+    - 646.89
+    - 253.53
+    - 657.89
+    source_text: 24.06.2015
+- assertion_id: ASSERT-077
+  candidate_id: CAND-077
+  field: works_council_followup_date
+  value: '2015-06-25'
+  semantic_role: primary_source
+  document_id: DOC-009
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-009-004
+    artifact_hash: sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af
+    page: 1
+    bbox:
+    - 210
+    - 617.89
+    - 253.53
+    - 628.89
+    source_text: 25.06.2015
+- assertion_id: ASSERT-078
+  candidate_id: CAND-078
+  field: consultation_closed_date
+  value: '2015-06-26'
+  semantic_role: primary_source
+  document_id: DOC-009
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-009-005
+    artifact_hash: sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af
+    page: 1
+    bbox:
+    - 210
+    - 588.89
+    - 253.53
+    - 599.89
+    source_text: 26.06.2015
+- assertion_id: ASSERT-079
+  candidate_id: CAND-079
+  field: agreement_reached
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-009
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-009-006
+    artifact_hash: sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af
+    page: 1
+    bbox:
+    - 210
+    - 553.89
+    - 227.89
+    - 564.89
+    source_text: Nein
+- assertion_id: ASSERT-080
+  candidate_id: CAND-080
+  field: consultation_status
+  value: COMPLETED_WITHOUT_AGREEMENT
+  semantic_role: primary_source
+  document_id: DOC-009
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-009-007
+    artifact_hash: sha256:c26075cb9299cf5211da9ae2293d57e29bd3500163163e9904cd0aa5b59fd7af
+    page: 1
+    bbox:
+    - 210
+    - 518.89
+    - 352.18
+    - 529.89
+    source_text: Ausreichend beraten; keine Einigung
+- assertion_id: ASSERT-081
+  candidate_id: CAND-081
+  field: notification_filed
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-010
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-010-001
+    artifact_hash: sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1
+    page: 1
+    bbox:
+    - 210
+    - 687.89
+    - 219.19
+    - 698.89
+    source_text: Ja
+- assertion_id: ASSERT-082
+  candidate_id: CAND-082
+  field: notification_date
+  value: '2015-06-26'
+  semantic_role: primary_source
+  document_id: DOC-010
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-010-002
+    artifact_hash: sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1
+    page: 1
+    bbox:
+    - 210
+    - 658.89
+    - 253.53
+    - 669.89
+    source_text: 26.06.2015
+- assertion_id: ASSERT-083
+  candidate_id: CAND-083
+  field: agency_receipt_date
+  value: '2015-06-26'
+  semantic_role: primary_source
+  document_id: DOC-010
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-010-003
+    artifact_hash: sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1
+    page: 1
+    bbox:
+    - 210
+    - 629.89
+    - 253.53
+    - 640.89
+    source_text: 26.06.2015
+- assertion_id: ASSERT-084
+  candidate_id: CAND-084
+  field: employees_notified
+  value: 188
+  semantic_role: primary_source
+  document_id: DOC-010
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-010-004
+    artifact_hash: sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1
+    page: 1
+    bbox:
+    - 210
+    - 600.89
+    - 224.51
+    - 611.89
+    source_text: '188'
+- assertion_id: ASSERT-085
+  candidate_id: CAND-085
+  field: prior_consultation_notice_date
+  value: '2015-06-10'
+  semantic_role: primary_source
+  document_id: DOC-010
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-010-005
+    artifact_hash: sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1
+    page: 1
+    bbox:
+    - 210
+    - 571.89
+    - 253.53
+    - 582.89
+    source_text: 10.06.2015
+- assertion_id: ASSERT-086
+  candidate_id: CAND-086
+  field: consultation_status_attached
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-010
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-010-006
+    artifact_hash: sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1
+    page: 1
+    bbox:
+    - 210
+    - 542.89
+    - 219.19
+    - 553.89
+    source_text: Ja
+- assertion_id: ASSERT-087
+  candidate_id: CAND-087
+  field: notification_valid_for_final_termination
+  value: true
+  semantic_role: administrative_filing
+  document_id: DOC-010
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-010-007
+    artifact_hash: sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1
+    page: 1
+    bbox:
+    - 210
+    - 513.89
+    - 219.19
+    - 524.89
+    source_text: Ja
+- assertion_id: ASSERT-088
+  candidate_id: CAND-088
+  field: authority_type
+  value: INTEGRATIONSAMT
+  semantic_role: primary_source
+  document_id: DOC-011
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-011-001
+    artifact_hash: sha256:23a0a34551f649a66ac586218b51a735bed198c876629c5d4383b325052da049
+    page: 1
+    bbox:
+    - 210
+    - 692.89
+    - 269.96
+    - 703.89
+    source_text: Integrationsamt
+- assertion_id: ASSERT-089
+  candidate_id: CAND-089
+  field: approval_granted
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-011
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-011-002
+    artifact_hash: sha256:23a0a34551f649a66ac586218b51a735bed198c876629c5d4383b325052da049
+    page: 1
+    bbox:
+    - 210
+    - 663.89
+    - 219.19
+    - 674.89
+    source_text: Ja
+- assertion_id: ASSERT-090
+  candidate_id: CAND-090
+  field: approval_date
+  value: '2015-07-08'
+  semantic_role: primary_source
+  document_id: DOC-011
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-011-003
+    artifact_hash: sha256:23a0a34551f649a66ac586218b51a735bed198c876629c5d4383b325052da049
+    page: 1
+    bbox:
+    - 210
+    - 634.89
+    - 253.53
+    - 645.89
+    source_text: 08.07.2015
+- assertion_id: ASSERT-091
+  candidate_id: CAND-091
+  field: approval_reference
+  value: IA-B-2015-0715-C
+  semantic_role: primary_source
+  document_id: DOC-011
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-011-004
+    artifact_hash: sha256:23a0a34551f649a66ac586218b51a735bed198c876629c5d4383b325052da049
+    page: 1
+    bbox:
+    - 210
+    - 605.89
+    - 280.59
+    - 616.89
+    source_text: IA-B-2015-0715-C
+- assertion_id: ASSERT-092
+  candidate_id: CAND-092
+  field: applies_to_termination_issued_at
+  value: '2015-07-15'
+  semantic_role: primary_source
+  document_id: DOC-011
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-011-005
+    artifact_hash: sha256:23a0a34551f649a66ac586218b51a735bed198c876629c5d4383b325052da049
+    page: 1
+    bbox:
+    - 210
+    - 576.89
+    - 253.53
+    - 587.89
+    source_text: 15.07.2015
+- assertion_id: ASSERT-093
+  candidate_id: CAND-093
+  field: disability_equivalent
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-011
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-011-006
+    artifact_hash: sha256:23a0a34551f649a66ac586218b51a735bed198c876629c5d4383b325052da049
+    page: 1
+    bbox:
+    - 210
+    - 547.89
+    - 219.19
+    - 558.89
+    source_text: Ja
+- assertion_id: ASSERT-094
+  candidate_id: CAND-094
+  field: termination_issued_at
+  value: '2015-07-15'
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-001
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 675.89
+    - 253.53
+    - 686.89
+    source_text: 15.07.2015
+- assertion_id: ASSERT-095
+  candidate_id: CAND-095
+  field: termination_effective
+  value: '2016-01-31'
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-002
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 646.89
+    - 253.53
+    - 657.89
+    source_text: 31.01.2016
+- assertion_id: ASSERT-096
+  candidate_id: CAND-096
+  field: termination_type
+  value: ORDINARY
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-003
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 617.89
+    - 303.33
+    - 628.89
+    source_text: Ordentliche Kuendigung
+- assertion_id: ASSERT-097
+  candidate_id: CAND-097
+  field: route
+  value: ROUTE_C
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-004
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 588.89
+    - 401.0
+    - 599.89
+    source_text: betriebsbedingt - vollstaendige Betriebsstilllegung
+- assertion_id: ASSERT-098
+  candidate_id: CAND-098
+  field: letter_exists
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-005
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 559.89
+    - 219.19
+    - 570.89
+    source_text: Ja
+- assertion_id: ASSERT-099
+  candidate_id: CAND-099
+  field: written_form_used
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-006
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 530.89
+    - 219.19
+    - 541.89
+    source_text: Ja
+- assertion_id: ASSERT-100
+  candidate_id: CAND-100
+  field: original_signature
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-007
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 501.89
+    - 219.19
+    - 512.89
+    source_text: Ja
+- assertion_id: ASSERT-101
+  candidate_id: CAND-101
+  field: proxy_signed
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-008
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 472.89
+    - 227.89
+    - 483.89
+    source_text: Nein
+- assertion_id: ASSERT-102
+  candidate_id: CAND-102
+  field: vollmacht_attached
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-009
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 443.89
+    - 227.89
+    - 454.89
+    source_text: Nein
+- assertion_id: ASSERT-103
+  candidate_id: CAND-103
+  field: delivery_proof
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-010
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 414.89
+    - 219.19
+    - 425.89
+    source_text: Ja
+- assertion_id: ASSERT-104
+  candidate_id: CAND-104
+  field: delivery_method
+  value: PERSONAL_HANDOVER
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-011
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 385.89
+    - 305.74
+    - 396.89
+    source_text: Persoenliche Uebergabe
+- assertion_id: ASSERT-105
+  candidate_id: CAND-105
+  field: delivery_date
+  value: '2015-07-15'
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-012
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 356.89
+    - 253.53
+    - 367.89
+    source_text: 15.07.2015
+- assertion_id: ASSERT-106
+  candidate_id: CAND-106
+  field: statutory_minimum_days
+  value: 120
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-013
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 327.89
+    - 224.51
+    - 338.89
+    source_text: '120'
+- assertion_id: ASSERT-107
+  candidate_id: CAND-107
+  field: contractual_minimum_days
+  value: 180
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-014
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 292.89
+    - 224.51
+    - 303.89
+    source_text: '180'
+- assertion_id: ASSERT-108
+  candidate_id: CAND-108
+  field: actual_notice_days
+  value: 200
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-015
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 257.89
+    - 224.51
+    - 268.89
+    source_text: '200'
+- assertion_id: ASSERT-109
+  candidate_id: CAND-109
+  field: terminates_on_valid_date
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-012
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-012-016
+    artifact_hash: sha256:8eec1560edbe2899770632b78c5f10dd9ace3ea026b6616c55f123e0d3cb8423
+    page: 1
+    bbox:
+    - 210
+    - 228.89
+    - 219.19
+    - 239.89
+    source_text: Ja
+- assertion_id: ASSERT-110
+  candidate_id: CAND-110
+  field: decision_basis_documented
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-001
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 655.89
+    - 219.19
+    - 666.89
+    source_text: Ja
+- assertion_id: ASSERT-111
+  candidate_id: CAND-111
+  field: no_protected_ground_indicia
+  value: false
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-002
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 626.89
+    - 227.89
+    - 637.89
+    source_text: Nein
+- assertion_id: ASSERT-112
+  candidate_id: CAND-112
+  field: protected_grounds_checked
+  value:
+  - Alter
+  - Behinderung
+  - Geschlecht
+  - Religion/Weltanschauung
+  - ethnische Herkunft
+  - sexuelle Identitaet
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-003
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 580.89
+    - 513.67
+    - 602.89
+    source_text: Alter, Behinderung, Geschlecht, Religion/Weltanschauung, ethnische Herkunft, sexuelle Identitaet
+- assertion_id: ASSERT-113
+  candidate_id: CAND-113
+  field: discrimination_risk_checked
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-004
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 556.89
+    - 219.19
+    - 567.89
+    source_text: Ja
+- assertion_id: ASSERT-114
+  candidate_id: CAND-114
+  field: agg_grounds_reviewed
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-005
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 527.89
+    - 219.19
+    - 538.89
+    source_text: Ja
+- assertion_id: ASSERT-115
+  candidate_id: CAND-115
+  field: decision_basis_agg_documented
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-006
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 492.89
+    - 219.19
+    - 503.89
+    source_text: Ja
+- assertion_id: ASSERT-116
+  candidate_id: CAND-116
+  field: decision_basis_reference
+  value: Vollstaendige Betriebsstilllegung / Gesellschafterbeschluss 20.01.2015
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-007
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 457.89
+    - 482.73
+    - 468.89
+    source_text: Vollstaendige Betriebsstilllegung / Gesellschafterbeschluss 20.01.2015
+- assertion_id: ASSERT-117
+  candidate_id: CAND-117
+  field: protected_ground_indicia_absent
+  value: true
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-008
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 428.89
+    - 219.19
+    - 439.89
+    source_text: Ja
+- assertion_id: ASSERT-118
+  candidate_id: CAND-118
+  field: grounds_checked
+  value:
+  - AGG § 1 Merkmale
+  semantic_role: primary_source
+  document_id: DOC-013
+  geometric_provenance:
+    anchor_id: ANCHOR-DOC-013-009
+    artifact_hash: sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6
+    page: 1
+    bbox:
+    - 210
+    - 393.89
+    - 284.45
+    - 404.89
+    source_text: AGG § 1 Merkmale

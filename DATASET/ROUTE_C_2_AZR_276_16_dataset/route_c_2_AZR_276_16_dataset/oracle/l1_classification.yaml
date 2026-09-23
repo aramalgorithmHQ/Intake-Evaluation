@@ -1,0 +1,107 @@
+schema_version: eval.l1.oracle.v1
+fixture_id: CASE-SYN-C-27616
+documents:
+- document_id: DOC-001
+  expected_type: HR_ESTABLISHMENT_SNAPSHOT
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-002
+  expected_type: BUSINESS_CLOSURE_RESOLUTION
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-003
+  expected_type: SOCIAL_SELECTION_APPLICABILITY_MEMO
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-004
+  expected_type: ALTERNATIVES_ASSESSMENT
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-005
+  expected_type: MASS_LAYOFF_NOTIFICATION
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-006
+  expected_type: TERMINATION_LETTER
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-007
+  expected_type: MASS_LAYOFF_CONSULTATION_NOTICE
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-008
+  expected_type: WORKS_COUNCIL_HEARING
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-009
+  expected_type: CONSULTATION_MINUTES
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-010
+  expected_type: MASS_LAYOFF_NOTIFICATION
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-011
+  expected_type: EXTERNAL_AUTHORITY_APPROVAL
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-012
+  expected_type: TERMINATION_LETTER
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH
+- document_id: DOC-013
+  expected_type: DECISION_BASIS_REVIEW
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: aram.de.termination.route
+    value: ROUTE_C
+  confidence_expectation: HIGH

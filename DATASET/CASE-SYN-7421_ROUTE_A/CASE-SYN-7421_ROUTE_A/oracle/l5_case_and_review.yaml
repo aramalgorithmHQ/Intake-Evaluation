@@ -1,0 +1,148 @@
+schema_version: eval.l5.oracle.v1
+fixture_id: CASE-SYN-7421
+review_population: SCRIPTED_L5_A
+review_protocol: route-a-clean-confirm-v1
+final_verified_case:
+  fixture_id: CASE-SYN-7421
+  review_population: SCRIPTED_L5_A
+  review_protocol: route-a-clean-confirm-v1
+  case_status: VERIFIED_EXPECTED
+  route:
+    namespace: tauri.eval.de.procedural_route
+    value: ROUTE_A
+  reason_family: CONDUCT
+  facts:
+    employment_start:
+      state: CONFIRMED
+      value: '2024-01-01'
+      criticality: TIER_1
+    employee_count_fte:
+      state: CONFIRMED
+      value: 84.0
+      criticality: TIER_1
+    tenure_months:
+      state: CONFIRMED
+      value: 32
+      criticality: TIER_1
+    kschg_applies:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+    betriebsrat_exists:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+    special_protections:
+      state: CONFIRMED
+      value: []
+      criticality: TIER_1
+    tech_used:
+      state: CONFIRMED
+      value: false
+      criticality: TIER_1
+    mass_layoff_triggered:
+      state: CONFIRMED
+      value: false
+      criticality: TIER_1
+    incident_date:
+      state: CONFIRMED
+      value: '2026-08-17'
+      criticality: TIER_1
+    warning_date:
+      state: CONFIRMED
+      value: '2026-05-20'
+      criticality: TIER_1
+    hearing_initiated:
+      state: CONFIRMED
+      value: '2026-09-01T09:00:00+02:00'
+      criticality: TIER_1
+    hearing_response_deadline:
+      state: CONFIRMED
+      value: '2026-09-08T09:00:00+02:00'
+      criticality: TIER_1
+    hearing_response_received_at:
+      state: CONFIRMED
+      value: '2026-09-05T14:30:00+02:00'
+      criticality: TIER_1
+    hearing_response_type:
+      state: CONFIRMED
+      value: APPROVED
+      criticality: TIER_1
+    termination_type:
+      state: CONFIRMED
+      value: ORDINARY
+      criticality: TIER_1
+    termination_issued:
+      state: CONFIRMED
+      value: '2026-09-10'
+      criticality: TIER_1
+    termination_effective:
+      state: CONFIRMED
+      value: '2026-10-31'
+      criticality: TIER_1
+    written_form_used:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+    original_signature:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+    delivery_date:
+      state: CONFIRMED
+      value: '2026-09-10'
+      criticality: TIER_1
+    notice_period_valid:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+    proportionality_analysis_exists:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+    alternatives_evaluated:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+    decision_basis_documented:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+    no_protected_ground_indicia:
+      state: CONFIRMED
+      value: true
+      criticality: TIER_1
+  expected_l4_safety_pass: true
+tier1_fields:
+- employment_start
+- employee_count_fte
+- tenure_months
+- kschg_applies
+- betriebsrat_exists
+- special_protections
+- tech_used
+- mass_layoff_triggered
+- incident_date
+- warning_date
+- hearing_initiated
+- hearing_response_deadline
+- hearing_response_received_at
+- hearing_response_type
+- termination_type
+- termination_issued
+- termination_effective
+- written_form_used
+- original_signature
+- delivery_date
+- notice_period_valid
+- proportionality_analysis_exists
+- alternatives_evaluated
+- decision_basis_documented
+- no_protected_ground_indicia
+human_correction_burden:
+  status: NOT_SCORED
+  reason: L5-B real-human telemetry required
+scripted_review_action_burden:
+  confirm_actions: 23
+  manual_corrections: 0
+  conflict_resolutions: 0

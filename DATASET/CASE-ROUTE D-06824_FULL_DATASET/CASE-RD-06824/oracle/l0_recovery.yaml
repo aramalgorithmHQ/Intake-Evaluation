@@ -1,0 +1,315 @@
+schema_version: eval.l0.oracle.v1
+fixture_id: CASE-RD-06824
+documents:
+- document_id: DOC-001
+  artifact_hash: sha256:27fc941c1bf5254d9ce5e13f7e7f9689f34aa643cd6306ac67682f7c308d125d
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-005
+    canonical_value: '2022-03-01'
+    anchor_id: ANCHOR-DOC-001-005
+    page: 1
+    source_text: '2022-03-01'
+  - assertion_id: ASSERT-006
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-001-006
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-007
+    canonical_value: 49
+    anchor_id: ANCHOR-DOC-001-007
+    page: 1
+    source_text: '49'
+  - assertion_id: ASSERT-008
+    canonical_value: 84.5
+    anchor_id: ANCHOR-DOC-001-008
+    page: 1
+    source_text: '84.5'
+  - assertion_id: ASSERT-009
+    canonical_value: '2026-04-01'
+    anchor_id: ANCHOR-DOC-001-009
+    page: 1
+    source_text: '2026-04-01'
+  - assertion_id: ASSERT-010
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-010
+    page: 1
+    source_text: Nein / false
+  - assertion_id: ASSERT-012
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-001-012
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-013
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-013
+    page: 1
+    source_text: Nein / false
+  - assertion_id: ASSERT-014
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-014
+    page: 1
+    source_text: Nein / false
+  - assertion_id: ASSERT-015
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-015
+    page: 1
+    source_text: Nein / false
+  - assertion_id: ASSERT-016
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-016
+    page: 1
+    source_text: Nein / false
+  - assertion_id: ASSERT-017
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-017
+    page: 1
+    source_text: Nein / false
+  - assertion_id: ASSERT-018
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-001-018
+    page: 1
+    source_text: Nein / false
+- document_id: DOC-002
+  artifact_hash: sha256:09b1840643145a8c23b0f508c2f19c7ba2ea71cd51d801850eb931a70ab00cdf
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-019
+    canonical_value: '2026-04-02'
+    anchor_id: ANCHOR-DOC-002-001
+    page: 1
+    source_text: '2026-04-02'
+  - assertion_id: ASSERT-023
+    canonical_value: '2026-04-03'
+    anchor_id: ANCHOR-DOC-002-005
+    page: 1
+    source_text: '2026-04-03'
+  - assertion_id: ASSERT-024
+    canonical_value: '2026-04-07'
+    anchor_id: ANCHOR-DOC-002-006
+    page: 1
+    source_text: '2026-04-07'
+- document_id: DOC-003
+  artifact_hash: sha256:e31d98e885dd17acc25e9022fe68ed22929bcd0e21d718d0f824fe9cf2ec0386
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-026
+    canonical_value: '2026-04-07T11:20:00+02:00'
+    anchor_id: ANCHOR-DOC-003-001
+    page: 1
+    source_text: '2026-04-07T11:20:00+02:00'
+  - assertion_id: ASSERT-029
+    canonical_value: '2026-04-21'
+    anchor_id: ANCHOR-DOC-003-004
+    page: 1
+    source_text: '2026-04-21'
+  - assertion_id: ASSERT-030
+    canonical_value: '2026-04-18T16:10:00+02:00'
+    anchor_id: ANCHOR-DOC-003-005
+    page: 1
+    source_text: '2026-04-18T16:10:00+02:00'
+  - assertion_id: ASSERT-031
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-003-006
+    page: 1
+    source_text: Ja / true
+- document_id: DOC-004
+  artifact_hash: sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6
+  expected_recovery_path: native_text
+  expected_page_count: 2
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-034
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-003
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-036
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-005
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-037
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-006
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-038
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-007
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-039
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-008
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-041
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-010
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-042
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-011
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-044
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-013
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-046
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-015
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-048
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-017
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-049
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-018
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-050
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-019
+    page: 2
+    source_text: Ja / true
+  - assertion_id: ASSERT-051
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-004-020
+    page: 2
+    source_text: Ja / true
+- document_id: DOC-005
+  artifact_hash: sha256:9508c7886834c0ceb69e15f789b77a9d414b9c4264b06cd7576ce4aed6464ac3
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-053
+    canonical_value: LANDESAMT
+    anchor_id: ANCHOR-DOC-005-001
+    page: 1
+    source_text: LANDESAMT
+  - assertion_id: ASSERT-054
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-002
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-055
+    canonical_value: '2026-04-17'
+    anchor_id: ANCHOR-DOC-005-003
+    page: 1
+    source_text: '2026-04-17'
+  - assertion_id: ASSERT-057
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-005-005
+    page: 1
+    source_text: Ja / true
+- document_id: DOC-006
+  artifact_hash: sha256:8d02a8ef25be01c396ec48ab14ec8506acd47bc624f869e66910c7183238b4ac
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-058
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-006-001
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-059
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-006-002
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-060
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-006-003
+    page: 1
+    source_text: Ja / true
+  - assertion_id: ASSERT-061
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-006-004
+    page: 1
+    source_text: Nein / false
+  - assertion_id: ASSERT-062
+    canonical_value: '2026-04-18T16:10:00+02:00'
+    anchor_id: ANCHOR-DOC-006-005
+    page: 1
+    source_text: '2026-04-18T16:10:00+02:00'
+  - assertion_id: ASSERT-063
+    canonical_value: REGISTERED_MAIL
+    anchor_id: ANCHOR-DOC-006-006
+    page: 1
+    source_text: REGISTERED_MAIL
+  - assertion_id: ASSERT-064
+    canonical_value: true
+    anchor_id: ANCHOR-DOC-006-007
+    page: 1
+    source_text: Ja / true
+- document_id: DOC-007
+  artifact_hash: sha256:32004f27cc1afe35f0fbee26b0b2749bb67f6312844398790fc182afe4d9de06
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-066
+    canonical_value: '2026-04-18'
+    anchor_id: ANCHOR-DOC-007-002
+    page: 1
+    source_text: '2026-04-18'
+  - assertion_id: ASSERT-068
+    canonical_value: REGISTERED_MAIL
+    anchor_id: ANCHOR-DOC-007-004
+    page: 1
+    source_text: REGISTERED_MAIL
+- document_id: DOC-008
+  artifact_hash: sha256:2a6d6bca60b8592b6e7d60666961f1ec1700ce881c6e9d1fc2b1e8a892c8e658
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-071
+    canonical_value: '2026-04-20'
+    anchor_id: ANCHOR-DOC-008-003
+    page: 1
+    source_text: '2026-04-20'
+  - assertion_id: ASSERT-072
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-008-004
+    page: 1
+    source_text: Nein / false
+- document_id: DOC-009
+  artifact_hash: sha256:c3376a483b9831a84a881ba2ccdfe3540b969be2e52d886a7fc73b0cb7e70c41
+  expected_recovery_path: native_text
+  expected_page_count: 1
+  must_stop_or_flag: false
+  critical_assertions:
+  - assertion_id: ASSERT-075
+    canonical_value: false
+    anchor_id: ANCHOR-DOC-009-003
+    page: 1
+    source_text: Nein / false
+  - assertion_id: ASSERT-076
+    canonical_value: ATTESTED_MISSING
+    anchor_id: ANCHOR-DOC-009-004
+    page: 1
+    source_text: ATTESTED_MISSING
+oracle_independence:
+  sut_modules_imported: []
+  shared_primitives:
+  - ISO-8601 parser
+  - SHA-256
+  uses_tauri_predictions: false
+  uses_production_mapper_as_oracle: false
+  uses_production_extractor_as_oracle: false

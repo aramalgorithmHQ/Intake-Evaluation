@@ -1,0 +1,29 @@
+request_version: '2'
+count: 1
+seed: 7421
+target:
+  layer: L5
+  behavior: END_TO_END_ROUTE_A_CLEAN
+  surface: TAURI_INTAKE_V43
+coverage:
+- L0
+- L1
+- L2
+- L3
+- L4
+- L5-A
+scenario:
+  reason_family: CONDUCT
+  termination_form: ORDINARY
+  procedures:
+    works_council: true
+    mass_layoff: false
+    public_sector: false
+  protections: []
+  tech_used: false
+challenge:
+  difficulty: CLEAN
+  evidence_condition: COMPLETE
+  document_quality: CLEAN
+mutations: []
+operator_comment: Create an independent synthetic Route A evaluation fixture from the supplied source contracts.

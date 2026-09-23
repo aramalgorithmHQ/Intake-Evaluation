@@ -1,0 +1,247 @@
+{
+  "document_id": "DOC-002",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Betriebs- und Schutzstatus",
+  "document_date": "31.08.2026",
+  "reference": "NH-HR-STATUS-7421",
+  "intro": "HR-Statusaufnahme für die Schwellen- und Schutzprüfung vor der beabsichtigten Personalmaßnahme.",
+  "template_rows": [
+    {
+      "label": "Beschäftigtenzahl (FTE)",
+      "value_placeholder": "{{ASSERT-005}}"
+    },
+    {
+      "label": "Stichtag Beschäftigtenzahl",
+      "value_placeholder": "{{ASSERT-006}}"
+    },
+    {
+      "label": "Beschäftigung durchgehend",
+      "value_placeholder": "{{ASSERT-007}}"
+    },
+    {
+      "label": "Betriebszugehörigkeit (Monate)",
+      "value_placeholder": "{{ASSERT-008}}"
+    },
+    {
+      "label": "Betriebsrat vorhanden",
+      "value_placeholder": "{{ASSERT-009}}"
+    },
+    {
+      "label": "Betriebskennung",
+      "value_placeholder": "{{ASSERT-010}}"
+    },
+    {
+      "label": "Schwangerschaftsschutz",
+      "value_placeholder": "{{ASSERT-011}}"
+    },
+    {
+      "label": "Elternzeit",
+      "value_placeholder": "{{ASSERT-012}}"
+    },
+    {
+      "label": "Gleichstellung Schwerbehinderung",
+      "value_placeholder": "{{ASSERT-013}}"
+    },
+    {
+      "label": "Betriebsratsmitglied",
+      "value_placeholder": "{{ASSERT-014}}"
+    },
+    {
+      "label": "Datenschutzbeauftragte",
+      "value_placeholder": "{{ASSERT-015}}"
+    },
+    {
+      "label": "Mitglied Wahlvorstand",
+      "value_placeholder": "{{ASSERT-016}}"
+    },
+    {
+      "label": "Wehr-/Zivildienstschutz",
+      "value_placeholder": "{{ASSERT-017}}"
+    },
+    {
+      "label": "Automatisierte Entscheidungstechnik eingesetzt",
+      "value_placeholder": "{{ASSERT-018}}"
+    },
+    {
+      "label": "Massenentlassungstatbestand",
+      "value_placeholder": "{{ASSERT-019}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Beschäftigtenzahl (FTE)",
+      "display_value": "84,0"
+    },
+    {
+      "label": "Stichtag Beschäftigtenzahl",
+      "display_value": "31.08.2026"
+    },
+    {
+      "label": "Beschäftigung durchgehend",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Betriebszugehörigkeit (Monate)",
+      "display_value": "32"
+    },
+    {
+      "label": "Betriebsrat vorhanden",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Betriebskennung",
+      "display_value": "DE-HH-04"
+    },
+    {
+      "label": "Schwangerschaftsschutz",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Elternzeit",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Gleichstellung Schwerbehinderung",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Betriebsratsmitglied",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Datenschutzbeauftragte",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Mitglied Wahlvorstand",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Wehr-/Zivildienstschutz",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Automatisierte Entscheidungstechnik eingesetzt",
+      "display_value": "Nein"
+    },
+    {
+      "label": "Massenentlassungstatbestand",
+      "display_value": "Nein"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-005",
+      "document_id": "DOC-002",
+      "slot_id": "employee_count_fte",
+      "canonical_value": 84.0,
+      "rendered_value": "84,0"
+    },
+    {
+      "assertion_id": "ASSERT-006",
+      "document_id": "DOC-002",
+      "slot_id": "headcount_date",
+      "canonical_value": "2026-08-31",
+      "rendered_value": "31.08.2026"
+    },
+    {
+      "assertion_id": "ASSERT-007",
+      "document_id": "DOC-002",
+      "slot_id": "tenure_continuous",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-008",
+      "document_id": "DOC-002",
+      "slot_id": "tenure_months",
+      "canonical_value": 32,
+      "rendered_value": "32"
+    },
+    {
+      "assertion_id": "ASSERT-009",
+      "document_id": "DOC-002",
+      "slot_id": "betriebsrat_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-010",
+      "document_id": "DOC-002",
+      "slot_id": "establishment_id",
+      "canonical_value": "DE-HH-04",
+      "rendered_value": "DE-HH-04"
+    },
+    {
+      "assertion_id": "ASSERT-011",
+      "document_id": "DOC-002",
+      "slot_id": "pregnancy_status",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-012",
+      "document_id": "DOC-002",
+      "slot_id": "parental_leave_status",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-013",
+      "document_id": "DOC-002",
+      "slot_id": "disability_equivalent",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-014",
+      "document_id": "DOC-002",
+      "slot_id": "br_member_status",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-015",
+      "document_id": "DOC-002",
+      "slot_id": "dpo_appointment_status",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-016",
+      "document_id": "DOC-002",
+      "slot_id": "election_board_status",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-017",
+      "document_id": "DOC-002",
+      "slot_id": "military_service_status",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-018",
+      "document_id": "DOC-002",
+      "slot_id": "tech_used",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    },
+    {
+      "assertion_id": "ASSERT-019",
+      "document_id": "DOC-002",
+      "slot_id": "mass_layoff_triggered",
+      "canonical_value": false,
+      "rendered_value": "Nein"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nBetriebs- und Schutzstatus\nDatum: 31.08.2026\nReferenz: NH-HR-STATUS-7421\nHR-Statusaufnahme für die Schwellen- und Schutzprüfung vor der beabsichtigten Personalmaßnahme.\nDokumentierte Angaben\nBeschäftigtenzahl (FTE): 84,0\nStichtag Beschäftigtenzahl: 31.08.2026\nBeschäftigung durchgehend: Ja\nBetriebszugehörigkeit (Monate): 32\nBetriebsrat vorhanden: Ja\nBetriebskennung: DE-HH-04\nSchwangerschaftsschutz: Nein\nElternzeit: Nein\nGleichstellung Schwerbehinderung: Nein\nBetriebsratsmitglied: Nein\nDatenschutzbeauftragte: Nein\nMitglied Wahlvorstand: Nein\nWehr-/Zivildienstschutz: Nein\nAutomatisierte Entscheidungstechnik eingesetzt: Nein\nMassenentlassungstatbestand: Nein\n",
+  "render_source_hash": "sha256:5a88c507dbeb006e2c94d5de0a7364d669a25dbc5eecddb20a2e1721c697838d",
+  "artifact_hash": "sha256:5aeab45fdb2e059d38d5bb90447355a3f398325c6fac0104a7171785fabeb43d",
+  "page_count": 1
+}

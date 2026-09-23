@@ -1,0 +1,99 @@
+case_id: CASE-C-27616
+case_name: Route C - complete closure / repeat termination after defective first mass-layoff filing
+category: CANONICAL
+route: ROUTE_C
+description: 'Synthetic source-adapted operational termination fixture based on BAG 2 AZR 276/16: complete closure,
+  first defective mass-layoff process, second compliant process, works council participation, and Integrationsamt
+  approval.'
+expected_verdict: INDETERMINATE
+envelope_overrides:
+  kschg_applies: true
+  betriebsrat_exists: true
+  special_protections:
+  - SEVERE_DISABILITY
+  tech_used: false
+  mass_layoff_triggered: true
+  termination_type: ORDINARY
+  tenure_months: 99
+  employee_count_fte: 190.0
+envelope_overrides_assumed:
+- tenure_months
+- employee_count_fte
+evidence_profile:
+  present:
+  - E0-a
+  - E0-b
+  - E0-c
+  - E0-d
+  - E0-e
+  - EU-WF
+  - EU-NP
+  - EU-AGG
+  - EU-AGG-1
+  - EU-AGG-2
+  - EQ-4
+  - EC-1
+  - EC-9
+  - EC-10
+  - EC-11
+  - EC-12
+  - EP-C1
+  - EP-C2
+  - EP-C3
+  missing: []
+  defective: []
+not_applicable_evidence_codes:
+- E0-f
+- EC-2
+- EC-3
+- EC-4
+- EC-5
+- EC-6
+- EC-7
+- EC-8
+- ET-CD
+- ET-MT
+activated_gates:
+- G0
+- G0.3
+- G1
+- G1.1
+- G1.2
+- G1.3
+- G1.4
+- G1.5
+- G1.6
+- G1.7
+- G2
+- G2.WF
+- G2.NP
+- G2.C1
+- G2.C7
+- G3
+- G4
+- G7
+timeline:
+  employment_start: '2007-04-01'
+  termination_issued: '2015-07-15'
+  termination_effective: '2016-01-31'
+  hearing_initiated: '2015-06-12'
+  hearing_response_deadline: '2015-06-19'
+  approval_date: '2015-07-08'
+  mass_layoff_consultation_date: '2015-06-10'
+  mass_layoff_authority_notice_date: '2015-06-26'
+  mass_layoff_effective_date: '2016-01-31'
+tags:
+- ROUTE_C
+- OPERATIONAL
+- COMPLETE_CLOSURE
+- MASS_LAYOFF
+- WORKS_COUNCIL
+- SEVERE_DISABILITY_EQUIVALENT
+- HISTORICAL_DISTRACTOR
+- SOURCE_ADAPTED
+source_case_ref:
+  docket: 2 AZR 276/16
+  decision_date: '2016-09-22'
+social_selection_state: NOT_APPLICABLE
+social_selection_reason: COMPLETE_CLOSURE_ALL_JOBS_ELIMINATED
+contract_review_required: true

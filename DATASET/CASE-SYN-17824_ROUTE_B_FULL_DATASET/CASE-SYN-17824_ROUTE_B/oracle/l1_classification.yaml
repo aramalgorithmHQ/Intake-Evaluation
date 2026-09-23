@@ -1,0 +1,75 @@
+schema_version: eval.l1.v1
+fixture_id: CASE-SYN-17824
+documents:
+- document_id: DOC-001
+  expected_type: HR_THRESHOLD_RECORD
+  document_type_namespace: tauri.eval.de.document_type
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+    owner: sut_compatibility_contract
+- document_id: DOC-002
+  expected_type: ABSENCE_RECORD
+  document_type_namespace: tauri.eval.de.document_type
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+    owner: sut_compatibility_contract
+- document_id: DOC-003
+  expected_type: BEM_RECORD
+  document_type_namespace: tauri.eval.de.document_type
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+    owner: sut_compatibility_contract
+- document_id: DOC-004
+  expected_type: HEALTH_PROGNOSIS_OPERATIONAL_IMPACT
+  document_type_namespace: tauri.eval.de.document_type
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+    owner: sut_compatibility_contract
+- document_id: DOC-005
+  expected_type: PROPORTIONALITY_ALTERNATIVES
+  document_type_namespace: tauri.eval.de.document_type
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+    owner: sut_compatibility_contract
+- document_id: DOC-006
+  expected_type: AUTHORITY_APPROVAL
+  document_type_namespace: tauri.eval.de.document_type
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+    owner: sut_compatibility_contract
+- document_id: DOC-007
+  expected_type: AGG_CONSISTENCY_REVIEW
+  document_type_namespace: tauri.eval.de.document_type
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+    owner: sut_compatibility_contract
+- document_id: DOC-008
+  expected_type: TERMINATION_LETTER_DELIVERY_PROOF
+  document_type_namespace: tauri.eval.de.document_type
+  ambiguity_required: false
+  acceptable_alternatives: []
+  expected_routing:
+    namespace: tauri.intake.v43.procedural_route
+    value: ROUTE_B
+    owner: sut_compatibility_contract

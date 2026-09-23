@@ -1,0 +1,20 @@
+request_version: '2'
+count: 1
+seed: 220916276
+target:
+  layer: L5
+  behavior: END_TO_END_OPERATIONAL_CLOSURE_WITH_HISTORICAL_DISTRACTOR
+  surface: TAURI_INTAKE
+scenario:
+  reason_family: OPERATIONAL
+  termination_form: ORDINARY
+  procedures:
+    works_council: true
+    mass_layoff: true
+    public_sector: false
+  protections:
+  - SEVERE_DISABILITY_EQUIVALENT
+challenge:
+  evidence_condition: HISTORICAL_CONFLICT
+  document_quality: CLEAN
+operator_comment: Create independently from the source case; do not copy an existing benchmark fixture.

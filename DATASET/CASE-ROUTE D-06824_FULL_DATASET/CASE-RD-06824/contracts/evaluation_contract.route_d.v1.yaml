@@ -1,0 +1,138 @@
+contract_id: tauri-intake-eval-de-route-d-synthetic-v1
+version: 1.0.0
+status: DRAFT_SCOPED_FOR_VALIDATED_STRESS
+purpose: Independent synthetic fixture semantics for Route D extraordinary-termination intake evaluation.
+authority_note: Defines benchmark semantics without using Tauri runtime predictions or outputs.
+jurisdiction: DE
+semantic_namespaces:
+  termination_route:
+    namespace: tauri.eval.de.termination_route
+    owner: evaluation_contract
+    values:
+      ROUTE_D: EXTRAORDINARY_TERMINATION
+  reason_family:
+    namespace: tauri.eval.de.reason_family
+    owner: evaluation_contract
+    values:
+    - CONDUCT
+    - PERSONAL_CAPABILITY
+    - OPERATIONAL
+    - UNSPECIFIED
+  document_type:
+    namespace: tauri.eval.de.document_type
+    owner: evaluation_contract
+    values:
+    - EMPLOYEE_STATUS_RECORD
+    - INVESTIGATION_REPORT
+    - KNOWLEDGE_DEADLINE_MEMO
+    - TERMINATION_DECISION_MEMO
+    - AUTHORITY_APPROVAL
+    - TERMINATION_LETTER
+    - POSTAL_POSTING_RECEIPT
+    - POSTAL_TRACKING_STATUS
+    - EVIDENCE_INVENTORY
+state_models:
+  fact_state:
+  - CONFIRMED
+  - UNKNOWN
+  - NOT_APPLICABLE
+  - CONFLICTING
+  - REVIEW_REQUIRED
+  evidence_state:
+  - PRESENT
+  - ATTESTED_MISSING
+  - DEFECTIVE
+  - NOT_PROVIDED
+  - NOT_APPLICABLE
+  candidate_state:
+  - EXPECTED
+  - FORBIDDEN
+  - DISTRACTOR
+  - AMBIGUOUS
+  reviewer_state:
+  - PENDING
+  - CONFIRMED
+  - REJECTED
+  - CORRECTED
+  - MARKED_UNKNOWN
+  - UNRESOLVED_CONFLICT
+criticality:
+  TIER_1: Can change route, gate, deadline, or verified-case correctness.
+  TIER_2: Supporting or corroborating fact.
+  TIER_3: Context or realism only.
+normalization:
+  date: ISO-8601 YYYY-MM-DD
+  datetime: ISO-8601 with offset
+  boolean: true/false
+  number: canonical JSON number
+  array: ordered unless field declares set semantics
+  text: exact UTF-8 text after whitespace normalization only
+candidate_matching:
+  version: route-d-occurrence-v1
+  default_mode: OCCURRENCE_LEVEL
+  identity_fields:
+  - field
+  - normalized_value
+  - document_id
+  - anchor_id
+  - semantic_role
+  - assertion_id
+  outcomes:
+  - EXACT_MATCH
+  - VALUE_MATCH_WRONG_SOURCE
+  - VALUE_MATCH_WRONG_ROLE
+  - PARTIAL_VALUE_MATCH
+  - SPURIOUS
+  - MISSING
+  - DUPLICATE
+classification_policy:
+  route_d_rule_pack:
+    namespace: tauri.eval.de.document_routing
+    value: extraordinary_termination_rule_pack
+  filename_semantics: NON_AUTHORITATIVE
+scenario_constraints:
+- id: SCN-D-001
+  if:
+    termination_form: EXTRAORDINARY
+  require:
+    reason_family_in:
+    - CONDUCT
+    - PERSONAL_CAPABILITY
+    - UNSPECIFIED
+- id: SCN-D-002
+  if:
+    protections_contains: PREGNANT
+  require:
+    authority_approval_before_issue: true
+- id: SCN-D-003
+  if:
+    procedures.works_council: false
+  require:
+    ED-9: NOT_APPLICABLE
+fixture_invariants:
+- id: INV-D-001
+  description: knowledge_date + 14 calendar days determines two_week_deadline
+- id: INV-D-002
+  description: termination_issued_at must be on or before two_week_deadline for the positive deadline
+    path
+- id: INV-D-003
+  description: pregnancy approval must predate termination issuance
+- id: INV-D-004
+  description: postal tracking status alone must not become confirmed receipt when delivery record is
+    absent
+- id: INV-D-005
+  description: defective delivery evidence must remain visible and fail closed to REVIEW_REQUIRED/UNKNOWN
+- id: INV-D-006
+  description: hidden fixture/oracle artifacts must not enter the SUT-visible package
+oracle_independence:
+  sut_modules_imported: []
+  shared_primitives:
+  - ISO-8601 parser
+  - SHA-256
+  uses_tauri_predictions: false
+  uses_production_mapper_as_oracle: false
+  uses_production_extractor_as_oracle: false
+golden_governance:
+  agent_may_promote: false
+  tier1_human_review_required_for_golden: true
+  tier1_provenance_review_required_for_golden: true

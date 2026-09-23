@@ -1,0 +1,52 @@
+{
+  "document_id": "DOC-008",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Stellungnahme des Betriebsrats",
+  "document_date": "05.09.2026",
+  "reference": "NH-BR-RSP-7421",
+  "intro": "Dokumentation der fristgerecht eingegangenen Stellungnahme zur zuvor eingeleiteten Anhörung.",
+  "template_rows": [
+    {
+      "label": "Stellungnahme eingegangen",
+      "value_placeholder": "{{ASSERT-053}}"
+    },
+    {
+      "label": "Reaktion des Betriebsrats",
+      "value_placeholder": "{{ASSERT-054}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Stellungnahme eingegangen",
+      "display_value": "05.09.2026 14:30"
+    },
+    {
+      "label": "Reaktion des Betriebsrats",
+      "display_value": "Zustimmung / keine Einwände"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-053",
+      "document_id": "DOC-008",
+      "slot_id": "hearing_response_received_at",
+      "canonical_value": "2026-09-05T14:30:00+02:00",
+      "rendered_value": "05.09.2026 14:30"
+    },
+    {
+      "assertion_id": "ASSERT-054",
+      "document_id": "DOC-008",
+      "slot_id": "hearing_response_type",
+      "canonical_value": "APPROVED",
+      "rendered_value": "Zustimmung / keine Einwände"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nStellungnahme des Betriebsrats\nDatum: 05.09.2026\nReferenz: NH-BR-RSP-7421\nDokumentation der fristgerecht eingegangenen Stellungnahme zur zuvor eingeleiteten Anhörung.\nDokumentierte Angaben\nStellungnahme eingegangen: 05.09.2026 14:30\nReaktion des Betriebsrats: Zustimmung / keine Einwände\n",
+  "render_source_hash": "sha256:0532818e7cc6adbac26070518dd0ade5e4705a12bc8770b734b70f5b45c64dac",
+  "artifact_hash": "sha256:4eb82b4fde6311cb59d34f33c93aa61348677ac78f43975dc1ae30e522bba74c",
+  "page_count": 1
+}

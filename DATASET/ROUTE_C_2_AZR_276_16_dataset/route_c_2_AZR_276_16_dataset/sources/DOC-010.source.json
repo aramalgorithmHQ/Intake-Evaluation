@@ -1,0 +1,69 @@
+{
+  "document_id": "DOC-010",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "MASS_LAYOFF_NOTIFICATION",
+  "title": "Massenentlassungsanzeige - Wiederholungskuendigungen",
+  "document_date": "2015-06-26",
+  "intro": "Anzeige fuer die zweite Kuendigungswelle nach erneuter Unterrichtung und Beratung des Betriebsrats.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "notification_filed",
+      "field": "notification_filed",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-010-001"
+    },
+    {
+      "slot_id": "notification_date",
+      "field": "notification_date",
+      "canonical_value": "2015-06-26",
+      "rendered_value": "26.06.2015",
+      "anchor_id": "ANCHOR-DOC-010-002"
+    },
+    {
+      "slot_id": "agency_receipt_date",
+      "field": "agency_receipt_date",
+      "canonical_value": "2015-06-26",
+      "rendered_value": "26.06.2015",
+      "anchor_id": "ANCHOR-DOC-010-003"
+    },
+    {
+      "slot_id": "employees_notified",
+      "field": "employees_notified",
+      "canonical_value": 188,
+      "rendered_value": "188",
+      "anchor_id": "ANCHOR-DOC-010-004"
+    },
+    {
+      "slot_id": "prior_consultation_notice_date",
+      "field": "prior_consultation_notice_date",
+      "canonical_value": "2015-06-10",
+      "rendered_value": "10.06.2015",
+      "anchor_id": "ANCHOR-DOC-010-005"
+    },
+    {
+      "slot_id": "consultation_status_attached",
+      "field": "consultation_status_attached",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-010-006"
+    },
+    {
+      "slot_id": "notification_valid_for_final_termination",
+      "field": "notification_valid_for_final_termination",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-010-007"
+    }
+  ],
+  "artifact_hash": "sha256:85fb86df5f9754f315c020db183564e0169dec34b272a5255c560f3fdee659c1",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

@@ -1,0 +1,434 @@
+{
+  "document_id": "DOC-004",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_id": "decision-memo-v1",
+  "renderer": "reportlab-canvas-v1",
+  "fixture_id": "CASE-RD-06824",
+  "build_time_fixed": "2026-09-22T12:53:00Z",
+  "title": "Entscheidungsvermerk - außerordentliche Kündigung",
+  "document_date": "2026-04-18",
+  "narrative": "Arbeitgeberseitige Dokumentation der Entscheidung. Qualitative Begründungen sind Dokumentbehauptungen; die Fixture bewertet deren Vorhandensein und Zuordnung, nicht die rechtliche Überzeugungskraft.",
+  "rows": [
+    {
+      "label": "Wichtiger Grund - Dokumentation",
+      "field": "important_reason_analysis",
+      "value": "Employer memo documents the alleged intentional alteration of finalized compliance records and the asserted loss of trust.",
+      "evidence_code": "ED-5",
+      "semantic_role": "party_assertion",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-032",
+      "candidate_id": "CAND-032",
+      "anchor_id": "ANCHOR-DOC-004-001"
+    },
+    {
+      "label": "Unzumutbarkeit Fortsetzung",
+      "field": "unreasonable_to_continue_basis",
+      "value": "Employer memo states that continued access to approval-locked records would create an immediate integrity risk.",
+      "evidence_code": "ED-5",
+      "semantic_role": "party_assertion",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-033",
+      "candidate_id": "CAND-033",
+      "anchor_id": "ANCHOR-DOC-004-002"
+    },
+    {
+      "label": "Interessenabwägung dokumentiert",
+      "field": "proportionality_analysis_exists",
+      "value": true,
+      "evidence_code": "ED-6",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-034",
+      "candidate_id": "CAND-034",
+      "anchor_id": "ANCHOR-DOC-004-003"
+    },
+    {
+      "label": "Schweregrad-Einschätzung",
+      "field": "severity_assessment",
+      "value": "High trust and record-integrity impact documented; no legal merits conclusion encoded in fixture truth.",
+      "evidence_code": "ED-6",
+      "semantic_role": "party_assertion",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-035",
+      "candidate_id": "CAND-035",
+      "anchor_id": "ANCHOR-DOC-004-004"
+    },
+    {
+      "label": "Betriebszugehörigkeit berücksichtigt",
+      "field": "tenure_considered",
+      "value": true,
+      "evidence_code": "ED-6",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-036",
+      "candidate_id": "CAND-036",
+      "anchor_id": "ANCHOR-DOC-004-005"
+    },
+    {
+      "label": "Vorverhalten berücksichtigt",
+      "field": "prior_conduct_considered",
+      "value": true,
+      "evidence_code": "ED-6",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-037",
+      "candidate_id": "CAND-037",
+      "anchor_id": "ANCHOR-DOC-004-006"
+    },
+    {
+      "label": "Persönliche Umstände berücksichtigt",
+      "field": "personal_circumstances_considered",
+      "value": true,
+      "evidence_code": "ED-6",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-038",
+      "candidate_id": "CAND-038",
+      "anchor_id": "ANCHOR-DOC-004-007"
+    },
+    {
+      "label": "Mildere Mittel geprüft",
+      "field": "alternatives_evaluated",
+      "value": true,
+      "evidence_code": "ED-7",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-039",
+      "candidate_id": "CAND-039",
+      "anchor_id": "ANCHOR-DOC-004-008"
+    },
+    {
+      "label": "Ordentliche Kündigung als unzureichend dokumentiert",
+      "field": "ordinary_termination_insufficient_reason",
+      "value": "Employer memo records that suspension, transfer and ordinary notice were considered and rejected for the documented access-risk rationale.",
+      "evidence_code": "ED-7",
+      "semantic_role": "party_assertion",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-040",
+      "candidate_id": "CAND-040",
+      "anchor_id": "ANCHOR-DOC-004-009"
+    },
+    {
+      "label": "Abmahnungserfordernis geprüft",
+      "field": "warning_necessity_assessed",
+      "value": true,
+      "evidence_code": "ED-8",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-041",
+      "candidate_id": "CAND-041",
+      "anchor_id": "ANCHOR-DOC-004-010"
+    },
+    {
+      "label": "Abmahnung vorhanden oder Ausnahme begründet",
+      "field": "warning_exists_or_exception_justified",
+      "value": true,
+      "evidence_code": "ED-8",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-042",
+      "candidate_id": "CAND-042",
+      "anchor_id": "ANCHOR-DOC-004-011"
+    },
+    {
+      "label": "Abmahnungsbegründung",
+      "field": "warning_justification",
+      "value": "Employer memo records a no-warning position based on the asserted intentional nature of the record changes; benchmark scores documentation, not legal correctness.",
+      "evidence_code": "ED-8",
+      "semantic_role": "party_assertion",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-043",
+      "candidate_id": "CAND-043",
+      "anchor_id": "ANCHOR-DOC-004-012"
+    },
+    {
+      "label": "Sofortige Beendigung als erforderlich dokumentiert",
+      "field": "immediate_termination_necessary",
+      "value": true,
+      "evidence_code": "EP-D1",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-044",
+      "candidate_id": "CAND-044",
+      "anchor_id": "ANCHOR-DOC-004-013"
+    },
+    {
+      "label": "Sofortigkeitsbegründung",
+      "field": "immediacy_basis",
+      "value": "Employer memo records an asserted immediate integrity risk while the employee retains system access.",
+      "evidence_code": "EP-D1",
+      "semantic_role": "party_assertion",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-045",
+      "candidate_id": "CAND-045",
+      "anchor_id": "ANCHOR-DOC-004-014"
+    },
+    {
+      "label": "Warnung als unmöglich/ungeeignet begründet",
+      "field": "warning_impossibility_justified",
+      "value": true,
+      "evidence_code": "EP-D2",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-046",
+      "candidate_id": "CAND-046",
+      "anchor_id": "ANCHOR-DOC-004-015"
+    },
+    {
+      "label": "Begründung Warnungsuntauglichkeit",
+      "field": "impossibility_basis",
+      "value": "Employer memo states that a warning would not address the asserted one-time trust breach; this is a document assertion only.",
+      "evidence_code": "EP-D2",
+      "semantic_role": "party_assertion",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-047",
+      "candidate_id": "CAND-047",
+      "anchor_id": "ANCHOR-DOC-004-016"
+    },
+    {
+      "label": "Vergleichsfälle dokumentiert",
+      "field": "prior_cases_documented",
+      "value": true,
+      "evidence_code": "EU-CON",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-048",
+      "candidate_id": "CAND-048",
+      "anchor_id": "ANCHOR-DOC-004-017"
+    },
+    {
+      "label": "Behandlung konsistent",
+      "field": "treatment_consistent",
+      "value": true,
+      "evidence_code": "EU-CON",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-049",
+      "candidate_id": "CAND-049",
+      "anchor_id": "ANCHOR-DOC-004-018"
+    },
+    {
+      "label": "Sachlicher Entscheidungsgrund dokumentiert",
+      "field": "decision_basis_documented",
+      "value": true,
+      "evidence_code": "EU-AGG",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-050",
+      "candidate_id": "CAND-050",
+      "anchor_id": "ANCHOR-DOC-004-019"
+    },
+    {
+      "label": "Keine Diskriminierungsindizien dokumentiert",
+      "field": "no_protected_ground_indicia",
+      "value": true,
+      "evidence_code": "EU-AGG",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_1",
+      "assertion_id": "ASSERT-051",
+      "candidate_id": "CAND-051",
+      "anchor_id": "ANCHOR-DOC-004-020"
+    },
+    {
+      "label": "Geprüfte AGG-Merkmale",
+      "field": "protected_grounds_checked",
+      "value": [
+        "gender",
+        "pregnancy",
+        "disability",
+        "age",
+        "religion",
+        "ethnic_origin",
+        "sexual_orientation"
+      ],
+      "evidence_code": "EU-AGG",
+      "semantic_role": "primary_source",
+      "criticality": "TIER_2",
+      "assertion_id": "ASSERT-052",
+      "candidate_id": "CAND-052",
+      "anchor_id": "ANCHOR-DOC-004-021"
+    }
+  ],
+  "signature": null,
+  "page_count": 2,
+  "artifact_sha256": "sha256:92708d1365a039caa9c7180d51ff5298123201888f65eeac5501179ec3d1caa6",
+  "injections": [
+    {
+      "assertion_id": "ASSERT-032",
+      "document_id": "DOC-004",
+      "slot_id": "important_reason_analysis",
+      "canonical_value": "Employer memo documents the alleged intentional alteration of finalized compliance records and the asserted loss of trust.",
+      "rendered_value": "Employer memo documents the alleged intentional alteration of finalized compliance records and the asserted loss of trust.",
+      "anchor_id": "ANCHOR-DOC-004-001"
+    },
+    {
+      "assertion_id": "ASSERT-033",
+      "document_id": "DOC-004",
+      "slot_id": "unreasonable_to_continue_basis",
+      "canonical_value": "Employer memo states that continued access to approval-locked records would create an immediate integrity risk.",
+      "rendered_value": "Employer memo states that continued access to approval-locked records would create an immediate integrity risk.",
+      "anchor_id": "ANCHOR-DOC-004-002"
+    },
+    {
+      "assertion_id": "ASSERT-034",
+      "document_id": "DOC-004",
+      "slot_id": "proportionality_analysis_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-003"
+    },
+    {
+      "assertion_id": "ASSERT-035",
+      "document_id": "DOC-004",
+      "slot_id": "severity_assessment",
+      "canonical_value": "High trust and record-integrity impact documented; no legal merits conclusion encoded in fixture truth.",
+      "rendered_value": "High trust and record-integrity impact documented; no legal merits conclusion encoded in fixture truth.",
+      "anchor_id": "ANCHOR-DOC-004-004"
+    },
+    {
+      "assertion_id": "ASSERT-036",
+      "document_id": "DOC-004",
+      "slot_id": "tenure_considered",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-005"
+    },
+    {
+      "assertion_id": "ASSERT-037",
+      "document_id": "DOC-004",
+      "slot_id": "prior_conduct_considered",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-006"
+    },
+    {
+      "assertion_id": "ASSERT-038",
+      "document_id": "DOC-004",
+      "slot_id": "personal_circumstances_considered",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-007"
+    },
+    {
+      "assertion_id": "ASSERT-039",
+      "document_id": "DOC-004",
+      "slot_id": "alternatives_evaluated",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-008"
+    },
+    {
+      "assertion_id": "ASSERT-040",
+      "document_id": "DOC-004",
+      "slot_id": "ordinary_termination_insufficient_reason",
+      "canonical_value": "Employer memo records that suspension, transfer and ordinary notice were considered and rejected for the documented access-risk rationale.",
+      "rendered_value": "Employer memo records that suspension, transfer and ordinary notice were considered and rejected for the documented access-risk rationale.",
+      "anchor_id": "ANCHOR-DOC-004-009"
+    },
+    {
+      "assertion_id": "ASSERT-041",
+      "document_id": "DOC-004",
+      "slot_id": "warning_necessity_assessed",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-010"
+    },
+    {
+      "assertion_id": "ASSERT-042",
+      "document_id": "DOC-004",
+      "slot_id": "warning_exists_or_exception_justified",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-011"
+    },
+    {
+      "assertion_id": "ASSERT-043",
+      "document_id": "DOC-004",
+      "slot_id": "warning_justification",
+      "canonical_value": "Employer memo records a no-warning position based on the asserted intentional nature of the record changes; benchmark scores documentation, not legal correctness.",
+      "rendered_value": "Employer memo records a no-warning position based on the asserted intentional nature of the record changes; benchmark scores documentation, not legal correctness.",
+      "anchor_id": "ANCHOR-DOC-004-012"
+    },
+    {
+      "assertion_id": "ASSERT-044",
+      "document_id": "DOC-004",
+      "slot_id": "immediate_termination_necessary",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-013"
+    },
+    {
+      "assertion_id": "ASSERT-045",
+      "document_id": "DOC-004",
+      "slot_id": "immediacy_basis",
+      "canonical_value": "Employer memo records an asserted immediate integrity risk while the employee retains system access.",
+      "rendered_value": "Employer memo records an asserted immediate integrity risk while the employee retains system access.",
+      "anchor_id": "ANCHOR-DOC-004-014"
+    },
+    {
+      "assertion_id": "ASSERT-046",
+      "document_id": "DOC-004",
+      "slot_id": "warning_impossibility_justified",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-015"
+    },
+    {
+      "assertion_id": "ASSERT-047",
+      "document_id": "DOC-004",
+      "slot_id": "impossibility_basis",
+      "canonical_value": "Employer memo states that a warning would not address the asserted one-time trust breach; this is a document assertion only.",
+      "rendered_value": "Employer memo states that a warning would not address the asserted one-time trust breach; this is a document assertion only.",
+      "anchor_id": "ANCHOR-DOC-004-016"
+    },
+    {
+      "assertion_id": "ASSERT-048",
+      "document_id": "DOC-004",
+      "slot_id": "prior_cases_documented",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-017"
+    },
+    {
+      "assertion_id": "ASSERT-049",
+      "document_id": "DOC-004",
+      "slot_id": "treatment_consistent",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-018"
+    },
+    {
+      "assertion_id": "ASSERT-050",
+      "document_id": "DOC-004",
+      "slot_id": "decision_basis_documented",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-019"
+    },
+    {
+      "assertion_id": "ASSERT-051",
+      "document_id": "DOC-004",
+      "slot_id": "no_protected_ground_indicia",
+      "canonical_value": true,
+      "rendered_value": "Ja / true",
+      "anchor_id": "ANCHOR-DOC-004-020"
+    },
+    {
+      "assertion_id": "ASSERT-052",
+      "document_id": "DOC-004",
+      "slot_id": "protected_grounds_checked",
+      "canonical_value": [
+        "gender",
+        "pregnancy",
+        "disability",
+        "age",
+        "religion",
+        "ethnic_origin",
+        "sexual_orientation"
+      ],
+      "rendered_value": "gender, pregnancy, disability, age, religion, ethnic_origin, sexual_orientation",
+      "anchor_id": "ANCHOR-DOC-004-021"
+    }
+  ],
+  "source_hash": "sha256:b366246dc63b3718bcfff4560fcb27d56a29e1b0d7b3603c3656acdc0c3136c3"
+}

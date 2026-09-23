@@ -1,0 +1,113 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "ASSERT-020",
+      "candidate_id": "CAND-020",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-2",
+      "field": "bem_initiated",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-2.bem_initiated"
+    },
+    {
+      "assertion_id": "ASSERT-021",
+      "candidate_id": "CAND-021",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-2",
+      "field": "bem_invitation_sent",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-2.bem_invitation_sent"
+    },
+    {
+      "assertion_id": "ASSERT-022",
+      "candidate_id": "CAND-022",
+      "canonical_value": "2023-11-16",
+      "criticality": "TIER_2",
+      "evidence_code": "EB-2",
+      "field": "bem_invitation_date",
+      "rendered_value": "16.11.2023",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-2.bem_invitation_date"
+    },
+    {
+      "assertion_id": "ASSERT-023",
+      "candidate_id": "CAND-023",
+      "canonical_value": "ACCEPTED",
+      "criticality": "TIER_2",
+      "evidence_code": "EB-2",
+      "field": "bem_employee_response",
+      "rendered_value": "ACCEPTED",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-2.bem_employee_response"
+    },
+    {
+      "assertion_id": "ASSERT-024",
+      "candidate_id": "CAND-024",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-2",
+      "field": "bem_exploration_documented",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-2.bem_exploration_documented"
+    },
+    {
+      "assertion_id": "ASSERT-025",
+      "candidate_id": "CAND-025",
+      "canonical_value": false,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-2",
+      "field": "bem_works_council_involved",
+      "rendered_value": "Nein",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-2.bem_works_council_involved"
+    },
+    {
+      "assertion_id": "ASSERT-026",
+      "candidate_id": "CAND-026",
+      "canonical_value": true,
+      "criticality": "TIER_2",
+      "evidence_code": "EB-2",
+      "field": "bem_integrationsamt_involved",
+      "rendered_value": "Ja",
+      "semantic_role": "primary_source",
+      "slot_id": "EB-2.bem_integrationsamt_involved"
+    },
+    {
+      "assertion_id": "ASSERT-027",
+      "candidate_id": "CAND-027",
+      "canonical_value": true,
+      "criticality": "TIER_1",
+      "evidence_code": "EP-B1",
+      "field": "bem_properly_conducted",
+      "rendered_value": "Ja",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EP-B1.bem_properly_conducted"
+    },
+    {
+      "assertion_id": "ASSERT-028",
+      "candidate_id": "CAND-028",
+      "canonical_value": "Einladung, Zustimmung, Gespräch am 05.12.2023, Maßnahmenprüfung und Abschlussvermerk liegen vollständig vor.",
+      "criticality": "TIER_2",
+      "evidence_code": "EP-B1",
+      "field": "bem_adequacy_basis",
+      "rendered_value": "Einladung, Zustimmung, Gespräch am 05.12.2023, Maßnahmenprüfung und Abschlussvermerk liegen vollständig vor.",
+      "semantic_role": "corroborating_source",
+      "slot_id": "EP-B1.bem_adequacy_basis"
+    }
+  ],
+  "document_id": "DOC-003",
+  "document_type": "BEM_RECORD",
+  "generator": "route-b-bag-pattern-v1",
+  "notes": [
+    "BEM-Gespräch: 05.12.2023.",
+    "Arbeitnehmer stimmte der Teilnahme und der Einbindung des Integrationsfachdiensts zu."
+  ],
+  "render_source": "BEM-Verfahren\n\nBEM eingeleitet: Ja\n\nEinladung versandt: Ja\n\nEinladungsdatum: 16.11.2023\n\nReaktion Arbeitnehmer: ACCEPTED\n\nErgebnis-/Suchprozess dokumentiert: Ja\n\nBetriebsrat beteiligt: Nein\n\nIntegrationsamt/Fachdienst beteiligt: Ja\n\nBEM ordnungsgemäß durchgeführt: Ja\n\nPrüfgrundlage: Einladung, Zustimmung, Gespräch am 05.12.2023, Maßnahmenprüfung und Abschlussvermerk liegen vollständig vor.\n",
+  "seed": 17824,
+  "source_kind": "DETERMINISTIC_TEMPLATE"
+}

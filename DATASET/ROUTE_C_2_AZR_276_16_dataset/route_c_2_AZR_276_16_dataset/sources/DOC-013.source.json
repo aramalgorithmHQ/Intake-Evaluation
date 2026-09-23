@@ -1,0 +1,94 @@
+{
+  "document_id": "DOC-013",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "DECISION_BASIS_REVIEW",
+  "title": "Dokumentation Entscheidungsbasis und Gleichbehandlungspruefung",
+  "document_date": "2015-07-10",
+  "intro": "Interne synthetische Kontrollnotiz. Sie dient allein der Abdeckung universeller Evaluationsfelder; sie bildet keine gerichtliche Feststellung zu AGG-Fragen ab.",
+  "body": [
+    "Die Schwerbehindertengleichstellung wird separat ueber das Zustimmungsverfahren des Integrationsamts behandelt."
+  ],
+  "render_source_rows": [
+    {
+      "slot_id": "decision_basis_documented",
+      "field": "decision_basis_documented",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-013-001"
+    },
+    {
+      "slot_id": "no_protected_ground_indicia",
+      "field": "no_protected_ground_indicia",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-013-002"
+    },
+    {
+      "slot_id": "protected_grounds_checked",
+      "field": "protected_grounds_checked",
+      "canonical_value": [
+        "Alter",
+        "Behinderung",
+        "Geschlecht",
+        "Religion/Weltanschauung",
+        "ethnische Herkunft",
+        "sexuelle Identitaet"
+      ],
+      "rendered_value": "Alter, Behinderung, Geschlecht, Religion/Weltanschauung, ethnische Herkunft, sexuelle Identitaet",
+      "anchor_id": "ANCHOR-DOC-013-003"
+    },
+    {
+      "slot_id": "discrimination_risk_checked",
+      "field": "discrimination_risk_checked",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-013-004"
+    },
+    {
+      "slot_id": "agg_grounds_reviewed",
+      "field": "agg_grounds_reviewed",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-013-005"
+    },
+    {
+      "slot_id": "decision_basis_agg_documented",
+      "field": "decision_basis_agg_documented",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-013-006"
+    },
+    {
+      "slot_id": "decision_basis_reference",
+      "field": "decision_basis_reference",
+      "canonical_value": "Vollstaendige Betriebsstilllegung / Gesellschafterbeschluss 20.01.2015",
+      "rendered_value": "Vollstaendige Betriebsstilllegung / Gesellschafterbeschluss 20.01.2015",
+      "anchor_id": "ANCHOR-DOC-013-007"
+    },
+    {
+      "slot_id": "protected_ground_indicia_absent",
+      "field": "protected_ground_indicia_absent",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-013-008"
+    },
+    {
+      "slot_id": "grounds_checked",
+      "field": "grounds_checked",
+      "canonical_value": [
+        "AGG § 1 Merkmale"
+      ],
+      "rendered_value": "AGG § 1 Merkmale",
+      "anchor_id": "ANCHOR-DOC-013-009"
+    }
+  ],
+  "artifact_hash": "sha256:4b15029803a41b225e6914123fdf0bf5ac8b0d9eeb6c3d5756dd3443193894b6",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

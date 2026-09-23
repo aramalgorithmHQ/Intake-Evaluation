@@ -1,0 +1,150 @@
+{
+  "document_id": "DOC-006",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Verhältnismäßigkeits- und Alternativenprüfung",
+  "document_date": "28.08.2026",
+  "reference": "NH-HR-PROP-7421",
+  "intro": "Dokumentierte Prüfung milderer Maßnahmen und der für die Interessenabwägung berücksichtigten Umstände.",
+  "template_rows": [
+    {
+      "label": "Verhältnismäßigkeitsprüfung dokumentiert",
+      "value_placeholder": "{{ASSERT-037}}"
+    },
+    {
+      "label": "Schwerebewertung",
+      "value_placeholder": "{{ASSERT-038}}"
+    },
+    {
+      "label": "Betriebszugehörigkeit berücksichtigt",
+      "value_placeholder": "{{ASSERT-039}}"
+    },
+    {
+      "label": "Persönliche Umstände berücksichtigt",
+      "value_placeholder": "{{ASSERT-040}}"
+    },
+    {
+      "label": "Betriebliche Auswirkungen berücksichtigt",
+      "value_placeholder": "{{ASSERT-041}}"
+    },
+    {
+      "label": "Mildere Mittel geprüft",
+      "value_placeholder": "{{ASSERT-042}}"
+    },
+    {
+      "label": "Geprüfte Alternativen",
+      "value_placeholder": "{{ASSERT-043}}"
+    },
+    {
+      "label": "Dokumentierte Gründe",
+      "value_placeholder": "{{ASSERT-044}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Verhältnismäßigkeitsprüfung dokumentiert",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Schwerebewertung",
+      "display_value": "Wiederholter gleichartiger Pflichtverstoß im laufenden Dispositionsdienst nach einschlägiger Abmahnung."
+    },
+    {
+      "label": "Betriebszugehörigkeit berücksichtigt",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Persönliche Umstände berücksichtigt",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Betriebliche Auswirkungen berücksichtigt",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Mildere Mittel geprüft",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Geprüfte Alternativen",
+      "display_value": "erneute Abmahnung; Versetzung in anderen Schichtbereich; Änderung der Einsatzplanung"
+    },
+    {
+      "label": "Dokumentierte Gründe",
+      "display_value": "erneute Abmahnung: Wiederholung nach einschlägiger Warnung; Versetzung: keine freie gleichwertige Stelle im Betrieb; Einsatzplanung: Pflichtverstoß betrifft die Grundpflicht zur Anwesenheit"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-037",
+      "document_id": "DOC-006",
+      "slot_id": "proportionality_analysis_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-038",
+      "document_id": "DOC-006",
+      "slot_id": "severity_assessment",
+      "canonical_value": "Wiederholter gleichartiger Pflichtverstoß im laufenden Dispositionsdienst nach einschlägiger Abmahnung.",
+      "rendered_value": "Wiederholter gleichartiger Pflichtverstoß im laufenden Dispositionsdienst nach einschlägiger Abmahnung."
+    },
+    {
+      "assertion_id": "ASSERT-039",
+      "document_id": "DOC-006",
+      "slot_id": "tenure_considered",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-040",
+      "document_id": "DOC-006",
+      "slot_id": "personal_circumstances_considered",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-041",
+      "document_id": "DOC-006",
+      "slot_id": "employer_impact_considered",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-042",
+      "document_id": "DOC-006",
+      "slot_id": "alternatives_evaluated",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-043",
+      "document_id": "DOC-006",
+      "slot_id": "alternatives_list",
+      "canonical_value": [
+        "erneute Abmahnung",
+        "Versetzung in anderen Schichtbereich",
+        "Änderung der Einsatzplanung"
+      ],
+      "rendered_value": "erneute Abmahnung; Versetzung in anderen Schichtbereich; Änderung der Einsatzplanung"
+    },
+    {
+      "assertion_id": "ASSERT-044",
+      "document_id": "DOC-006",
+      "slot_id": "alternatives_rejection_reasons",
+      "canonical_value": [
+        "erneute Abmahnung: Wiederholung nach einschlägiger Warnung",
+        "Versetzung: keine freie gleichwertige Stelle im Betrieb",
+        "Einsatzplanung: Pflichtverstoß betrifft die Grundpflicht zur Anwesenheit"
+      ],
+      "rendered_value": "erneute Abmahnung: Wiederholung nach einschlägiger Warnung; Versetzung: keine freie gleichwertige Stelle im Betrieb; Einsatzplanung: Pflichtverstoß betrifft die Grundpflicht zur Anwesenheit"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nVerhältnismäßigkeits- und Alternativenprüfung\nDatum: 28.08.2026\nReferenz: NH-HR-PROP-7421\nDokumentierte Prüfung milderer Maßnahmen und der für die Interessenabwägung berücksichtigten Umstände.\nDokumentierte Angaben\nVerhältnismäßigkeitsprüfung dokumentiert: Ja\nSchwerebewertung: Wiederholter gleichartiger Pflichtverstoß im laufenden Dispositionsdienst nach einschlägiger Abmahnung.\nBetriebszugehörigkeit berücksichtigt: Ja\nPersönliche Umstände berücksichtigt: Ja\nBetriebliche Auswirkungen berücksichtigt: Ja\nMildere Mittel geprüft: Ja\nGeprüfte Alternativen: erneute Abmahnung; Versetzung in anderen Schichtbereich; Änderung der Einsatzplanung\nDokumentierte Gründe: erneute Abmahnung: Wiederholung nach einschlägiger Warnung; Versetzung: keine freie gleichwertige Stelle im Betrieb; Einsatzplanung: Pflichtverstoß betrifft die Grundpflicht zur Anwesenheit\n",
+  "render_source_hash": "sha256:12c6e3af6e43a56221dadf5c7a519eab56baad0118b09d77bd4cbc1e83fe3f4f",
+  "artifact_hash": "sha256:c557fb32667051bcf6f1d76d949793e4f3fcfabee2fd0be90275f77b9b58ad9a",
+  "page_count": 1
+}

@@ -1,0 +1,38 @@
+fixture_id: CASE-SYN-7421
+scoring_status: SCORED
+eligible_metrics:
+  L0:
+  - Critical Text Recovery Rate
+  - Critical Value Accuracy
+  - Page Recovery & Association Accuracy
+  - Recovery Path Accuracy
+  - Unsafe Continuation Rate
+  L1:
+  - Classification Accuracy
+  - Wrong-Confident Classification Rate
+  - Wrong Rule-Pack Routing Rate
+  - Correct Abstention / Ambiguity Rate
+  - Per-Type Precision & Recall
+  L2:
+  - Fact Recall
+  - Fact Precision
+  - Value Accuracy
+  - Safe Rule Abstention Rate
+  - Candidate Evidence Traceability Rate
+  L3:
+  - Field Mapping Accuracy
+  - Confirmed-Fact Preservation Rate
+  - Derived-Field Accuracy
+  - Transformation Completeness
+  - Conflict & Provenance Safety
+  L4:
+  - Schema Pass Rate
+  - Required-Field Completeness
+  - Invariant Pass Rate
+  - Evidence-State Validity
+  L5-A:
+  - Verified Case Pass Rate
+  - Critical Field Accuracy
+  - Critical Error Escape Rate
+  L5-B:
+  - 'Human Correction Burden: NOT_APPLICABLE_WITHOUT_REAL_HUMAN_TELEMETRY'

@@ -1,0 +1,135 @@
+evaluation_contract:
+  bundle_id: tauri-intake-eval-de-route-a-synth-v1
+  version: 1.0.0
+  scope: FIXTURE_LOCAL_SYNTHETIC_ROUTE_A
+  created_from_source_authority:
+  - file: TAURI_INTAKE_DATASET_AGENT_DESIGN.md
+    sha256: sha256:e37ced5c90c80d0aeaa86cd85b398b8e8cbf5190d9692989d9ff8c715ce7c982
+  - file: evidence_codes.DE.v1.yaml
+    sha256: sha256:73cd10369ca12c600ab3037603688f793a7446b0dc2a900e64f7a24a73726c00
+  - file: gate_registry.DE.v1.yaml
+    sha256: sha256:6d7ceed9e875cbf44229a63bb17a14b009c2062ee86490696c4036c82379b4aa
+  - file: reference_graph.ede.DE.v1.yaml
+    sha256: sha256:ea8ec227af14d4ded8f1f60388cc7b44a77a89874d1131d1b9b9b2ba40ead5ed
+  authority_note: Independent synthetic benchmark contract for this fixture. It does not consume Tauri predictions.
+semantic_namespaces:
+  tauri.eval.de.reason_family:
+    owner: evaluation_contract
+    values:
+    - CONDUCT
+  tauri.eval.de.procedural_route:
+    owner: evaluation_contract
+    values:
+      ROUTE_A: CONDUCT
+  tauri.eval.candidate.semantic_role:
+    owner: evaluation_contract
+    values:
+    - primary_source
+    - primary_declaration
+    - corroborating_source
+    - system_log
+    - policy_reference
+  tauri.eval.document_type:
+    owner: evaluation_contract
+    values:
+    - EMPLOYMENT_CONTRACT
+    - ESTABLISHMENT_STATUS_MEMO
+    - INCIDENT_REPORT
+    - WARNING_NOTICE
+    - CONDUCT_ASSESSMENT
+    - PROPORTIONALITY_ASSESSMENT
+    - WORKS_COUNCIL_HEARING
+    - WORKS_COUNCIL_RESPONSE
+    - NOTICE_PERIOD_CALCULATION
+    - TERMINATION_LETTER
+    - DELIVERY_PROOF
+    - COMPLIANCE_REVIEW
+states:
+  fact:
+  - CONFIRMED
+  - UNKNOWN
+  - NOT_APPLICABLE
+  - CONFLICTING
+  - REVIEW_REQUIRED
+  evidence:
+  - PRESENT
+  - ATTESTED_MISSING
+  - DEFECTIVE
+  - NOT_PROVIDED
+  - NOT_APPLICABLE
+  candidate:
+  - EXPECTED
+  - FORBIDDEN
+  - DISTRACTOR
+  - AMBIGUOUS
+  reviewer:
+  - PENDING
+  - CONFIRMED
+  - REJECTED
+  - CORRECTED
+  - MARKED_UNKNOWN
+  - UNRESOLVED_CONFLICT
+criticality:
+- TIER_1
+- TIER_2
+- TIER_3
+candidate_matching:
+  version: route-a-occurrence-v1
+  default_mode: OCCURRENCE_LEVEL
+  identity:
+  - field
+  - normalized_value
+  - document_id
+  - page
+  - semantic_role
+  - assertion_id
+  outcomes:
+  - EXACT_MATCH
+  - VALUE_MATCH_WRONG_SOURCE
+  - VALUE_MATCH_WRONG_ROLE
+  - PARTIAL_VALUE_MATCH
+  - SPURIOUS
+  - MISSING
+  - DUPLICATE
+classification_policy:
+  clean_template_documents: UNIQUE_CLASS_REQUIRED
+  ambiguity_policy: ABSTAIN_WHEN_BODY_TYPE_NOT_UNIQUE
+route_a_required_evidence:
+- E0-a
+- E0-b
+- E0-c
+- E0-d
+- EA-1
+- EA-2
+- EA-4
+- EA-5
+- EA-6
+- EA-7
+- EA-8
+- EA-9
+- EA-10
+- EU-WF
+- EU-NP
+- EU-AGG
+optional_included_evidence:
+- EA-11
+- EU-CON
+not_applicable_evidence:
+- E0-e
+- E0-f
+- EA-3
+- ET-CD
+- ET-MT
+invariants:
+- termination_form_is_ordinary
+- employment_start_before_termination
+- warning_before_incident
+- hearing_before_termination
+- ordinary_hearing_window_respected_or_early_response_received
+- delivery_date_equals_termination_issued
+- effective_date_after_issued_date
+- written_form_and_original_signature_present
+- notice_period_marked_valid
+- no_special_protection_triggered
+- no_tech_gates_when_tech_used_false
+- agg_review_documented

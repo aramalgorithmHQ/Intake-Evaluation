@@ -1,0 +1,82 @@
+{
+  "document_id": "DOC-005",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Verhaltens- und Prognosebewertung",
+  "document_date": "25.08.2026",
+  "reference": "NH-HR-ASS-7421",
+  "intro": "Interne Tatsachenbewertung auf Grundlage des dokumentierten Vorfalls und der vorangegangenen Abmahnung.",
+  "template_rows": [
+    {
+      "label": "Verschuldensbewertung",
+      "value_placeholder": "{{ASSERT-033}}"
+    },
+    {
+      "label": "Verschuldensform",
+      "value_placeholder": "{{ASSERT-034}}"
+    },
+    {
+      "label": "Grundlage negative Prognose",
+      "value_placeholder": "{{ASSERT-035}}"
+    },
+    {
+      "label": "Prognosebelege",
+      "value_placeholder": "{{ASSERT-036}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Verschuldensbewertung",
+      "display_value": "Die Mitarbeiterin kannte die Anwesenheitspflicht und verließ den Dienst dennoch ohne Freigabe."
+    },
+    {
+      "label": "Verschuldensform",
+      "display_value": "vorsätzlich"
+    },
+    {
+      "label": "Grundlage negative Prognose",
+      "display_value": "Wiederholung desselben Pflichtverstoßes trotz dokumentierter Abmahnung."
+    },
+    {
+      "label": "Prognosebelege",
+      "display_value": "Abmahnung 20.05.2026; Vorfallsbericht 17.08.2026"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-033",
+      "document_id": "DOC-005",
+      "slot_id": "culpability_assessment",
+      "canonical_value": "Die Mitarbeiterin kannte die Anwesenheitspflicht und verließ den Dienst dennoch ohne Freigabe.",
+      "rendered_value": "Die Mitarbeiterin kannte die Anwesenheitspflicht und verließ den Dienst dennoch ohne Freigabe."
+    },
+    {
+      "assertion_id": "ASSERT-034",
+      "document_id": "DOC-005",
+      "slot_id": "culpability_type",
+      "canonical_value": "INTENTIONAL",
+      "rendered_value": "vorsätzlich"
+    },
+    {
+      "assertion_id": "ASSERT-035",
+      "document_id": "DOC-005",
+      "slot_id": "negative_prognosis_basis",
+      "canonical_value": "Wiederholung desselben Pflichtverstoßes trotz dokumentierter Abmahnung.",
+      "rendered_value": "Wiederholung desselben Pflichtverstoßes trotz dokumentierter Abmahnung."
+    },
+    {
+      "assertion_id": "ASSERT-036",
+      "document_id": "DOC-005",
+      "slot_id": "prognosis_evidence",
+      "canonical_value": "Abmahnung 20.05.2026; Vorfallsbericht 17.08.2026",
+      "rendered_value": "Abmahnung 20.05.2026; Vorfallsbericht 17.08.2026"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nVerhaltens- und Prognosebewertung\nDatum: 25.08.2026\nReferenz: NH-HR-ASS-7421\nInterne Tatsachenbewertung auf Grundlage des dokumentierten Vorfalls und der vorangegangenen Abmahnung.\nDokumentierte Angaben\nVerschuldensbewertung: Die Mitarbeiterin kannte die Anwesenheitspflicht und verließ den Dienst dennoch ohne Freigabe.\nVerschuldensform: vorsätzlich\nGrundlage negative Prognose: Wiederholung desselben Pflichtverstoßes trotz dokumentierter Abmahnung.\nPrognosebelege: Abmahnung 20.05.2026; Vorfallsbericht 17.08.2026\n",
+  "render_source_hash": "sha256:480cc0c973151dfb707212be8cd5b9480f3730525569d8a0b91713aa03136949",
+  "artifact_hash": "sha256:b9c8e637dbee0c68f11beaf7a56a175b2c07b5a94e7f2c953d88cabcf17bcd33",
+  "page_count": 1
+}

@@ -1,0 +1,49 @@
+schema_version: eval.l4.oracle.v1
+fixture_id: CASE-RD-06824
+normative_schema_contract: scoped evaluation contract + pinned case_definition.schema.yaml compatibility
+  snapshot
+expected_parse_result: PASS
+expected_schema_result: PASS
+required_field_expectations:
+- field: case_id
+  expected: PRESENT
+- field: route
+  expected: ROUTE_D
+- field: envelope_overrides.termination_type
+  expected: EXTRAORDINARY
+- field: evidence_profile.defective
+  expected: CONTAINS ED-11 and EU-WF
+invariant_results:
+- invariant_id: INV-D-001
+  expected: PASS
+  detail: 2026-04-07 + 14 days = 2026-04-21
+- invariant_id: INV-D-002
+  expected: PASS
+  detail: termination issued 2026-04-18 before deadline 2026-04-21
+- invariant_id: INV-D-003
+  expected: PASS
+  detail: authority approval 2026-04-17 predates issue 2026-04-18
+- invariant_id: INV-D-004
+  expected: PASS
+  detail: tracking date 2026-04-20 is not promoted to confirmed receipt
+- invariant_id: INV-D-005
+  expected: PASS
+  detail: receipt remains REVIEW_REQUIRED/UNKNOWN
+- invariant_id: INV-D-006
+  expected: PASS
+  detail: SUT-visible folder contains PDFs only plus a benign manifest
+evidence_state_results:
+- code: ED-11
+  expected_state: DEFECTIVE
+- code: EU-WF
+  expected_state: DEFECTIVE
+- field: termination_received_at
+  expected_state: REVIEW_REQUIRED
+oracle_independence:
+  sut_modules_imported: []
+  shared_primitives:
+  - ISO-8601 parser
+  - SHA-256
+  uses_tauri_predictions: false
+  uses_production_mapper_as_oracle: false
+  uses_production_extractor_as_oracle: false

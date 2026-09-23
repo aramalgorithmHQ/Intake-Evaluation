@@ -1,0 +1,62 @@
+{
+  "document_id": "DOC-005",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "MASS_LAYOFF_NOTIFICATION",
+  "title": "Massenentlassungsanzeige - erste Welle",
+  "document_date": "2015-01-28",
+  "intro": "Historischer Verfahrensstand. Diese Anzeige gehoert zur ersten Kuendigungswelle und ist fuer die spaetere Wiederholungskuendigung nicht die massgebliche Anzeige.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "notification_filed",
+      "field": "notification_filed",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-005-001"
+    },
+    {
+      "slot_id": "notification_date",
+      "field": "notification_date",
+      "canonical_value": "2015-01-28",
+      "rendered_value": "28.01.2015",
+      "anchor_id": "ANCHOR-DOC-005-002"
+    },
+    {
+      "slot_id": "agency_receipt_date",
+      "field": "agency_receipt_date",
+      "canonical_value": "2015-01-28",
+      "rendered_value": "28.01.2015",
+      "anchor_id": "ANCHOR-DOC-005-003"
+    },
+    {
+      "slot_id": "employees_notified",
+      "field": "employees_notified",
+      "canonical_value": 188,
+      "rendered_value": "188",
+      "anchor_id": "ANCHOR-DOC-005-004"
+    },
+    {
+      "slot_id": "works_council_statement_attached",
+      "field": "works_council_statement_attached",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-005-005"
+    },
+    {
+      "slot_id": "notification_valid",
+      "field": "notification_valid",
+      "canonical_value": false,
+      "rendered_value": "Spaeter als fehlerhaft beurteilt",
+      "anchor_id": "ANCHOR-DOC-005-006"
+    }
+  ],
+  "artifact_hash": "sha256:dfd2cd5b4b7160c8e74c7223df24c0746b7c4c30e381d79fa641822f91d004ce",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

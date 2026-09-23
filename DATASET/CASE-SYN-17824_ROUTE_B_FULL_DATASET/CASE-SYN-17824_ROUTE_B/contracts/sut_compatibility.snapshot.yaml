@@ -1,0 +1,28 @@
+contract_id: tauri-intake-v43-local-snapshot@1.0.0
+status: LOCAL_COMPATIBILITY_SNAPSHOT_FROM_SUPPLIED_ARTIFACTS
+surface: TAURI_INTAKE_V43
+case_definition_schema_version: 1.1.0
+route_namespace: tauri.intake.v43.procedural_route
+route_values:
+- ROUTE_A
+- ROUTE_B
+- ROUTE_C
+- ROUTE_D
+checkpoint_versions:
+  L0: eval.l0.v1
+  L1: eval.l1.v1
+  L2: eval.l2.v1
+  L3: eval.l3.v1
+  L4: eval.l4.v1
+  L5: eval.l5.v1
+source_artifacts:
+- path: contracts/source/gate_registry.DE.v1.yaml
+  sha256: 6d7ceed9e875cbf44229a63bb17a14b009c2062ee86490696c4036c82379b4aa
+- path: contracts/source/evidence_codes.DE.v1.yaml
+  sha256: 73cd10369ca12c600ab3037603688f793a7446b0dc2a900e64f7a24a73726c00
+- path: contracts/source/case_definition.schema.yaml
+  sha256: 8d8f1e1cd0e4e941579d442586b42bfe48538d7469f8e7686364087a900c1026
+- path: contracts/source/reference_graph.ede.DE.v1.yaml
+  sha256: ea8ec227af14d4ded8f1f60388cc7b44a77a89874d1131d1b9b9b2ba40ead5ed
+note: This is a dataset-local compatibility snapshot built from the supplied schema/registry artifacts; it is not a claim
+  about an unprovided production git build.

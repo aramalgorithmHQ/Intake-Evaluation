@@ -1,0 +1,104 @@
+{
+  "document_id": "DOC-012",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "template_family": "route-a-clean-v1",
+  "prompt_template": null,
+  "model_id": null,
+  "generation_parameters": null,
+  "title": "Konsistenz- und AGG-Prüfvermerk",
+  "document_date": "09.09.2026",
+  "reference": "NH-COMP-7421",
+  "intro": "Abschließender struktureller Prüfvermerk zur Gleichbehandlung und zur Dokumentation diskriminierungsfreier Entscheidungsgrundlagen.",
+  "template_rows": [
+    {
+      "label": "Vergleichsfälle dokumentiert",
+      "value_placeholder": "{{ASSERT-074}}"
+    },
+    {
+      "label": "Behandlung vergleichbarer Fälle konsistent",
+      "value_placeholder": "{{ASSERT-075}}"
+    },
+    {
+      "label": "Entscheidungsgrundlage dokumentiert",
+      "value_placeholder": "{{ASSERT-076}}"
+    },
+    {
+      "label": "Keine Indizien geschützter Merkmale",
+      "value_placeholder": "{{ASSERT-077}}"
+    },
+    {
+      "label": "Geprüfte Merkmale",
+      "value_placeholder": "{{ASSERT-078}}"
+    }
+  ],
+  "rendered_rows": [
+    {
+      "label": "Vergleichsfälle dokumentiert",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Behandlung vergleichbarer Fälle konsistent",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Entscheidungsgrundlage dokumentiert",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Keine Indizien geschützter Merkmale",
+      "display_value": "Ja"
+    },
+    {
+      "label": "Geprüfte Merkmale",
+      "display_value": "ethnische Herkunft; Geschlecht; Religion/Weltanschauung; Behinderung; Alter; sexuelle Identität"
+    }
+  ],
+  "injections": [
+    {
+      "assertion_id": "ASSERT-074",
+      "document_id": "DOC-012",
+      "slot_id": "prior_cases_documented",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-075",
+      "document_id": "DOC-012",
+      "slot_id": "treatment_consistent",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-076",
+      "document_id": "DOC-012",
+      "slot_id": "decision_basis_documented",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-077",
+      "document_id": "DOC-012",
+      "slot_id": "no_protected_ground_indicia",
+      "canonical_value": true,
+      "rendered_value": "Ja"
+    },
+    {
+      "assertion_id": "ASSERT-078",
+      "document_id": "DOC-012",
+      "slot_id": "protected_grounds_checked",
+      "canonical_value": [
+        "ethnische Herkunft",
+        "Geschlecht",
+        "Religion/Weltanschauung",
+        "Behinderung",
+        "Alter",
+        "sexuelle Identität"
+      ],
+      "rendered_value": "ethnische Herkunft; Geschlecht; Religion/Weltanschauung; Behinderung; Alter; sexuelle Identität"
+    }
+  ],
+  "render_source_text": "Nordhafen Logistik GmbH\nKonsistenz- und AGG-Prüfvermerk\nDatum: 09.09.2026\nReferenz: NH-COMP-7421\nAbschließender struktureller Prüfvermerk zur Gleichbehandlung und zur Dokumentation diskriminierungsfreier Entscheidungsgrundlagen.\nDokumentierte Angaben\nVergleichsfälle dokumentiert: Ja\nBehandlung vergleichbarer Fälle konsistent: Ja\nEntscheidungsgrundlage dokumentiert: Ja\nKeine Indizien geschützter Merkmale: Ja\nGeprüfte Merkmale: ethnische Herkunft; Geschlecht; Religion/Weltanschauung; Behinderung; Alter; sexuelle Identität\n",
+  "render_source_hash": "sha256:8b73ece4084eee7b7f197506b541e116cb063c40e3056e44fcfedfff8eaa9474",
+  "artifact_hash": "sha256:91e3a322c6730acf7a3bcb13439f5d3f11c3df961545616c4f7a38b098b4aa49",
+  "page_count": 1
+}

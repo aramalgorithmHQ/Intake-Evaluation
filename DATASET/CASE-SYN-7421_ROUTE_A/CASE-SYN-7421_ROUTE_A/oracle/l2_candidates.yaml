@@ -1,0 +1,962 @@
+schema_version: eval.l2.oracle.v1
+fixture_id: CASE-SYN-7421
+matching_mode: OCCURRENCE_LEVEL
+matching_policy: route-a-occurrence-v1
+expected_candidates:
+- candidate_id: CAND-001
+  assertion_id: ASSERT-001
+  field: employee_full_name
+  value: Mara Hoffmann
+  document_id: DOC-001
+  page: 1
+  anchor_id: ANCHOR-DOC-001-001
+  semantic_role: primary_source
+  criticality: TIER_2
+  evidence_codes:
+  - E0-b
+  state: EXPECTED
+- candidate_id: CAND-002
+  assertion_id: ASSERT-002
+  field: employee_id
+  value: EMP-7421
+  document_id: DOC-001
+  page: 1
+  anchor_id: ANCHOR-DOC-001-002
+  semantic_role: primary_source
+  criticality: TIER_2
+  evidence_codes:
+  - E0-b
+  state: EXPECTED
+- candidate_id: CAND-003
+  assertion_id: ASSERT-003
+  field: job_title
+  value: Dispositionskoordinatorin
+  document_id: DOC-001
+  page: 1
+  anchor_id: ANCHOR-DOC-001-003
+  semantic_role: primary_source
+  criticality: TIER_2
+  evidence_codes:
+  - E0-b
+  state: EXPECTED
+- candidate_id: CAND-004
+  assertion_id: ASSERT-004
+  field: employment_start_date
+  value: '2024-01-01'
+  document_id: DOC-001
+  page: 1
+  anchor_id: ANCHOR-DOC-001-004
+  semantic_role: primary_source
+  criticality: TIER_1
+  evidence_codes:
+  - E0-b
+  state: EXPECTED
+- candidate_id: CAND-005
+  assertion_id: ASSERT-005
+  field: employee_count_fte
+  value: 84.0
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-001
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-a
+  state: EXPECTED
+- candidate_id: CAND-006
+  assertion_id: ASSERT-006
+  field: headcount_date
+  value: '2026-08-31'
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-002
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-a
+  state: EXPECTED
+- candidate_id: CAND-007
+  assertion_id: ASSERT-007
+  field: tenure_continuous
+  value: true
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-003
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-b
+  state: EXPECTED
+- candidate_id: CAND-008
+  assertion_id: ASSERT-008
+  field: tenure_months
+  value: 32
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-004
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-b
+  state: EXPECTED
+- candidate_id: CAND-009
+  assertion_id: ASSERT-009
+  field: betriebsrat_exists
+  value: true
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-005
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-c
+  state: EXPECTED
+- candidate_id: CAND-010
+  assertion_id: ASSERT-010
+  field: establishment_id
+  value: DE-HH-04
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-006
+  semantic_role: system_log
+  criticality: TIER_2
+  evidence_codes:
+  - E0-c
+  state: EXPECTED
+- candidate_id: CAND-011
+  assertion_id: ASSERT-011
+  field: pregnancy_status
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-007
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-d
+  state: EXPECTED
+- candidate_id: CAND-012
+  assertion_id: ASSERT-012
+  field: parental_leave_status
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-008
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-d
+  state: EXPECTED
+- candidate_id: CAND-013
+  assertion_id: ASSERT-013
+  field: disability_equivalent
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-009
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-d
+  state: EXPECTED
+- candidate_id: CAND-014
+  assertion_id: ASSERT-014
+  field: br_member_status
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-010
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-d
+  state: EXPECTED
+- candidate_id: CAND-015
+  assertion_id: ASSERT-015
+  field: dpo_appointment_status
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-011
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-d
+  state: EXPECTED
+- candidate_id: CAND-016
+  assertion_id: ASSERT-016
+  field: election_board_status
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-012
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-d
+  state: EXPECTED
+- candidate_id: CAND-017
+  assertion_id: ASSERT-017
+  field: military_service_status
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-013
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes:
+  - E0-d
+  state: EXPECTED
+- candidate_id: CAND-018
+  assertion_id: ASSERT-018
+  field: tech_used
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-014
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes: []
+  state: EXPECTED
+- candidate_id: CAND-019
+  assertion_id: ASSERT-019
+  field: mass_layoff_triggered
+  value: false
+  document_id: DOC-002
+  page: 1
+  anchor_id: ANCHOR-DOC-002-015
+  semantic_role: system_log
+  criticality: TIER_1
+  evidence_codes: []
+  state: EXPECTED
+- candidate_id: CAND-020
+  assertion_id: ASSERT-020
+  field: incident_date
+  value: '2026-08-17'
+  document_id: DOC-003
+  page: 1
+  anchor_id: ANCHOR-DOC-003-001
+  semantic_role: primary_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-1
+  state: EXPECTED
+- candidate_id: CAND-021
+  assertion_id: ASSERT-021
+  field: incident_description
+  value: Unentschuldigtes Verlassen des laufenden Dispositionsdienstes vor Schichtende ohne Freigabe der Schichtleitung.
+  document_id: DOC-003
+  page: 1
+  anchor_id: ANCHOR-DOC-003-002
+  semantic_role: primary_source
+  criticality: TIER_2
+  evidence_codes:
+  - EA-1
+  state: EXPECTED
+- candidate_id: CAND-022
+  assertion_id: ASSERT-022
+  field: contractual_duty_breached
+  value: Anwesenheits- und Abstimmungspflicht im laufenden Dispositionsdienst
+  document_id: DOC-003
+  page: 1
+  anchor_id: ANCHOR-DOC-003-003
+  semantic_role: primary_source
+  criticality: TIER_2
+  evidence_codes:
+  - EA-1
+  state: EXPECTED
+- candidate_id: CAND-023
+  assertion_id: ASSERT-023
+  field: witnesses
+  value:
+  - Anna Weber
+  - Lukas Frank
+  document_id: DOC-003
+  page: 1
+  anchor_id: ANCHOR-DOC-003-004
+  semantic_role: corroborating_source
+  criticality: TIER_2
+  evidence_codes:
+  - EA-1
+  state: EXPECTED
+- candidate_id: CAND-024
+  assertion_id: ASSERT-024
+  field: evidence_references
+  value:
+  - Schichtprotokoll 17.08.2026
+  - Zutrittslog 17.08.2026
+  document_id: DOC-003
+  page: 1
+  anchor_id: ANCHOR-DOC-003-005
+  semantic_role: corroborating_source
+  criticality: TIER_2
+  evidence_codes:
+  - EA-1
+  state: EXPECTED
+- candidate_id: CAND-025
+  assertion_id: ASSERT-025
+  field: warning_exists
+  value: true
+  document_id: DOC-004
+  page: 1
+  anchor_id: ANCHOR-DOC-004-001
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-2
+  state: EXPECTED
+- candidate_id: CAND-026
+  assertion_id: ASSERT-026
+  field: warning_date
+  value: '2026-05-20'
+  document_id: DOC-004
+  page: 1
+  anchor_id: ANCHOR-DOC-004-002
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-2
+  state: EXPECTED
+- candidate_id: CAND-027
+  assertion_id: ASSERT-027
+  field: warning_same_conduct
+  value: true
+  document_id: DOC-004
+  page: 1
+  anchor_id: ANCHOR-DOC-004-003
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-2
+  state: EXPECTED
+- candidate_id: CAND-028
+  assertion_id: ASSERT-028
+  field: warning_delivery_proof
+  value: true
+  document_id: DOC-004
+  page: 1
+  anchor_id: ANCHOR-DOC-004-004
+  semantic_role: primary_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-2
+  state: EXPECTED
+- candidate_id: CAND-029
+  assertion_id: ASSERT-029
+  field: documentation_function
+  value: true
+  document_id: DOC-004
+  page: 1
+  anchor_id: ANCHOR-DOC-004-005
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-2
+  state: EXPECTED
+- candidate_id: CAND-030
+  assertion_id: ASSERT-030
+  field: censure_function
+  value: true
+  document_id: DOC-004
+  page: 1
+  anchor_id: ANCHOR-DOC-004-006
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-2
+  state: EXPECTED
+- candidate_id: CAND-031
+  assertion_id: ASSERT-031
+  field: warning_function
+  value: true
+  document_id: DOC-004
+  page: 1
+  anchor_id: ANCHOR-DOC-004-007
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-2
+  state: EXPECTED
+- candidate_id: CAND-032
+  assertion_id: ASSERT-032
+  field: warning_expired
+  value: false
+  document_id: DOC-004
+  page: 1
+  anchor_id: ANCHOR-DOC-004-008
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-2
+  state: EXPECTED
+- candidate_id: CAND-033
+  assertion_id: ASSERT-033
+  field: culpability_assessment
+  value: Die Mitarbeiterin kannte die Anwesenheitspflicht und verließ den Dienst dennoch ohne Freigabe.
+  document_id: DOC-005
+  page: 1
+  anchor_id: ANCHOR-DOC-005-001
+  semantic_role: corroborating_source
+  criticality: TIER_2
+  evidence_codes:
+  - EA-4
+  state: EXPECTED
+- candidate_id: CAND-034
+  assertion_id: ASSERT-034
+  field: culpability_type
+  value: INTENTIONAL
+  document_id: DOC-005
+  page: 1
+  anchor_id: ANCHOR-DOC-005-002
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-4
+  state: EXPECTED
+- candidate_id: CAND-035
+  assertion_id: ASSERT-035
+  field: negative_prognosis_basis
+  value: Wiederholung desselben Pflichtverstoßes trotz dokumentierter Abmahnung.
+  document_id: DOC-005
+  page: 1
+  anchor_id: ANCHOR-DOC-005-003
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-5
+  state: EXPECTED
+- candidate_id: CAND-036
+  assertion_id: ASSERT-036
+  field: prognosis_evidence
+  value: Abmahnung 20.05.2026; Vorfallsbericht 17.08.2026
+  document_id: DOC-005
+  page: 1
+  anchor_id: ANCHOR-DOC-005-004
+  semantic_role: corroborating_source
+  criticality: TIER_2
+  evidence_codes:
+  - EA-5
+  state: EXPECTED
+- candidate_id: CAND-037
+  assertion_id: ASSERT-037
+  field: proportionality_analysis_exists
+  value: true
+  document_id: DOC-006
+  page: 1
+  anchor_id: ANCHOR-DOC-006-001
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EA-6
+  state: EXPECTED
+- candidate_id: CAND-038
+  assertion_id: ASSERT-038
+  field: severity_assessment
+  value: Wiederholter gleichartiger Pflichtverstoß im laufenden Dispositionsdienst nach einschlägiger Abmahnung.
+  document_id: DOC-006
+  page: 1
+  anchor_id: ANCHOR-DOC-006-002
+  semantic_role: policy_reference
+  criticality: TIER_2
+  evidence_codes:
+  - EA-6
+  state: EXPECTED
+- candidate_id: CAND-039
+  assertion_id: ASSERT-039
+  field: tenure_considered
+  value: true
+  document_id: DOC-006
+  page: 1
+  anchor_id: ANCHOR-DOC-006-003
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EA-6
+  state: EXPECTED
+- candidate_id: CAND-040
+  assertion_id: ASSERT-040
+  field: personal_circumstances_considered
+  value: true
+  document_id: DOC-006
+  page: 1
+  anchor_id: ANCHOR-DOC-006-004
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EA-6
+  state: EXPECTED
+- candidate_id: CAND-041
+  assertion_id: ASSERT-041
+  field: employer_impact_considered
+  value: true
+  document_id: DOC-006
+  page: 1
+  anchor_id: ANCHOR-DOC-006-005
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EA-6
+  state: EXPECTED
+- candidate_id: CAND-042
+  assertion_id: ASSERT-042
+  field: alternatives_evaluated
+  value: true
+  document_id: DOC-006
+  page: 1
+  anchor_id: ANCHOR-DOC-006-006
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EA-7
+  state: EXPECTED
+- candidate_id: CAND-043
+  assertion_id: ASSERT-043
+  field: alternatives_list
+  value:
+  - erneute Abmahnung
+  - Versetzung in anderen Schichtbereich
+  - Änderung der Einsatzplanung
+  document_id: DOC-006
+  page: 1
+  anchor_id: ANCHOR-DOC-006-007
+  semantic_role: policy_reference
+  criticality: TIER_2
+  evidence_codes:
+  - EA-7
+  state: EXPECTED
+- candidate_id: CAND-044
+  assertion_id: ASSERT-044
+  field: alternatives_rejection_reasons
+  value:
+  - 'erneute Abmahnung: Wiederholung nach einschlägiger Warnung'
+  - 'Versetzung: keine freie gleichwertige Stelle im Betrieb'
+  - 'Einsatzplanung: Pflichtverstoß betrifft die Grundpflicht zur Anwesenheit'
+  document_id: DOC-006
+  page: 1
+  anchor_id: ANCHOR-DOC-006-008
+  semantic_role: policy_reference
+  criticality: TIER_2
+  evidence_codes:
+  - EA-7
+  state: EXPECTED
+- candidate_id: CAND-045
+  assertion_id: ASSERT-045
+  field: hearing_document_exists
+  value: true
+  document_id: DOC-007
+  page: 1
+  anchor_id: ANCHOR-DOC-007-001
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-046
+  assertion_id: ASSERT-046
+  field: hearing_initiated_at
+  value: '2026-09-01T09:00:00+02:00'
+  document_id: DOC-007
+  page: 1
+  anchor_id: ANCHOR-DOC-007-002
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-047
+  assertion_id: ASSERT-047
+  field: hearing_contains_employee_identity
+  value: true
+  document_id: DOC-007
+  page: 1
+  anchor_id: ANCHOR-DOC-007-003
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-048
+  assertion_id: ASSERT-048
+  field: hearing_contains_termination_type
+  value: true
+  document_id: DOC-007
+  page: 1
+  anchor_id: ANCHOR-DOC-007-004
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-049
+  assertion_id: ASSERT-049
+  field: hearing_contains_termination_reason
+  value: true
+  document_id: DOC-007
+  page: 1
+  anchor_id: ANCHOR-DOC-007-005
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-050
+  assertion_id: ASSERT-050
+  field: hearing_contains_route
+  value: true
+  document_id: DOC-007
+  page: 1
+  anchor_id: ANCHOR-DOC-007-006
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-051
+  assertion_id: ASSERT-051
+  field: hearing_route_stated
+  value: ROUTE_A
+  document_id: DOC-007
+  page: 1
+  anchor_id: ANCHOR-DOC-007-007
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-052
+  assertion_id: ASSERT-052
+  field: hearing_response_deadline
+  value: '2026-09-08T09:00:00+02:00'
+  document_id: DOC-007
+  page: 1
+  anchor_id: ANCHOR-DOC-007-008
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-053
+  assertion_id: ASSERT-053
+  field: hearing_response_received_at
+  value: '2026-09-05T14:30:00+02:00'
+  document_id: DOC-008
+  page: 1
+  anchor_id: ANCHOR-DOC-008-001
+  semantic_role: primary_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-054
+  assertion_id: ASSERT-054
+  field: hearing_response_type
+  value: APPROVED
+  document_id: DOC-008
+  page: 1
+  anchor_id: ANCHOR-DOC-008-002
+  semantic_role: primary_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-8
+  state: EXPECTED
+- candidate_id: CAND-055
+  assertion_id: ASSERT-055
+  field: statutory_minimum_days
+  value: 30
+  document_id: DOC-009
+  page: 1
+  anchor_id: ANCHOR-DOC-009-001
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EU-NP
+  state: EXPECTED
+- candidate_id: CAND-056
+  assertion_id: ASSERT-056
+  field: contractual_minimum_days
+  value: 30
+  document_id: DOC-009
+  page: 1
+  anchor_id: ANCHOR-DOC-009-002
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EU-NP
+  state: EXPECTED
+- candidate_id: CAND-057
+  assertion_id: ASSERT-057
+  field: actual_notice_days
+  value: 51
+  document_id: DOC-009
+  page: 1
+  anchor_id: ANCHOR-DOC-009-003
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EU-NP
+  state: EXPECTED
+- candidate_id: CAND-058
+  assertion_id: ASSERT-058
+  field: terminates_on_valid_date
+  value: true
+  document_id: DOC-009
+  page: 1
+  anchor_id: ANCHOR-DOC-009-004
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EU-NP
+  state: EXPECTED
+- candidate_id: CAND-059
+  assertion_id: ASSERT-059
+  field: termination_issued_at
+  value: '2026-09-10'
+  document_id: DOC-009
+  page: 1
+  anchor_id: ANCHOR-DOC-009-005
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EU-NP
+  state: EXPECTED
+- candidate_id: CAND-060
+  assertion_id: ASSERT-060
+  field: termination_effective
+  value: '2026-10-31'
+  document_id: DOC-009
+  page: 1
+  anchor_id: ANCHOR-DOC-009-006
+  semantic_role: corroborating_source
+  criticality: TIER_1
+  evidence_codes:
+  - EU-NP
+  state: EXPECTED
+- candidate_id: CAND-061
+  assertion_id: ASSERT-061
+  field: letter_exists
+  value: true
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-001
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-9
+  state: EXPECTED
+- candidate_id: CAND-062
+  assertion_id: ASSERT-062
+  field: written_form_used
+  value: true
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-002
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-9
+  - EU-WF
+  state: EXPECTED
+- candidate_id: CAND-063
+  assertion_id: ASSERT-063
+  field: original_signature
+  value: true
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-003
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-9
+  - EU-WF
+  state: EXPECTED
+- candidate_id: CAND-064
+  assertion_id: ASSERT-064
+  field: proxy_signed
+  value: false
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-004
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EU-WF
+  state: EXPECTED
+- candidate_id: CAND-065
+  assertion_id: ASSERT-065
+  field: notice_period_stated
+  value: 51
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-005
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-9
+  state: EXPECTED
+- candidate_id: CAND-066
+  assertion_id: ASSERT-066
+  field: route_stated_in_letter
+  value: ROUTE_A
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-006
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-9
+  state: EXPECTED
+- candidate_id: CAND-067
+  assertion_id: ASSERT-067
+  field: termination_type
+  value: ORDINARY
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-007
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-9
+  state: EXPECTED
+- candidate_id: CAND-068
+  assertion_id: ASSERT-068
+  field: termination_issued_at
+  value: '2026-09-10'
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-008
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-9
+  state: EXPECTED
+- candidate_id: CAND-069
+  assertion_id: ASSERT-069
+  field: termination_effective
+  value: '2026-10-31'
+  document_id: DOC-010
+  page: 1
+  anchor_id: ANCHOR-DOC-010-009
+  semantic_role: primary_declaration
+  criticality: TIER_1
+  evidence_codes:
+  - EA-9
+  state: EXPECTED
+- candidate_id: CAND-070
+  assertion_id: ASSERT-070
+  field: delivery_method
+  value: PERSONAL_HANDOVER
+  document_id: DOC-011
+  page: 1
+  anchor_id: ANCHOR-DOC-011-001
+  semantic_role: primary_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-10
+  - EU-WF
+  state: EXPECTED
+- candidate_id: CAND-071
+  assertion_id: ASSERT-071
+  field: delivery_date
+  value: '2026-09-10'
+  document_id: DOC-011
+  page: 1
+  anchor_id: ANCHOR-DOC-011-002
+  semantic_role: primary_source
+  criticality: TIER_1
+  evidence_codes:
+  - EA-10
+  - EU-WF
+  state: EXPECTED
+- candidate_id: CAND-072
+  assertion_id: ASSERT-072
+  field: delivery_witness
+  value: Julia Klein
+  document_id: DOC-011
+  page: 1
+  anchor_id: ANCHOR-DOC-011-003
+  semantic_role: primary_source
+  criticality: TIER_2
+  evidence_codes:
+  - EA-10
+  state: EXPECTED
+- candidate_id: CAND-073
+  assertion_id: ASSERT-073
+  field: delivery_proof
+  value: true
+  document_id: DOC-011
+  page: 1
+  anchor_id: ANCHOR-DOC-011-004
+  semantic_role: primary_source
+  criticality: TIER_1
+  evidence_codes:
+  - EU-WF
+  state: EXPECTED
+- candidate_id: CAND-074
+  assertion_id: ASSERT-074
+  field: prior_cases_documented
+  value: true
+  document_id: DOC-012
+  page: 1
+  anchor_id: ANCHOR-DOC-012-001
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EA-11
+  - EU-CON
+  state: EXPECTED
+- candidate_id: CAND-075
+  assertion_id: ASSERT-075
+  field: treatment_consistent
+  value: true
+  document_id: DOC-012
+  page: 1
+  anchor_id: ANCHOR-DOC-012-002
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EA-11
+  - EU-CON
+  state: EXPECTED
+- candidate_id: CAND-076
+  assertion_id: ASSERT-076
+  field: decision_basis_documented
+  value: true
+  document_id: DOC-012
+  page: 1
+  anchor_id: ANCHOR-DOC-012-003
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EU-AGG
+  state: EXPECTED
+- candidate_id: CAND-077
+  assertion_id: ASSERT-077
+  field: no_protected_ground_indicia
+  value: true
+  document_id: DOC-012
+  page: 1
+  anchor_id: ANCHOR-DOC-012-004
+  semantic_role: policy_reference
+  criticality: TIER_1
+  evidence_codes:
+  - EU-AGG
+  state: EXPECTED
+- candidate_id: CAND-078
+  assertion_id: ASSERT-078
+  field: protected_grounds_checked
+  value:
+  - ethnische Herkunft
+  - Geschlecht
+  - Religion/Weltanschauung
+  - Behinderung
+  - Alter
+  - sexuelle Identität
+  document_id: DOC-012
+  page: 1
+  anchor_id: ANCHOR-DOC-012-005
+  semantic_role: policy_reference
+  criticality: TIER_2
+  evidence_codes:
+  - EU-AGG
+  state: EXPECTED
+forbidden_candidates: []

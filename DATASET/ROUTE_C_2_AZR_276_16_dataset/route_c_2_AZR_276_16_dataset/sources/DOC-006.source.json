@@ -1,0 +1,62 @@
+{
+  "document_id": "DOC-006",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "TERMINATION_LETTER",
+  "title": "Ordentliche Kuendigung - erste Welle",
+  "document_date": "2015-02-13",
+  "intro": "Historische erste Kuendigung. Dieses Schreiben bleibt als bewusstes Datums- und Status-Distraktordokument im Evaluationsfall enthalten.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "termination_issued_at",
+      "field": "termination_issued_at",
+      "canonical_value": "2015-02-13",
+      "rendered_value": "13.02.2015",
+      "anchor_id": "ANCHOR-DOC-006-001"
+    },
+    {
+      "slot_id": "termination_effective",
+      "field": "termination_effective",
+      "canonical_value": "2015-07-31",
+      "rendered_value": "31.07.2015",
+      "anchor_id": "ANCHOR-DOC-006-002"
+    },
+    {
+      "slot_id": "termination_type",
+      "field": "termination_type",
+      "canonical_value": "ORDINARY",
+      "rendered_value": "Ordentliche Kuendigung",
+      "anchor_id": "ANCHOR-DOC-006-003"
+    },
+    {
+      "slot_id": "route",
+      "field": "route",
+      "canonical_value": "ROUTE_C",
+      "rendered_value": "betriebsbedingt - Betriebsstilllegung",
+      "anchor_id": "ANCHOR-DOC-006-004"
+    },
+    {
+      "slot_id": "integrationsamt_approval_before_termination",
+      "field": "integrationsamt_approval_before_termination",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-006-005"
+    },
+    {
+      "slot_id": "historical_outcome",
+      "field": "historical_outcome",
+      "canonical_value": "INVALIDATED",
+      "rendered_value": "Erste Kuendigung durch BAG nicht als wirksam behandelt",
+      "anchor_id": "ANCHOR-DOC-006-006"
+    }
+  ],
+  "artifact_hash": "sha256:36db4bfd3c70f7291be053a968b3691d8d3af1992571a42d2b11c04afe354d50",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}

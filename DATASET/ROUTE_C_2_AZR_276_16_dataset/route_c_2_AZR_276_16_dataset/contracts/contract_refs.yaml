@@ -1,0 +1,10 @@
+generated_at: '2026-09-22T18:23:00+05:30'
+snapshots:
+- file: gate_registry.DE.v1.yaml
+  sha256: sha256:6d7ceed9e875cbf44229a63bb17a14b009c2062ee86490696c4036c82379b4aa
+- file: evidence_codes.DE.v1.yaml
+  sha256: sha256:73cd10369ca12c600ab3037603688f793a7446b0dc2a900e64f7a24a73726c00
+- file: reference_graph.ede.DE.v1.yaml
+  sha256: sha256:ea8ec227af14d4ded8f1f60388cc7b44a77a89874d1131d1b9b9b2ba40ead5ed
+- file: case_definition.schema.yaml
+  sha256: sha256:8d8f1e1cd0e4e941579d442586b42bfe48538d7469f8e7686364087a900c1026

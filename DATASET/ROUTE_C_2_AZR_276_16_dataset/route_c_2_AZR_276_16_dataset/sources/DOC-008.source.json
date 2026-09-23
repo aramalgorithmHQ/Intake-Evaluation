@@ -1,0 +1,97 @@
+{
+  "document_id": "DOC-008",
+  "source_kind": "DETERMINISTIC_TEMPLATE",
+  "document_type": "WORKS_COUNCIL_HEARING",
+  "title": "Anhoerung nach § 102 BetrVG - Wiederholungskuendigung",
+  "document_date": "2015-06-12",
+  "intro": "Einzelanhoerung zur beabsichtigten ordentlichen betriebsbedingten Wiederholungskuendigung von Mara Klein.",
+  "body": [],
+  "render_source_rows": [
+    {
+      "slot_id": "hearing_document_exists",
+      "field": "hearing_document_exists",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-008-001"
+    },
+    {
+      "slot_id": "hearing_initiated_at",
+      "field": "hearing_initiated_at",
+      "canonical_value": "2015-06-12T09:00:00+02:00",
+      "rendered_value": "12.06.2015 09:00 Uhr",
+      "anchor_id": "ANCHOR-DOC-008-002"
+    },
+    {
+      "slot_id": "hearing_contains_employee_identity",
+      "field": "hearing_contains_employee_identity",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-008-003"
+    },
+    {
+      "slot_id": "hearing_contains_termination_type",
+      "field": "hearing_contains_termination_type",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-008-004"
+    },
+    {
+      "slot_id": "hearing_contains_termination_reason",
+      "field": "hearing_contains_termination_reason",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-008-005"
+    },
+    {
+      "slot_id": "hearing_contains_route",
+      "field": "hearing_contains_route",
+      "canonical_value": true,
+      "rendered_value": "Ja",
+      "anchor_id": "ANCHOR-DOC-008-006"
+    },
+    {
+      "slot_id": "hearing_route_stated",
+      "field": "hearing_route_stated",
+      "canonical_value": "ROUTE_C",
+      "rendered_value": "betriebsbedingt - vollstaendige Betriebsstilllegung",
+      "anchor_id": "ANCHOR-DOC-008-007"
+    },
+    {
+      "slot_id": "hearing_contains_social_selection_data",
+      "field": "hearing_contains_social_selection_data",
+      "canonical_value": false,
+      "rendered_value": "Nein",
+      "anchor_id": "ANCHOR-DOC-008-008"
+    },
+    {
+      "slot_id": "hearing_response_deadline",
+      "field": "hearing_response_deadline",
+      "canonical_value": "2015-06-19T18:00:00+02:00",
+      "rendered_value": "19.06.2015 18:00 Uhr",
+      "anchor_id": "ANCHOR-DOC-008-009"
+    },
+    {
+      "slot_id": "hearing_response_received_at",
+      "field": "hearing_response_received_at",
+      "canonical_value": "2015-06-18T16:00:00+02:00",
+      "rendered_value": "18.06.2015 16:00 Uhr",
+      "anchor_id": "ANCHOR-DOC-008-010"
+    },
+    {
+      "slot_id": "hearing_response_type",
+      "field": "hearing_response_type",
+      "canonical_value": "OBJECTED",
+      "rendered_value": "Bedenken / Widerspruch",
+      "anchor_id": "ANCHOR-DOC-008-011"
+    }
+  ],
+  "artifact_hash": "sha256:ed95676f64f9b1ce15f149b0fdfc29788e1d8c2cfc69684ee234add10701480c",
+  "page_count": 1,
+  "renderer": {
+    "library": "reportlab",
+    "version": "4.4.9",
+    "page_size": "A4",
+    "font": "Helvetica built-in",
+    "invariant_mode": true
+  }
+}
